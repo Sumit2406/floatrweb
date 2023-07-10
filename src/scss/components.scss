@@ -1,0 +1,142 @@
+.txtinputblock {
+    height: auto;
+    padding: 10px;
+}
+.txtinputblock label {
+    color: blue;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: left;
+    display: flex;
+    margin-bottom: 20px;
+}
+.txtinputblock .textinput {
+    border: 1px solid #000;
+    height: 50px;
+    display: flex;
+    background: #FFF;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.txtinputblock .textinput_prefix, .textinput_suffix {
+    background: #EEE;
+    padding: 0 5px;
+    line-height: 50px;
+    width: 40px;
+    // border-top-left-radius: 5px;
+    // border-bottom-left-radius: 5px;
+}
+
+.txtinputblock .textinput_box, .txtinputblock .textinput_box:focus {
+    width: 100%;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+    
+}
+.textinput{
+    background-color: #F00;
+}
+.txtinputblock .errormessage {
+    display: inline-flex;
+    width: 100%;
+    justify-content: flex-end;
+    color: #F00;
+    font-size: 13px;
+    line-height: 15px;
+    margin: 0;
+    margin-top: 5px;
+}
+.txtinputblock .infomessage {
+    display: inline-flex;
+    width: 100%;
+    justify-content: flex-start;
+    color: #00F;
+    font-size: 13px;
+    line-height: 15px;
+    margin: 0;
+    margin-top: 5px;
+}
+
+.txtinputblock{
+    border-radius: 5px;
+}
+
+.btn{
+    width: 100px;
+height: 30px;
+top: 230px;
+left: 150px;
+border-radius: 100px;
+border: 1px
+}
+
+.input-demo__prefix,
+.input-demo__suffix,
+.input-demo__input,
+.input-demo_image2,
+.input-demo_image1
+{
+  padding: 10px 8px 10px 8px;
+  background-color: whitesmoke;
+  border: none;
+  height: auto;
+}
+
+.TextAreaContainer{
+    display: 'flex';
+    align-items: 'center';
+    justify-content: 'center';
+    margin-bottom: '1rem';
+}
+.TextAreaLabel{
+    margin-right: '1rem';
+    font-size: '1rem';
+    font-weight: 'bold';
+}
+
+textarea{
+    width: '100%';
+    height: '150px';
+    padding: '0.5rem';
+    border-radius: '5px';
+    border: '1px solid #ccc';
+}
+
+///// Tabs styling
+
+.tabs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .tab-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .tab-item {
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 0px;
+    border: none;
+  }
+  
+  .tab-content {
+    margin-top: 10px;
+  }
+  
+
+  .tab-item.active {
+    background-color: black;
+    color:white
+  }
