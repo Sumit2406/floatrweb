@@ -9,13 +9,11 @@ import TextArea from '../components/TextArea';
 import SelectOptionDemo from '../components/SelectOptionDemo';
 import FileUploader from '../components/FileUploader';
 import DateComponents from '../components/DateComponents';
-// import Tabs from '../components/Tabs';
 
 
 
 export default function Home() {
     const [text, setText] = useState('');
-  
     const handleChange = (e) => {
       setText(e.target.value);
     };
@@ -33,18 +31,22 @@ export default function Home() {
     };
 
     // Form upload
-
-    const [file, setFile] = useState();
-    function uploadHandleChange(e) {
-        console.log(e.target.files);
-        setFile(URL.createObjectURL(e.target.files[0]));
-    }
-
+    const fileHandler=(data)=>{
+      console.log(data);
+    }  
     // Date Component
 
     const handleDateChange = (date) => {    
       console.log("Selected date:", date);
     };
+
+    //Check box component
+
+    const[isChecked, setIsChecked] =useState(false)
+    const handleOnDivChange = () => {
+      setIsChecked(!isChecked);
+    };
+console.log(isChecked);    
 
 
   return (
@@ -63,17 +65,19 @@ export default function Home() {
       <div>
 <ButtonDemo txt="Submit" style={buttonStyle} onClick={handleClick}/>
 </div>
-<CheckboxDemo 
-chk = {" Confirm you Employement Status"}/>
+
 <SelectOptionDemo/>
 <TextArea label="Write your feedabck here" value={text} onChange={handleChange} />
 
-<FileUploader file1={file} uploadHandleChange={uploadHandleChange}/>
+
 <DateComponents title="Select Date" onDateChange={handleDateChange}/>
 
 
+<CheckboxDemo chk = {" Confirm you Employement Status"} handleOnDivChange={handleOnDivChange} 
+isChecked={isChecked}
+/>
 
-
+<FileUploader onPass={fileHandler}/>
     </div>
   </div>
   )

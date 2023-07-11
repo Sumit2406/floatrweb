@@ -1,28 +1,16 @@
-import React, { useState } from 'react';
+import "../scss/components.scss"
+import tick from  "../assets/pngs/tick.png";
+import unTick from  "../assets/pngs/unTick.png";
 
-export default function CheckboxDemo({chk}) {
-  const [isChecked, setIsChecked] = useState(false);
-
-  const handleOnChange = () => {
-    setIsChecked(!isChecked);
-  };
+import React from 'react';
+export default function CheckboxDemo({chk,handleOnDivChange, isChecked}) {
 
   return (
-    <div>
-      <div>
-        <input
-          type="checkbox"
-          id="employment"
-          name="employment"
-          value="Employed"
-          checked={isChecked}
-          onChange={handleOnChange}
-        />
-        {chk && <label htmlFor="employment">{chk}</label>}
-      </div>
-      <div className="result">
-        Above checkbox is {isChecked ? 'employed' : 'unemployed'}.
-      </div>
-    </div>
+
+<div className="chkBox" onClick={handleOnDivChange}>
+{isChecked? <img src={tick} alt="clicked" /> : <img src={unTick} alt="clicked" />}
+</div>
+
+  
   );
 }

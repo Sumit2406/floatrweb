@@ -1,12 +1,43 @@
- import React from "react";
+import React, { useRef,useState} from 'react';
+import uploadicon from "../assets/pngs/Vector.png";
+//
+const FileUploader = ({onPass}) => {
+  const fileInputRef = useRef(null);
+  const [uploadedImage, setUploadedImage] = useState(null);
+  
+  const handleDivClick = () => {
+    fileInputRef.current.click();
+  };
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    
+    reader.onload = (e) => {
+      setUploadedImage(e.target.result);
+      onPass(e.target.result);
+    };
+    reader.readAsDataURL(file);
+  };
 
-export default function FileUploader({file1,uploadHandleChange}) {
-        return (
-<div className="App">
-            <h2>Update Image</h2>
-            <input type="file" onChange={uploadHandleChange} />
-           {file1  && <img src={file1} alt="filename" style={{width:'100px', height:'50px'}}/> }  
-</div>
-  )
-}
+  return (
+    <div
+      className="upload-div"
+      style={{ backgroundImage: `url(${uploadedImage})`}}
+      onClick={handleDivClick}
 
+    >
+      <input
+        ref={fileInputRef}
+        type="file"
+        onChange={handleFileChange}
+        accept=".png, .jpg, .jpeg"
+      />
+      {!uploadedImage && <><img src={uploadicon} alt="uploadicon" />
+      <br/>
+      <p><b> Upload Signature </b></p>
+      <p>(.jpeg, .png)</p></>}
+    </div>
+  );
+};
+
+export default FileUploader;
