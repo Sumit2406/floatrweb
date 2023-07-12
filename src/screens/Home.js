@@ -18,7 +18,7 @@ const handleInputChange=(e)=>{
   console.log(e.target.value);
   
 }
-  // Select option
+  // Text Area
     const [text, setText] = useState('');
     const handleChange = (e) => {
       setText(e.target.value);
@@ -58,6 +58,18 @@ const handleInputChange=(e)=>{
     };
 console.log(isChecked);    
 
+// Select Option
+const [selectedOption, setSelectedOption] = useState('');
+const options = [
+  { value: 'option1-Value', label: 'Option 1' },
+  { value: 'option2-Value', label: 'Option 2' },
+  { value: 'option3-Value', label: 'Option 3' },
+];
+const selecthandleChange = (e) => {
+  setSelectedOption(e.target.value);
+  console.log(e.target.value)
+};
+
 
   return (
     <div>
@@ -85,13 +97,11 @@ console.log(isChecked);
 <DateComponents title="Select Date" handleDateChange={handleDateChange} selectedDate={selectedDate}/>
 
 
-<CheckboxDemo handleOnDivChange={handleOnDivChange} 
-isChecked={isChecked}
-/>
+<CheckboxDemo handleOnDivChange={handleOnDivChange} isChecked={isChecked}/>
 
 <FileUploader onPass={fileHandler}/>
 
-<SelectOptionDemo/>
+<SelectOptionDemo selectedOption={selectedOption} options={options} selecthandleChange={selecthandleChange}/>
     </div>
   </div>
   )
