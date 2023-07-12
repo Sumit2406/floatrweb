@@ -186,3 +186,18 @@ textarea{
     align-items: center;
   }
  
+  .dropdown{
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    height: 20px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  .dropdown p{
+    padding: 5px;
+  }
+

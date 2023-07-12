@@ -9,8 +9,14 @@ import TextArea from '../components/TextArea';
 import SelectOptionDemo from '../components/SelectOptionDemo';
 import FileUploader from '../components/FileUploader';
 import DateComponents from '../components/DateComponents';
+import Dropdown from '../components/Dropdown';
 
 export default function Home() {
+//Dromp Down
+const [dropval, setdropval] =useState(false);
+  const handleDropdown =(e)=>{
+    setdropval(!dropval);
+  }
   //text Input
 const[textInput, setTextInput] =useState();
 const handleInputChange=(e)=>{
@@ -67,9 +73,8 @@ const options = [
 ];
 const selecthandleChange = (e) => {
   setSelectedOption(e.target.value);
-  console.log(e.target.value)
 };
-
+console.log(selectedOption);
 
   return (
     <div>
@@ -86,6 +91,7 @@ const selecthandleChange = (e) => {
         handleInputChange={handleInputChange}
         value={textInput}
       />
+          </div>
       <div>
 <ButtonDemo txt="Submit" style={buttonStyle} onClick={handleClick}/>
 </div>
@@ -102,7 +108,7 @@ const selecthandleChange = (e) => {
 <FileUploader onPass={fileHandler}/>
 
 <SelectOptionDemo selectedOption={selectedOption} options={options} selecthandleChange={selecthandleChange}/>
-    </div>
+<Dropdown handleDropdown={handleDropdown} dropval={dropval}/>
   </div>
   )
 }
