@@ -1,7 +1,7 @@
 import React from 'react';
 // import "../scss/App.scss";
 // import "../scss/components.scss";
-const Inputdemo = ({ title, placeholder, prefix, suffix, image1, image2, inputType }) => {
+const Inputdemo = ({ title, placeholder, prefix, suffix, image1, image2, inputType,value,handleInputChange }) => {
 
   return (
     <div className='txtinputblock'>
@@ -15,12 +15,13 @@ const Inputdemo = ({ title, placeholder, prefix, suffix, image1, image2, inputTy
           </span>
         }
       <input className='textinput_box' type={inputType}  placeholder={placeholder}
+      value={value} onChange={handleInputChange}
       />
 
       {suffix && <span className="textinput_suffix ">{suffix}</span>}
       {image2 && 
           <span className="input-demo_image2 ">
-            <img src={image2} alt="Right Icon" style={{ height: 20, width: 20 }} />
+            <img src={image2} alt="Right Icon" style={{ height: 20, width: 20 }} onChange={handleInputChange}/>
           </span>
         }
       </div>

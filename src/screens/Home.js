@@ -11,12 +11,22 @@ import FileUploader from '../components/FileUploader';
 import DateComponents from '../components/DateComponents';
 
 
-
 export default function Home() {
+  //text Input
+const[textInput, setTextInput] =useState();
+const handleInputChange=(e)=>{
+  setTextInput(e.target.value);
+  console.log(e.target.value);
+  
+}
+  // Select option
     const [text, setText] = useState('');
     const handleChange = (e) => {
       setText(e.target.value);
+      console.log(e.target.value);
     };
+
+    //Button click
     const buttonStyle = {
       backgroundColor: 'blue',
       color: 'white',
@@ -24,8 +34,8 @@ export default function Home() {
       borderRadius: '15px',
       width: '100px',
       height: '30px',
+      value: {textInput}
     };
-
     const handleClick = () => {
       console.log('Button clicked!');
     };
@@ -35,10 +45,11 @@ export default function Home() {
       console.log(data);
     }  
     // Date Component
-
-    const handleDateChange = (date) => {    
-      console.log("Selected date:", date);
+    const [selectedDate, setSelectedDate] = useState("");
+    const handleDateChange = (event) => {    
+      setSelectedDate(event.target.value);
     };
+    console.log("Selected date:", selectedDate);
 
     //Check box component
 
@@ -61,23 +72,27 @@ console.log(isChecked);
         image1 ={image1}
         image2 ={image2}
         input-type="text"
+        handleInputChange={handleInputChange}
+        value={textInput}
       />
       <div>
 <ButtonDemo txt="Submit" style={buttonStyle} onClick={handleClick}/>
 </div>
 
-<SelectOptionDemo/>
+
 <TextArea label="Write your feedabck here" value={text} onChange={handleChange} />
 
 
-<DateComponents title="Select Date" onDateChange={handleDateChange}/>
+<DateComponents title="Select Date" handleDateChange={handleDateChange} selectedDate={selectedDate}/>
 
 
-<CheckboxDemo chk = {" Confirm you Employement Status"} handleOnDivChange={handleOnDivChange} 
+<CheckboxDemo handleOnDivChange={handleOnDivChange} 
 isChecked={isChecked}
 />
 
 <FileUploader onPass={fileHandler}/>
+
+<SelectOptionDemo/>
     </div>
   </div>
   )
