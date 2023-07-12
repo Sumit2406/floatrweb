@@ -13,6 +13,7 @@ export default function SelectOptionDemo() {
 
   const handleChange = (e) => {
     setSelectedOption(e.target.value);
+    console.log(e.target.value)
   };
 
   return (

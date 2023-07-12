@@ -10,7 +10,6 @@ import SelectOptionDemo from '../components/SelectOptionDemo';
 import FileUploader from '../components/FileUploader';
 import DateComponents from '../components/DateComponents';
 
-
 export default function Home() {
   //text Input
 const[textInput, setTextInput] =useState();
