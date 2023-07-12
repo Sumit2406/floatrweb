@@ -190,14 +190,44 @@ textarea{
     border: 1px solid black;
     color: black;
     background-color: white;
-    height: 20px;
+    height: 30px;
     width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    // border-radius: 5px;
+    position: relative;
+    display: block;   
+    background-color: #f1ecec;
   }
   .dropdown p{
-    padding: 5px;
+    padding: 0px; 
+    // position: absolute;
+    // top: 0%;
+    // left: 0;
+    z-index: 1000;
+    width: auto;
+    height: 20px;
+    margin: 0px;
+    text-align: left;
+    align-items: center;
   }
+.ddlist li{
+  // background: #cce5ff;
+  margin-top: 0px;
+  border: 1px solid black;
+  list-style-type: none;
+  width: 99px;
+  background-color: #f1ecec;
+}
+.ddlist{
+  margin: 10px;
+}
 
+.ddlist img{
+  align-items: end;
+  padding-left: 30px;
+     position: absolute;
+    // top: 0%;
+  right: 0;
+}

@@ -13,22 +13,36 @@ import Dropdown from '../components/Dropdown';
 
 export default function Home() {
 //Dromp Down
-const [dropval, setdropval] =useState(false);
-  const handleDropdown =(e)=>{
-    setdropval(!dropval);
+const DDoptions = [
+  { value: 'option1-Value', label: 'Option 1' },
+  { value: 'option2-Value', label: 'Option 2' },
+  { value: 'option3-Value', label: 'Option 3' },
+];
+
+const [dropstatus, setdropstatus] =useState(false);
+const [selectedDemo, setselectedDemo] = useState('');
+const handleDropdown =(e)=>{
+    setdropstatus(!dropstatus);
   }
+
+const demoValueChange = (value) => {
+  console.log(value ,"sumit")
+  setselectedDemo(value)
+}; 
+
+
   //text Input
 const[textInput, setTextInput] =useState();
 const handleInputChange=(e)=>{
   setTextInput(e.target.value);
-  console.log(e.target.value);
+  // console.log(e.target.value);
   
 }
   // Text Area
     const [text, setText] = useState('');
     const handleChange = (e) => {
       setText(e.target.value);
-      console.log(e.target.value);
+      // console.log(e.target.value);
     };
 
     //Button click
@@ -42,19 +56,19 @@ const handleInputChange=(e)=>{
       value: {textInput}
     };
     const handleClick = () => {
-      console.log('Button clicked!');
+      // console.log('Button clicked!');
     };
 
     // Form upload
     const fileHandler=(data)=>{
-      console.log(data);
+      // console.log(data);
     }  
     // Date Component
     const [selectedDate, setSelectedDate] = useState("");
     const handleDateChange = (event) => {    
       setSelectedDate(event.target.value);
     };
-    console.log("Selected date:", selectedDate);
+    // console.log("Selected date:", selectedDate);
 
     //Check box component
 
@@ -62,7 +76,7 @@ const handleInputChange=(e)=>{
     const handleOnDivChange = () => {
       setIsChecked(!isChecked);
     };
-console.log(isChecked);    
+// console.log(isChecked);    
 
 // Select Option
 const [selectedOption, setSelectedOption] = useState('');
@@ -74,7 +88,8 @@ const options = [
 const selecthandleChange = (e) => {
   setSelectedOption(e.target.value);
 };
-console.log(selectedOption);
+
+// console.log(selectedOption);
 
   return (
     <div>
@@ -93,9 +108,12 @@ console.log(selectedOption);
       />
           </div>
       <div>
+      <Dropdown handleDropdown={handleDropdown} dropstatus={dropstatus} DDoptions={DDoptions} 
+selectedDemo={selectedDemo}
+demoValueChange={demoValueChange} />
+
 <ButtonDemo txt="Submit" style={buttonStyle} onClick={handleClick}/>
 </div>
-
 
 <TextArea label="Write your feedabck here" value={text} onChange={handleChange} />
 
@@ -108,7 +126,7 @@ console.log(selectedOption);
 <FileUploader onPass={fileHandler}/>
 
 <SelectOptionDemo selectedOption={selectedOption} options={options} selecthandleChange={selecthandleChange}/>
-<Dropdown handleDropdown={handleDropdown} dropval={dropval}/>
+
   </div>
   )
 }
