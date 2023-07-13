@@ -6,6 +6,7 @@ import Contact from "../screens/Contact"
 import Blogs from "../screens/Blogs"
 import Carrer from "../screens/Career"
 import Products from "../screens/Products"
+import Description from '../screens/Description';
 
 
 
@@ -19,6 +20,7 @@ export default function Navigation() {
   <Route path="/products" element={<Products />} /> 
   <Route path="/blogs" element={<Blogs />} /> 
   <Route path="/career" element={<Carrer /> } /> 
+  <Route path="/description" element={<Description/>}/>
   
 </Routes>
     </div>

@@ -8,7 +8,6 @@ import appleicon from '../assets/svgs/apple-logo.svg';
 
 
 
-
 export default function Navbar() {
   return (
     
@@ -26,6 +25,7 @@ export default function Navbar() {
       <li><Link to='/products'> <div>Products </div></Link></li>
       <li><Link to='/blogs'> <div>Blogs </div></Link></li>
       <li><Link to='/career'> <div>Career </div></Link></li>
+      <li><Link to='/description'><div>Description Page</div></Link></li>
       </ul>
       </nav>
       </div>
