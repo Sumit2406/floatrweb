@@ -6,8 +6,6 @@ import LogoDark2 from '../assets/svgs/LogoDark2.svg';
 import androdicon from '../assets/svgs/google-play.svg';
 import appleicon from '../assets/svgs/apple-logo.svg';
 
-
-
 export default function Navbar() {
   return (
     
