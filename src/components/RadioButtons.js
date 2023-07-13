@@ -1,23 +1,23 @@
-import React, { useState } from "react";
-
+import React from "react";
+import "../scss/components.scss"
 import radioselected from "../assets/pngs/radioselected.png";
 import radiounselected from "../assets/pngs/radiounselected.png";
 
-export default function RadioButtons({ radioDatas }) {
-  const [checkd, setcheckd] = useState();
+
+export default function RadioButtons({ radioDatas,handleradio,checkd }) {
+    
   return (
-    <div>
-      <ul >
+    <div className="radiodiv">
+        <p><b>Select you option</b></p>
+      <ul className="radioul">
         {radioDatas.map((radioData, index) => {
           return (
-            <li
+            <li className="radiolist"
               onClick={() => {
-                console.log("clicked", index);
-                setcheckd(index);
+                handleradio(radioData.value, index)
               }}
-              key={index.toString()}
+              key={index}
             >
-              {" "}
               {index === checkd ? (
                 <img src={radioselected} alt="radioselected" />
               ) : (

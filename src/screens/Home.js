@@ -15,11 +15,11 @@ import RadioButtons from '../components/RadioButtons';
 export default function Home() {
 
   //Radio Buttons
-// const [radioStatus, setRadioStatus] =useState(false);
-// const RadioHandle=()=>{
-//   setRadioStatus(!radioStatus);
-// }
-
+const [checkd, setcheckd] = useState(2);
+const handleradio =((value, setchk)=> {
+  setcheckd(setchk);
+  console.log("clicked by ", value);
+})
 const radioDatas = [{ value: 'option1-Value', label: 'option 1' }, { value: 'option2-Value', label: 'option 2' }, { value: 'option3-Value', label: 'option 3' }]
 
   //Dromp Down
@@ -36,8 +36,9 @@ const handleDropdown =(e)=>{
   }
 
 const demoValueChange = (value) => {
-  console.log(value ,"sumit")
-  setselectedDemo(value)
+  // console.log(value ,"sumit")
+  setselectedDemo(value);
+  console.log(value)
 }; 
 
 
@@ -136,9 +137,10 @@ demoValueChange={demoValueChange} />
 <FileUploader onPass={fileHandler}/>
 
 <SelectOptionDemo selectedOption={selectedOption} options={options} selecthandleChange={selecthandleChange}/>
-<RadioButtons radioDatas={radioDatas}/>
+<RadioButtons radioDatas={radioDatas} handleradio={handleradio} checkd={checkd}/>
 {/* radioStatus={radioStatus} RadioHandle={RadioHandle}  */}
 
   </div>
   )
 }
+
