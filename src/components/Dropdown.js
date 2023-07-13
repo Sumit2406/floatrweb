@@ -19,11 +19,12 @@ export default function Dropdown({
         value={selectedOption}
       >
         <p>{dropdownlabel} {dropstatus ? (
-          <img src={dowonIcon} alt="dowonIcon"/>
-        ) : (
           <img src={upIcon} alt="upIcon" />
+        ) : (
+          <img src={dowonIcon} alt="dowonIcon"/>
         )}
 </p>
+<div>
         {dropstatus ? (
           <ul className="ddlist">
             {DDoptions.map((option, i) => (
@@ -39,7 +40,9 @@ export default function Dropdown({
             ))}
           </ul>
         ) : null}
+        </div>
       </div>
     </>
   );
 }
+
