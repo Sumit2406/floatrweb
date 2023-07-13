@@ -13,15 +13,16 @@ import Dropdown from '../components/Dropdown';
 import RadioButtons from '../components/RadioButtons';
 
 export default function Home() {
-//Radio Buttons
-const [radioStatus, setRadioStatus] =useState(false);
-const RadioHandle=()=>{
-  setRadioStatus(!radioStatus);
-}
+
+  //Radio Buttons
+// const [radioStatus, setRadioStatus] =useState(false);
+// const RadioHandle=()=>{
+//   setRadioStatus(!radioStatus);
+// }
 
 const radioDatas = [{ value: 'option1-Value', label: 'option 1' }, { value: 'option2-Value', label: 'option 2' }, { value: 'option3-Value', label: 'option 3' }]
 
-//Dromp Down
+  //Dromp Down
 const DDoptions = [
   { value: 'option1-Value', label: 'Option 1' },
   { value: 'option2-Value', label: 'Option 2' },
@@ -135,8 +136,9 @@ demoValueChange={demoValueChange} />
 <FileUploader onPass={fileHandler}/>
 
 <SelectOptionDemo selectedOption={selectedOption} options={options} selecthandleChange={selecthandleChange}/>
+<RadioButtons radioDatas={radioDatas}/>
+{/* radioStatus={radioStatus} RadioHandle={RadioHandle}  */}
 
-<RadioButtons radioStatus={radioStatus} RadioHandle={RadioHandle} radioDatas={radioDatas}/>
   </div>
   )
 }

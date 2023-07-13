@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import radioselected from "../assets/pngs/radioselected.png";
 import radiounselected from "../assets/pngs/radiounselected.png";
 
-export default function RadioButtons({ radioStatus, RadioHandle, radioDatas }) {
+export default function RadioButtons({ radioDatas }) {
   const [checkd, setcheckd] = useState();
   return (
     <div>
-      <ul onChange={RadioHandle}>
+      <ul >
         {radioDatas.map((radioData, index) => {
           return (
             <li
