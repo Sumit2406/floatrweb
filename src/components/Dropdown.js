@@ -24,7 +24,7 @@ export default function Dropdown({
           <img src={dowonIcon} alt="dowonIcon"/>
         )}
 </p>
-<div>
+
         {dropstatus ? (
           <ul className="ddlist">
             {DDoptions.map((option, i) => (
@@ -41,7 +41,7 @@ export default function Dropdown({
           </ul>
         ) : null}
         </div>
-      </div>
+      
     </>
   );
 }

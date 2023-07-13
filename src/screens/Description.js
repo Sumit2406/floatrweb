@@ -1,9 +1,11 @@
 import React from 'react'
-import FileUploader from '../components/FileUploader'
-import ButtonDemo from '../components/ButtonDemo'
-import RadioButtons from '../components/RadioButtons'
-import CheckboxDemo from '../components/CheckboxDemo'
-import Inputdemo from '../components/Inputdemo'
+// import TextArea from '../components/TextArea'
+// import FileUploader from '../components/FileUploader'
+// import ButtonDemo from '../components/ButtonDemo'
+// import RadioButtons from '../components/RadioButtons'
+// import CheckboxDemo from '../components/CheckboxDemo'
+// import Inputdemo from '../components/Inputdemo'
+// import DateComponents from '../components/DateComponents'
 
 export default function Description() {
   return (
@@ -71,10 +73,32 @@ export default function Description() {
 <p>Link to import - import FileUploader from '../components/FileUploader'</p>
 <p>Props Used :-</p>
 <p>fileHandler - required </p>
+<p>Link to import :- import FileUploader from '../components/FileUploader' </p>
 </div>
+
 <div>
-  <p>DateComponents component</p>
+  <h3>DateComponents Components</h3> 
+  <p>We have created Date component to select the date from user</p>
+  <p>In this component we have used used useState variable selectedDate, handleDateChange() function for event handling</p>
+  <p>In this componed we are passing title, selectedDate and function handleDateChange as props</p>
+  <p>Props Used- </p>
+  <p>title -required</p>
+  <p>selectedDate - required</p>
+  <p>handleDateChange - required </p>
+  <p>Link to import :- import DateComponents from '../components/DateComponents'</p>
 </div>
+
+<div>
+  <h3>TextArea Component</h3>
+  <p>We need to pass label, value and onChange function as props</p>
+  <p>This component is generally used to collect some short description from user</p>
+  <p>In this component we are used useState variable as text and handleChange() for event handling </p>
+  <p>Props Used- </p>
+  <p></p>
+  <p></p>
+  <p></p>
+</div>
+
 
     </div>
   )
