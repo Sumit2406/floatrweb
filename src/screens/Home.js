@@ -6,7 +6,7 @@ import image2 from "../assets/pngs/User2.png";
 import Button from '../components/Button';
 import Checkbox from '../components/Checkbox';
 import TextArea from '../components/TextArea';
-import SelectOptionDemo from '../components/SelectOptionDemo';
+// import SelectOptionDemo from '../components/SelectOptionDemo';
 import FileUploader from '../components/FileUploader';
 import DateComponents from '../components/DateComponents';
 import Dropdown from '../components/Dropdown';
@@ -23,21 +23,21 @@ const handleradio =((value, setchk)=> {
 const radioDatas = [{ value: 'option1-Value', label: 'option 1' }, { value: 'option2-Value', label: 'option 2' }, { value: 'option3-Value', label: 'option 3' }]
 
   //Dromp Down
-const DDoptions = [
+const dropDownObj = [
   { value: 'option1-Value', label: 'Option 1' },
   { value: 'option2-Value', label: 'Option 2' },
   { value: 'option3-Value', label: 'Option 3' },
 ];
 
 const [dropstatus, setdropstatus] =useState(false);
-const [selectedDemo, setselectedDemo] = useState('');
+const [selectedOption, setselectedOption] = useState('');
 const handleDropdown =(e)=>{
     setdropstatus(!dropstatus);
   }
 
 const demoValueChange = (value) => {
   // console.log(value ,"sumit")
-  setselectedDemo(value);
+  setselectedOption(value);
   console.log(value)
 }; 
 
@@ -90,15 +90,15 @@ const handleInputChange=(e)=>{
 // console.log(isChecked);    
 
 // Select Option
-const [selectedOption, setSelectedOption] = useState('');
-const options = [
-  { value: 'option1-Value', label: 'Option 1' },
-  { value: 'option2-Value', label: 'Option 2' },
-  { value: 'option3-Value', label: 'Option 3' },
-];
-const selecthandleChange = (e) => {
-  setSelectedOption(e.target.value);
-};
+// const [selectedOption, setSelectedOption] = useState('');
+// const options = [
+//   { value: 'option1-Value', label: 'Option 1' },
+//   { value: 'option2-Value', label: 'Option 2' },
+//   { value: 'option3-Value', label: 'Option 3' },
+// ];
+// const selecthandleChange = (e) => {
+//   setSelectedOption(e.target.value);
+// };
 
 // console.log(selectedOption);
 
@@ -119,8 +119,11 @@ const selecthandleChange = (e) => {
       />
           </div>
       <div>
-      <Dropdown handleDropdown={handleDropdown} dropstatus={dropstatus} DDoptions={DDoptions} 
-selectedDemo={selectedDemo}
+      <Dropdown 
+      handleDropdown={handleDropdown} 
+      dropstatus={dropstatus} 
+      dropDownObj={dropDownObj} 
+selectedOption={selectedOption}
 demoValueChange={demoValueChange} />
 
 <Button btnLabel="Submit" btnStyle={buttonStyle} btnClick={btnHandleClick}/>
@@ -136,7 +139,7 @@ demoValueChange={demoValueChange} />
 
 <FileUploader onPass={fileHandler}/>
 
-<SelectOptionDemo selectedOption={selectedOption} options={options} selecthandleChange={selecthandleChange}/>
+{/* <SelectOptionDemo selectedOption={selectedOption} options={options} selecthandleChange={selecthandleChange}/> */}
 <RadioButtons radioDatas={radioDatas} handleradio={handleradio} checkd={checkd}/>
 {/* radioStatus={radioStatus} RadioHandle={RadioHandle}  */}
 

@@ -10,6 +10,7 @@ import DateComponents from '../components/DateComponents';
 import TextArea from '../components/TextArea'
 import Tabs from '../components/Tabs'
 import "../scss/components.scss"
+import Dropdown from '../components/Dropdown';
 
 
 export default function Description() {
@@ -80,6 +81,26 @@ const handleChange = (e) => {
   setText(e.target.value);
   // console.log(e.target.value);
 };
+
+//Dropdown Component
+const dropDownObj = [
+  { value: 'option1-Value', label: 'Option 1' },
+  { value: 'option2-Value', label: 'Option 2' },
+  { value: 'option3-Value', label: 'Option 3' },
+];
+
+const [dropstatus, setdropstatus] =useState(false);
+const [selectedOption, setselectedOption] = useState('');
+const handleDropdown =(e)=>{
+    setdropstatus(!dropstatus);
+  }
+const demoValueChange = (value) => {
+  // console.log(value ,"sumit")
+  setselectedOption(value);
+  console.log(value)
+}; 
+
+
 
   return (
     <div>
@@ -217,6 +238,33 @@ const handleChange = (e) => {
         onTabSelect={handleTabSelect}
       />
 </div>
+<div>
+  <h3>Dropdown Component</h3>
+  <p>In this componet we have created one div inside the div we have added paragraph along with image</p>
+  <p>In this component we have used useState dropstatus to update the status initialy set to false</p>
+  <p>we have created variable dropDownObj to store the data</p>
+  <p>dropDownObj </p>
+  <p>Props Used :-</p>
+  <p>handleDropdown - required</p>
+  <p>dropstatus - required</p>
+  <p>dropDownObj - required</p>
+  <p>selectedDemo - required</p>
+  <p>demoValueChange - required</p>
+<h4>Demo:- </h4>
+<Dropdown handleDropdown={handleDropdown} dropstatus={dropstatus} dropDownObj={dropDownObj} 
+selectedOption={selectedOption}
+demoValueChange={demoValueChange} />
+
+{/* <Dropdown 
+      handleDropdown={handleDropdown} 
+      dropstatus={dropstatus} 
+      dropDownObj={dropDownObj} 
+selectedOption={selectedOption}
+demoValueChange={demoValueChange} /> */}
+
+
+</div>
+
     </div>
   )
 }

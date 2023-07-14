@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import dowonIcon from "../assets/pngs/drop-down.png";
+import downIcon from "../assets/pngs/drop-down.png";
 import upIcon from "../assets/pngs/drop-up.png";
 import "../scss/components.scss";
 
@@ -7,10 +7,12 @@ export default function Dropdown({
   selectedOption,
   handleDropdown,
   dropstatus,
-  DDoptions,
+  dropDownObj,
   demoValueChange,
-}) {
+}) 
+{
   const [dropdownlabel, setdropdownlabel] = useState("Select Option");
+  console.log(selectedOption);
   return (
     <>
       <div
@@ -21,13 +23,13 @@ export default function Dropdown({
         <p>{dropdownlabel} {dropstatus ? (
           <img src={upIcon} alt="upIcon" />
         ) : (
-          <img src={dowonIcon} alt="dowonIcon"/>
+          <img src={downIcon} alt="downIcon"/>
         )}
 </p>
 
         {dropstatus ? (
           <ul className="ddlist">
-            {DDoptions.map((option, i) => (
+            {dropDownObj.map((option, i) => (
               <li
                 onClick={() => {
                   setdropdownlabel(option.label);
