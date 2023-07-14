@@ -16,7 +16,7 @@ import Dropdown from '../components/Dropdown';
 export default function Description() {
 
   //Tabs Component
-    const tabsData = [
+    const tabDataObj = [
     { label: "Male", value: "M", content: <p>Content for Tab 1</p> },
     { label: "Female", value: "F", content: <p>Content for Tab 2</p> },
     { label: "Transgender", value: "T", content: <p>Content for Tab 3</p> },
@@ -42,7 +42,7 @@ const chkHableClick = () => {
 
 //RadioButtons Component
 const [radioStatus, setradioStatus] = useState(2);
-const handleradio =((value, setchk)=> {
+const handleRadio =((value, setchk)=> {
   setradioStatus(setchk);
   console.log("clicked by ", value);
 })
@@ -156,15 +156,15 @@ const demoValueChange = (value) => {
   <p>We have used Custom Radion button with the help of icons</p>
   <p>We have imported two radion icon for toggling</p>
   <p>We need to pass useState variable radioStatus as proos for radio status</p>
-  <p>We need to pass fucntion handleradio() as props for image toggling functionality</p>
+  <p>We need to pass fucntion handleRadio() as props for image toggling functionality</p>
   <p>we need to pass arry of object "radioObj" as props to for updating option values </p>
   <p>Props Used:-</p>
   <p>radioObj - required</p>  
-  <p>handleradio - required</p>
+  <p>handleRadio - required</p>
   <p>radioStatus - required</p>
   <p>Link to import:- import RadioButtons from '../components/RadioButtons'</p>
   <p>Demo:-</p>
-  <RadioButtons radioObj={radioObj} handleradio={handleradio} radioStatus={radioStatus}/>
+  <RadioButtons radioObj={radioObj} handleRadio={handleRadio} radioStatus={radioStatus}/>
 </div>
 <div>
 
@@ -233,7 +233,7 @@ const demoValueChange = (value) => {
 <p>Link need to import :- import Tabs from '../components/Tabs' </p>
 <h4>Demo:-</h4>
 <Tabs
-        data={tabsData}
+        tabDataObj={tabDataObj}
         defaultSelected="2"
         onTabSelect={handleTabSelect}
       />

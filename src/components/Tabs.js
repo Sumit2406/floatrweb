@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-const Tabs = ({ data, defaultSelected, onTabSelect }) => {
+const Tabs = ({ tabDataObj, defaultSelected, onTabSelect }) => {
   
   const [selectedValue, setSelectedValue] = useState(defaultSelected || "");
-  console.log(selectedValue);
+  console.log(defaultSelected);
   const handleTabClick = (value) => {
     setSelectedValue(value);
     if (onTabSelect) {
@@ -14,7 +14,7 @@ const Tabs = ({ data, defaultSelected, onTabSelect }) => {
   return (
     <div className="tabs-container">
       <ul className="tab-list">
-        {data.map((tab) => (
+        {tabDataObj.map((tab) => (
           <li
             key={tab.value}
             className={`tab-item ${tab.value === selectedValue ? "active" : ""}`}
@@ -26,7 +26,7 @@ const Tabs = ({ data, defaultSelected, onTabSelect }) => {
       </ul>
       <div className="tab-content">
         {selectedValue &&
-          data.find((tab) => tab.value === selectedValue)?.content}
+          tabDataObj.find((tab) => tab.value === selectedValue)?.content}
       </div>
     </div>
   );
