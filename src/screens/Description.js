@@ -4,7 +4,7 @@ import image1 from "../assets/pngs/User1.png";
 import image2 from "../assets/pngs/User2.png";
 import CheckboxDemo from '../components/CheckboxDemo'
 import RadioButtons from '../components/RadioButtons'
-import ButtonDemo from '../components/ButtonDemo'
+import Button from '../components/Button'
 import FileUploader from '../components/FileUploader'
 import DateComponents from '../components/DateComponents';
 import TextArea from '../components/TextArea'
@@ -47,7 +47,7 @@ const handleradio =((value, setchk)=> {
 })
 const radioDatas = [{ value: 'option1-Value', label: 'option 1' }, { value: 'option2-Value', label: 'option 2' }, { value: 'option3-Value', label: 'option 3' }]
 
-//ButtonDemo Componet
+//Button Componet
 const buttonStyle = {
   backgroundColor: 'blue',
   color: 'white',
@@ -144,15 +144,15 @@ const handleChange = (e) => {
 </div>
 <div>
 
-  <h3>ButtonDemo Component</h3>
+  <h3>Button Component</h3>
   <p> In button componet we have used props "txt" as button title, "buttonStyle" as style and handleClick as as function and passed all these as props </p>
   <p>Props Used:- </p>
   <p>txt- required</p>
   <p>buttonStyle - required</p>
   <p>handleClick - handleClick</p>
-  <p>Link to import - import ButtonDemo from '../components/ButtonDemo' </p>
+  <p>Link to import - import Button from '../components/Button' </p>
   <p>Demo:-</p>
-  <ButtonDemo txt="Submit" style={buttonStyle} onClick={handleClick}/>
+  <Button txt="Submit" style={buttonStyle} onClick={handleClick}/>
 </div>
 
 <div>

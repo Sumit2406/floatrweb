@@ -4,7 +4,7 @@ import Tabs from '../components/Tabs'
 import "../scss/components.scss"
 
 export default function Products() {
-  const tabsData = [
+  const tbDataObj = [
     { label: "Male", value: "M", content: <p>Content for Tab 1</p> },
     { label: "Female", value: "F", content: <p>Content for Tab 2</p> },
     { label: "Transgender", value: "T", content: <p>Content for Tab 3</p> },
@@ -18,7 +18,7 @@ export default function Products() {
     <div className="tab-container">
       <h1>Product page</h1>
       <Tabs
-        data={tabsData}
+        data={tbDataObj}
         defaultSelected="2"
         onTabSelect={handleTabSelect}
       />

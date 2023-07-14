@@ -1,13 +1,13 @@
 import React from 'react'
 // import "../scss/components.scss"
 
-export default function ButtonDemo({txt,style,onClick}) {
+export default function Button({btnLabel,btnStyle,btnClick}) {
   return (    
       <button className='btn' 
-     style={style ? style : null}
-      onClick={onClick}
+     style={btnStyle ? btnStyle : null}
+      onClick={btnClick}
       >
-        {txt}
+        {btnLabel}
         </button>      
   );
 }

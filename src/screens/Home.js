@@ -3,7 +3,7 @@ import "../scss/App.scss";
 import InputComponent from '../components/InputComponent';
 import image1 from "../assets/pngs/User1.png";
 import image2 from "../assets/pngs/User2.png";
-import ButtonDemo from '../components/ButtonDemo';
+import Button from '../components/Button';
 import CheckboxDemo from '../components/CheckboxDemo';
 import TextArea from '../components/TextArea';
 import SelectOptionDemo from '../components/SelectOptionDemo';
@@ -66,7 +66,7 @@ const handleInputChange=(e)=>{
       height: '30px',
       value: {textInput}
     };
-    const handleClick = () => {
+    const btnHandleClick = () => {
       // console.log('Button clicked!');
     };
 
@@ -123,7 +123,7 @@ const selecthandleChange = (e) => {
 selectedDemo={selectedDemo}
 demoValueChange={demoValueChange} />
 
-<ButtonDemo txt="Submit" style={buttonStyle} onClick={handleClick}/>
+<Button btnLabel="Submit" btnStyle={buttonStyle} btnClick={btnHandleClick}/>
 </div>
 
 <TextArea label="Write your feedabck here" value={text} onChange={handleChange} />
