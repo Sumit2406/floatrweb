@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import InputComponent from '../components/InputComponent'
 import image1 from "../assets/pngs/User1.png";
 import image2 from "../assets/pngs/User2.png";
-import CheckboxDemo from '../components/CheckboxDemo'
+import Checkbox from '../components/Checkbox'
 import RadioButtons from '../components/RadioButtons'
 import Button from '../components/Button'
 import FileUploader from '../components/FileUploader'
@@ -32,7 +32,7 @@ const handleInputChange=(e)=>{
   // console.log(e.target.value);  
 }
 
-// CheckboxDemo Component
+// Checkbox Component
 const[isChecked, setIsChecked] =useState(false)
 const handleOnDivChange = () => {
   setIsChecked(!isChecked);
@@ -57,9 +57,10 @@ const buttonStyle = {
   height: '30px',
   value: {textInput}
 };
-const handleClick = () => {
+const btnHandleClick = () => {
   // console.log('Button clicked!');
 };
+
 
 //FileUploader Componet
 const fileHandler=(data)=>{
@@ -114,7 +115,7 @@ const handleChange = (e) => {
           </div>
       </div>
 <div>
-  <h3>CheckboxDemo Component</h3>
+  <h3>Checkbox Component</h3>
   <p>Created Custom Check box with the lelp of icons</p>
   <p>we need to import Checkbox icons for toggling</p>
   <p>We have used useState variable isChecked for checkbox status</p>
@@ -122,9 +123,9 @@ const handleChange = (e) => {
   <p>Props Used:-</p>
   <p>handleOnDivChange - required</p>
   <p>isChecked - required</p>
-  <p>Link to import:- import CheckboxDemo from '../components/CheckboxDemo' </p> 
+  <p>Link to import:- import Checkbox from '../components/Checkbox' </p> 
   <p>Demo:-</p>
-  <CheckboxDemo handleOnDivChange={handleOnDivChange} isChecked={isChecked}/>
+  <Checkbox handleOnDivChange={handleOnDivChange} isChecked={isChecked}/>
 </div>
 
 <div>
@@ -147,12 +148,12 @@ const handleChange = (e) => {
   <h3>Button Component</h3>
   <p> In button componet we have used props "txt" as button title, "buttonStyle" as style and handleClick as as function and passed all these as props </p>
   <p>Props Used:- </p>
-  <p>txt- required</p>
+  <p>btnLabel- required</p>
   <p>buttonStyle - required</p>
-  <p>handleClick - handleClick</p>
+  <p>btnClick - required</p>
   <p>Link to import - import Button from '../components/Button' </p>
   <p>Demo:-</p>
-  <Button txt="Submit" style={buttonStyle} onClick={handleClick}/>
+  <Button btnLabel="Submit" btnStyle={buttonStyle} btnClick={btnHandleClick}/>
 </div>
 
 <div>

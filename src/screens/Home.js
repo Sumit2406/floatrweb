@@ -4,7 +4,7 @@ import InputComponent from '../components/InputComponent';
 import image1 from "../assets/pngs/User1.png";
 import image2 from "../assets/pngs/User2.png";
 import Button from '../components/Button';
-import CheckboxDemo from '../components/CheckboxDemo';
+import Checkbox from '../components/Checkbox';
 import TextArea from '../components/TextArea';
 import SelectOptionDemo from '../components/SelectOptionDemo';
 import FileUploader from '../components/FileUploader';
@@ -132,7 +132,7 @@ demoValueChange={demoValueChange} />
 <DateComponents title="Select Date" handleDateChange={handleDateChange} selectedDate={selectedDate}/>
 
 
-<CheckboxDemo handleOnDivChange={handleOnDivChange} isChecked={isChecked}/>
+<Checkbox handleOnDivChange={handleOnDivChange} isChecked={isChecked}/>
 
 <FileUploader onPass={fileHandler}/>
 

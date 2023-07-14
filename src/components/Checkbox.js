@@ -3,7 +3,7 @@ import tick from  "../assets/pngs/tick.png";
 import unTick from  "../assets/pngs/unTick.png";
 
 import React from 'react';
-export default function CheckboxDemo({handleOnDivChange, isChecked}) {
+export default function Checkbox({handleOnDivChange, isChecked}) {
 
   return (
 
