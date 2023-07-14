@@ -101,10 +101,11 @@ const demoValueChange = (value) => {
 }; 
 
 
-
   return (
     <div>
-      <div className='pagetitle'><div className='contentblock'><h1> Component Description </h1></div></div>
+      <div className='pagetitle'><div className='contentblock'>
+        <h1> Component Description </h1>
+        </div></div>
       <div className='contentblock'>
       <div className='compoblock'>
       <h2>Input Component</h2>
@@ -126,7 +127,6 @@ const demoValueChange = (value) => {
      <p className='subtitle'>Imports</p>
      <code><p>import InputComponent from "../components/InputComponent"</p></code></div> 
      
-     
      <div className='rightblock'><p className='subtitle'>Sample Output</p>
      <div>
       <InputComponent
@@ -143,14 +143,16 @@ const demoValueChange = (value) => {
      </div>   
       </div>
       </div>
-
       
 <div>
-  <h2>Checkbox Component</h2>
-  <p>Created Custom Check box with the lelp of icons</p>
-  <p>we need to import Checkbox icons for toggling</p>
-  <p>We have used useState variable isChecked for checkbox status</p>
-  <p>We have used fucntion handleOnDivChange() for image toggling functionality</p>
+
+<h2>Checkbox Component</h2>
+<ul>
+  <li>Created Custom Check box with the lelp of icons</li>
+  <li>we need to import Checkbox icons for toggling</li>
+  <li>We have used useState variable isChecked for checkbox status</li>
+  <li>We have used fucntion handleOnDivChange() for image toggling functionality</li>
+  </ul>
   <p>Props Used:-</p>
   <p>handleOnDivChange - required</p>
   <p>isChecked - required</p>
