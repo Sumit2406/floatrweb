@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     
       <header>
-        <div id="mainwrap">
+        <div className="mainwrap">
       <div id='logo'>
       <img src={LogoDark2} alt="Logo Dark 2" />
       </div>

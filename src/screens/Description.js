@@ -104,24 +104,31 @@ const demoValueChange = (value) => {
 
   return (
     <div>
-      <h1> Component Description </h1>
-      <div>
-      <h3>InputComponent Component</h3>
-      <p>This compone having icon on left and right</p>
-      <p>This component having prefix and suffix like (₹, %)</p>
-      <p>This component having Title and placeholder</p>
-      <p>we have to pass useState variable textInput and fucntion handleInputChange() as props</p>
-      <p>Props:- </p>
-      <p>title-required</p>
-      <p>placeholder-required</p>
-      <p>prefix/suffix-Optional</p>
-      <p>left-icon/right-icon-optional</p>
-      <p>value(userState variable)-required</p>
-      <p>handleInputChange(fucntion)-required</p>
-      <p>textInput-required</p>
-     <p>Link to import:- import InputComponent from "../components/InputComponent"</p> 
-     <h4>Demo:-</h4>
-     <div style={{width:'50%'}}>
+      <div className='pagetitle'><div className='contentblock'><h1> Component Description </h1></div></div>
+      <div className='contentblock'>
+      <div className='compoblock'>
+      <h2>Input Component</h2>
+      <div className='masterblock'>
+      <div className='leftblock'><ul><li>This compone having icon on left and right</li>
+      <li>This component having prefix and suffix like (₹, %)</li>
+      <li>This component having Title and placeholder</li>
+      <li>we have to pass useState variable textInput and fucntion handleInputChange() as props</li>
+      </ul>
+      <p className='subtitle'>Props</p>
+      <code>
+      <ul><li>title-required</li>
+      <li>placeholder-required</li>
+      <li>prefix/suffix-Optional</li>
+      <li>left-icon/right-icon-optional</li>
+      <li>value(userState variable)-required</li>
+      <li>handleInputChange(fucntion)-required</li>
+      <li>textInput-required</li></ul></code>
+     <p className='subtitle'>Imports</p>
+     <code><p>import InputComponent from "../components/InputComponent"</p></code></div> 
+     
+     
+     <div className='rightblock'><p className='subtitle'>Sample Output</p>
+     <div>
       <InputComponent
         title="UserName"
         placeholder="Enter username"
@@ -132,13 +139,14 @@ const demoValueChange = (value) => {
         input-type="text"
         handleInputChange={handleInputChange}
         value={textInput}
-      />
-          </div>
+      /></div>
+     </div>   
+      </div>
       </div>
 
       
 <div>
-  <h3>Checkbox Component</h3>
+  <h2>Checkbox Component</h2>
   <p>Created Custom Check box with the lelp of icons</p>
   <p>we need to import Checkbox icons for toggling</p>
   <p>We have used useState variable isChecked for checkbox status</p>
@@ -152,7 +160,7 @@ const demoValueChange = (value) => {
 </div>
 
 <div>
-<h3>RadioButtons Component</h3>
+<h2>RadioButtons Component</h2>
   <p>We have used Custom Radion button with the help of icons</p>
   <p>We have imported two radion icon for toggling</p>
   <p>We need to pass useState variable radioStatus as proos for radio status</p>
@@ -168,7 +176,7 @@ const demoValueChange = (value) => {
 </div>
 <div>
 
-  <h3>Button Component</h3>
+  <h2>Button Component</h2>
   <p> In button componet we have used props "txt" as button title, "buttonStyle" as style and handleClick as as function and passed all these as props </p>
   <p>Props Used:- </p>
   <p>btnLabel- required</p>
@@ -180,7 +188,7 @@ const demoValueChange = (value) => {
 </div>
 
 <div>
-<h3>FileUploader Component</h3>
+<h2>FileUploader Component</h2>
 <p>We have created custom file upload button with the help of Icon, and uploadHandler funtion </p>
 <p>we need to pass uploadHandler() fucntion as props </p>
 <p>In this component we have used use state to check the status of uploaded image also used use ref to perform</p>
@@ -194,7 +202,7 @@ const demoValueChange = (value) => {
 </div>
 
 <div>
-  <h3>DateComponents Components</h3> 
+  <h2>DateComponents Components</h2> 
   <p>We have created Date component to select the date from user</p>
   <p>In this component we have used used useState variable selectedDate, handleDateChange() function for event handling</p>
   <p>In this componed we are passing title, selectedDate and function handleDateChange as props</p>
@@ -209,7 +217,7 @@ const demoValueChange = (value) => {
 </div>
 
 <div>
-  <h3>TextArea Component</h3>
+  <h2>TextArea Component</h2>
   <p>We need to pass label, value and onChange function as props</p>
   <p>This component is generally used to collect some short description from user</p>
   <p>In this component we are used useState variable as text and handleChange() for event handling </p>
@@ -223,23 +231,23 @@ const demoValueChange = (value) => {
 </div>
 
 <div>
-<h3>Tabs Component</h3>
+<h2>Tabs Component</h2>
 <p>we have created variable with tabsData which contain information as an array of object </p>
-<p>we need to pass tabsData, defaultSelected and onTabSelect() function as props</p>
+<p>we need to pass tabsData, defaultSelected and handleTabSelect() function as props</p>
 <p>Props Used</p>
 <p>tabsData - required</p>
 <p>defaultSelected - required</p>
-<p>onTabSelect - required</p>
+<p>handleTabSelect - required</p>
 <p>Link need to import :- import Tabs from '../components/Tabs' </p>
 <h4>Demo:-</h4>
 <Tabs
         tabDataObj={tabDataObj}
         defaultSelected="2"
-        onTabSelect={handleTabSelect}
+        handleTabSelect={handleTabSelect}
       />
 </div>
 <div>
-  <h3>Dropdown Component</h3>
+  <h2>Dropdown Component</h2>
   <p>In this componet we have created one div inside the div we have added paragraph along with image</p>
   <p>In this component we have used useState dropstatus to update the status initialy set to false</p>
   <p>we have created variable dropDownObj to store the data</p>
@@ -256,7 +264,7 @@ selectedOption={selectedOption}
 demoValueChange={demoValueChange} />
 
 </div>
-
+</div>
     </div>
   )
 }

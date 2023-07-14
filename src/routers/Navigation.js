@@ -7,12 +7,12 @@ import Blogs from "../screens/Blogs"
 import Carrer from "../screens/Career"
 import Products from "../screens/Products"
 import Description from '../screens/Description';
-
+import "../scss/App.scss"
 
 
 export default function Navigation() {
   return (
-    <div>
+    <div className='mainbody'>
 <Routes>
   <Route path="/" element={<Home />} /> 
   <Route path="/contact" element={<Contact />} /> 

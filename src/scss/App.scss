@@ -1,8 +1,18 @@
 // @use "forPartial"; // using partial SCSS file from _forPartial.scss
 @use "sass:math";  // for using math operations
 
-.App {
-  text-align: center;
+// .App {
+//   text-align: center;
+// }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+}
+.mainbody {
+  width: 100%;
+    // display: flex;
+    // justify-content: center;
 }
 
 .App-logo {
@@ -82,14 +92,14 @@
 
 header{
 	width: 100%;
-	height: 100px;
+	height: 80px;
 	// background: black;
-  background: #061D33;
+  background: #0C121A;
 	display: flex;
 	justify-content: center;
 }
 
-#mainwrap{
+.mainwrap{
   width: 80%;
 	height: 100%;
 	display: flex;
@@ -103,7 +113,6 @@ header{
 	width: 20%;
 	align-items: center;
     display: flex;
-	justify-content: center;
 }
 
 #logo img{
@@ -133,6 +142,8 @@ nav a {
     padding: 14px 16px;
     text-decoration: none;
     color: white;
+    font-size: 14px;
+    line-height: 16px;
   }
 
   #navmenu span{
@@ -152,9 +163,70 @@ nav a {
     }
     
     #brand-icon img{
-      height:50px;
-      width: 60px;
+      height: 30px;
+      width: auto;
       cursor: pointer;
+      margin: 0 10px;
     }
-    
-    
+  .contentblock {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }  
+  .pagetitle {
+    background: rgba(67, 162, 255,0.15);
+    padding: 15px 0;
+  }
+  .pagetitle h1 {
+    font-size: 26px;
+    line-height: 32px;
+    color: #0C121A;
+  }
+h2 {
+  font-size: 20px;
+    line-height: 26px;
+    color: #43A2FF;
+    font-weight: 300;
+    margin: 0;
+    padding: 15px 0;
+}
+ul {
+  margin: 0;
+}
+ul li {
+  font-size: 14px;
+  line-height: 22px;
+}
+p {
+  font-size: 16px;
+  line-height: 18px;
+  margin: 0;
+  color: #0C121A;
+}
+.subtitle {
+  font-weight: bold;
+  padding: 10px 0;
+}
+.subtitle::after {
+  content: '';
+  border-bottom: 2px solid #43A2FF;
+    width: 200px;
+    display: block;
+    margin-top: 2px;
+}
+.masterblock {
+  display: flex;
+}
+.leftblock {
+  flex:1;
+  width: 60%;
+  margin-right: 20px;
+}
+.rightblock {
+  flex:1;
+}
+
+.compoblock {
+  padding: 25px 0;
+    border-bottom: 1px solid #43A2FF;
+}
