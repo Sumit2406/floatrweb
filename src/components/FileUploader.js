@@ -1,7 +1,7 @@
 import React, { useRef,useState} from 'react';
 import uploadicon from "../assets/pngs/Vector.png";
 //
-const FileUploader = ({onPass}) => {
+const FileUploader = ({uploadHandler}) => {
   const fileInputRef = useRef(null);
   const [uploadedImage, setUploadedImage] = useState(null);
   
@@ -14,7 +14,7 @@ const FileUploader = ({onPass}) => {
     
     reader.onload = (e) => {
       setUploadedImage(e.target.result);
-      onPass(e.target.result);
+      uploadHandler(e.target.result);
     };
     reader.readAsDataURL(file);
   };
