@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-// import "../scss/App.scss";
-import Inputdemo from "../components/Inputdemo"
+import "../scss/App.scss";
+import InputComponent from '../components/InputComponent';
 import image1 from "../assets/pngs/User1.png";
 import image2 from "../assets/pngs/User2.png";
 import ButtonDemo from '../components/ButtonDemo';
@@ -106,7 +106,7 @@ const selecthandleChange = (e) => {
     <div>
       <h1>Home Page</h1>
       <div style={{width:'50%'}}>
-      <Inputdemo
+      <InputComponent
         title="UserName"
         placeholder="Enter username"
         prefix="₹"

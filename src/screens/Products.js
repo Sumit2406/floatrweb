@@ -19,7 +19,7 @@ export default function Products() {
       <h1>Product page</h1>
       <Tabs
         data={tabsData}
-        defaultSelected="3"
+        defaultSelected="2"
         onTabSelect={handleTabSelect}
       />
     </div>

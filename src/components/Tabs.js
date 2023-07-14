@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 
 const Tabs = ({ data, defaultSelected, onTabSelect }) => {
+  
   const [selectedValue, setSelectedValue] = useState(defaultSelected || "");
+  console.log(selectedValue);
   const handleTabClick = (value) => {
     setSelectedValue(value);
     if (onTabSelect) {

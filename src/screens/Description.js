@@ -1,18 +1,90 @@
-import React from 'react'
-// import TextArea from '../components/TextArea'
-// import FileUploader from '../components/FileUploader'
-// import ButtonDemo from '../components/ButtonDemo'
-// import RadioButtons from '../components/RadioButtons'
-// import CheckboxDemo from '../components/CheckboxDemo'
-// import Inputdemo from '../components/Inputdemo'
-// import DateComponents from '../components/DateComponents'
+import React, {useState} from 'react'
+import InputComponent from '../components/InputComponent'
+import image1 from "../assets/pngs/User1.png";
+import image2 from "../assets/pngs/User2.png";
+import CheckboxDemo from '../components/CheckboxDemo'
+import RadioButtons from '../components/RadioButtons'
+import ButtonDemo from '../components/ButtonDemo'
+import FileUploader from '../components/FileUploader'
+import DateComponents from '../components/DateComponents';
+import TextArea from '../components/TextArea'
+import Tabs from '../components/Tabs'
+import "../scss/components.scss"
+
 
 export default function Description() {
+
+  //Tabs Component
+    const tabsData = [
+    { label: "Male", value: "M", content: <p>Content for Tab 1</p> },
+    { label: "Female", value: "F", content: <p>Content for Tab 2</p> },
+    { label: "Transgender", value: "T", content: <p>Content for Tab 3</p> },
+  ];
+
+  const handleTabSelect = (selectedValue) => {
+    console.log("Selected value:", selectedValue);
+  };
+
+//InputComponent Component
+const[textInput, setTextInput] =useState();
+const handleInputChange=(e)=>{
+  setTextInput(e.target.value);
+  // console.log(e.target.value);  
+}
+
+// CheckboxDemo Component
+const[isChecked, setIsChecked] =useState(false)
+const handleOnDivChange = () => {
+  setIsChecked(!isChecked);
+};
+// console.log(isChecked);    
+
+//RadioButtons Component
+const [checkd, setcheckd] = useState(2);
+const handleradio =((value, setchk)=> {
+  setcheckd(setchk);
+  console.log("clicked by ", value);
+})
+const radioDatas = [{ value: 'option1-Value', label: 'option 1' }, { value: 'option2-Value', label: 'option 2' }, { value: 'option3-Value', label: 'option 3' }]
+
+//ButtonDemo Componet
+const buttonStyle = {
+  backgroundColor: 'blue',
+  color: 'white',
+  fontSize: '16px',
+  borderRadius: '15px',
+  width: '100px',
+  height: '30px',
+  value: {textInput}
+};
+const handleClick = () => {
+  // console.log('Button clicked!');
+};
+
+//FileUploader Componet
+const fileHandler=(data)=>{
+  // console.log(data);
+}  
+
+//DateComponents Component
+const [selectedDate, setSelectedDate] = useState("");
+const handleDateChange = (event) => {    
+  setSelectedDate(event.target.value);
+};
+// console.log("Selected date:", selectedDate);
+
+//TextArea Component
+const [text, setText] = useState('');
+const handleChange = (e) => {
+  setText(e.target.value);
+  // console.log(e.target.value);
+};
+
   return (
     <div>
-      <h1> Component Discription </h1>
+      <h1> Component Description </h1>
       <div>
-      <h3>Inputdemo Component</h3>
+      <h3>InputComponent Component</h3>
       <p>This compone having icon on left and right</p>
       <p>This component having prefix and suffix like (₹, %)</p>
       <p>This component having Title and placeholder</p>
@@ -25,8 +97,21 @@ export default function Description() {
       <p>value(userState variable)-required</p>
       <p>handleInputChange(fucntion)-required</p>
       <p>textInput-required</p>
-     <p>Link to import:- import Inputdemo from "../components/Inputdemo"</p> 
-     <p>Demo:-</p>
+     <p>Link to import:- import InputComponent from "../components/InputComponent"</p> 
+     <h4>Demo:-</h4>
+     <div style={{width:'50%'}}>
+      <InputComponent
+        title="UserName"
+        placeholder="Enter username"
+        prefix="₹"
+        suffix="%"
+        image1 ={image1}
+        image2 ={image2}
+        input-type="text"
+        handleInputChange={handleInputChange}
+        value={textInput}
+      />
+          </div>
       </div>
 <div>
   <h3>CheckboxDemo Component</h3>
@@ -38,6 +123,8 @@ export default function Description() {
   <p>handleOnDivChange - required</p>
   <p>isChecked - required</p>
   <p>Link to import:- import CheckboxDemo from '../components/CheckboxDemo' </p> 
+  <p>Demo:-</p>
+  <CheckboxDemo handleOnDivChange={handleOnDivChange} isChecked={isChecked}/>
 </div>
 
 <div>
@@ -52,6 +139,8 @@ export default function Description() {
   <p>handleradio - required</p>
   <p>checkd - required</p>
   <p>Link to import:- import RadioButtons from '../components/RadioButtons'</p>
+  <p>Demo:-</p>
+  <RadioButtons radioDatas={radioDatas} handleradio={handleradio} checkd={checkd}/>
 </div>
 <div>
 
@@ -62,6 +151,8 @@ export default function Description() {
   <p>buttonStyle - required</p>
   <p>handleClick - handleClick</p>
   <p>Link to import - import ButtonDemo from '../components/ButtonDemo' </p>
+  <p>Demo:-</p>
+  <ButtonDemo txt="Submit" style={buttonStyle} onClick={handleClick}/>
 </div>
 
 <div>
@@ -74,6 +165,8 @@ export default function Description() {
 <p>Props Used :-</p>
 <p>fileHandler - required </p>
 <p>Link to import :- import FileUploader from '../components/FileUploader' </p>
+<p>Demo:-</p>
+<FileUploader onPass={fileHandler}/>
 </div>
 
 <div>
@@ -86,6 +179,9 @@ export default function Description() {
   <p>selectedDate - required</p>
   <p>handleDateChange - required </p>
   <p>Link to import :- import DateComponents from '../components/DateComponents'</p>
+  <p>Demo:-</p>
+  <DateComponents title="Select Date" handleDateChange={handleDateChange} selectedDate={selectedDate}/>
+
 </div>
 
 <div>
@@ -94,12 +190,30 @@ export default function Description() {
   <p>This component is generally used to collect some short description from user</p>
   <p>In this component we are used useState variable as text and handleChange() for event handling </p>
   <p>Props Used- </p>
-  <p></p>
-  <p></p>
-  <p></p>
+  <p>text - required</p>
+  <p>handleChange() - required</p>
+  <p>label - required</p>
+  <p>Link to import :- import TextArea from '../components/TextArea' </p>
+  <p>Demo:-</p>
+  <TextArea label="Write your feedabck here" value={text} onChange={handleChange} />
 </div>
 
-
+<div>
+<h3>Tabs Component</h3>
+<p>we have created variable with tabsData which contain information as an array of object </p>
+<p>we need to pass tabsData, defaultSelected and onTabSelect() function as props</p>
+<p>Props Used</p>
+<p>tabsData - required</p>
+<p>defaultSelected - required</p>
+<p>onTabSelect - required</p>
+<p>Link need to import :- import Tabs from '../components/Tabs' </p>
+<h4>Demo:-</h4>
+<Tabs
+        data={tabsData}
+        defaultSelected="2"
+        onTabSelect={handleTabSelect}
+      />
+</div>
     </div>
   )
 }
