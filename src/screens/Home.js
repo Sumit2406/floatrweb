@@ -71,7 +71,7 @@ const handleInputChange=(e)=>{
     };
 
     // Form upload
-    const fileHandler=(data)=>{
+    const uploadHandler=(data)=>{
       // console.log(data);
     }  
     // Date Component
@@ -137,7 +137,7 @@ demoValueChange={demoValueChange} />
 
 <Checkbox chkHableClick={chkHableClick} isChecked={isChecked}/>
 
-<FileUploader onPass={fileHandler}/>
+<FileUploader onPass={uploadHandler}/>
 
 {/* <SelectOptionDemo selectedOption={selectedOption} options={options} selecthandleChange={selecthandleChange}/> */}
 <RadioButtons radioDatas={radioDatas} handleradio={handleradio} checkd={checkd}/>

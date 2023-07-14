@@ -64,7 +64,7 @@ const btnHandleClick = () => {
 
 
 //FileUploader Componet
-const fileHandler=(data)=>{
+const uploadHandler=(data)=>{
   // console.log(data);
 }  
 
@@ -181,16 +181,16 @@ const demoValueChange = (value) => {
 
 <div>
 <h3>FileUploader Component</h3>
-<p>We have created custom file upload button with the help of Icon, and fileHandler funtion </p>
-<p>we need to pass fileHandler() fucntion as props </p>
+<p>We have created custom file upload button with the help of Icon, and uploadHandler funtion </p>
+<p>we need to pass uploadHandler() fucntion as props </p>
 <p>In this component we have used use state to check the status of uploaded image also used use ref to perform</p>
 <p>In this componet we have used useref to update Dom directly </p>
 <p>Link to import - import FileUploader from '../components/FileUploader'</p>
 <p>Props Used :-</p>
-<p>fileHandler - required </p>
+<p>uploadHandler - required </p>
 <p>Link to import :- import FileUploader from '../components/FileUploader' </p>
 <p>Demo:-</p>
-<FileUploader onPass={fileHandler}/>
+<FileUploader onPass={uploadHandler}/>
 </div>
 
 <div>
@@ -248,20 +248,12 @@ const demoValueChange = (value) => {
   <p>handleDropdown - required</p>
   <p>dropstatus - required</p>
   <p>dropDownObj - required</p>
-  <p>selectedDemo - required</p>
+  <p>selectedOption - required</p>
   <p>demoValueChange - required</p>
 <h4>Demo:- </h4>
 <Dropdown handleDropdown={handleDropdown} dropstatus={dropstatus} dropDownObj={dropDownObj} 
 selectedOption={selectedOption}
 demoValueChange={demoValueChange} />
-
-{/* <Dropdown 
-      handleDropdown={handleDropdown} 
-      dropstatus={dropstatus} 
-      dropDownObj={dropDownObj} 
-selectedOption={selectedOption}
-demoValueChange={demoValueChange} /> */}
-
 
 </div>
 
