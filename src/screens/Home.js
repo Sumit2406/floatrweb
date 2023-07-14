@@ -81,10 +81,10 @@ const handleInputChange=(e)=>{
     };
     // console.log("Selected date:", selectedDate);
 
-    //Check box component
+    //Checkbox component
 
     const[isChecked, setIsChecked] =useState(false)
-    const handleOnDivChange = () => {
+    const chkHableClick = () => {
       setIsChecked(!isChecked);
     };
 // console.log(isChecked);    
@@ -132,7 +132,7 @@ demoValueChange={demoValueChange} />
 <DateComponents title="Select Date" handleDateChange={handleDateChange} selectedDate={selectedDate}/>
 
 
-<Checkbox handleOnDivChange={handleOnDivChange} isChecked={isChecked}/>
+<Checkbox chkHableClick={chkHableClick} isChecked={isChecked}/>
 
 <FileUploader onPass={fileHandler}/>
 

@@ -34,7 +34,7 @@ const handleInputChange=(e)=>{
 
 // Checkbox Component
 const[isChecked, setIsChecked] =useState(false)
-const handleOnDivChange = () => {
+const chkHableClick = () => {
   setIsChecked(!isChecked);
 };
 // console.log(isChecked);    
@@ -114,6 +114,8 @@ const handleChange = (e) => {
       />
           </div>
       </div>
+
+      
 <div>
   <h3>Checkbox Component</h3>
   <p>Created Custom Check box with the lelp of icons</p>
@@ -125,7 +127,7 @@ const handleChange = (e) => {
   <p>isChecked - required</p>
   <p>Link to import:- import Checkbox from '../components/Checkbox' </p> 
   <p>Demo:-</p>
-  <Checkbox handleOnDivChange={handleOnDivChange} isChecked={isChecked}/>
+  <Checkbox chkHableClick={chkHableClick} isChecked={isChecked}/>
 </div>
 
 <div>
