@@ -15,12 +15,12 @@ import RadioButtons from '../components/RadioButtons';
 export default function Home() {
 
   //Radio Buttons
-const [checkd, setcheckd] = useState(2);
-const handleradio =((value, setchk)=> {
-  setcheckd(setchk);
+const [radioStatus, setradioStatus] = useState(2);
+const radioObj = [{ value: 'option1-Value', label: 'option 1' }, { value: 'option2-Value', label: 'option 2' }, { value: 'option3-Value', label: 'option 3' }]
+const handleRadio =((value, setchk)=> {
+  setradioStatus(setchk);
   console.log("clicked by ", value);
 })
-const radioDatas = [{ value: 'option1-Value', label: 'option 1' }, { value: 'option2-Value', label: 'option 2' }, { value: 'option3-Value', label: 'option 3' }]
 
   //Dromp Down
 const dropDownObj = [
@@ -137,10 +137,10 @@ demoValueChange={demoValueChange} />
 
 <Checkbox chkHableClick={chkHableClick} isChecked={isChecked}/>
 
-<FileUploader onPass={uploadHandler}/>
+<FileUploader uploadHandler={uploadHandler}/>
 
 {/* <SelectOptionDemo selectedOption={selectedOption} options={options} selecthandleChange={selecthandleChange}/> */}
-<RadioButtons radioDatas={radioDatas} handleradio={handleradio} checkd={checkd}/>
+<RadioButtons radioObj={radioObj} handleRadio={handleRadio} radioStatus={radioStatus}/>
 {/* radioStatus={radioStatus} RadioHandle={RadioHandle}  */}
 
   </div>

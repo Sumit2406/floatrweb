@@ -41,12 +41,12 @@ const chkHableClick = () => {
 // console.log(isChecked);    
 
 //RadioButtons Component
-const [checkd, setcheckd] = useState(2);
+const [radioStatus, setradioStatus] = useState(2);
 const handleradio =((value, setchk)=> {
-  setcheckd(setchk);
+  setradioStatus(setchk);
   console.log("clicked by ", value);
 })
-const radioDatas = [{ value: 'option1-Value', label: 'option 1' }, { value: 'option2-Value', label: 'option 2' }, { value: 'option3-Value', label: 'option 3' }]
+const radioObj = [{ value: 'option1-Value', label: 'option 1' }, { value: 'option2-Value', label: 'option 2' }, { value: 'option3-Value', label: 'option 3' }]
 
 //Button Componet
 const buttonStyle = {
@@ -155,16 +155,16 @@ const demoValueChange = (value) => {
 <h3>RadioButtons Component</h3>
   <p>We have used Custom Radion button with the help of icons</p>
   <p>We have imported two radion icon for toggling</p>
-  <p>We need to pass useState variable checkd as proos for radio status</p>
+  <p>We need to pass useState variable radioStatus as proos for radio status</p>
   <p>We need to pass fucntion handleradio() as props for image toggling functionality</p>
-  <p>we need to pass arry of object "radioDatas" as props to for updating option values </p>
+  <p>we need to pass arry of object "radioObj" as props to for updating option values </p>
   <p>Props Used:-</p>
-  <p>radioDatas - required</p>  
+  <p>radioObj - required</p>  
   <p>handleradio - required</p>
-  <p>checkd - required</p>
+  <p>radioStatus - required</p>
   <p>Link to import:- import RadioButtons from '../components/RadioButtons'</p>
   <p>Demo:-</p>
-  <RadioButtons radioDatas={radioDatas} handleradio={handleradio} checkd={checkd}/>
+  <RadioButtons radioObj={radioObj} handleradio={handleradio} radioStatus={radioStatus}/>
 </div>
 <div>
 
@@ -190,7 +190,7 @@ const demoValueChange = (value) => {
 <p>uploadHandler - required </p>
 <p>Link to import :- import FileUploader from '../components/FileUploader' </p>
 <p>Demo:-</p>
-<FileUploader onPass={uploadHandler}/>
+<FileUploader uploadHandler={uploadHandler}/>
 </div>
 
 <div>

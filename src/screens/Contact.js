@@ -1,7 +1,7 @@
 import React from 'react'
 import InputComponent from "../components/InputComponent"
-import image1 from "../assets/pngs/User1.png";
-import image2 from "../assets/pngs/User2.png";
+import leftIcon from "../assets/pngs/User1.png";
+import rightIcon from "../assets/pngs/User2.png";
 
 export default function Contact() {
   return (
@@ -12,8 +12,8 @@ export default function Contact() {
         placeholder="Enter Contact number"
         prefix="₹"
         suffix="%"
-        image1 ={image1}
-        image2 ={image2}
+        leftIcon ={leftIcon}
+        rightIcon ={rightIcon}
         inputType= "number"
       />
     </div>
