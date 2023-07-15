@@ -278,30 +278,38 @@ export default function Description() {
           </div>
         </div>
 
-        <div>
-          <h2>FileUploader Component</h2>
-          <p>
+        <div className="compoblock">
+              <h2>FileUploader Component</h2>
+          <div className="masterblock">
+            <div className="leftblock">
+              <ul>
+<li>
             We have created custom file upload button with the help of Icon, and
             uploadHandler funtion{" "}
-          </p>
-          <p>we need to pass uploadHandler() fucntion as props </p>
-          <p>
+          </li>
+          <li>we need to pass uploadHandler() fucntion as props </li>
+          <li>
             In this component we have used use state to check the status of
             uploaded image also used use ref to perform
-          </p>
-          <p>In this componet we have used useref to update Dom directly </p>
-          <p>
-            Link to import - import FileUploader from
-            '../components/FileUploader'
-          </p>
-          <p>Props Used :-</p>
-          <p>uploadHandler - required </p>
-          <p>
-            Link to import :- import FileUploader from
-            '../components/FileUploader'{" "}
-          </p>
-          <p>Demo:-</p>
-          <FileUploader uploadHandler={uploadHandler} />
+          </li>
+          <li>In this componet we have used useref to update Dom directly </li>              </ul>
+              <p className="subtitle">Props</p>
+              <code>
+                <ul>
+              <li>uploadHandler - required</li>
+                          </ul>
+              </code>
+              <p className="subtitle">Imports</p>
+              <code>
+                <p>import FileUploader from '../components/FileUploader'</p>
+              </code>
+            </div>
+            <div className="rightblock">
+              <p className="subtitle">Sample Output</p>
+              <div>          <FileUploader uploadHandler={uploadHandler} />
+              </div>
+            </div>
+          </div>
         </div>
 
         <div>
