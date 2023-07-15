@@ -157,7 +157,7 @@ export default function Description() {
             </div>
           </div>
         </div>
-    
+
         <div className="compoblock">
           <h2>Checkbox Component</h2>
           <div className="masterblock">
@@ -191,7 +191,6 @@ export default function Description() {
               <Checkbox chkHableClick={chkHableClick} isChecked={isChecked} />
             </div>
           </div>
-        
         </div>
 
         <div className="compoblock">
@@ -242,23 +241,23 @@ export default function Description() {
         </div>
 
         <div className="compoblock">
-        <h2>Button Component</h2>
+          <h2>Button Component</h2>
           <div className="masterblock">
             <div className="leftblock">
               <ul>
-<li>
-            In button componet we have used props "txt" as button title,
-            "buttonStyle" as style and handleClick as as function and passed all
-            these as props{" "}
-          </li>          
+                <li>
+                  In button componet we have used props "txt" as button title,
+                  "buttonStyle" as style and handleClick as as function and
+                  passed all these as props{" "}
+                </li>
               </ul>
               <p className="subtitle">Props</p>
               <code>
                 <ul>
-              <li>btnLabel- required</li>
-          <li>buttonStyle - required</li>
-          <li>btnClick - required</li>
-                          </ul>
+                  <li>btnLabel- required</li>
+                  <li>buttonStyle - required</li>
+                  <li>btnClick - required</li>
+                </ul>
               </code>
               <p className="subtitle">Imports</p>
               <code>
@@ -268,36 +267,39 @@ export default function Description() {
             <div className="rightblock">
               <p className="subtitle">Sample Output</p>
               <div>
-                 <Button
-            btnLabel="Submit"
-            btnStyle={buttonStyle}
-            btnClick={btnHandleClick}
-          />
+                <Button
+                  btnLabel="Submit"
+                  btnStyle={buttonStyle}
+                  btnClick={btnHandleClick}
+                />
               </div>
             </div>
           </div>
         </div>
 
         <div className="compoblock">
-              <h2>FileUploader Component</h2>
+          <h2>FileUploader Component</h2>
           <div className="masterblock">
             <div className="leftblock">
               <ul>
-<li>
-            We have created custom file upload button with the help of Icon, and
-            uploadHandler funtion{" "}
-          </li>
-          <li>we need to pass uploadHandler() fucntion as props </li>
-          <li>
-            In this component we have used use state to check the status of
-            uploaded image also used use ref to perform
-          </li>
-          <li>In this componet we have used useref to update Dom directly </li>              </ul>
+                <li>
+                  We have created custom file upload button with the help of
+                  Icon, and uploadHandler funtion{" "}
+                </li>
+                <li>we need to pass uploadHandler() fucntion as props </li>
+                <li>
+                  In this component we have used use state to check the status
+                  of uploaded image also used use ref to perform
+                </li>
+                <li>
+                  In this componet we have used useref to update Dom directly{" "}
+                </li>{" "}
+              </ul>
               <p className="subtitle">Props</p>
               <code>
                 <ul>
-              <li>uploadHandler - required</li>
-                          </ul>
+                  <li>uploadHandler - required</li>
+                </ul>
               </code>
               <p className="subtitle">Imports</p>
               <code>
@@ -306,63 +308,95 @@ export default function Description() {
             </div>
             <div className="rightblock">
               <p className="subtitle">Sample Output</p>
-              <div>          <FileUploader uploadHandler={uploadHandler} />
+              <div>
+                {" "}
+                <FileUploader uploadHandler={uploadHandler} />
               </div>
             </div>
           </div>
         </div>
 
-        <div>
-          <h2>DateComponents Components</h2>
-          <p>We have created Date component to select the date from user</p>
-          <p>
+        <div className="compoblock">
+    <h2>DateComponents Components</h2>
+          <div className="masterblock">
+            <div className="leftblock">
+              <ul>
+<li>We have created Date component to select the date from user</li>
+          <li>
             In this component we have used used useState variable selectedDate,
             handleDateChange() function for event handling
-          </p>
-          <p>
+          </li>
+          <li>
             In this componed we are passing title, selectedDate and function
             handleDateChange as props
-          </p>
-          <p>Props Used- </p>
-          <p>title -required</p>
-          <p>selectedDate - required</p>
-          <p>handleDateChange - required </p>
-          <p>
-            Link to import :- import DateComponents from
-            '../components/DateComponents'
-          </p>
-          <p>Demo:-</p>
+          </li>
+  </ul>
+              <p className="subtitle">Props</p>
+              <code>
+                <ul>
+       <li>title -required</li>
+          <li>selectedDate - required</li>
+          <li>handleDateChange - required </li>
+                          </ul>
+              </code>
+              <p className="subtitle">Imports</p>
+              <code>
+                <p>import DateComponents from
+            '../components/DateComponents'</p>
+              </code>
+            </div>
+            <div className="rightblock">
+              <p className="subtitle">Sample Output</p>
+              <div>
           <DateComponents
             title="Select Date"
             handleDateChange={handleDateChange}
             selectedDate={selectedDate}
-          />
+          />              </div>
+            </div>
+          </div>
         </div>
 
-        <div>
-          <h2>TextArea Component</h2>
-          <p>We need to pass label, value and onChange function as props</p>
-          <p>
+        <div className="compoblock">
+    <h2>TextArea Component</h2>
+          <div className="masterblock">
+            <div className="leftblock">
+              <ul>
+<li>We need to pass label, value and onChange function as props</li>
+          <li>
             This component is generally used to collect some short description
             from user
-          </p>
-          <p>
+          </li>
+          <li>
             In this component we are used useState variable as text and
             handleChange() for event handling{" "}
-          </p>
-          <p>Props Used- </p>
-          <p>text - required</p>
-          <p>handleChange() - required</p>
-          <p>label - required</p>
-          <p>
-            Link to import :- import TextArea from '../components/TextArea'{" "}
-          </p>
-          <p>Demo:-</p>
+          </li>
+  </ul>
+              <p className="subtitle">Props</p>
+              <code>
+                <ul>
+                 <li>Props Used- </li>
+          <li>text - required</li>
+          <li>handleChange() - required</li>
+          <li>label - required</li>
+                          </ul>
+              </code>
+              <p className="subtitle">Imports</p>
+              <code>
+                <p>import TextArea from '../components/TextArea'</p>
+              </code>
+            </div>
+            <div className="rightblock">
+              <p className="subtitle">Sample Output</p>
+              <div>
           <TextArea
             label="Write your feedabck here"
             value={text}
             onChange={handleChange}
           />
+         </div>
+            </div>
+          </div>
         </div>
 
         <div>
