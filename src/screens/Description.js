@@ -159,11 +159,11 @@ export default function Description() {
         </div>
 
         <div className="compoblock">
-          <h2>Checkbox Component</h2>
+              <h2>Checkbox Component</h2>
           <div className="masterblock">
             <div className="leftblock">
               <ul>
-                <li>Created Custom Check box with the lelp of icons</li>
+                 <li>Created Custom Check box with the lelp of icons</li>
                 <li>we need to import Checkbox icons for toggling</li>
                 <li>
                   We have used useState variable isChecked for checkbox status
@@ -172,23 +172,23 @@ export default function Description() {
                   We have used fucntion handleOnDivChange() for image toggling
                   functionality
                 </li>
-              </ul>
-              <p className="subtitle">Props Used:-</p>
+  </ul>
+              <p className="subtitle">Props</p>
               <code>
                 <ul>
                   <li>handleOnDivChange - required</li>
                   <li>isChecked - required</li>
-                </ul>
+     </ul>
               </code>
               <p className="subtitle">Imports</p>
               <code>
-                <p>import Checkbox from '../components/Checkbox' </p>
+                <p>import Checkbox from '../components/Checkbox'</p>
               </code>
             </div>
-            <div className="rightblock"></div>
-            <p className="subtitle">Sample Output</p>
-            <div>
-              <Checkbox chkHableClick={chkHableClick} isChecked={isChecked} />
+            <div className="rightblock">
+              <p className="subtitle">Sample Output</p>
+              <div>
+              <Checkbox chkHableClick={chkHableClick} isChecked={isChecked} />         </div>
             </div>
           </div>
         </div>
@@ -437,34 +437,51 @@ export default function Description() {
             </div>
           </div>
         </div>
-        
-        <div>
-          <h2>Dropdown Component</h2>
-          <p>
+
+        <div className="compoblock">
+    <h2>Dropdown Component</h2>
+          <div className="masterblock">
+            <div className="leftblock">
+              <ul>
+ <li>
             In this componet we have created one div inside the div we have
             added paragraph along with image
-          </p>
-          <p>
+          </li>
+          <li>
             In this component we have used useState dropstatus to update the
             status initialy set to false
-          </p>
-          <p>we have created variable dropDownObj to store the data</p>
-          <p>dropDownObj </p>
-          <p>Props Used :-</p>
-          <p>handleDropdown - required</p>
-          <p>dropstatus - required</p>
-          <p>dropDownObj - required</p>
-          <p>selectedOption - required</p>
-          <p>demoValueChange - required</p>
-          <h4>Demo:- </h4>
-          <Dropdown
+          </li>
+          <li>we have created variable dropDownObj to store the data</li>
+  </ul>
+              <p className="subtitle">Props</p>
+              <code>
+                <ul>
+<li>handleDropdown - required</li>
+          <li>dropstatus - required</li>
+          <li>dropDownObj - required</li>
+          <li>selectedOption - required</li>
+          <li>demoValueChange - required</li>      </ul>
+              </code>
+              <p className="subtitle">Imports</p>
+              <code>
+                <p>import Dropdown from "../components/Dropdown"</p>
+              </code>
+            </div>
+            <div className="rightblock">
+              <p className="subtitle">Sample Output</p>
+              <div>
+         <Dropdown
             handleDropdown={handleDropdown}
             dropstatus={dropstatus}
             dropDownObj={dropDownObj}
             selectedOption={selectedOption}
             demoValueChange={demoValueChange}
           />
+         </div>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   );
