@@ -399,28 +399,45 @@ export default function Description() {
           </div>
         </div>
 
-        <div>
-          <h2>Tabs Component</h2>
-          <p>
+        <div className="compoblock">
+              <h2>Tabs Component</h2>
+          <div className="masterblock">
+            <div className="leftblock">
+              <ul>
+<li>
             we have created variable with tabsData which contain information as
             an array of object{" "}
-          </p>
-          <p>
+          </li>
+          <li>
             we need to pass tabsData, defaultSelected and handleTabSelect()
             function as props
-          </p>
-          <p>Props Used</p>
-          <p>tabsData - required</p>
-          <p>defaultSelected - required</p>
-          <p>handleTabSelect - required</p>
-          <p>Link need to import :- import Tabs from '../components/Tabs' </p>
-          <h4>Demo:-</h4>
-          <Tabs
+          </li>
+  </ul>
+              <p className="subtitle">Props</p>
+              <code>
+                <ul>
+<li>tabsData - required</li>
+          <li>defaultSelected - required</li>
+          <li>handleTabSelect - required</li>                          </ul>
+              </code>
+              <p className="subtitle">Imports</p>
+              <code>
+                <p>import Tabs from '../components/Tabs'</p>
+              </code>
+            </div>
+            <div className="rightblock">
+              <p className="subtitle">Sample Output</p>
+              <div>
+         <Tabs
             tabDataObj={tabDataObj}
             defaultSelected="2"
             handleTabSelect={handleTabSelect}
           />
+         </div>
+            </div>
+          </div>
         </div>
+        
         <div>
           <h2>Dropdown Component</h2>
           <p>
