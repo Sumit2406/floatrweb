@@ -151,7 +151,7 @@ export default function Description() {
                   image2={image2}
                   input-type="text"
                   handleInputChange={handleInputChange}
-                  value={textInput}
+                  value={textInput || ''}
                 />
               </div>
             </div>
@@ -159,11 +159,11 @@ export default function Description() {
         </div>
 
         <div className="compoblock">
-              <h2>Checkbox Component</h2>
+       <h2>Checkbox Component</h2>
           <div className="masterblock">
             <div className="leftblock">
               <ul>
-                 <li>Created Custom Check box with the lelp of icons</li>
+                                  <li>Created Custom Check box with the lelp of icons</li>
                 <li>we need to import Checkbox icons for toggling</li>
                 <li>
                   We have used useState variable isChecked for checkbox status
@@ -176,8 +176,9 @@ export default function Description() {
               <p className="subtitle">Props</p>
               <code>
                 <ul>
-                  <li>handleOnDivChange - required</li>
+                         <li>handleOnDivChange - required</li>
                   <li>isChecked - required</li>
+
      </ul>
               </code>
               <p className="subtitle">Imports</p>
@@ -188,17 +189,18 @@ export default function Description() {
             <div className="rightblock">
               <p className="subtitle">Sample Output</p>
               <div>
-              <Checkbox chkHableClick={chkHableClick} isChecked={isChecked} />         </div>
+              <Checkbox chkHableClick={chkHableClick} isChecked={isChecked} />
+       </div>
             </div>
           </div>
         </div>
 
         <div className="compoblock">
-          <h2>RadioButtons Component</h2>
+        <h2>RadioButtons Component</h2>
           <div className="masterblock">
             <div className="leftblock">
               <ul>
-                <li>
+                                 <li>
                   We have used Custom Radion button with the help of icons
                 </li>
                 <li>We have imported two radion icon for toggling</li>
@@ -213,29 +215,30 @@ export default function Description() {
                 <li>
                   we need to pass arry of object "radioObj" as props to for
                   updating option values{" "}
-                </li>{" "}
-              </ul>
-              <p className="subtitle">Props Used:-</p>
+                </li>
+  </ul>
+              <p className="subtitle">Props</p>
               <code>
                 <ul>
-                  <li>radioObj - required</li>
+       <li>radioObj - required</li>
                   <li>handleRadio - required</li>
                   <li>radioStatus - required</li>
-                </ul>
+     </ul>
               </code>
               <p className="subtitle">Imports</p>
               <code>
                 <p>import RadioButtons from '../components/RadioButtons'</p>
               </code>
             </div>
-            <div className="rightblock"></div>
-            <p className="subtitle">Sample Output</p>
-            <div>
+            <div className="rightblock">
+              <p className="subtitle">Sample Output</p>
+              <div>
               <RadioButtons
                 radioObj={radioObj}
                 handleRadio={handleRadio}
                 radioStatus={radioStatus}
               />
+       </div>
             </div>
           </div>
         </div>
