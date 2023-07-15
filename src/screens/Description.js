@@ -157,87 +157,125 @@ export default function Description() {
             </div>
           </div>
         </div>
-
-        <div className='compoblock'>
-
-<h2>Checkbox Component</h2>
-<div className='masterblock'>
-<div className='leftblock'>
-<ul>
-  <li>Created Custom Check box with the lelp of icons</li>
-  <li>we need to import Checkbox icons for toggling</li>
-  <li>We have used useState variable isChecked for checkbox status</li>
-  <li>We have used fucntion handleOnDivChange() for image toggling functionality</li>
-  </ul>
-  <p className='subtitle'>Props Used:-</p>
-  <code><ul>
-  <li>handleOnDivChange - required</li>
-  <li>isChecked - required</li>
-</ul>
-</code>
-<p className="subtitle">Imports</p>
-<code>  
-  <p>import Checkbox from '../components/Checkbox' </p> 
-</code>
-</div> 
-  <div className='rightblock'></div>
-  <p className='subtitle'>Sample Output</p>
-  <div>
-  <Checkbox chkHableClick={chkHableClick} isChecked={isChecked}/>
-</div>
-</div>   
-</div>
-
-        <div>
-          <h2>RadioButtons Component</h2>
-          <p>We have used Custom Radion button with the help of icons</p>
-          <p>We have imported two radion icon for toggling</p>
-          <p>
-            We need to pass useState variable radioStatus as proos for radio
-            status
-          </p>
-          <p>
-            We need to pass fucntion handleRadio() as props for image toggling
-            functionality
-          </p>
-          <p>
-            we need to pass arry of object "radioObj" as props to for updating
-            option values{" "}
-          </p>
-          <p>Props Used:-</p>
-          <p>radioObj - required</p>
-          <p>handleRadio - required</p>
-          <p>radioStatus - required</p>
-          <p>
-            Link to import:- import RadioButtons from
-            '../components/RadioButtons'
-          </p>
-          <p>Demo:-</p>
-          <RadioButtons
-            radioObj={radioObj}
-            handleRadio={handleRadio}
-            radioStatus={radioStatus}
-          />
+    
+        <div className="compoblock">
+          <h2>Checkbox Component</h2>
+          <div className="masterblock">
+            <div className="leftblock">
+              <ul>
+                <li>Created Custom Check box with the lelp of icons</li>
+                <li>we need to import Checkbox icons for toggling</li>
+                <li>
+                  We have used useState variable isChecked for checkbox status
+                </li>
+                <li>
+                  We have used fucntion handleOnDivChange() for image toggling
+                  functionality
+                </li>
+              </ul>
+              <p className="subtitle">Props Used:-</p>
+              <code>
+                <ul>
+                  <li>handleOnDivChange - required</li>
+                  <li>isChecked - required</li>
+                </ul>
+              </code>
+              <p className="subtitle">Imports</p>
+              <code>
+                <p>import Checkbox from '../components/Checkbox' </p>
+              </code>
+            </div>
+            <div className="rightblock"></div>
+            <p className="subtitle">Sample Output</p>
+            <div>
+              <Checkbox chkHableClick={chkHableClick} isChecked={isChecked} />
+            </div>
+          </div>
+        
         </div>
-        <div>
-          <h2>Button Component</h2>
-          <p>
-            {" "}
+
+        <div className="compoblock">
+          <h2>RadioButtons Component</h2>
+          <div className="masterblock">
+            <div className="leftblock">
+              <ul>
+                <li>
+                  We have used Custom Radion button with the help of icons
+                </li>
+                <li>We have imported two radion icon for toggling</li>
+                <li>
+                  We need to pass useState variable radioStatus as proos for
+                  radio status
+                </li>
+                <li>
+                  We need to pass fucntion handleRadio() as props for image
+                  toggling functionality
+                </li>
+                <li>
+                  we need to pass arry of object "radioObj" as props to for
+                  updating option values{" "}
+                </li>{" "}
+              </ul>
+              <p className="subtitle">Props Used:-</p>
+              <code>
+                <ul>
+                  <li>radioObj - required</li>
+                  <li>handleRadio - required</li>
+                  <li>radioStatus - required</li>
+                </ul>
+              </code>
+              <p className="subtitle">Imports</p>
+              <code>
+                <p>import RadioButtons from '../components/RadioButtons'</p>
+              </code>
+            </div>
+            <div className="rightblock"></div>
+            <p className="subtitle">Sample Output</p>
+            <div>
+              <RadioButtons
+                radioObj={radioObj}
+                handleRadio={handleRadio}
+                radioStatus={radioStatus}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="compoblock">
+        <h2>Button Component</h2>
+          <div className="masterblock">
+            <div className="leftblock">
+              <ul>
+<li>
             In button componet we have used props "txt" as button title,
             "buttonStyle" as style and handleClick as as function and passed all
             these as props{" "}
-          </p>
-          <p>Props Used:- </p>
-          <p>btnLabel- required</p>
-          <p>buttonStyle - required</p>
-          <p>btnClick - required</p>
-          <p>Link to import - import Button from '../components/Button' </p>
-          <p>Demo:-</p>
-          <Button
+          </li>          
+              </ul>
+              <p className="subtitle">Props</p>
+              <code>
+                <ul>
+              <li>btnLabel- required</li>
+          <li>buttonStyle - required</li>
+          <li>btnClick - required</li>
+                          </ul>
+              </code>
+              <p className="subtitle">Imports</p>
+              <code>
+                <p>import Button from '../components/Button'</p>
+              </code>
+            </div>
+            <div className="rightblock">
+              <p className="subtitle">Sample Output</p>
+              <div>
+                 <Button
             btnLabel="Submit"
             btnStyle={buttonStyle}
             btnClick={btnHandleClick}
           />
+              </div>
+            </div>
+          </div>
         </div>
 
         <div>
