@@ -6,15 +6,13 @@ const InputBox = ({ title, placeholder, prefix, suffix, image1, image2, inputTyp
   return (
     <div className='txtinputblock'>
       <label>{title}</label>
-      
       <div className='textinput'>
       {prefix && <span className="textinput_prefix ">{prefix}</span>}
       {image1 && 
-          <span className="input-demo_image1 ">
+          <span className="input-demo_image1 "> 
             <img src={image1} alt="Left Icon" style={{ height: 20, width: 20}} />
           </span>
         }
-
       <input className='textinput_box' type={inputType}  placeholder={placeholder}
       value={value} onChange={handleInputChange}
       />

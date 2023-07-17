@@ -15,11 +15,11 @@ export default function Navigation() {
     <div className='mainbody'>
 <Routes>
   <Route path="/" element={<Home />} /> 
-  <Route path="/contact" element={<Contact />} /> 
-  <Route path="/about" element={<About />} /> 
   <Route path="/products" element={<Products />} /> 
+  <Route path="/about" element={<About />} /> 
   <Route path="/blogs" element={<Blogs />} /> 
   <Route path="/career" element={<Carrer /> } /> 
+  <Route path="/contact" element={<Contact />} /> 
   <Route path="/description" element={<Description/>}/>
   
 </Routes>

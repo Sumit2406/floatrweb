@@ -18,11 +18,11 @@ export default function Navbar() {
       <nav>
       <ul>
       <li><Link to='/'> <div>Home </div></Link></li>
-      <li><Link to='/contact'> <div>Contact </div></Link></li>
-      <li><Link to='/about'> <div>About Us </div></Link></li>
       <li><Link to='/products'> <div>Products </div></Link></li>
+      <li><Link to='/about'> <div>About Us </div></Link></li>
       <li><Link to='/blogs'> <div>Blogs </div></Link></li>
       <li><Link to='/career'> <div>Career </div></Link></li>
+      <li><Link to='/contact'> <div>Contact </div></Link></li>
       <li><Link to='/description'><div>Description Page</div></Link></li>
       </ul>
       </nav>
