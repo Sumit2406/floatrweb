@@ -221,9 +221,12 @@ textarea{
     position: relative;
     display: block;   
     background-color: #f1ecec;
+    text-align: center;
   }
   .dropdown p{
-    padding: 0px; 
+    padding: 5px 5px; 
+    display: flex;
+    justify-content: space-between;
     // position: absolute;
     // top: 0%;
     // left: 0;
@@ -239,11 +242,14 @@ textarea{
   margin-top: 0px;
   border: 1px solid black;
   list-style-type: none;
-  width: 99px;
+  width: 100px;
+  height: 28px;
   background-color: #f1ecec;
 }
 .ddlist{
-  margin: 10px;
+  // margin: 10px;
+  margin: 0;
+    margin-left: 9px;
 }
 
 .ddlist img{
@@ -258,7 +264,7 @@ textarea{
 
 .radiodiv{
   width:150px;
-  height:130px;
+  height:150px;
   border: 1px solid black;
   align-content: center;
   .content{
@@ -266,18 +272,15 @@ textarea{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 105px;
-    // margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     .radioul{
         .radiolist{
         position: relative;
-        left: -20px;
         list-style-type: none;
         align-items: center;
-        padding: 2px;
+        // padding: 2px;
         display: flex;
-        justify-content: center;
-        align-items: center;
       }
     }
   }
