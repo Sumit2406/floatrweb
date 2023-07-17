@@ -23,8 +23,6 @@
     padding: 0 5px;
     line-height: 50px;
     width: 40px;
-    // border-top-left-radius: 5px;
-    // border-bottom-left-radius: 5px;
 }
 
 .txtinputblock .textinput_box, .txtinputblock .textinput_box:focus {
@@ -89,6 +87,11 @@ border: 1px
     align-items: 'center';
     justify-content: 'center';
     margin-bottom: '1rem';
+    textarea{
+      height: 100px;
+      width: 250px;
+      resize: none;
+    }
 }
 .TextAreaLabel{
     margin-right: '1rem';
@@ -104,7 +107,7 @@ textarea{
     border: '1px solid #ccc';
 }
 
-///// Tabs styling
+// Tabs styling
 
 .tabs-container {
     display: flex;
@@ -144,34 +147,31 @@ textarea{
   //File upload 
 
   .upload-div {
-    // position: relative;
     width: 100px;
     height: 100px;
     background-color: #f0f0f0;
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
     border: 1px solid gray;
-    margin: 10px;
-    div{
-      
+    img{
+      position: relative;
+      left: 35px;
+      margin-top: 8px;
+            }
+    div{      
       display: flex;
       align-items: center;
       flex-direction: column;
+      
+      justify-content: center;
       p{
         font-size: 16px;
-       
       }
     }
   
     .uploaded-image {
-      // position: absolute;
-      // top: 5px;
-      // left: 0;
       width: 50px;
       height: 50px;
       margin-top: 10px;
@@ -180,7 +180,6 @@ textarea{
       z-index: 2;
     }
   }
-  
   .upload-div input[type="file"] {
     display: none;
   }
@@ -255,14 +254,37 @@ textarea{
   right: 0;
 }
 
+// Radio button
 
 .radiodiv{
-  width:150px;
-  height:150px;
+  width:140px;
+  height:130px;
   border: 1px solid black;
+  align-content: center;
+  .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+
+    .radioul{
+        .radiolist{
+        position: relative;
+        left: -20px;
+        list-style-type: none;
+        align-items: center;
+        padding: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+      }
+
+
+  
+ 
 }
 
-.radiolist{
-  list-style-type: none;
-  align-items: center;
-}
+

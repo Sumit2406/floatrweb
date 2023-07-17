@@ -8,6 +8,7 @@ export default function RadioButtons({ radioObj, handleRadio, radioStatus }) {
     
   return (
     <div className="radiodiv">
+      <div className="content">
         <p><b>Select you option</b></p>
       <ul className="radioul">
         {radioObj.map((radioData, index) => {
@@ -28,6 +29,7 @@ export default function RadioButtons({ radioObj, handleRadio, radioStatus }) {
           );
         })}
       </ul>
+      </div>
     </div>
   );
 }
