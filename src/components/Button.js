@@ -4,13 +4,11 @@ import React from 'react'
 export default function Button({btnLabel,rectangualar,btnClick}) {
   return (    
       <button className='btn' 
-    //  style={btnStyle ? btnStyle : null}
-
     style={rectangualar==="true" ? ({
       backgroundColor: 'blue',
       color: 'white',
       fontSize: '16px',
-      width: '10px',
+      width: '100px',
       height: '35px',
     }) 
  : ({

@@ -50,18 +50,9 @@ export default function Description() {
     { value: "option3-Value", label: "option 3" },
   ];
 
-  //Button Componet
-  const buttonStyle = {
-    backgroundColor: "blue",
-    color: "white",
-    fontSize: "16px",
-    borderRadius: "15px",
-    width: "100px",
-    height: "30px",
-    value: { textInput },
-  };
+  //Button Componet 
   const btnHandleClick = () => {
-    // console.log('Button clicked!');
+    console.log('Button clicked!');
   };
 
   //FileUploader Componet
@@ -270,11 +261,7 @@ export default function Description() {
             <div className="rightblock">
               <p className="subtitle">Sample Output</p>
               <div>
-                <Button
-                  btnLabel="Submit"
-                  btnStyle={buttonStyle}
-                  btnClick={btnHandleClick}
-                />
+              <Button btnLabel="Submit" rectangualar="false" btnClick={btnHandleClick}/>
               </div>
             </div>
           </div>

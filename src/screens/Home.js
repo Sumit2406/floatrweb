@@ -131,12 +131,10 @@ demoValueChange={demoValueChange} />
 
 {/* <Button btnLabel="Submit" btnStyle={buttonStyle} btnClick={btnHandleClick}/> */}
 
-<Button btnLabel="Submit" rectangualar="false" btnClick={btnHandleClick}/>
+<Button btnLabel="Submit" rectangualar="true" btnClick={btnHandleClick}/>
+</div> 
 
-</div>
- 
 <TextArea label="Write your feedabck here" value={text} onChange={handleChange} />
-
 
 <DateComponents title="Select Date" handleDateChange={handleDateChange} selectedDate={selectedDate}/>
 
