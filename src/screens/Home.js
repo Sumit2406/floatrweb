@@ -57,15 +57,18 @@ const handleInputChange=(e)=>{
     };
 
     //Button click
-    const buttonStyle = {
-      backgroundColor: 'blue',
-      color: 'white',
-      fontSize: '16px',
-      borderRadius: '15px',
-      width: '100px',
-      height: '30px',
-      value: {textInput}
-    };
+    // const buttonStyle = {
+    //   backgroundColor: 'blue',
+    //   color: 'white',
+    //   fontSize: '16px',
+    //   borderRadius: '15px',
+    //   width: '100px',
+    //   height: '30px',
+    //   value: {textInput}
+    // };
+
+
+
     const btnHandleClick = () => {
       // console.log('Button clicked!');
     };
@@ -126,7 +129,10 @@ const handleInputChange=(e)=>{
 selectedOption={selectedOption}
 demoValueChange={demoValueChange} />
 
-<Button btnLabel="Submit" btnStyle={buttonStyle} btnClick={btnHandleClick}/>
+{/* <Button btnLabel="Submit" btnStyle={buttonStyle} btnClick={btnHandleClick}/> */}
+
+<Button btnLabel="Submit" rectangualar="false" btnClick={btnHandleClick}/>
+
 </div>
  
 <TextArea label="Write your feedabck here" value={text} onChange={handleChange} />
