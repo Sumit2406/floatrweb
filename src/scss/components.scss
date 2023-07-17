@@ -144,17 +144,41 @@ textarea{
   //File upload 
 
   .upload-div {
-    position: relative;
+    // position: relative;
     width: 100px;
     height: 100px;
     background-color: #f0f0f0;
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     border: 1px solid gray;
-    
+    margin: 10px;
+    div{
+      
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      p{
+        font-size: 16px;
+       
+      }
+    }
+  
+    .uploaded-image {
+      // position: absolute;
+      // top: 5px;
+      // left: 0;
+      width: 50px;
+      height: 50px;
+      margin-top: 10px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 2;
+    }
   }
   
   .upload-div input[type="file"] {
@@ -162,21 +186,20 @@ textarea{
   }
    
   
-  .upload-div p {
-    font-size: 16px;
-    margin: 0;
-  }
-  
-  .uploaded-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 2;
-  }
+  // .upload-div p {
+    
+  // }
+
+  // .uploaded-image {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 50px;
+  //   height: 50px;
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   z-index: 2;
+  // }
   
   .chkBox, .chkBox img {
     width: 50px;

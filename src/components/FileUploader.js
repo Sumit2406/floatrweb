@@ -1,5 +1,7 @@
 import React, { useRef,useState} from 'react';
 import uploadicon from "../assets/pngs/Vector.png";
+import "../scss/components.scss"
+
 //
 const FileUploader = ({uploadHandler}) => {
   const fileInputRef = useRef(null);
@@ -24,7 +26,6 @@ const FileUploader = ({uploadHandler}) => {
       className="upload-div"
       style={{ backgroundImage: `url(${uploadedImage})`}}
       onClick={handleDivClick}
-
     >
       <input
         ref={fileInputRef}
@@ -34,8 +35,12 @@ const FileUploader = ({uploadHandler}) => {
       />
       {!uploadedImage && <><img src={uploadicon} alt="uploadicon" />
       <br/>
-      <p><b> Upload Signature </b></p>
-      <p>(.jpeg, .png)</p></>}
+      <div>
+      <p><b> Upload  </b></p>
+      <p><b> Signature </b></p>
+      <p>(.jpeg, .png)</p>
+      </div>
+      </>}
     </div>
   );
 };
