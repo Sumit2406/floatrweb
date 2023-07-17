@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import InputComponent from "../components/InputComponent";
+import InputBox from "../components/InputBox";
 import image1 from "../assets/pngs/User1.png";
 import image2 from "../assets/pngs/User2.png";
 import Checkbox from "../components/Checkbox";
@@ -24,7 +24,7 @@ export default function Description() {
     console.log("Selected value:", selectedValue);
   };
 
-  //InputComponent Component
+  //InputBox Component
   const [textInput, setTextInput] = useState();
   const handleInputChange = (e) => {
     setTextInput(e.target.value);
@@ -127,13 +127,13 @@ export default function Description() {
               </code>
               <p className="subtitle">Imports</p>
               <code>
-                <p>import InputComponent from "../components/InputComponent"</p>
+                <p>import InputBox from "../components/InputBox"</p>
               </code>
             </div>
             <div className="rightblock">
               <p className="subtitle">Sample Output</p>
               <div>
-                <InputComponent
+                <InputBox
                   title="UserName"
                   placeholder="Enter username"
                   prefix="₹"

@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import "../scss/App.scss";
-import InputComponent from '../components/InputComponent';
+import InputBox from '../components/InputBox';
 import image1 from "../assets/pngs/User1.png";
 import image2 from "../assets/pngs/User2.png";
 import Button from '../components/Button';
@@ -90,26 +90,12 @@ const handleInputChange=(e)=>{
     const chkHableClick = () => {
       setIsChecked(!isChecked);
     };
-// console.log(isChecked);    
-
-// Select Option
-// const [selectedOption, setSelectedOption] = useState('');
-// const options = [
-//   { value: 'option1-Value', label: 'Option 1' },
-//   { value: 'option2-Value', label: 'Option 2' },
-//   { value: 'option3-Value', label: 'Option 3' },
-// ];
-// const selecthandleChange = (e) => {
-//   setSelectedOption(e.target.value);
-// };
-
-// console.log(selectedOption);
 
   return (
     <div>
       <h1>Home Page</h1>
       <div style={{width:'50%'}}>
-      <InputComponent
+      <InputBox
         title="UserName"
         placeholder="Enter username"
         prefix="₹"
@@ -128,8 +114,6 @@ const handleInputChange=(e)=>{
       dropDownObj={dropDownObj} 
 selectedOption={selectedOption}
 demoValueChange={demoValueChange} />
-
-{/* <Button btnLabel="Submit" btnStyle={buttonStyle} btnClick={btnHandleClick}/> */}
 
 <Button btnLabel="Submit" rectangualar="true" btnClick={btnHandleClick}/>
 </div> 

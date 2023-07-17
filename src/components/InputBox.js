@@ -1,7 +1,7 @@
 import React from 'react';
 // import "../scss/App.scss";
 // import "../scss/components.scss";
-const InputComponent = ({ title, placeholder, prefix, suffix, image1, image2, inputType,value,handleInputChange }) => {
+const InputBox = ({ title, placeholder, prefix, suffix, image1, image2, inputType,value,handleInputChange }) => {
 
   return (
     <div className='txtinputblock'>
@@ -14,6 +14,7 @@ const InputComponent = ({ title, placeholder, prefix, suffix, image1, image2, in
             <img src={image1} alt="Left Icon" style={{ height: 20, width: 20}} />
           </span>
         }
+
       <input className='textinput_box' type={inputType}  placeholder={placeholder}
       value={value} onChange={handleInputChange}
       />
@@ -31,4 +32,4 @@ const InputComponent = ({ title, placeholder, prefix, suffix, image1, image2, in
   );
 };
 
-export default InputComponent;
+export default InputBox;
