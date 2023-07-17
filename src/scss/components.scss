@@ -257,7 +257,7 @@ textarea{
 // Radio button
 
 .radiodiv{
-  width:140px;
+  width:150px;
   height:130px;
   border: 1px solid black;
   align-content: center;
@@ -266,8 +266,8 @@ textarea{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 15px;
-
+    margin-top: 105px;
+    // margin-bottom: 20px;
     .radioul{
         .radiolist{
         position: relative;
@@ -280,7 +280,7 @@ textarea{
         align-items: center;
       }
     }
-      }
+  }
 
 
   
