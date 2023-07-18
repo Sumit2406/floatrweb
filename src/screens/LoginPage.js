@@ -20,9 +20,9 @@ export default function LoginPage() {
       };
 
   return (
-    <div className='login-main-container'>
-    <div className='login-wrapper contentblock' >
-      <div className="login-left-content"> 
+    <div className='container'>
+    <div className='row' >
+      <div className="col-4"> 
 <h1>Welcome !</h1>
 <p>Login to continue</p>
 <InputBox
@@ -34,7 +34,7 @@ export default function LoginPage() {
                 />
 <Button btnLabel="Login" rectangualar="false" btnClick={btnHandleClick}/>
       </div>
-      <div className="login-right-content">
+      <div className="col-8 logobanner">
       <img src={imageWithLaptop} alt="imageWithLaptop" />
       </div>
     </div>
