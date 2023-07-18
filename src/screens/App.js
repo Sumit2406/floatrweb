@@ -1,14 +1,14 @@
-// import logo from '../assets/svgs/logo.svg';
 import Navigation from '../routers/Navigation';
-// import '../scss/App.scss';
 import Navbar from './Navbar';
-
+import "../scss/App.scss"
 function App() {
   
   return (
-    <div className="App">
+    <div className="container-fluid">
+      <div>
        <Navbar /> 
-      <Navigation />     
+      <Navigation />
+      </div>     
     </div>
   );
 }

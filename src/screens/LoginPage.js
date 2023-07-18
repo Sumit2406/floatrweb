@@ -5,10 +5,7 @@ import imageWithLaptop from '../assets/pngs/imageWithLaptop.png';
 import group1 from '../assets/pngs/group1.png';
 import group2 from '../assets/pngs/group2.png';
 import group3 from '../assets/pngs/group3.png';
-
-
-
-
+import "../scss/components.scss"
 
 export default function LoginPage() {
 //button
@@ -31,7 +28,6 @@ export default function LoginPage() {
 <InputBox
  title="Mobile Number"
  placeholder="Enter Mobile Number"
- prefix="+91"
  input-type="text"
  handleInputChange={handleInputChange}
  value={textInput || ''}

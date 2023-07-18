@@ -2,15 +2,15 @@ import React from 'react'
 import {Link} from "react-router-dom";
 import '../scss/App.scss';
 
-import LogoDark2 from '../assets/svgs/LogoDark2.svg';
+import LogoDark2 from '../assets/pngs/LogoDark2.png';
 import androdicon from '../assets/svgs/google-play.svg';
-import appleicon from '../assets/svgs/apple-logo.svg';
+import appleicon from '../assets/pngs/apple-logo.png';
 
 export default function Navbar() {
   return (
     
-      <header>
-        <div className="mainwrap">
+      <header className="container header">
+        <div className="row header-item">
       <div id='logo'>
       <img src={LogoDark2} alt="Logo Dark 2" />
       </div>
