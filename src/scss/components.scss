@@ -280,3 +280,23 @@ textarea{
   }
 }
 
+
+.login-left-content{
+  width: 40%;
+  height: 500px;
+  
+}
+.login-right-content{
+  width: 60%;
+  height: 500px;
+}
+
+.login-right-content img{
+width: 100%;
+height: 100%;
+}
+
+.login-wrapper{
+  background: #F1F5FF;
+  display: flex;
+}

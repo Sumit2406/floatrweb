@@ -21,7 +21,6 @@ export default function Navigation() {
   <Route path="/career" element={<Carrer /> } /> 
   <Route path="/contact" element={<Contact />} /> 
   <Route path="/description" element={<Description/>}/>
-  
 </Routes>
     </div>
   )

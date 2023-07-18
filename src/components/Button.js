@@ -5,19 +5,24 @@ export default function Button({btnLabel,rectangualar,btnClick}) {
   return (    
       <button className='btn' 
     style={rectangualar==="true" ? ({
-      backgroundColor: 'blue',
+      backgroundColor: '#6f6fb5',
       color: 'white',
       fontSize: '16px',
-      width: '100px',
-      height: '35px',
+      width: '295px',
+      height: '80px',
+      lineHeight: '22px',
+      letterSpacing:'3px'
     }) 
  : ({
-  backgroundColor: 'blue',
+  backgroundColor: '#6f6fb5',
   color: 'white',
   fontSize: '16px',
-  width: '100px',
-  height: '35px',
-  borderRadius: '15px',
+  width: '295px',
+  height: '80px',
+  borderRadius: '20px',
+  lineHeight: '22px',
+  letterSpacing:'3px'
+
 })}
       onClick={btnClick}
       >
