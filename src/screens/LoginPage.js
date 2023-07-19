@@ -26,7 +26,7 @@ export default function LoginPage() {
     setIsButtonDisabled(!mobilePattern.test(inputMobileNumber));
     
       };
-console.log(isButtonDisabled,"Sumit");
+// console.log(isButtonDisabled,"Sumit");
 
   return (
     <div className='container'>
