@@ -1,11 +1,12 @@
 import React from 'react';
 // import "../scss/App.scss";
 // import "../scss/components.scss";
-const InputBox = ({ title, placeholder, prefix, suffix, image1, image2, inputType,value,handleInputChange }) => {
-
+const InputBox = ({ title, placeholder, prefix, suffix, image1, image2, value,handleInputChange,
+  type }) => {
+// console.log(value);
   return (
     <div className='txtinputblock'>
-      <label>{title}</label>
+      <label >{title} </label>
       <div className='textinput'>
       {prefix && <span className="textinput_prefix ">{prefix}</span>}
       {image1 && 
@@ -13,7 +14,7 @@ const InputBox = ({ title, placeholder, prefix, suffix, image1, image2, inputTyp
             <img src={image1} alt="Left Icon" style={{ height: 20, width: 20}} />
           </span>
         }
-      <input className='textinput_box' type={inputType}  placeholder={placeholder}
+      <input className='textinput_box' type={type}  placeholder={placeholder}
       value={value} onChange={handleInputChange}
       />
 

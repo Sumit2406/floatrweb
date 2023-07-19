@@ -10,14 +10,23 @@ import "../scss/components.scss"
 export default function LoginPage() {
 //button
     const btnHandleClick = () => {
-        console.log('Button clicked!');
+        console.log('Mobile number submitted:', mobileNumber);
       };
 //Login
-      const [textInput, setTextInput] = useState();
-      const handleInputChange = (e) => {
-        setTextInput(e.target.value);
-        // console.log(e.target.value);
+      const [mobileNumber, setMobileNumber] = useState('');
+      const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+      const handleInputChange = (event) => {
+        if (isNaN(event.target.value)) {
+          event.target.value= "";
+        }
+        const inputMobileNumber = event.target.value;
+        
+    setMobileNumber(inputMobileNumber);
+    const mobilePattern = /^(\+?91|0)?[6789]\d{9}$/;
+    setIsButtonDisabled(!mobilePattern.test(inputMobileNumber));
+    
       };
+console.log(isButtonDisabled,"Sumit");
 
   return (
     <div className='container'>
@@ -28,11 +37,12 @@ export default function LoginPage() {
 <InputBox
  title="Mobile Number"
  placeholder="Enter Mobile Number"
- input-type="text"
- handleInputChange={handleInputChange}
- value={textInput || ''}
+type="text"
+id="mobile"
+value={mobileNumber}
+handleInputChange={handleInputChange}
                 />
-<Button btnLabel="Login" rectangualar="false" btnClick={btnHandleClick}/>
+<Button btnLabel="Login" rectangualar="false" btnClick={btnHandleClick} disable={!isButtonDisabled}/>
       </div>
       <div className="col-8 logobanner">
       <img src={imageWithLaptop} alt="imageWithLaptop" />

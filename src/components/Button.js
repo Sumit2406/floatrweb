@@ -1,11 +1,11 @@
 import React from 'react'
 // import "../scss/components.scss"
 
-export default function Button({btnLabel,rectangualar,btnClick}) {
+export default function Button({btnLabel,rectangualar,btnClick,disable}) {
   return (    
       <button className='btn' 
     style={rectangualar==="true" ? ({
-      $backgroundColor: 'rgba(110, 121, 133, 0.60)',
+      backgroundColor: disable ? '#3023c2' : 'rgba(110, 121, 133, 0.60)',
       color: 'rgba(255, 255, 255, 0.60)',
       fontSize: '16px',
       width: '200px',
@@ -14,7 +14,7 @@ export default function Button({btnLabel,rectangualar,btnClick}) {
       letterSpacing:'3px'
     }) 
  : ({
-  backgroundColor: 'rgba(110, 121, 133, 0.60)',
+  backgroundColor: disable ? '#3023c2' :'rgba(110, 121, 133, 0.60)',
   color: 'rgba(255, 255, 255, 0.60)',
   fontSize: '16px',
   width: '200px',
@@ -25,6 +25,8 @@ export default function Button({btnLabel,rectangualar,btnClick}) {
 
 })}
       onClick={btnClick}
+      disabled= {disable ? false : true}
+      
       >
         {btnLabel}
         </button>      
