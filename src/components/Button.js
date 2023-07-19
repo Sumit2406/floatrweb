@@ -5,7 +5,7 @@ export default function Button({btnLabel,rectangualar,btnClick,disable}) {
   return (    
       <button className='btn' 
     style={rectangualar==="true" ? ({
-      backgroundColor: disable ? '#3023c2' : 'rgba(110, 121, 133, 0.60)',
+      backgroundColor: disable ? '#43A2FF' : 'rgba(110, 121, 133, 0.60)',
       color: 'rgba(255, 255, 255, 0.60)',
       fontSize: '16px',
       width: '200px',
@@ -14,7 +14,7 @@ export default function Button({btnLabel,rectangualar,btnClick,disable}) {
       letterSpacing:'3px'
     }) 
  : ({
-  backgroundColor: disable ? '#3023c2' :'rgba(110, 121, 133, 0.60)',
+  backgroundColor: disable ? '#43A2FF' :'rgba(110, 121, 133, 0.60)',
   color: 'rgba(255, 255, 255, 0.60)',
   fontSize: '16px',
   width: '200px',
@@ -25,8 +25,7 @@ export default function Button({btnLabel,rectangualar,btnClick,disable}) {
 
 })}
       onClick={btnClick}
-      disabled= {disable ? false : true}
-      
+      disabled= {disable ? false : true} 
       >
         {btnLabel}
         </button>      

@@ -3,7 +3,6 @@ import React from 'react';
 // import "../scss/components.scss";
 const InputBox = ({ title, placeholder, prefix, suffix, image1, image2, value,handleInputChange,
   type }) => {
-// console.log(value);
   return (
     <div className='txtinputblock'>
       <label >{title} </label>
