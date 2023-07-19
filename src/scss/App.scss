@@ -1,13 +1,16 @@
+
+
 // @use "forPartial"; // using partial SCSS file from _forPartial.scss
 @use "sass:math";  // for using math operations
 @import '~bootstrap/scss/bootstrap';
 // .App {
 //   text-align: center;
 // }
+
 body {
   margin: 0;
   padding: 0;
-  font-family: Helvetica, sans-serif;
+  font-family: "ProximaRegular";
   background-color: #F1F5FF;
 }
 
@@ -30,6 +33,8 @@ img {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+//////////////////////////////
 
 .App-header {
   background-color: #282c34;
@@ -54,140 +59,146 @@ img {
     transform: rotate(360deg);
   }
 }
+///
 
-.header {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.mainwrap{
-  width: 80%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	flex-direction:row;
-}
+// .mainwrap{
+//   width: 80%;
+// 	height: 100%;
+// 	display: flex;
+// 	align-items: center;
+// 	flex-wrap: wrap;
+// 	flex-direction:row;
+// }
 
-#logo{
-	height: 74px;
-	width: auto;
-}
-
-.header-item{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#navmenu{
-	display: flex;
-	justify-content: center;
-	width: 65%;
-}
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-    }
+// #navmenu{
+// 	display: flex;
+// 	justify-content: center;
+// 	width: 65%;
+// }
+// nav ul {
+//   list-style-type: none;
+//   margin: 0;
+//   padding: 0;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//     }
 
 
-nav a {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    color: black;
-    font-size: 14px;
-    line-height: 16px;
-  }
+// nav a {
+//     display: inline-block;
+//     text-align: center;
+//     padding: 14px 16px;
+//     text-decoration: none;
+//     color: black;
+//     font-size: 14px;
+//     line-height: 16px;
+//   }
 
-  #navmenu span{
-    padding: 10px 20px;
-    line-height: 100%;
-    color: #fff;
-    cursor: pointer;
-  }
-  
- 
-  #brand-icon{
-      // height: 100%;
-      // width: 15%;
-      display: flex;
-      // align-items: center;
-      justify-content: flex-end;
-    }
+//   #navmenu span{
+//     padding: 10px 20px;
+//     line-height: 100%;
+//     color: #fff;
+//     cursor: pointer;
+//   }
+
+
+// .header {
+//   padding-top: 20px;
+//   padding-bottom: 20px;
+// }
+
+// #logo{
+// 	height: 74px;
+// 	width: auto;
+// }
+
+// .header-item{
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+   
+//   #brand-icon{
+//       display: flex;
+//       justify-content: flex-end;
+//     }
     
-    #brand-icon img{
-      height: 56px;
-      width: auto;
-      cursor: pointer;
-      margin: 0 10px;
-    }
-  .contentblock {
-    display: block;
-    width: 80%;
-    margin: 0 auto;
-  }  
-  .pagetitle {
-    background: rgba(67, 162, 255,0.15);
-    padding: 15px 0;
-  }
-  .pagetitle h1 {
-    font-size: 26px;
-    line-height: 32px;
-    color: #0C121A;
-  }
-h2 {
-  font-size: 20px;
-    line-height: 26px;
-    color: #43A2FF;
-    font-weight: 300;
-    margin: 0;
-    padding: 15px 0;
-}
-ul {
-  margin: 0;
-}
-ul li {
-  font-size: 14px;
-  line-height: 22px;
-}
-p {
-  font-size: 16px;
-  line-height: 18px;
-  margin: 0;
-  color: #0C121A;
-}
-.subtitle {
-  font-weight: bold;
-  padding: 10px 0;
-}
-.subtitle::after {
-  content: '';
-  border-bottom: 2px solid #43A2FF;
-    width: 200px;
-    display: block;
-    margin-top: 2px;
-}
-.masterblock {
-  display: flex;
-}
-.leftblock {
-  flex:1;
-  width: 60%;
-  margin-right: 20px;
-}
-.rightblock {
-  flex:1;
-}
+//     #brand-icon img{
+//       height: 56px;
+//       width: auto;
+//       cursor: pointer;
+//       margin: 0 10px;
+//     }
 
-.compoblock {
-  padding: 25px 0;
-    border-bottom: 1px solid #43A2FF;
-}
+//   .contentblock {
+//     display: block;
+//     width: 80%;
+//     margin: 0 auto;
+//   }  
+
+//   .pagetitle {
+//     background: rgba(67, 162, 255,0.15);
+//     padding: 15px 0;
+//   }
+//   .pagetitle h1 {
+//     font-size: 26px;
+//     line-height: 32px;
+//     color: #0C121A;
+//   }
+// h2 {
+//   font-size: 20px;
+//     line-height: 26px;
+//     color: #43A2FF;
+//     font-weight: 300;
+//     margin: 0;
+//     padding: 15px 0;
+// }
+// ul {
+//   margin: 0;
+// }
+// ul li {
+//   font-size: 14px;
+//   line-height: 22px;
+// }
+// p {
+//   font-size: 16px;
+//   line-height: 18px;
+//   margin: 0;
+//   color: #0C121A;
+// }
+
+
+// .subtitle {
+//   font-weight: bold;
+//   padding: 10px 0;
+// }
+// .subtitle::after {
+//   content: '';
+//   border-bottom: 2px solid #43A2FF;
+//     width: 200px;
+//     display: block;
+//     margin-top: 2px;
+// }
+// .masterblock {
+//   display: flex;
+// }
+// .leftblock {
+//   flex:1;
+//   width: 60%;
+//   margin-right: 20px;
+// }
+// .rightblock {
+//   flex:1;
+// }
+
+// .compoblock {
+//   padding: 25px 0;
+//     border-bottom: 1px solid #43A2FF;
+// }
+
+
+// LoginPage Componet 
 
 .logobanner {
   height: 609px;
@@ -198,19 +209,18 @@ p {
 .pgtitle{
   font-size: 48px;
   line-height: 58px;
-  font-weight: 800px;
+  // font-weight: 800px;
+  font-family: "ProximaExtraBold";
   margin: 0;
   color: #061d33;
 }
 .pgsubtitle {
   font-size: 24px;
   line-height: 29px;
-  font-weight: 400;
+  // font-weight: 400;
+  font-family: "ProximaRegular";
   color: #333333;
 }
-
-
-// LoginPage Component
 
 .login-bottom-content {
   background: #FFF;
@@ -237,7 +247,8 @@ p {
   padding-left: 20px;
   font-size: 24px;
   line-height: 29px;
-  font-weight: 600;
+  // font-weight: 600;
+  font-family: "ProximaBold";
 }
 .bottomImageIcon{
   height: 60px;

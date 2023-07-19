@@ -10,6 +10,7 @@
     line-height: 29px;
     text-align: left;
     display: flex;
+    font-family: "ProximaBold";
     margin-bottom: 20px;
 }
 .txtinputblock .textinput {
@@ -88,7 +89,8 @@
 .TextAreaLabel{
     margin-right: '1rem';
     font-size: '1rem';
-    font-weight: 'bold';
+    // font-weight: 'bold';
+    font-family: "ProximaBold";
 }
 
 textarea{
@@ -119,7 +121,8 @@ textarea{
   .tab-item {
     padding: 10px;
     cursor: pointer;
-    font-weight: bold;
+    // font-weight: bold;
+    font-family: "ProximaBold";
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 0px;
@@ -251,64 +254,8 @@ textarea{
           display: flex;
           align-items: flex-start;
         padding: 2px;
+
       }
     }
   }
 }
-// LoginPage Component
-
-// .login-main-container{
-//   background: #F1F5FF;
-// }
-
-// .login-left-content{
-//   width: 35%;
-//   height: 500px;
-  
-// }
-// .login-right-content{
-//   width: 65%;
-//   height: 450px;
-// }
-
-// .login-right-content img{
-// width: 100%;
-// height: 100%;
-// }
-
-// .login-wrapper{
-//   display: flex;
-// }
-
-// .login-bottom-content {
-//   background: #FFF;
-//   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-//   width: 1140px;
-//   height: 130px;
-//   position: fixed;
-//   bottom: 80px;
-//   margin: 0 auto;
-//   border-radius: 15px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-evenly;
-// }
-
-// .bottom-icons
-// {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .bottom-icons span {
-//   padding-left: 20px;
-//   font-size: 24px;
-//   line-height: 29px;
-//   font-weight: 600;
-// }
-// .bottomImageIcon{
-//   height: 60px;
-//   width: 60px;
-//   display: block;
-// }

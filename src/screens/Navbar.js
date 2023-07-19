@@ -1,6 +1,5 @@
 import React from 'react'
-import {Link} from "react-router-dom";
-import '../scss/App.scss';
+import '../scss/Header.scss';
 
 import LogoDark2 from '../assets/pngs/LogoDark2.png';
 import androdicon from '../assets/svgs/google-play.svg';

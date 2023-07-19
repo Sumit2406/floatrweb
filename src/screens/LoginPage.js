@@ -1,3 +1,4 @@
+import "../scss/App.scss";
 import React, {useState} from 'react'
 import Button from '../components/Button'
 import InputBox from "../components/InputBox"
@@ -5,10 +6,7 @@ import imageWithLaptop from '../assets/pngs/imageWithLaptop.png';
 import group1 from '../assets/pngs/group1.png';
 import group2 from '../assets/pngs/group2.png';
 import group3 from '../assets/pngs/group3.png';
-// import "../scss/components.scss"
 
-
-import "../scss/App.scss";
 
 export default function LoginPage() {
 //button

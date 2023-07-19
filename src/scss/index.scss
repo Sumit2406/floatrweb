@@ -1,3 +1,33 @@
+@font-face { //800
+  font-family: "ProximaExtraBold";
+  src: local("ProximaExtraBold"),
+   url("../assets/fonts/Proxima Nova Extrabold.otf") format("truetype");
+ }
+
+@font-face { //700
+  font-family: "ProximaBold";
+  src: local("ProximaBold"),
+   url("../assets/fonts/Proxima Nova Bold.otf") format("truetype");
+ }
+
+ @font-face { //600
+  font-family: "ProximaSemiBold";
+  src: local("ProximaSemiBold"),
+   url("../assets/fonts/Proxima Nova Semibold.otf") format("truetype");
+ }
+ 
+ @font-face { //400
+  font-family: "ProximaRegular";
+src: local("ProximaRegular"),
+   url("../assets/fonts/Proxima Nova Regular.otf") format("truetype");
+ }
+
+ @font-face { //400
+  font-family: "ProximaLight";
+src: local("ProximaLight"),
+   url("../assets/fonts/Proxima Nova Light.otf") format("truetype");
+ }
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +41,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
