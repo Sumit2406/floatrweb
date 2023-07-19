@@ -5,7 +5,10 @@ import imageWithLaptop from '../assets/pngs/imageWithLaptop.png';
 import group1 from '../assets/pngs/group1.png';
 import group2 from '../assets/pngs/group2.png';
 import group3 from '../assets/pngs/group3.png';
-import "../scss/components.scss"
+// import "../scss/components.scss"
+
+
+import "../scss/App.scss";
 
 export default function LoginPage() {
 //button
@@ -26,7 +29,6 @@ export default function LoginPage() {
     setIsButtonDisabled(!mobilePattern.test(inputMobileNumber));
     
       };
-// console.log(isButtonDisabled,"Sumit");
 
   return (
     <div className='container'>

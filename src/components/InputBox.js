@@ -1,6 +1,5 @@
 import React from 'react';
-// import "../scss/App.scss";
-// import "../scss/components.scss";
+
 const InputBox = ({ title, placeholder, prefix, suffix, image1, image2, value, info, error, handleInputChange,
   type }) => {
   return (
