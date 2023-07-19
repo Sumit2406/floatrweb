@@ -1,7 +1,7 @@
 import React from 'react';
 // import "../scss/App.scss";
 // import "../scss/components.scss";
-const InputBox = ({ title, placeholder, prefix, suffix, image1, image2, value,handleInputChange,
+const InputBox = ({ title, placeholder, prefix, suffix, image1, image2, value, info, error, handleInputChange,
   type }) => {
   return (
     <div className='txtinputblock'>
@@ -24,8 +24,8 @@ const InputBox = ({ title, placeholder, prefix, suffix, image1, image2, value,ha
           </span>
         }
       </div>
-      <p className='infomessage'>This is an important message</p>
-      <p className='errormessage'>Hello Error</p>
+      {info && !error && <span className='infomessage'>This is an important message</span>}
+      <span className='errormessage'>{error}</span>
     </div>
   );
 };

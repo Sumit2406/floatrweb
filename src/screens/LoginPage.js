@@ -32,8 +32,9 @@ export default function LoginPage() {
     <div className='container'>
     <div className='row' >
       <div className="col-4"> 
-<h1>Welcome !</h1>
-<p>Login to continue</p>
+<h1 className='pgtitle'>Welcome !</h1>
+<p className='pgsubtitle'>Login to continue</p>
+<div className='inputwithlbl'>
 <InputBox
  title="Mobile Number"
  placeholder="Enter Mobile Number"
@@ -42,17 +43,23 @@ id="mobile"
 value={mobileNumber}
 handleInputChange={handleInputChange}
                 />
+ </div>
 <Button btnLabel="Login" rectangualar="false" btnClick={btnHandleClick} disable={!isButtonDisabled}/>
       </div>
-      <div className="col-8 logobanner">
-      <img src={imageWithLaptop} alt="imageWithLaptop" />
+      <div className="col-8 position-relative"><div className="logobanner">
+      <img src={imageWithLaptop} alt="imageWithLaptop" /></div>
       </div>
     </div>
           <div className='login-bottom-content'>
-        <div className='bottom-icons'><img src={group1} alt="group1" /><span> Budget & Expense</span></div>
-        <div className='bottom-icons'><img src={group2} alt="group2" /><span>Financial Goals</span> </div>
-        <div className='bottom-icons'><img src={group3} alt="group3" /><span>Investments </span></div>
-          </div>
-          </div>
+        <div className='bottom-icons'>
+         <div className='bottomImageIcon'><img src={group1} alt="group1" /></div> 
+         <span> Budget & Expense</span></div>
+        <div className='bottom-icons'>
+        <div className='bottomImageIcon'><img src={group2} alt="group2" /></div>
+        <span>Financial Goals</span> </div>
+        <div className='bottom-icons'>
+        <div className='bottomImageIcon'><img src={group3} alt="group3" /></div>
+        <span>Investments </span></div>
+      </div></div>  
   )
 }

@@ -249,7 +249,21 @@ p {
 }
 
 .logobanner {
-  height: 709px;
-  position: relative;
+  height: 609px;
+  position: absolute;
+  right: 40px;
   top: -40px;
+}
+.pgtitle{
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 800px;
+  margin: 0;
+  color: #061d33;
+}
+.pgsubtitle {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 400;
+  color: #333333;
 }

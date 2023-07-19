@@ -1,6 +1,8 @@
+//InputBox Component
+
 .txtinputblock {
     height: auto;
-    padding: 10px 0px;
+  
 }
 .txtinputblock label {
     color: #333;
@@ -11,12 +13,14 @@
     margin-bottom: 20px;
 }
 .txtinputblock .textinput {
-    border: 1px solid #000;
-    height: 50px;
+    border: 1px solid #535d69;
+    height: 70px;
     display: flex;
-    background: #FFF;
-    border-radius: 5px;
+    background: transparent;
+    border-radius: 13px;
     overflow: hidden;
+    text-align: left;
+
 }
 .txtinputblock .textinput_prefix, .textinput_suffix {
     background: #EEE;
@@ -29,14 +33,11 @@
 .txtinputblock .textinput_box, .txtinputblock .textinput_box:focus {
     width: 100%;
     border: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    text-align: center;
+    border-radius: 13px;
+  padding: 0 16px;
     
 }
-// .textinput{
-//     background-color: #F00;
-// }
+
 .txtinputblock .errormessage {
     display: inline-flex;
     width: 100%;
@@ -45,7 +46,6 @@
     font-size: 13px;
     line-height: 15px;
     margin: 0;
-    margin-top: 5px;
 }
 .txtinputblock .infomessage {
     display: inline-flex;
@@ -58,9 +58,8 @@
     margin-top: 5px;
 }
 
-.txtinputblock{
-    // border-radius: 5px;
-    margin-top: 30px;
+.inputwithlbl{
+  padding: 50px 0 90px;
 }
 
 
@@ -303,18 +302,20 @@ height: 100%;
   display: flex;
 }
 
-.login-bottom-content{
-  display: inline-block;
-background: #FFF;
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-width: 1000px;
-height: 80px;
-display: flex;
-justify-content: space-evenly;
-position: relative;
-bottom:45px;
-left: 150px;
+.login-bottom-content {
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 1140px;
+  height: 130px;
+  position: fixed;
+  bottom: 80px;
+  margin: 0 auto;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
+
 .bottom-icons
 {
   display: flex;
@@ -322,17 +323,14 @@ left: 150px;
   align-items: center;
 }
 
-.bottom-icons span{
+.bottom-icons span {
   padding-left: 20px;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 600;
 }
-
-.bottom-icons img{
-  height: 70px;
-  width: 70px;
+.bottomImageIcon{
+  height: 60px;
+  width: 60px;
+  display: block;
 }
-
-// .brand-icon, .logo, .navmenu{
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
