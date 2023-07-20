@@ -14,8 +14,6 @@ export default function Button({btnLabel,rectangualar,btnClick,disable}) {
       lineHeight: '22px',
       borderRadius: '20px',
       fontWeight: '700'    
-      
-      
     }) 
  : ({
   backgroundColor: disable ? '#43A2FF' :'#6E7985',
