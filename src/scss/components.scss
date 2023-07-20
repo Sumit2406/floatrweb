@@ -11,14 +11,14 @@
     text-align: left;
     display: flex;
     font-family: "ProximaBold";
-    margin-bottom: 10px;
+    margin-bottom: 0.5555555555555556em;
 }
 .txtinputblock .textinput {
-    border: 1px solid #535d69;
+    border: 0.5555555555555556em solid #535d69;
     height: 2.77em;
     display: flex;
     background: transparent;
-    border-radius: 10px;
+    border-radius: 0.5555555555555556em;
     overflow: hidden;
     text-align: left;
     font-family: "ProximaRegular";
@@ -28,7 +28,7 @@
 }
 .txtinputblock .textinput_prefix, .textinput_suffix {
     background: #EEE;
-    padding: 0 5px;
+    padding: 0 0.27em;
     line-height: 2.77em;
     width: 2.22em;
 }
@@ -36,8 +36,8 @@
 .txtinputblock .textinput_box, .txtinputblock .textinput_box:focus {
     width: 100%;
     border: none;
-    border-radius: 13px;
-  padding: 0 16px;    
+    border-radius: 0.72em;
+  padding: 0 0.8888888888888888em;    
 }
 
 .txtinputblock .errormessage {
@@ -45,7 +45,7 @@
     width: 100%;
     justify-content: flex-end;
     color: #F00;
-    font-size: 14px;
+    font-size: 0.7777777777777778em;
     line-height: 0.88em;
     margin: 0;
     font-family: 'Proxima-Regular';
@@ -55,15 +55,15 @@
     width: 100%;
     justify-content: flex-start;
     color: #00F;
-    font-size: 14px;
+    font-size: 0.7777777777777778em;
     line-height: 0.88em;
     margin: 0;
-    margin-top: 5px;
+    margin-top: 0.2777777777777778em;
     font-family: 'Proxima-Regular';
 }
 
 .inputwithlbl{
-  padding: 50px 0px;
+  padding: 2.7777777777777777em 0em;
 }
 
 .input-demo__prefix,
@@ -72,7 +72,7 @@
 .input-demo_image2,
 .input-demo_image1
 {
-  padding: 10px 8px 10px 8px;
+  padding: 0.55em 0.44em 0.55em 0.44em;
   background-color: whitesmoke;
   border: none;
   height: auto;
@@ -102,7 +102,7 @@ textarea{
     width: '100%';
     height: '8.33em';
     padding: '0.5rem';
-    border-radius: '5px';
+    border-radius: '0.27em';
     border: '1px solid #ccc';
 }
 
@@ -124,18 +124,18 @@ textarea{
   }
   
   .tab-item {
-    padding: 10px;
+    padding: 0.5555555555555556em;
     cursor: pointer;
     // font-weight: bold;
     font-family: "ProximaBold";
     border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 0px;
+    border-radius: 0.27em;
+    margin-right: 0em;
     border: none;
   }
   
   .tab-content {
-    margin-top: 10px;
+    margin-top: 0.5555555555555556em;
   }
   
   .tab-item.active {
@@ -146,7 +146,7 @@ textarea{
   //FileUpload Component
 
   .upload-div {
-    width: 100px;
+    width: 5.555555555555555em;
     height: 5.55em;
     background-color: #f0f0f0;
     background-repeat: no-repeat;
@@ -156,8 +156,8 @@ textarea{
     border: 1px solid gray;
     img{
       position: relative;
-      left: 35px;
-      margin-top: 8px;
+      left: 1.9444444444444444em;
+      margin-top: 0.4444444444444444em;
             }
     div{      
       display: flex;
@@ -166,13 +166,13 @@ textarea{
       
       justify-content: center;
       p{
-        font-size: 16px;
+        font-size: 0.8888888888888888em;
       }
     }
     .uploaded-image {
       width: 2.77em;
       height: 2.77em;
-      margin-top: 10px;
+      margin-top: 0.5555555555555556em;
       background-repeat: no-repeat;
       background-size: cover;
       z-index: 2;
@@ -209,18 +209,18 @@ textarea{
     text-align: center;
   }
   .dropdown p{
-    padding: 5px 5px; 
+    padding: 0.2777777777777778em 0.2777777777777778em; 
     display: flex;
     justify-content: space-between;
     z-index: 1000;
     width: auto;
     height: 1.11em;
-    margin: 0px;
+    margin: 0em;
     text-align: left;
     align-items: center;
   }
 .ddlist li{
-  margin-top: 0px;
+  margin-top: 0em;
   border: 1px solid black;
   list-style-type: none;
   width: 5.55em;
@@ -229,12 +229,12 @@ textarea{
 }
 .ddlist{
   margin: 0;
-    margin-left: 9px;
+    margin-left: 0.5em;
 }
 
 .ddlist img{
   align-items: end;
-  padding-left: 30px;
+  padding-left: 1.6666666666666667em;
   position: absolute;
   right: 0;
 }
@@ -249,16 +249,16 @@ textarea{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 0.2777777777777778em;
+    margin-bottom: 0.2777777777777778em;
     .radioul{
         .radiolist{
           list-style-type: none;
           position: relative;
-          left: -50px;
+          left: -2.7777777777777777em;
           display: flex;
           align-items: flex-start;
-        padding: 2px;
+        padding: 0.1111111111111111em;
 
       }
     }
