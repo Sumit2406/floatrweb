@@ -12,6 +12,7 @@ body {
   padding: 0;
   font-family: "ProximaRegular";
   background-color: #F1F5FF;
+  font-size: 1em;
 }
 
 img {
@@ -201,39 +202,42 @@ img {
 // LoginPage Componet 
 
 .logobanner {
-  height: 609px;
+  height: 735px;
   position: absolute;
   right: 40px;
-  top: -40px;
+  top: 0px;
 }
 .pgtitle{
-  font-size: 48px;
-  line-height: 58px;
-  // font-weight: 800px;
+  font-size: 2em;
+  line-height: 46px;
+  
   font-family: "ProximaExtraBold";
   margin: 0;
   color: #061d33;
 }
 .pgsubtitle {
-  font-size: 24px;
-  line-height: 29px;
-  // font-weight: 400;
+  font-size: 1em;
+  line-height: 22px;
   font-family: "ProximaRegular";
   color: #333333;
 }
 
 .login-bottom-content {
-  background: #FFF;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  width: 1140px;
-  height: 130px;
   position: fixed;
-  bottom: 80px;
-  margin: 0 auto;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  bottom: 60px;
+  left: 0px;
+  width: 100%;
+}
+
+.bottom-block{
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+background: #FFF;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+padding: 25px 0px;
+border-radius: 15px;
 }
 
 .bottom-icons
@@ -244,14 +248,13 @@ img {
 }
 
 .bottom-icons span {
-  padding-left: 20px;
-  font-size: 24px;
-  line-height: 29px;
-  // font-weight: 600;
+  padding-left: 10px;
+  font-size: 1em;
+  line-height: 22px;
   font-family: "ProximaBold";
 }
 .bottomImageIcon{
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   display: block;
 }

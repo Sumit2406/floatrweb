@@ -6,22 +6,25 @@
 }
 .txtinputblock label {
     color: #333;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 1em;
+    line-height: 22px;
     text-align: left;
     display: flex;
     font-family: "ProximaBold";
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .txtinputblock .textinput {
     border: 1px solid #535d69;
-    height: 70px;
+    height: 50px;
     display: flex;
     background: transparent;
-    border-radius: 13px;
+    border-radius: 10px;
     overflow: hidden;
     text-align: left;
-
+    font-family: "ProximaRegular";
+}
+.textinputblock .textinput::placeholder {
+  font-family: "ProximaRegular";
 }
 .txtinputblock .textinput_prefix, .textinput_suffix {
     background: #EEE;
@@ -42,23 +45,25 @@
     width: 100%;
     justify-content: flex-end;
     color: #F00;
-    font-size: 13px;
-    line-height: 15px;
+    font-size: 14px;
+    line-height: 16px;
     margin: 0;
+    font-family: 'Proxima-Regular';
 }
 .txtinputblock .infomessage {
     display: inline-flex;
     width: 100%;
     justify-content: flex-start;
     color: #00F;
-    font-size: 13px;
-    line-height: 15px;
+    font-size: 14px;
+    line-height: 16px;
     margin: 0;
     margin-top: 5px;
+    font-family: 'Proxima-Regular';
 }
 
 .inputwithlbl{
-  padding: 50px 0 90px;
+  padding: 50px 0px;
 }
 
 .input-demo__prefix,
@@ -259,3 +264,4 @@ textarea{
     }
   }
 }
+

@@ -7,24 +7,24 @@ export default function Button({btnLabel,rectangualar,btnClick,disable}) {
     style={rectangualar==="true" ? ({
       backgroundColor: disable ? '#43A2FF' : '#6E7985',
       color: disable ? 'rgba(255, 255, 255, 0.60)': '#FFFFFF',
-      fontSize: '24px',
-      width: '300px',
+      fontSize: '1em',
+      width: '200px',
       letterSpacing:'3px',
-      height: '80px',
+      height: '60px',
       lineHeight: '22px',
-      borderRadius: '20px',
-      fontWeight: '700'    
+      borderRadius: '10px',      
+      
     }) 
  : ({
   backgroundColor: disable ? '#43A2FF' :'#6E7985',
   color : disable? 'rgba(255, 255, 255, 0.60)' : '#FFFFFF',
-  fontSize: '24px',
-  width: '300px',
+  fontSize: '1em',
+  width: '200px',
   letterSpacing:'3px',
-  height: '80px',
+  height: '60px',
   lineHeight: '22px',
-  borderRadius: '20px',
-  fontWeight: '700'    
+  borderRadius: '10px',
+  
 
 })}
       onClick={btnClick}

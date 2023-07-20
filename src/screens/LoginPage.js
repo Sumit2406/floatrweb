@@ -50,7 +50,8 @@ handleInputChange={handleInputChange}
       <img src={imageWithLaptop} alt="imageWithLaptop" /></div>
       </div>
     </div>
-          <div className='login-bottom-content'>
+          <div className='login-bottom-content row'>
+            <div className="col-8 bottom-block">
         <div className='bottom-icons'>
          <div className='bottomImageIcon'><img src={group1} alt="group1" /></div> 
          <span> Budget & Expense</span></div>
@@ -60,6 +61,7 @@ handleInputChange={handleInputChange}
         <div className='bottom-icons'>
         <div className='bottomImageIcon'><img src={group3} alt="group3" /></div>
         <span>Investments </span></div>
+        </div>
       </div></div>  
   )
 }
