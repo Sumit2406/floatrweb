@@ -4,7 +4,6 @@ import Button from "../components/Button";
 import InputBox from "../components/InputBox";
 import LoginPageBanner from '../assets/pngs/LoginPageBanner.png';
 
-
 export default function LoginPage() {
   //button
   const btnHandleClick = () => {
