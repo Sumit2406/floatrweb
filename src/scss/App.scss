@@ -201,85 +201,155 @@ img {
 
 // LoginPage Componet 
 
-.logobanner {
-  height: 36.9em;
-  position: absolute;
-  right: 2.2222222222222223em;
-  top: 0.8333333333333334em;
-}
-.pgtitle{
-  font-size: 2em;
-  line-height: 1.5;
+// .logobanner {
+//   height: 36.9em;
+//   position: absolute;
+//   right: 2.2222222222222223em;
+//   top: 0.8333333333333334em;
+// }
+// .pgtitle{
+//   font-size: 2em;
+//   line-height: 1.5;
   
-  font-family: "ProximaExtraBold";
-  margin: 0;
-  color: #061d33;
-}
-.pgsubtitle {
-  font-size: 1em;
-  line-height: 1.3;
-  font-family: "ProximaRegular";
-  color: #333333;
-}
+//   font-family: "ProximaExtraBold";
+//   margin: 0;
+//   color: #061d33;
+// }
+// .pgsubtitle {
+//   font-size: 1em;
+//   line-height: 1.3;
+//   font-family: "ProximaRegular";
+//   color: #333333;
+// }
 
-.login-bottom-content {
-  position: fixed;
-  bottom: 3.3333333333333335em;
-  left: 0px;
-  width: 100%;
-}
+// .login-bottom-content {
+//   position: fixed;
+//   bottom: 3.3333333333333335em;
+//   left: 0px;
+//   width: 100%;
+// }
 
-.bottom-block{
-margin: 0 auto;
-display: flex;
-align-items: center;
-justify-content: space-evenly;
+// .bottom-block{
+// margin: 0 auto;
+// display: flex;
+// align-items: center;
+// justify-content: space-evenly;
+// background: #FFF;
+// box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+// padding: 1.3888888888888888em 0em;
+// border-radius: 0.8333333333333334em;
+// }
+
+// .bottom-icons
+// {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .bottom-icons span {
+//   padding-left: 0.5555555555555556em;
+//   font-size: 1em;
+//   line-height: 1.3;
+//   font-family: "ProximaBold";
+// }
+// .bottomImageIcon{
+//   height: 2.77em;
+//   width: 2.77em;
+//   display: block;
+// }
+
+// @media only screen and (min-width: 1349px) {
+//   body {
+//     font-size: 16px;
+//   }
+//   .logobanner {
+//     height: 22.7em;
+//     right: 90px;
+//   }
+// }
+
+// @media only screen and (min-width: 1440px) {
+//   body {
+//     font-size: 20px;
+//   }
+// }
+
+// @media only screen and (min-width: 1600px) {
+//   body {
+//     font-size: 22px;
+//   }
+//   .logobanner {
+//     height: 25.9em;
+//   }
+// }
+
+.MainPageContent{
+  width: 1140px;
+  height:636px;
+  border-radius: 20px;
 background: #FFF;
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-padding: 1.3888888888888888em 0em;
-border-radius: 0.8333333333333334em;
+
+}
+.left-LoginPageBanner{
+  width: 450px;
+height: 358px;
+margin-top: 139px;
+margin-bottom: 139px;
+margin-left: 60px;
 }
 
-.bottom-icons
-{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.rightSideLoginContent{
+  width: 410px;
+height: 472px;
+margin-top: 82px;
+margin-bottom: 82px;
+margin-right: 100px;
 }
 
-.bottom-icons span {
-  padding-left: 0.5555555555555556em;
-  font-size: 1em;
-  line-height: 1.3;
-  font-family: "ProximaBold";
-}
-.bottomImageIcon{
-  height: 2.77em;
-  width: 2.77em;
-  display: block;
+.pgtitle{
+  color: #061D33;
+font-family: Proxima Nova;
+font-size: 48px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
 }
 
-@media only screen and (min-width: 1349px) {
-  body {
-    font-size: 16px;
-  }
-  .logobanner {
-    height: 22.7em;
-    right: 90px;
-  }
+.pgsubtitle{
+  color: #333;
+  font-family: Proxima Nova;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.instruction{
+  color: #333;
+font-family: Proxima Nova;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 26px;
+margin-bottom: 16px; 
 }
 
-@media only screen and (min-width: 1440px) {
-  body {
-    font-size: 20px;
-  }
+.instruction span{
+  color: #43A2FF;
+font-family: Proxima Nova;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 26px;
+text-decoration-line: underline;
 }
 
-@media only screen and (min-width: 1600px) {
-  body {
-    font-size: 22px;
-  }
-  .logobanner {
-    height: 25.9em;
-  }
+
+.pgtitle{
+  color: #061D33;
+font-family: Proxima Nova;
+font-size: 48px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
 }
