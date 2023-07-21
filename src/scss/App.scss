@@ -285,10 +285,11 @@ img {
 // }
 
 .MainPageContent{
-  width: 1140px;
+  // width: 1140px;
   height:636px;
   border-radius: 20px;
 background: #FFF;
+// margin: 80px 150px 194px 150px;
 
 }
 .left-LoginPageBanner{
@@ -324,7 +325,7 @@ line-height: normal;
   font-weight: 400;
   line-height: normal;
 }
-.instruction{
+.login-instruction{
   color: #333;
 font-family: Proxima Nova;
 font-size: 20px;
@@ -334,7 +335,7 @@ line-height: 26px;
 margin-bottom: 16px; 
 }
 
-.instruction span{
+.login-instruction span{
   color: #43A2FF;
 font-family: Proxima Nova;
 font-size: 20px;
@@ -353,3 +354,5 @@ font-style: normal;
 font-weight: 800;
 line-height: normal;
 }
+
+
