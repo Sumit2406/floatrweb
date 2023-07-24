@@ -7,31 +7,25 @@ export default function Button({btnLabel,rectangualar,btnClick,disable}) {
     style={rectangualar==="true" ? ({
       backgroundColor: disable ? '#43A2FF' : '#6E7985',
       color: disable ? 'rgba(255, 255, 255, 0.60)': '#FFFFFF',
-      borderRadius: '15px',      
-      width: "410px",
-      height: '70px',
-      letterSpacing:'0.16666666666666666em',
-lineHeight: '22px',
-fontWeight: 700,
-fontSize: '24px',
-display:'flex',
-justifyContent:'center',
-alignItems:'center'
-
+      borderRadius: '0.5rem',      
+      width: "100%",
+      // height: '70px',
+      letterSpacing:'3px',
+lineHeight: '1.5',
+fontSize: '18px',
+fontFamily: 'ProximaBold'
     }) 
  : ({
   backgroundColor: disable ? '#43A2FF' :'#6E7985',
   color : disable? 'rgba(255, 255, 255, 0.60)' : '#FFFFFF',
-  borderRadius: '15px',      
-  width: "410px",
-  letterSpacing:'0.16666666666666666em',
-  height: '70px',
-lineHeight: '22px',
-fontWeight: 700,
-fontSize: '24px',
-display:'flex',
-justifyContent:'center',
-alignItems:'center'
+  borderRadius: '0.5rem',      
+      width: "100%",
+      // height: '70px',
+      letterSpacing:'3px',
+lineHeight: '1.5',
+fontSize: '18px',
+fontFamily: 'ProximaBold'
+
 })}
       onClick={btnClick}
       disabled= {disable ? false : true} 

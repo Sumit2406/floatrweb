@@ -22,6 +22,15 @@ img {
 
 .mainbody {
   width: 100%;
+  height: calc(100vh - 104px);
+  margin-top: 50px;
+}
+.loginBlock{
+  height: 100%;
+  display: flex;
+  align-items: center;
+justify-content: center;
+margin-top: -51px;
 }
 
 .App-logo {
@@ -286,73 +295,56 @@ img {
 
 .MainPageContent{
   // width: 1140px;
-  height:636px;
+  // height:636px;
   border-radius: 20px;
 background: #FFF;
-
-
+padding: 50px 0px;
 }
 .left-LoginPageBanner{
-  width: 450px;
-height: 358px;
-margin-top: 139px;
-margin-bottom: 139px;
-margin-left: 60px;
+//   width: 450px;
+height: 280px;
+// margin-top: 139px;
+// margin-bottom: 139px;
+// margin-left: 60px;
+
 }
 
-.rightSideLoginContent{
-  width: 410px;
-height: 472px;
-margin-top: 82px;
-margin-bottom: 82px;
-margin-right: 100px;
-}
-
-.pgtitle{
-  color: #061D33;
-font-family: Proxima Nova;
-font-size: 48px;
-font-style: normal;
-font-weight: 800;
-line-height: normal;
-}
+// .rightSideLoginContent{
+// //   width: 410px;
+// // height: 472px;
+// // margin-top: 82px;
+// // margin-bottom: 82px;
+// // margin-right: 100px;
+// }
 
 .pgsubtitle{
   color: #333;
-  font-family: Proxima Nova;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  font-family: 'ProximaRegular';
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0;
 }
 .login-instruction{
   color: #333;
-font-family: Proxima Nova;
-font-size: 20px;
-font-style: normal;
-font-weight: 600;
-line-height: 26px;
-margin-bottom: 16px; 
+font-family: 'ProximaSemiBold';
+font-size: 16px;
+line-height: 1.2;
+margin-bottom: 16px;
+span{
+  color: #43A2FF;
+text-decoration-line: underline;
+} 
 }
 
-.login-instruction span{
-  color: #43A2FF;
-font-family: Proxima Nova;
-font-size: 20px;
-font-style: normal;
-font-weight: 600;
-line-height: 26px;
-text-decoration-line: underline;
-}
+
 
 
 .pgtitle{
   color: #061D33;
-font-family: Proxima Nova;
-font-size: 48px;
-font-style: normal;
-font-weight: 800;
-line-height: normal;
+font-family: 'ProximaExtraBold';
+font-size: 36px;
+line-height: 1.5;
+margin: 0px;
 }
 
 

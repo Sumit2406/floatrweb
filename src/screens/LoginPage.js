@@ -24,20 +24,21 @@ export default function LoginPage() {
   };
 
   return (
+    <div className="loginBlock">
     <div className="container">
       <div className="MainPageContent ">
       <div className="row ">
-      <div className="col-6 ">
+      <div className="col-6 d-flex justify-content-center align-self-center">
       <div className="left-LoginPageBanner">
         <img src={LoginPageBanner} alt="LoginPageBanner" />
         </div>
       </div>
 
-      <div className="col-6" >
+      <div className="col-6 align-self-center ">
         <div className="rightSideLoginContent">
       <h1 className="pgtitle">Welcome !</h1>
           <p className="pgsubtitle">Login to continue</p>
-          <div className="inputwithlbl">
+          <div className="inputwithlbl col-7">
             <InputBox
               title="Mobile Number"
               placeholder="Enter Mobile Number"
@@ -47,6 +48,7 @@ export default function LoginPage() {
               handleInputChange={handleInputChange}
             />
           </div>
+          <div className="col-7">
           <p className="login-instruction">By proceeding, you are agreeing to Floatr’s <br/>
 <span>Terms & Conditions </span> & <span>Privacy Policy</span></p>
           <Button
@@ -55,10 +57,12 @@ export default function LoginPage() {
             btnClick={btnHandleClick}
             disable={!isButtonDisabled}
           />
+          </div>
       </div>
       </div>
       </div>
       </div>
+    </div>
     </div>
   );
 }
