@@ -58,42 +58,6 @@ export default function LoginPage() {
       </div>
       </div>
       </div>
-
-
-
-      {/* <div className="row">
-        <div className="MainPageContent">
-        <div className="col-6" >
-        <div className="LoginPageBanner">
-        <img src={LoginPageBanner} alt="LoginPageBanner" />
-        </div>
-        </div>
-        <div className="col-6">
-          <h1 className="pgtitle">Welcome !</h1>
-          <p className="pgsubtitle">Login to continue</p>
-          <div className="inputwithlbl">
-            <InputBox
-              title="Mobile Number"
-              placeholder="Enter Mobile Number"
-              type="text"
-              id="mobile"
-              value={mobileNumber}
-              handleInputChange={handleInputChange}
-            />
-          </div>
-          <Button
-            btnLabel="Login"
-            rectangualar="false"
-            btnClick={btnHandleClick}
-            disable={!isButtonDisabled}
-          />
-        </div>
-
-        {/* <div className="col-8 position-relative"><div className="logobanner">
-      <img src={imageWithLaptop} alt="imageWithLaptop" /></div>
-      </div> */}
-      {/* </div> */}
-      {/* </div> */} 
       </div>
     </div>
   );
