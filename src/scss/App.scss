@@ -102,4 +102,25 @@ line-height: 1.5;
 margin: 0px;
 }
 
+.OTPDesign{
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  justify-content:space-around;
+}
 
+.otp-field {
+  width: 62px;
+  height: 62px;
+  border-radius: 5px;
+  color: #333;
+  font-family: ProximaNormal;
+  font-size: 32px;
+  padding: 14.5px 20.5px;
+  margin-right: 18px;
+}
+.OTPWarning{
+  display: flex;
+  justify-content: space-between;
+}

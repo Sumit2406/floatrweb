@@ -3,11 +3,14 @@ import React, { useState } from "react";
 import Button from "../components/Button";
 import InputBox from "../components/InputBox";
 import LoginPageBanner from '../assets/pngs/LoginPageBanner.png';
+import Otp from "../components/Otp";
 
 export default function LoginPage() {
+  const [otpInput, setOtpInput] =useState(false);
   //button
   const btnHandleClick = () => {
     console.log("Mobile number submitted:", mobileNumber);
+    setOtpInput(true);
   };
   //Login
   const [mobileNumber, setMobileNumber] = useState("");
@@ -39,14 +42,14 @@ export default function LoginPage() {
       <h1 className="pgtitle">Welcome !</h1>
           <p className="pgsubtitle">Login to continue</p>
           <div className="inputwithlbl col-7">
-            <InputBox
+         {otpInput? <Otp/> : <InputBox
               title="Mobile Number"
               placeholder="Enter Mobile Number"
               type="text"
               id="mobile"
               value={mobileNumber}
               handleInputChange={handleInputChange}
-            />
+            /> }   
           </div>
           <div className="col-7">
           <p className="login-instruction">By proceeding, you are agreeing to Floatr’s <br/>
