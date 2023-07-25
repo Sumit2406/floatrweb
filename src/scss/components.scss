@@ -265,3 +265,34 @@ textarea{
   }
 }
 
+.button1{
+// border-radius: '0.5rem';      
+width: 274px;
+letter-spacing:'3px';
+line-height: '1.5';
+font-size: '18px';
+font-family: 'ProximaSemiBold';
+padding: '7px 10px';
+max-height: '42px'
+}
+
+.disable-recatngular1{
+  background-color: #43A2FF;
+  color: #FFF 
+}
+.enable-recatngular1{
+  background-color: rgba(110, 121, 133, 0.60);
+  color: rgba(255, 255, 255, 0.60);
+}
+
+
+.disable-Circular1{
+  background-color: #43A2FF;
+  color: #FFF;
+  border-radius: 0.5rem;
+}
+.enable-Circular1{
+  background-color: rgba(110, 121, 133, 0.60);
+  color: rgba(255, 255, 255, 0.60);
+  border-radius: 0.5rem;
+}

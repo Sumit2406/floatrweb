@@ -1,7 +1,7 @@
 import React from 'react';
 
 const InputBox = ({ title, placeholder, prefix, suffix, image1, image2, value, info, error, handleInputChange,
-  type }) => {
+  type, len }) => {
   return (
     <div className='txtinputblock'>
       {title && <label >{title} </label>}
@@ -13,7 +13,7 @@ const InputBox = ({ title, placeholder, prefix, suffix, image1, image2, value, i
           </span>
         }
       <input className='textinput_box' type={type}  placeholder={placeholder}
-      value={value} onChange={handleInputChange}
+      value={value} onChange={handleInputChange} 
       />
 
       {suffix && <span className="textinput_suffix ">{suffix}</span>}
