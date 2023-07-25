@@ -52,10 +52,10 @@ export default function LoginPage() {
             /> }   
           </div>
           <div className="col-9">
-          {otpInput? <p className="login-Warning ">OTP is valid for 5 minutes <span >Resend OTP</span></p> : 
+          {otpInput? <p className="login-Warning OTPWarning">OTP is valid for 5 minutes <span >Resend OTP</span></p> : 
           <p className="login-instruction">By proceeding, you are agreeing to Floatr’s <br/>
           <span>Terms & Conditions </span> & <span>Privacy Policy</span></p> }
-          <Button
+         <Button
             btnLabel="Get OTP"
             rectangualar="false"
             btnClick={btnHandleClick}

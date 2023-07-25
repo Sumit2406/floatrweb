@@ -3,7 +3,8 @@ import "../scss/App.scss";
 
 export default function Otp() 
 {
-    const [otp, setOtp] = useState(new Array(4).fill(""));
+    const [otp, setOtp] = useState(new Array(4).fill(null));
+    console.log(typeof otp);
 
     const handleChange = (element, index) => {
         if (isNaN(element.value)) 
