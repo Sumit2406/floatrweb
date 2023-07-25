@@ -4,7 +4,7 @@ const InputBox = ({ title, placeholder, prefix, suffix, image1, image2, value, i
   type }) => {
   return (
     <div className='txtinputblock'>
-      <label >{title} </label>
+      {title && <label >{title} </label>}
       <div className='textinput'>
       {prefix && <span className="textinput_prefix ">{prefix}</span>}
       {image1 && 

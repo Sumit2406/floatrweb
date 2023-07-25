@@ -27,8 +27,8 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="loginBlock">
-    <div className="container row align-item-center justify-content-center">
+    <div className="loginBlock container">
+    <div className="row justify-content-center">
       <div className="MainPageContent col-9 ">
       <div className="row ">
       <div className="col-6 d-flex justify-content-center align-self-center">

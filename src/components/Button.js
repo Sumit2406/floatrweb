@@ -13,7 +13,9 @@ export default function Button({btnLabel,rectangualar,btnClick,disable}) {
       letterSpacing:'3px',
 lineHeight: '1.5',
 fontSize: '18px',
-fontFamily: 'ProximaSemiBold'
+fontFamily: 'ProximaSemiBold',
+padding: '7px 10px',
+maxHeight: '42px'
     }) 
  : ({
   backgroundColor: disable ? '#43A2FF' :'#6E7985',
@@ -24,8 +26,9 @@ fontFamily: 'ProximaSemiBold'
       letterSpacing:'3px',
 lineHeight: '1.5',
 fontSize: '18px',
-fontFamily: 'ProximaSemiBold'
-
+fontFamily: 'ProximaSemiBold',
+padding: '7px 10px',
+maxHeight: '42px'
 })}
       onClick={btnClick}
       disabled= {disable ? false : true} 

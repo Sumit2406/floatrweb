@@ -35,8 +35,9 @@
 .txtinputblock .textinput_box, .txtinputblock .textinput_box:focus {
     width: 100%;
     border: none;
-    border-radius: 0.72em;
-  padding: 0 0.8888888888888888em;    
+    border-radius: 0.25em;
+  padding: 0 15px;
+  max-height: 42px;    
 }
 
 .txtinputblock .errormessage {
@@ -62,7 +63,7 @@
 }
 
 .inputwithlbl{
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .input-demo__prefix,

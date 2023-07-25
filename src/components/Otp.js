@@ -16,6 +16,17 @@ export default function Otp()
         }
     };
 
+    const handleKeyDown = (e, index) => {
+        if (e.key === "Backspace" && !otp[index]) {
+          if (index > 0) {
+            const previousInput = e.target.previousSibling;
+            if (e.target.previousSibling) {
+              previousInput.focus();
+            }
+          }
+        }
+      };
+
     return (
             <div className="row">
                 <p>Mobile Number Verification</p>
@@ -32,6 +43,8 @@ export default function Otp()
                                 value={data}
                                 onChange={e => handleChange(e.target, index)}
                                 onFocus={e => e.target.select()}
+                                onKeyDown={(e) => handleKeyDown(e, index)}
+
                             />
                         );
                     })}
