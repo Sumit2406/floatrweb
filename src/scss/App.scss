@@ -118,22 +118,42 @@ margin: 0px;
   justify-content: center;
   align-items: center;
   justify-content:space-around;
+  // margin-top: 25px;
 }
 
 .otp-field {
-    width: 45px;
-    height: 45px;
-    border-radius: 5px;
-    color: #333;
-    font-family: ProximaNormal;
-    font-size: 28px;
-    padding: 9.5px 13.5px;
-    margin-right: 22px;
+  width: 45px;
+  height: 45px;
+  color: #333;
+  font-family: "ProximaRegular";
+  padding: 11.5px 16.5px;
+  margin-right: 23px;
+  border: 1px solid #535d69;
+  background: transparent;
+  border-radius: 0.5555555556em;
 }
 .OTPWarning{
   display: flex;
   justify-content: space-between;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  font-size: 14px;
+}
+.OtpTitle{
+  color: #333;
+  font-size: 1em;
+  line-height: 1.3;
+  text-align: left;
+  display: flex;
+  font-family: "ProximaBold";
+  margin-bottom: 0.5555555556em;
+}
+
+.login-Warning{
+  color: #333;
+    font-family: "ProximaSemiBold";
+    font-size: 16px;
+    line-height: 1.2;
+    margin-top: 25px;
+    span{
+      color: #43A2FF;
+      text-decoration-line: underline;
+    }
 }

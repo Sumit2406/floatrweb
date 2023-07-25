@@ -29,7 +29,7 @@ export default function Otp()
 
     return (
             <div className="row">
-                <p>Mobile Number Verification</p>
+                <p className="OtpTitle">Mobile Number Verification</p>
                 <div className="col-12">
                     <div className="OTPDesign">
                     {otp.map((data, index) => {
@@ -49,7 +49,7 @@ export default function Otp()
                         );
                     })}
 </div>
-<p className="login-instruction OTPWarning">OTP is valid for 5 minutes<span>Resend OTP</span></p>
+{/* <p className="login-instruction OTPWarning">OTP is valid for 5 minutes<span>Resend OTP</span></p> */}
                 </div>
                 
             </div>
