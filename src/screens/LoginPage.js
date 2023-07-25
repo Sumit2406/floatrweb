@@ -28,8 +28,8 @@ export default function LoginPage() {
 
   return (
     <div className="loginBlock">
-    <div className="container">
-      <div className="MainPageContent ">
+    <div className="container row align-item-center justify-content-center">
+      <div className="MainPageContent col-9 ">
       <div className="row ">
       <div className="col-6 d-flex justify-content-center align-self-center">
       <div className="left-LoginPageBanner">
@@ -41,7 +41,7 @@ export default function LoginPage() {
         <div className="rightSideLoginContent">
       <h1 className="pgtitle">Welcome !</h1>
           <p className="pgsubtitle">Login to continue</p>
-          <div className="inputwithlbl col-7">
+          <div className="inputwithlbl col-9">
          {otpInput? <Otp/> : <InputBox
               title="Mobile Number"
               placeholder="Enter Mobile Number"
@@ -51,7 +51,7 @@ export default function LoginPage() {
               handleInputChange={handleInputChange}
             /> }   
           </div>
-          <div className="col-7">
+          <div className="col-9">
           <p className="login-instruction">By proceeding, you are agreeing to Floatr’s <br/>
 <span>Terms & Conditions </span> & <span>Privacy Policy</span></p>
           <Button

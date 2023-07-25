@@ -19,16 +19,22 @@ img {
 }
 
 .mainbody {
-  width: 100%;
-  height: calc(100vh - 104px);
-  margin-top: 50px;
+  // width: 100%;
+  // height: calc(100vh - 104px);
+  // margin-top: 50px;
+  position: relative;
+  height: 100%;
 }
 .loginBlock{
-  height: 100%;
+  // height: 100%;
   display: flex;
-  align-items: center;
+  // align-items: center;
 justify-content: center;
-margin-top: -51px;
+// margin-top: -51px;
+position: absolute;
+top: 104px;
+bottom: 20px;
+width: 100%;
 }
 
 .App-logo {
@@ -70,7 +76,8 @@ margin-top: -51px;
 .MainPageContent{
   border-radius: 20px;
 background: #FFF;
-padding: 50px 0px;
+padding: 50px;
+box-shadow: 1px 1px 15px -4px rgba(0,0,0,0.3);
 }
 .left-LoginPageBanner{
 height: 280px;
@@ -111,16 +118,17 @@ margin: 0px;
 }
 
 .otp-field {
-  width: 62px;
-  height: 62px;
-  border-radius: 5px;
-  color: #333;
-  font-family: ProximaNormal;
-  font-size: 32px;
-  padding: 14.5px 20.5px;
-  margin-right: 18px;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    color: #333;
+    font-family: ProximaNormal;
+    font-size: 28px;
+    padding: 10.5px 15.5px;
+    margin-right: 28px;
 }
 .OTPWarning{
+  
   display: flex;
   justify-content: space-between;
 }
