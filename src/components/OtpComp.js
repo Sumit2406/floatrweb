@@ -1,33 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "../scss/App.scss";
 
-export default function Otp() 
+export default function OtpComp({otp, handleChange, handleKeyDown}) 
 {
-    const [otp, setOtp] = useState(new Array(4).fill(""));
-    
-
-    const handleChange = (element, index) => {
-        if (isNaN(element.value)) 
-        return false;
-
-        setOtp([...otp.map((d, idx) => (idx === index ? element.value : d))]);
-
-        if (element.nextSibling) {
-            element.nextSibling.focus();
-        }
-    };
-
-    const handleKeyDown = (e, index) => {
-        if (e.key === "Backspace" && !otp[index]) {
-          if (index > 0) {
-            const previousInput = e.target.previousSibling;
-            if (e.target.previousSibling) {
-              previousInput.focus();
-            }
-          }
-        }
-      };
-
     return (
             <div className="row">
                 <p className="OtpTitle">Mobile Number Verification</p>
@@ -45,12 +20,10 @@ export default function Otp()
                                 onChange={e => handleChange(e.target, index)}
                                 onFocus={e => e.target.select()}
                                 onKeyDown={(e) => handleKeyDown(e, index)}
-
                             />
                         );
                     })}
 </div>
-{/* <p className="login-instruction OTPWarning">OTP is valid for 5 minutes<span>Resend OTP</span></p> */}
                 </div>
                 
             </div>
