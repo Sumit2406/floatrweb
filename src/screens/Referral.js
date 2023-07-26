@@ -6,13 +6,15 @@ import LoginPageBanner from '../assets/pngs/LoginPageBanner.png';
 
 export default function Referral() {
   
-
   //Login
   const [referralCode, setreferralCode] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [togglestatus, setToggleStatus] =useState(true);
-  const handleInputChange = (e) => {
-console.log(e);
+  const handleInputChange = (event) => {
+    const inputReferralCode = event.target.value;
+    setreferralCode(inputReferralCode);
+    
+    inputReferralCode ? setIsButtonDisabled(false): setIsButtonDisabled(true);
   };
 
   const btnHandleClick = () => {
@@ -33,13 +35,12 @@ console.log(e);
       <div className="col-6 align-self-center ">
         <div className="rightSideLoginContent">
       <h1 className="pgtitle">Have you been reffered?</h1>
-          {/* <p className="pgsubtitle">Enter Referral Code</p> */}
           <div className="inputwithlbl col-9">
          <InputBox
               title="Enter Referral Code"
               placeholder="Enter code if you are referred"
               type="text"
-              id="referrel"
+              id="referralCode"
               value={referralCode}
               handleInputChange={handleInputChange}
             /> 
