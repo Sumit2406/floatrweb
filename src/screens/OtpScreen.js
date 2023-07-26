@@ -3,9 +3,11 @@ import React, { useState } from "react";
 import Button from "../components/Button";
 import LoginPageBanner from '../assets/pngs/LoginPageBanner.png';
 import OtpComp from "../components/OtpComp";
+import { useNavigate } from "react-router-dom";
+
 
 export default function OtpScreen() {
-
+  const navigate =useNavigate()  
     //button
     const btnHandleClick = () => {
       console.log("Button Clicked in OTP")
@@ -48,9 +50,6 @@ export default function OtpScreen() {
         }
       };
 
-
-
-
 return (
 <div className="loginBlock container">
     <div className="row justify-content-center">
@@ -75,7 +74,10 @@ return (
           </div>
           <div className="col-9">
           <div className="login-Warning"><p>OTP is valid for 5 minutes only</p>
-          <div className="OTPWarning"><span >Change Number</span> <span >Resend OTP</span></div>
+          <div className="OTPWarning">
+            <span 
+            onClick={()=>{navigate("/")}}
+            >Change Number</span> <span >Resend OTP</span></div>
           </div>
          <Button
             btnLabel="Login"

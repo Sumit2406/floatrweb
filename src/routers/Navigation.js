@@ -8,6 +8,7 @@ import Carrer from "../screens/Career"
 import Products from "../screens/Products"
 import Description from '../screens/Description';
 import OtpScreen from '../screens/OtpScreen';
+import Referral from '../screens/Referral';
 import "../scss/App.scss"
 
 export default function Navigation() {
@@ -16,6 +17,8 @@ export default function Navigation() {
 <Routes>
   <Route path="/" element={<Home />} /> 
 <Route path='/OtpScreen' element={<OtpScreen/>}/>
+<Route path='/Referral' element={<Referral/>}/>
+
   <Route path="/products" element={<Products />} /> 
   <Route path="/about" element={<About />} /> 
   <Route path="/blogs" element={<Blogs />} /> 

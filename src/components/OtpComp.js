@@ -3,6 +3,7 @@ import "../scss/App.scss";
 
 export default function OtpComp({otp, handleChange, handleKeyDown}) 
 {
+    
     return (
             <div className="row">
                 <p className="OtpTitle">Mobile Number Verification</p>
