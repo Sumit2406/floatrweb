@@ -119,6 +119,11 @@ margin: 0px;
 .OTPWarning{
   display: flex;
   justify-content: space-between;
+  span{
+    color: #43A2FF;
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
 .OtpTitle{
   color: #333;
@@ -135,10 +140,11 @@ margin: 0px;
     font-family: "ProximaSemiBold";
     font-size: 1em;
     line-height: 1.2;
-    margin-top: 25px;
+    margin: 25px 0px;
+    mar
     span{
       color: #43A2FF;
-      text-decoration-line: underline;
+      text-decoration: underline;
       cursor: pointer;
     }
 }

@@ -7,6 +7,7 @@ import Blogs from "../screens/Blogs"
 import Carrer from "../screens/Career"
 import Products from "../screens/Products"
 import Description from '../screens/Description';
+import OtpScreen from '../screens/OtpScreen';
 import "../scss/App.scss"
 
 
@@ -15,12 +16,13 @@ export default function Navigation() {
     <div className='mainbody'>
 <Routes>
   <Route path="/" element={<Home />} /> 
-  <Route path="/products" element={<Products />} /> 
+<Route path='/OtpScreen' element={<OtpScreen/>}/>
+  {/* <Route path="/products" element={<Products />} /> 
   <Route path="/about" element={<About />} /> 
   <Route path="/blogs" element={<Blogs />} /> 
   <Route path="/career" element={<Carrer /> } /> 
   <Route path="/contact" element={<Contact />} /> 
-  <Route path="/description" element={<Description/>}/>
+  <Route path="/description" element={<Description/>}/> */}
 </Routes>
     </div>
   )
