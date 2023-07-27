@@ -13,6 +13,7 @@ const navigate =useNavigate()
 
     navigate("/OtpScreen");
   };
+  
   //Login
   const [mobileNumber, setMobileNumber] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
