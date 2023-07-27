@@ -26,11 +26,6 @@ export default function Referral() {
     <div className="row justify-content-center">
       <div className="MainPageContent col-9 ">
       <div className="row ">
-      <div className="col-6 d-flex justify-content-center align-self-center">
-      <div className="left-LoginPageBanner">
-        <img src={LoginPageBanner} alt="LoginPageBanner" />
-        </div>
-      </div>
 
       <div className="col-6 align-self-center ">
         <div className="rightSideLoginContent">
@@ -62,6 +57,12 @@ export default function Referral() {
           </div>
       </div>
       </div>
+      <div className="col-6 d-flex justify-content-center align-self-center">
+      <div className="left-LoginPageBanner">
+        <img src={LoginPageBanner} alt="LoginPageBanner" />
+        </div>
+      </div>
+
       </div>
       </div>
     </div>
