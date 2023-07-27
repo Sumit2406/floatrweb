@@ -3,42 +3,49 @@ import React, { useState } from "react";
 import Button from "../components/Button";
 import InputBox from "../components/InputBox";
 import LoginPageBanner from '../assets/pngs/LoginPageBanner.png';
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 export default function LoginPage() {
   
-const navigate =useNavigate()  
+// const navigate =useNavigate()  
 
   const btnHandleClick = () => {
-
-    navigate("/OtpScreen");
+    const digitPattern = /^[6789]\d{9}$/;
+    let error;
+    if (!mobileNumber) {
+      error = "Mobile number field cannot be blank";
+    }
+    else if (!digitPattern.test(mobileNumber)) {
+      error= "Mobile number should contain only digits";
+    } 
+    else if (mobileNumber.length !== 10) {
+      error= "Mobile number should be 10 digits long";
+    } 
+    else if (!["6", "7", "8", "9"].includes(mobileNumber.charAt(0))) {
+      error= "Mobile number should start with 6, 7, 8, or 9";
+    }  
+    else {
+      error= "Number Successfully Submitted";
+    }
+    console.log(error);
   };
   
   //Login
   const [mobileNumber, setMobileNumber] = useState("");
-  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-  const handleInputChange = (event) => {
-    if (isNaN(event.target.value)) {
-      event.target.value = "";
-    }
-    const inputMobileNumber = event.target.value;
 
-    setMobileNumber(inputMobileNumber);
-    const mobilePattern = /^(\+?91|0)?[6789]\d{9}$/;
-    setIsButtonDisabled(!mobilePattern.test(inputMobileNumber));
+  
+  const handleInputChange = (event) => {
+    const inputValue = event.target.value;
+    setMobileNumber(inputValue);  
   };
+
+  const isButtonDisabled = mobileNumber === "";
 
   return (
     <div className="loginBlock container">
     <div className="row justify-content-center">
       <div className="MainPageContent col-9 ">
       <div className="row ">
-      <div className="col-6 d-flex justify-content-center align-self-center">
-      <div className="left-LoginPageBanner">
-        <img src={LoginPageBanner} alt="LoginPageBanner" />
-        </div>
-      </div>
-
       <div className="col-6 align-self-center ">
         <div className="rightSideLoginContent">
       <h1 className="pgtitle">Welcome !</h1>
@@ -65,10 +72,16 @@ const navigate =useNavigate()
           </div>
       </div>
       </div>
+      <div className="col-6 d-flex justify-content-center align-self-center">
+      <div className="left-LoginPageBanner">
+        <img src={LoginPageBanner} alt="LoginPageBanner" />
+        </div>
+      </div>
       </div>
       </div>
     </div>
     </div>
   );
 }
+
 
