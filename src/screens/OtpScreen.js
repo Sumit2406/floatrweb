@@ -4,7 +4,7 @@ import Button from "../components/Button";
 import LoginPageBanner from '../assets/pngs/LoginPageBanner.png';
 import OtpComp from "../components/OtpComp";
 import { useNavigate } from "react-router-dom";
-
+import InputBox from "../components/InputBox";
 
 export default function OtpScreen() {
   const navigate =useNavigate()  
@@ -14,7 +14,14 @@ export default function OtpScreen() {
     };
     //Login
   
-    // const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+    const [mobileNumber, setMobileNumber] = useState("");
+
+  
+  const handleInputChange = (event) => {
+    const inputValue = event.target.value;
+    setMobileNumber(inputValue);  
+  };
+
     let isButtonDisabled=true;
 
     const [otp, setOtp] = useState(new Array(4).fill(""));
@@ -59,6 +66,17 @@ return (
         <div className="rightSideLoginContent">
       <h1 className="pgtitle">Welcome !</h1>
           <p className="pgsubtitle">Login to continue</p>
+          <div className="inputwithlbl col-9">
+         <InputBox
+              // title="Mobile Number"
+              placeholder="Enter Mobile Number"
+              type="text"
+              id="mobile"
+              value={mobileNumber}
+              handleInputChange={handleInputChange}
+            /> 
+          </div>
+
           <div className="inputwithlbl col-9">
          <OtpComp 
          otp={otp}

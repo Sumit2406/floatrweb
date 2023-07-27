@@ -14,6 +14,7 @@
 }
 .txtinputblock .textinput {
     border: 1px solid #535d69;
+    // border-bottom: 1px solid #535d69;
     height: 2.77em;
     display: flex;
     background: transparent;
@@ -297,4 +298,49 @@ border: none;
   background-color: rgba(110, 121, 133, 0.60);
   color: rgba(255, 255, 255, 0.60);
   border-radius: 0.5rem;
+}
+
+
+// OTPComp
+
+.OTPDesign{
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  justify-content:space-around;
+}
+
+.otp-field {
+  width: 45px;
+  height: 45px;
+  color: #333;
+  font-family: "ProximaRegular";
+  padding: 11.5px 16.5px;
+  margin-right: 23px;
+  // border: 1px solid #535d69;
+  background: transparent;
+  // border-radius: 0.5555555556em;
+  border: none;
+  border-bottom: 1px solid #535d69;
+  
+}
+.OTPWarning{
+  display: flex;
+  justify-content: space-between;
+  span{
+    color: #43A2FF;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+.OtpTitle{
+  color: #333;
+  font-size: 1em;
+  line-height: 1.3;
+  text-align: left;
+  display: flex;
+  font-family: "ProximaBold";
+  margin-bottom: 0.5555555556em;
+  margin-top: -18px;
 }
