@@ -1,1 +1,2 @@
-// export const OTP_SUCCESS = "OTP_SUCCESS";
+export const OTP_SUCCESS = "OTP_SUCCESS";
+export const LOGOUT_SUCCESS="LOGOUT_SUCCESS"

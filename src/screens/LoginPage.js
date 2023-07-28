@@ -3,19 +3,30 @@ import React, { useState } from "react";
 import Button from "../components/Button";
 import InputBoxLowerBarder from "../components/InputBoxLowerBarder";
 import LoginPageBanner from '../assets/pngs/LoginPageBanner.png';
-// import { useNavigate } from "react-router-dom";
+import { loginPersonal } from "../actions/UserAction";
+// import axiosInstance from "../helpers/axiosInstance";
+
+// import { Navigate } from "react-router-dom";
 
 export default function LoginPage() {
   const [mobileNumber, setMobileNumber] = useState("");
   const [error, setError] = useState("");
 
-// const navigate =useNavigate()  
+  const onLogin = async (userinfo) => {
+    const { data, error } = await loginPersonal(userinfo);
+    console.log(data);
+    if (!error) {
+      // sendAnalytics("act_enter_phone_number");
+      // navigation.navigate("VerifyOTP", {
+      //   contact: data?.contact,
+      // });
+      // dispatch(otpSuccess(data));
+    } else {
+      // showToastMessage(data?.message, "fail");
+    }
+  };
 
   const btnHandleClick = () => {
-    // if (!mobileNumber) {
-    //   setError("Mobile number field cannot be blank");
-    // } 
-    // else 
     if (mobileNumber.length !== 10) {
       setError("Mobile number should be 10 digits long");
     } 
@@ -24,6 +35,7 @@ export default function LoginPage() {
     } 
     else {
       setError("Number Successfully Submitted");
+      onLogin({contact : mobileNumber});
     } 
     // if(mobileNumber.length===10)
     // {
