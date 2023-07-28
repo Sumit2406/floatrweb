@@ -112,7 +112,7 @@ margin: 0px;
     }
 }
 
-.togglecontainer{
+.togglecontainer{ 
   display: flex;
 justify-content: space-between;
 }
@@ -142,4 +142,13 @@ justify-content: space-between;
   height: 20px;
   border-radius: 15px;
   background-color: rgba(110, 121, 133, 0.60);
+}
+
+.Termscondition{
+  display: flex;
+}
+.Termscondition Checkbox{
+  height: 1em ;
+  width: 1em;
+  margin-right: 10px;
 }

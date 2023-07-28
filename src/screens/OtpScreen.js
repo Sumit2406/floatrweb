@@ -4,7 +4,8 @@ import Button from "../components/Button";
 import LoginPageBanner from '../assets/pngs/LoginPageBanner.png';
 import OtpComp from "../components/OtpComp";
 import { useNavigate } from "react-router-dom";
-import InputBox from "../components/InputBox";
+import InputBoxLowerBarder from "../components/InputBoxLowerBarder";
+
 
 export default function OtpScreen() {
   const navigate =useNavigate()  
@@ -12,21 +13,17 @@ export default function OtpScreen() {
     const btnHandleClick = () => {
       console.log("Button Clicked in OTP")
     };
+    
     //Login
   
-    const [mobileNumber, setMobileNumber] = useState("");
-
-  
+    const [mobileNumber, setMobileNumber] = useState("");  
   const handleInputChange = (event) => {
     const inputValue = event.target.value;
     setMobileNumber(inputValue);  
   };
 
     let isButtonDisabled=true;
-
     const [otp, setOtp] = useState(new Array(4).fill(""));
-
-
     if(otp.every((digit) => digit !== ""))
     {
       console.log("soham")
@@ -42,10 +39,7 @@ export default function OtpScreen() {
         if (element.nextSibling) {
             element.nextSibling.focus();
         }
-
-       
     };
-
     const handleKeyDown = (e, index) => {
         if (e.key === "Backspace" && !otp[index]) {
           if (index > 0) {
@@ -67,8 +61,8 @@ return (
       <h1 className="pgtitle">Welcome !</h1>
           <p className="pgsubtitle">Login to continue</p>
           <div className="inputwithlbl col-9">
-         <InputBox
-              // title="Mobile Number"
+         <InputBoxLowerBarder
+                // title="Mobile Number"
               placeholder="Enter Mobile Number"
               type="text"
               id="mobile"
@@ -91,12 +85,13 @@ return (
             onClick={()=>{navigate("/")}}
             >Change Number</span> <span >Resend OTP</span></div>
           </div>
-         <Button
+          <Button
             btnLabel="Login"
             rectangualar="false"
             btnClick={btnHandleClick}
             disable={!isButtonDisabled}
           />
+
           </div>
       </div>
       </div>

@@ -1,7 +1,7 @@
 import "../scss/App.scss";
 import React, { useState } from "react";
 import Button from "../components/Button";
-import InputBox from "../components/InputBox";
+import InputBoxLowerBarder from "../components/InputBoxLowerBarder";
 import LoginPageBanner from '../assets/pngs/LoginPageBanner.png';
 
 export default function Referral() {
@@ -31,7 +31,7 @@ export default function Referral() {
         <div className="rightSideLoginContent">
       <h1 className="pgtitle">Have you been reffered?</h1>
           <div className="inputwithlbl col-9">
-         <InputBox
+         <InputBoxLowerBarder
               title="Enter Referral Code"
               placeholder="Enter code if you are referred"
               type="text"

@@ -49,7 +49,7 @@
     font-size: 0.7777777777777778em;
     line-height: 0.88em;
     margin: 0;
-    font-family: 'Proxima-Regular';
+    font-family: 'ProximaRegular';
 }
 .txtinputblock .infomessage {
     display: inline-flex;
@@ -77,6 +77,19 @@
   background-color: whitesmoke;
   border: none;
   height: auto;
+}
+
+
+.txtinputblock .textinputlowerborder {
+  border-bottom: 1px solid #535d69;
+  // border-bottom: 1px solid #535d69;
+  height: 2.77em;
+  display: flex;
+  background: transparent;
+  // border-radius: 0.5555555555555556em;
+  overflow: hidden;
+  text-align: left;
+  font-family: "ProximaRegular";
 }
 
 // TextArea Component

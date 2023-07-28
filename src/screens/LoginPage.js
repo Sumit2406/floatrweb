@@ -1,44 +1,46 @@
 import "../scss/App.scss";
 import React, { useState } from "react";
 import Button from "../components/Button";
-import InputBox from "../components/InputBox";
+import InputBoxLowerBarder from "../components/InputBoxLowerBarder";
 import LoginPageBanner from '../assets/pngs/LoginPageBanner.png';
 // import { useNavigate } from "react-router-dom";
 
 export default function LoginPage() {
-  
+  const [mobileNumber, setMobileNumber] = useState("");
+  const [error, setError] = useState("");
+
 // const navigate =useNavigate()  
 
   const btnHandleClick = () => {
-    const digitPattern = /^[6789]\d{9}$/;
-    let error;
-    if (!mobileNumber) {
-      error = "Mobile number field cannot be blank";
-    }
-    else if (!digitPattern.test(mobileNumber)) {
-      error= "Mobile number should contain only digits";
+    // if (!mobileNumber) {
+    //   setError("Mobile number field cannot be blank");
+    // } 
+    // else 
+    if (mobileNumber.length !== 10) {
+      setError("Mobile number should be 10 digits long");
     } 
-    else if (mobileNumber.length !== 10) {
-      error= "Mobile number should be 10 digits long";
+    else if (!/^[6789]\d{9}$/.test(mobileNumber)) {
+      setError("Mobile number should start with 6, 7, 8, or 9");
     } 
-    else if (!["6", "7", "8", "9"].includes(mobileNumber.charAt(0))) {
-      error= "Mobile number should start with 6, 7, 8, or 9";
-    }  
     else {
-      error= "Number Successfully Submitted";
-    }
-    console.log(error);
-  };
+      setError("Number Successfully Submitted");
+    } 
+    // if(mobileNumber.length===10)
+    // {
+    //   navigate('/OtpScreen')
+    // }
+   };
   
   //Login
-  const [mobileNumber, setMobileNumber] = useState("");
 
   
   const handleInputChange = (event) => {
     const inputValue = event.target.value;
+    if (isNaN(inputValue)) 
+        return false;
     setMobileNumber(inputValue);  
   };
-
+  
   const isButtonDisabled = mobileNumber === "";
 
   return (
@@ -51,15 +53,19 @@ export default function LoginPage() {
       <h1 className="pgtitle">Welcome !</h1>
           <p className="pgsubtitle">Login to continue</p>
           <div className="inputwithlbl col-9">
-         <InputBox
+         <InputBoxLowerBarder
               title="Mobile Number"
               placeholder="Enter Mobile Number"
               type="text"
               id="mobile"
               value={mobileNumber}
               handleInputChange={handleInputChange}
+              len={10}
+              error={error}
             /> 
           </div>
+
+
           <div className="col-9"> 
           <p className="login-instruction">By proceeding, you are agreeing to Floatr’s <br/>
           <span>Terms & Conditions </span> & <span>Privacy Policy</span></p>
