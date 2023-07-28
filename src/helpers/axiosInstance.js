@@ -7,9 +7,9 @@ import { SERVERURL } from  "../config"
 // import { customToast } from '../utills/commonFunctions';
 import rateLimit from 'axios-rate-limit';
 // import I18n from 'react-native-i18n';
-// import { userLogoutSuccess } from "../actions/UserAction";
+import { userLogoutSuccess } from "../actions/UserAction";
 
-// import {store} from "../configureStore"
+import {store} from "../configureStore"
 
 
 
@@ -22,7 +22,7 @@ const headers = {
 
 // let start;
 // const getToken = async () => {
-//     const tokenObj = await AsyncStorage.getItem('usercrendentials').then((value) => {
+//     const tokenObj = await localStorage.getItem('usercrendentials').then((value) => {
 //         const res = JSON.parse(value);
 //         return res;
 //     });
@@ -49,14 +49,14 @@ axiosInstance.interceptors.request.use(
         // const token = await getToken();
         // const netStatus = await NetInfo.fetch();
         // if (netStatus.isConnected) {
-        //     if (token) {
-        //         // console.log('get token=== ',token)
-        //         config.headers.Authorization = `${token}`;
-        //     }
-        //     if (config.customheader) {
-        //         config.headers = Object.assign(config.headers, config.customheader);
-        //     }
-        //     start = new Date().getTime();
+            // if (token) {
+            //     // console.log('get token=== ',token)
+            //     config.headers.Authorization = `${token}`;
+            // }
+            if (config.customheader) {
+                config.headers = Object.assign(config.headers, config.customheader);
+            }
+            // start = new Date().getTime();
              return config;
         // }
         // const msg = I18n.t('INFO_NO_NETWORK_AVAILABLE');
@@ -89,11 +89,11 @@ axiosInstance.interceptors.response.use(
                 reject(error);
             });
         }else if(error.response.status === 403){
-            // const {dispatch} = store;
-            // setTimeout(async () => {
-            //     // await AsyncStorage.removeItem("usercrendentials");
-            //     dispatch(userLogoutSuccess())
-            //   }, 3000);
+            const {dispatch} = store;
+            setTimeout(async () => {
+                await localStorage.removeItem("usercrendentials");
+                dispatch(userLogoutSuccess())
+              }, 3000);
               return new Promise((resolve, reject) => {
                 reject(error);
             });

@@ -19,7 +19,8 @@ import {
   };
 
 
-  export function otpSuccess(payload) {
+  export function otpSuccess(payload) {console.log(payload, 'Reducer Payload')
+
     return {
       type: OTP_SUCCESS,
       payload,

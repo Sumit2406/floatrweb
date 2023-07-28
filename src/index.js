@@ -8,15 +8,18 @@ import './assets/fonts/Proxima Nova Extrabold.otf';
 import './assets/fonts/Proxima Nova Light.otf';
 import './assets/fonts/Proxima Nova Regular.otf';
 import './assets/fonts/Proxima Nova Semibold.otf';
+import { Provider } from 'react-redux';
+import { store } from './configureStore';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <BrowserRouter>
     <App />
     </BrowserRouter>
-  </React.StrictMode>
+    </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

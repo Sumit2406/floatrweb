@@ -1,14 +1,14 @@
-// import { combineReducers } from "redux";
+import { combineReducers } from "redux";
+import userReducer from "./userReducer";
 
-// const appReducer = combineReducers({
-//   userReducer
-// });
+const appReducer = combineReducers({
+  userReducer
+});
 
 
-// export default function rootReducer(state, action) {
+export default function rootReducer(state, action) {
 //   if (action.type === LOGOUT_SUCCESS) {
 //     return appReducer(undefined, action);
 //   }
-
-//   return appReducer(state, action);
-// }
+  return appReducer(state, action);
+}

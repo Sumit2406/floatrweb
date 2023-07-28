@@ -3,12 +3,18 @@ import React, { useState } from "react";
 import Button from "../components/Button";
 import InputBoxLowerBarder from "../components/InputBoxLowerBarder";
 import LoginPageBanner from '../assets/pngs/LoginPageBanner.png';
-import { loginPersonal } from "../actions/UserAction";
+import { loginPersonal, otpSuccess } from "../actions/UserAction";
+import { useDispatch, useSelector } from "react-redux";
 // import axiosInstance from "../helpers/axiosInstance";
 
 // import { Navigate } from "react-router-dom";
 
 export default function LoginPage() {
+  const dispatch = useDispatch();
+ 
+  const loginReducer = useSelector((state) => state.userReducer)
+  // const {loginReducer} = useSelector((state) => state.userReducer)
+ 
   const [mobileNumber, setMobileNumber] = useState("");
   const [error, setError] = useState("");
 
@@ -20,7 +26,8 @@ export default function LoginPage() {
       // navigation.navigate("VerifyOTP", {
       //   contact: data?.contact,
       // });
-      // dispatch(otpSuccess(data));
+      dispatch(otpSuccess(data));
+      console.log( 'loginReducer.... iiiii',loginReducer)
     } else {
       // showToastMessage(data?.message, "fail");
     }
@@ -58,8 +65,8 @@ export default function LoginPage() {
   return (
     <div className="loginBlock container">
     <div className="row justify-content-center">
-      <div className="MainPageContent col-9 ">
-      <div className="row ">
+      {/* <div className="MainPageContent col-9 ">
+      <div className="row "> */}
       <div className="col-6 align-self-center ">
         <div className="rightSideLoginContent">
       <h1 className="pgtitle">Welcome !</h1>
@@ -76,8 +83,6 @@ export default function LoginPage() {
               error={error}
             /> 
           </div>
-
-
           <div className="col-9"> 
           <p className="login-instruction">By proceeding, you are agreeing to Floatr’s <br/>
           <span>Terms & Conditions </span> & <span>Privacy Policy</span></p>
@@ -95,8 +100,8 @@ export default function LoginPage() {
         <img src={LoginPageBanner} alt="LoginPageBanner" />
         </div>
       </div>
-      </div>
-      </div>
+      {/* </div>
+      </div> */}
     </div>
     </div>
   );
