@@ -1,8 +1,10 @@
 import "../scss/App.scss";
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Button from "../components/Button";
 import InputBoxLowerBarder from "../components/InputBoxLowerBarder";
 import LoginPageBanner from '../assets/pngs/LoginPageBanner.png';
+import ToggleButton from "../components/ToggleButton";
+
 
 export default function Referral() {
   
@@ -20,6 +22,10 @@ export default function Referral() {
   const btnHandleClick = () => {
     console.log("clicked by Referral page")
   };
+
+  const handleToggle=(event)=>{
+    setToggleStatus(!togglestatus);
+  }
 
   return (
     <div className="loginBlock container">
@@ -41,13 +47,12 @@ export default function Referral() {
             /> 
           </div>
           <div className="col-9">
-            <div className="togglecontainer">
-          <p className="login-instruction">I don't have a Referral Code</p>
-          
-          <div className={togglestatus? 'toggle' : 'toggle-disable'} onClick={()=> setToggleStatus(!togglestatus)}>
-            <div className={togglestatus? 'toggle-circle' : 'toggle-circle-disable'} onClick={()=> setToggleStatus(!togglestatus)}></div>
-          </div>
-          </div> 
+            
+<ToggleButton 
+title="I don't have a Referral Code"
+handleToggle={handleToggle}
+togglestatus={togglestatus}
+ />
          <Button
             btnLabel="Submit"
             rectangualar="false"

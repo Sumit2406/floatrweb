@@ -19,14 +19,16 @@ export default function OtpScreen() {
     const [mobileNumber, setMobileNumber] = useState("");  
   const handleInputChange = (event) => {
     const inputValue = event.target.value;
-    setMobileNumber(inputValue);  
+    if (isNaN(inputValue)) 
+        return false;
+    setMobileNumber(inputValue); 
   };
 
     let isButtonDisabled=true;
     const [otp, setOtp] = useState(new Array(4).fill(""));
     if(otp.every((digit) => digit !== ""))
     {
-      console.log("soham")
+
       isButtonDisabled=false
     }else{
       isButtonDisabled=true;
@@ -62,17 +64,19 @@ return (
           <p className="pgsubtitle">Login to continue</p>
           <div className="inputwithlbl col-9">
          <InputBoxLowerBarder
-                // title="Mobile Number"
+                title="Mobile Number"
               placeholder="Enter Mobile Number"
               type="text"
               id="mobile"
               value={mobileNumber}
               handleInputChange={handleInputChange}
+              len={10}
             /> 
           </div>
 
           <div className="inputwithlbl col-9">
          <OtpComp 
+         title="Enter OTP"
          otp={otp}
          handleChange={handleChange}
          handleKeyDown={handleKeyDown}

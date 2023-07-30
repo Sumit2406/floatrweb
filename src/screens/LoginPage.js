@@ -58,6 +58,7 @@ export default function LoginPage() {
     if (isNaN(inputValue)) 
         return false;
     setMobileNumber(inputValue);  
+    setError("");
   };
   
   const isButtonDisabled = mobileNumber === "";
@@ -65,8 +66,8 @@ export default function LoginPage() {
   return (
     <div className="loginBlock container">
     <div className="row justify-content-center">
-      {/* <div className="MainPageContent col-9 ">
-      <div className="row "> */}
+      <div className="MainPageContent col-9 ">
+      <div className="row ">
       <div className="col-6 align-self-center ">
         <div className="rightSideLoginContent">
       <h1 className="pgtitle">Welcome !</h1>
@@ -100,8 +101,8 @@ export default function LoginPage() {
         <img src={LoginPageBanner} alt="LoginPageBanner" />
         </div>
       </div>
-      {/* </div>
-      </div> */}
+      </div>
+      </div>
     </div>
     </div>
   );

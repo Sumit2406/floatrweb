@@ -2,12 +2,12 @@ import React from "react";
 // import "../scss/App.scss";
 import "../scss/components.scss";
 
-export default function OtpComp({otp, handleChange, handleKeyDown}) 
+export default function OtpComp({otp, handleChange, handleKeyDown,title}) 
 {
     
     return (
             <div className="row">
-                <p className="OtpTitle">Enter OTP</p>
+                <p className="OtpTitle">{title}</p>
                 <div className="col-12">
                     <div className="OTPDesign">
                     {otp.map((data, index) => {
