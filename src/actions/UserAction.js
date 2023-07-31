@@ -53,7 +53,6 @@ import {
   }
   };
 
-
   export function userLogoutSuccess(payload) {
     return {
       type: LOGOUT_SUCCESS,

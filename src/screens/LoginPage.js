@@ -80,10 +80,10 @@ export default function LoginPage() {
     const verifyapi = await verifyOtp(data)
     if(verifyapi && verifyapi.error){
       alert(verifyapi?.data)
-    }else{
-     
     }
-
+    else{     
+    
+    }
   };
 
   const handleChange = (element, index) => {
