@@ -17,15 +17,42 @@ import {
       return { error: true, data: error?.response?.data?.message };
     }
   };
-
+  
 
   export function otpSuccess(payload) {console.log(payload, 'Reducer Payload')
-
     return {
       type: OTP_SUCCESS,
       payload,
     };
   }
+
+
+
+  export const resendOtp = async (params) => {
+    try {
+    const { data } = await axiosInstance.put("user/personal/otp", params);
+    console.log('resendOtp',data)
+    return { error: false, data };
+  } catch (error) {
+    console.log("error in resendOtp", error);
+  //   customToast(error?.response?.data?.message, "error");
+    return { error: true, data: error?.response?.data?.message };
+  }
+  };
+//
+  export const verifyOtp = async (params) => {
+    try {
+      console.log(params.contact);
+    const { data } = await axiosInstance.put("user/personal/register/otp", params);
+    console.log('verifyOtp',data)
+    return { error: false, data };
+  } catch (error) {
+    console.log("error in resendOtp", error);
+    // customToast(error?.response?.data?.message, "error");
+    return { error: true, data: error?.response?.data?.message };
+  }
+  };
+
 
   export function userLogoutSuccess(payload) {
     return {

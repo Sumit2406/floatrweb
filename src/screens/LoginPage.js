@@ -6,7 +6,7 @@ import OtpComp from "../components/OtpComp";
 import InputBoxLowerBarder from "../components/InputBoxLowerBarder";
 // import {useNavigate} from "react-router-dom"
 
-import { loginPersonal, otpSuccess } from "../actions/UserAction";
+import { loginPersonal, otpSuccess, resendOtp,verifyOtp } from "../actions/UserAction";
 import { useDispatch, useSelector } from "react-redux";
 
 
@@ -22,7 +22,7 @@ export default function LoginPage() {
 
   const onLogin = async (userinfo) => {
     const { data, error } = await loginPersonal(userinfo);
-    // console.log(data,'api sucesss',error);
+    console.log(data,'api sucesss',error);
     if (!error) {
       // sendAnalytics("act_enter_phone_number");
       // navigationx`.navigate("VerifyOTP", {
@@ -31,13 +31,12 @@ export default function LoginPage() {
       dispatch(otpSuccess(data));
       setOtpStatus(true);
       setloginbtnstatus(false);
-      // console.log("loginReducer.... iiiii", loginReducer);
+      console.log("loginReducer.... iiiii", loginReducer);
     } else {
       // showToastMessage(data?.message, "fail");
     }
   };
 
- 
 
   //button
   const numBtnHandleClick = () => {
@@ -49,12 +48,7 @@ export default function LoginPage() {
       
     } else {
       onLogin({ contact: mobileNumber });
-
-   
-      
     }
-
-    
   };
   //Login
 
@@ -76,8 +70,20 @@ export default function LoginPage() {
     isOtpButtonDisabled = true;
   }
 
-  const otpBtnHandleClick = () => {
+  const otpBtnHandleClick = async () => {
     console.log("Button Clicked by OTP");
+    const data = {
+      contact: 98898989898,
+      otp: 9898,
+      otp_expire_at: ''
+    };
+    const verifyapi = await verifyOtp(data)
+    if(verifyapi && verifyapi.error){
+      alert(verifyapi?.data)
+    }else{
+     
+    }
+
   };
 
   const handleChange = (element, index) => {
@@ -98,6 +104,19 @@ export default function LoginPage() {
       }
     }
   };
+
+  const otpResend = async ()=>{
+    console.log("called resend");
+    const data ={
+      "contact": mobileNumber
+   }
+    const resendapi = await resendOtp(data)
+    if(resendapi && resendapi.error){
+      alert(resendapi?.data)
+    }else{
+     
+    }
+  }
 
   return (
     <div className="loginBlock container">
@@ -133,7 +152,8 @@ export default function LoginPage() {
                     
                     <div className="OTPWarning">
                     <p>OTP is valid for 5 minutes only</p>  
-                                        <span>Resend OTP</span>
+                    <div onClick={otpResend}>
+                                        <span>Resend OTP</span></div>
                     </div>
                   </div>
                 </div>
