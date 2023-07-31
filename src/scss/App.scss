@@ -67,7 +67,9 @@ padding: 50px;
 box-shadow: 1px 1px 15px -4px rgba(0,0,0,0.3);
 }
 .left-LoginPageBanner{
-height: 280px;
+// height: 280px;
+margin-left: 205px;
+height: 420px;
 }
 
 .pgsubtitle{
@@ -82,7 +84,7 @@ height: 280px;
 font-family: 'ProximaSemiBold';
 font-size: 1em;
 line-height: 1.2;
-margin-bottom: 132px;
+margin-bottom: 25px;
 span{
   color: #43A2FF;
 text-decoration-line: underline;
@@ -103,7 +105,7 @@ margin: 0px;
     font-family: "ProximaSemiBold";
     font-size: 1em;
     line-height: 1.2;
-    margin: 25px 0px;
+    margin: 15px 0px;
     mar
     span{
       color: #43A2FF;
@@ -120,4 +122,7 @@ margin: 0px;
   height: 1em ;
   width: 1em;
   margin-right: 10px;
+}
+.blankArea{
+  margin-top: 147px
 }
