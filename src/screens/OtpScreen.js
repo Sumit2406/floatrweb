@@ -58,7 +58,7 @@ return (
     <div className="row justify-content-center">
       <div className="MainPageContent col-9 ">
       <div className="row ">
-      <div className="col-6 align-self-center ">
+      <div className="col-4 align-self-center ">
         <div className="rightSideLoginContent">
       <h1 className="pgtitle">Welcome !</h1>
           <p className="pgsubtitle">Login to continue</p>
@@ -74,7 +74,7 @@ return (
             /> 
           </div>
 
-          <div className="inputwithlbl col-9">
+          <div className="inputwithlbl">
          <OtpComp 
          title="Enter OTP"
          otp={otp}
@@ -82,7 +82,7 @@ return (
          handleKeyDown={handleKeyDown}
          />    
           </div>
-          <div className="col-9">
+          <div >
           <div className="login-Warning"><p>OTP is valid for 5 minutes only</p>
           <div className="OTPWarning">
             <span 
@@ -99,7 +99,7 @@ return (
           </div>
       </div>
       </div>
-      <div className="col-6 d-flex justify-content-center align-self-center">
+      <div className="col-8 d-flex justify-content-center align-self-center">
       <div className="left-LoginPageBanner">
         <img src={LoginPageBanner} alt="LoginPageBanner" />
         </div>

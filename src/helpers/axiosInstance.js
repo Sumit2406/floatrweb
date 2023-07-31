@@ -1,6 +1,5 @@
 // import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
-
 import { SERVERURL } from  "../config"
 
 // import NetInfo from '@react-native-community/netinfo';
@@ -8,17 +7,12 @@ import { SERVERURL } from  "../config"
 import rateLimit from 'axios-rate-limit';
 // import I18n from 'react-native-i18n';
 import { userLogoutSuccess } from "../actions/UserAction";
-
 import {store} from "../configureStore"
-
-
 
 const headers = {
     Accept: 'application/json',
     'Content-Type': 'application/json'
 };
-
-
 
 // let start;
 // const getToken = async () => {

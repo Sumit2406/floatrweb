@@ -1,22 +1,24 @@
 import "../scss/App.scss";
 import React, { useState } from "react";
 import Button from "../components/Button";
-import InputBoxLowerBarder from "../components/InputBoxLowerBarder";
 import LoginPageBanner from '../assets/pngs/LoginPageBanner.png';
+import OtpComp from "../components/OtpComp";
+import { useNavigate } from "react-router-dom";
+import InputBoxLowerBarder from "../components/InputBoxLowerBarder";
+
 import { loginPersonal, otpSuccess } from "../actions/UserAction";
 import { useDispatch, useSelector } from "react-redux";
-// import axiosInstance from "../helpers/axiosInstance";
 
-// import { Navigate } from "react-router-dom";
 
 export default function LoginPage() {
   const dispatch = useDispatch();
- 
   const loginReducer = useSelector((state) => state.userReducer)
-  // const {loginReducer} = useSelector((state) => state.userReducer)
- 
   const [mobileNumber, setMobileNumber] = useState("");
   const [error, setError] = useState("");
+  const [otp, setOtp] = useState(new Array(4).fill(""));
+  const [otpStatus, setOtpStatus] = useState(false);
+  // const [loginbtnstatus, setloginbtnstatus] =useState(false);
+  const navigate =useNavigate()  
 
   const onLogin = async (userinfo) => {
     const { data, error } = await loginPersonal(userinfo);
@@ -33,48 +35,70 @@ export default function LoginPage() {
     }
   };
 
-  const btnHandleClick = () => {
-    if (mobileNumber.length !== 10) {
-      setError("Mobile number should be 10 digits long");
-    } 
-    else if (!/^[6789]\d{9}$/.test(mobileNumber)) {
-      setError("Mobile number should start with 6, 7, 8, or 9");
-    } 
-    else {
-      setError("Number Successfully Submitted");
-      onLogin({contact : mobileNumber});
-    } 
-    // if(mobileNumber.length===10)
-    // {
-    //   navigate('/OtpScreen')
-    // }
-   };
-  
-  //Login
-
+    //button
+    const numBtnHandleClick = () => {
+      setOtpStatus(true);
+      if (mobileNumber.length !== 10) {
+        setError("Mobile number should be 10 digits long");
+      } 
+      else if (!/^[6789]\d{9}$/.test(mobileNumber)) {
+        setError("Mobile number should start with 6, 7, 8, or 9");
+      } 
+      else {
+        onLogin({contact : mobileNumber});
+    };
+  }
+    //Login
   
   const handleInputChange = (event) => {
     const inputValue = event.target.value;
     if (isNaN(inputValue)) 
         return false;
-    setMobileNumber(inputValue);  
-    setError("");
+    setMobileNumber(inputValue); 
   };
-  
+
   const isButtonDisabled = mobileNumber === "";
 
-  return (
-    <div className="loginBlock container">
+
+    // let isButtonDisabled=true;
+    // const [otp, setOtp] = useState(new Array(4).fill(""));
+    // if(otp.every((digit) => digit !== ""))
+    // {
+
+    //   isButtonDisabled=false
+    // }else{
+    //   isButtonDisabled=true;
+    // }
+    
+    const handleChange = (element, index) => {
+        if (isNaN(element.value)) 
+        return false;
+        setOtp([...otp.map((d, idx) => (idx === index ? element.value : d))]);
+        if (element.nextSibling) {
+            element.nextSibling.focus();
+        }
+    };
+    const handleKeyDown = (e, index) => {
+        if (e.key === "Backspace" && !otp[index]) {
+          if (index > 0) {
+            const previousInput = e.target.previousSibling;
+            if (e.target.previousSibling) {
+              previousInput.focus();
+            }
+          }
+        }
+      };
+
+return (
+<div className="loginBlock container">
     <div className="row justify-content-center">
-      <div className="MainPageContent col-9 ">
-      <div className="row ">
-      <div className="col-6 align-self-center ">
+      <div className="col-4 align-self-center ">
         <div className="rightSideLoginContent">
       <h1 className="pgtitle">Welcome !</h1>
           <p className="pgsubtitle">Login to continue</p>
-          <div className="inputwithlbl col-9">
+          <div className="inputwithlbl">
          <InputBoxLowerBarder
-              title="Mobile Number"
+                title="Mobile Number"
               placeholder="Enter Mobile Number"
               type="text"
               id="mobile"
@@ -84,28 +108,48 @@ export default function LoginPage() {
               error={error}
             /> 
           </div>
-          <div className="col-9"> 
-          <p className="login-instruction">By proceeding, you are agreeing to Floatr’s <br/>
-          <span>Terms & Conditions </span> & <span>Privacy Policy</span></p>
-         <Button
+{otpStatus? <>
+ <div className="inputwithlbl">
+         <OtpComp 
+         title="Enter OTP"
+         otp={otp}
+         handleChange={handleChange}
+         handleKeyDown={handleKeyDown}
+         />    
+          </div>
+          <div >
+          <div className="login-Warning"><p>OTP is valid for 5 minutes only</p>
+          <div className="OTPWarning">
+            <span 
+            onClick={()=>{navigate("/")}}
+            >Change Number</span> <span >Resend OTP</span></div>
+          </div>
+          </div>
+          </> : null}
+
+          <Button
             btnLabel="Get OTP"
             rectangualar="false"
-            btnClick={btnHandleClick}
+            btnClick={numBtnHandleClick}
             disable={!isButtonDisabled}
           />
-          </div>
+
+{/* <Button
+            btnLabel="Login"
+            rectangualar="false"
+            btnClick={otpBtnHandleClick}
+            disable={!isButtonDisabled}
+          /> */}
+
+
       </div>
       </div>
-      <div className="col-6 d-flex justify-content-center align-self-center">
+      <div className="col-8 d-flex justify-content-center align-self-center">
       <div className="left-LoginPageBanner">
         <img src={LoginPageBanner} alt="LoginPageBanner" />
         </div>
       </div>
-      </div>
-      </div>
     </div>
     </div>
-  );
+  )
 }
-
-
