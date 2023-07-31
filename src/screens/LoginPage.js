@@ -22,18 +22,22 @@ export default function LoginPage() {
 
   const onLogin = async (userinfo) => {
     const { data, error } = await loginPersonal(userinfo);
-    console.log(data);
+    // console.log(data,'api sucesss',error);
     if (!error) {
       // sendAnalytics("act_enter_phone_number");
-      // navigation.navigate("VerifyOTP", {
+      // navigationx`.navigate("VerifyOTP", {
       //   contact: data?.contact,
       // });
       dispatch(otpSuccess(data));
-      console.log("loginReducer.... iiiii", loginReducer);
+      setOtpStatus(true);
+      setloginbtnstatus(false);
+      // console.log("loginReducer.... iiiii", loginReducer);
     } else {
       // showToastMessage(data?.message, "fail");
     }
   };
+
+ 
 
   //button
   const numBtnHandleClick = () => {
@@ -45,10 +49,12 @@ export default function LoginPage() {
       
     } else {
       onLogin({ contact: mobileNumber });
-      setOtpStatus(true);
+
+   
+      
     }
 
-    setloginbtnstatus(false);
+    
   };
   //Login
 
@@ -57,9 +63,10 @@ export default function LoginPage() {
     if (isNaN(inputValue)) return false;
     setMobileNumber(inputValue);
     setError("");
+
   };
 
-  let isButtonDisabled = mobileNumber === "";
+  // let isButtonDisabled = mobileNumber === "";
 
   let isOtpButtonDisabled = true;
 
@@ -81,9 +88,10 @@ export default function LoginPage() {
     }
   };
   const handleKeyDown = (e, index) => {
-    if (e.key === "Backspace" && !otp[index]) {
+    if (e.key === "Backspace" && !otp[index]) {   
       if (index > 0) {
         const previousInput = e.target.previousSibling;
+        console.log('previousInput',previousInput)
         if (e.target.previousSibling) {
           previousInput.focus();
         }
@@ -143,7 +151,7 @@ export default function LoginPage() {
                 btnLabel="Get OTP"
                 rectangualar="false"
                 btnClick={numBtnHandleClick}
-                disable={!isButtonDisabled}
+                disable={mobileNumber && mobileNumber.length >= 1 ? true :false}
               />
             ) : (
               <Button
