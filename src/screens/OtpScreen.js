@@ -56,8 +56,8 @@ export default function OtpScreen() {
 return (
 <div className="loginBlock container">
     <div className="row justify-content-center">
-      <div className="MainPageContent col-9 ">
-      <div className="row ">
+      {/* <div className="MainPageContent col-9 ">
+      <div className="row "> */}
       <div className="col-4 align-self-center ">
         <div className="rightSideLoginContent">
       <h1 className="pgtitle">Welcome !</h1>
@@ -104,8 +104,8 @@ return (
         <img src={LoginPageBanner} alt="LoginPageBanner" />
         </div>
       </div>
-      </div>
-      </div>
+      {/* </div>
+      </div> */}
     </div>
     </div>
   )

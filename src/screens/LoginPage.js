@@ -17,7 +17,7 @@ export default function LoginPage() {
   const [error, setError] = useState("");
   const [otp, setOtp] = useState(new Array(4).fill(""));
   const [otpStatus, setOtpStatus] = useState(false);
-  // const [loginbtnstatus, setloginbtnstatus] =useState(false);
+  const [loginbtnstatus, setloginbtnstatus] =useState(true);
   const navigate =useNavigate()  
 
   const onLogin = async (userinfo) => {
@@ -47,6 +47,8 @@ export default function LoginPage() {
       else {
         onLogin({contact : mobileNumber});
     };
+
+    setloginbtnstatus(false);
   }
     //Login
   
@@ -60,16 +62,21 @@ export default function LoginPage() {
   const isButtonDisabled = mobileNumber === "";
 
 
-    // let isButtonDisabled=true;
-    // const [otp, setOtp] = useState(new Array(4).fill(""));
-    // if(otp.every((digit) => digit !== ""))
-    // {
-
-    //   isButtonDisabled=false
-    // }else{
-    //   isButtonDisabled=true;
-    // }
+    let isOtpButtonDisabled=true;
     
+    if(otp.every((digit) => digit !== ""))
+    {
+
+      isOtpButtonDisabled=false
+    }else{
+      isOtpButtonDisabled=true;
+    }
+    
+    const otpBtnHandleClick = () => {
+      console.log("Button Clicked by OTP");
+    };
+ 
+
     const handleChange = (element, index) => {
         if (isNaN(element.value)) 
         return false;
@@ -126,22 +133,26 @@ return (
           </div>
           </div>
           </> : null}
+<div>       
+            <p className="login-instruction">By proceeding, you are agreeing to Floatr’s <br/>
+          <span>Terms & Conditions </span> & <span>Privacy Policy</span></p>
+</div>
 
+
+{loginbtnstatus ? 
           <Button
             btnLabel="Get OTP"
             rectangualar="false"
             btnClick={numBtnHandleClick}
             disable={!isButtonDisabled}
-          />
-
-{/* <Button
+          /> :
+          <Button
             btnLabel="Login"
             rectangualar="false"
             btnClick={otpBtnHandleClick}
-            disable={!isButtonDisabled}
-          /> */}
-
-
+            disable={!isOtpButtonDisabled}
+          />
+          }
       </div>
       </div>
       <div className="col-8 d-flex justify-content-center align-self-center">
