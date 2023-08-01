@@ -22,6 +22,8 @@ export default function LoginPage() {
   const [otp, setOtp] = useState(new Array(4).fill(""));
   const [otpStatus, setOtpStatus] = useState(false);
   const [loginbtnstatus, setloginbtnstatus] = useState(true);
+  const [apiErrorStatus, setApiErrorStatu] =useState(false);
+  const [apiError, setApiError] =useState("");
   
 
   const onLogin = async (userinfo) => {
@@ -33,7 +35,7 @@ export default function LoginPage() {
       setloginbtnstatus(false);
     } else {
       // showToastMessage(data?.message, "fail");
-
+      setError(error);
     }
   };
 
@@ -73,7 +75,10 @@ export default function LoginPage() {
 
     const verifyapi = await verifyOtp(data, loginReducer?.otpData?.token);
     if (verifyapi && verifyapi.error) {
-      alert(verifyapi?.data);
+      setApiErrorStatu(true);
+      setApiError(verifyapi?.data);
+      // console.log("Sumit",verifyapi?.data);
+      // alert(verifyapi?.data);
     } else {
       alert("otp is verified successfully");
     }
@@ -85,6 +90,7 @@ export default function LoginPage() {
     if (element.nextSibling) {
       element.nextSibling.focus();
     }
+    setApiErrorStatu(false);
   };
 
   const handleKeyDown = (e, index) => {
@@ -106,8 +112,11 @@ export default function LoginPage() {
     };
     const resendapi = await resendOtp(data);
     if (resendapi && resendapi.error) {
-      alert(resendapi?.data);
-    } else {
+      // alert(resendapi?.data);
+      setApiErrorStatu(true);
+      setApiError(resendapi.error)
+    } 
+    else {
     }
   };
 
@@ -143,7 +152,7 @@ export default function LoginPage() {
                 <div>
                   <div className="login-Warning">
                     <div className="OTPWarning">
-                      <p>OTP is valid for 5 minutes only</p>
+                      {apiErrorStatus ? <p className="otpverifyerror">{apiError} </p>: <p>OTP is valid for 5 minutes only</p>}
                       <div onClick={otpResend}>
                         <span>Resend OTP</span>
                       </div>

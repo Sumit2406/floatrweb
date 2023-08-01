@@ -16,6 +16,7 @@ export const loginPersonal = async (params) => {
   }
 };
 
+
 export function otpSuccess(payload) {
   console.log(payload, "Reducer Payload");
   return {
