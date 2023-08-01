@@ -22,20 +22,17 @@ export default function LoginPage() {
   const [otp, setOtp] = useState(new Array(4).fill(""));
   const [otpStatus, setOtpStatus] = useState(false);
   const [loginbtnstatus, setloginbtnstatus] = useState(true);
-  const [apiErrorStatus, setApiErrorStatu] =useState(false);
-  const [apiError, setApiError] =useState("");
-  
+  const [apiError, setApiError] = useState("");
 
   const onLogin = async (userinfo) => {
     const { data, error } = await loginPersonal(userinfo);
-    console.log(data, "api sucesss", error);
     if (!error) {
       dispatch(otpSuccess(data));
       setOtpStatus(true);
       setloginbtnstatus(false);
+      setError("");
     } else {
-      // showToastMessage(data?.message, "fail");
-      setError(error);
+      setError(data);
     }
   };
 
@@ -75,11 +72,11 @@ export default function LoginPage() {
 
     const verifyapi = await verifyOtp(data, loginReducer?.otpData?.token);
     if (verifyapi && verifyapi.error) {
-      setApiErrorStatu(true);
+      // setApiErrorStatu(true);
       setApiError(verifyapi?.data);
-      // console.log("Sumit",verifyapi?.data);
       // alert(verifyapi?.data);
     } else {
+      setApiError("");
       alert("otp is verified successfully");
     }
   };
@@ -90,14 +87,12 @@ export default function LoginPage() {
     if (element.nextSibling) {
       element.nextSibling.focus();
     }
-    setApiErrorStatu(false);
   };
 
   const handleKeyDown = (e, index) => {
     if (e.key === "Backspace" && !otp[index]) {
       if (index > 0) {
         const previousInput = e.target.previousSibling;
-        // console.log('previousInput',previousInput)
         if (e.target.previousSibling) {
           previousInput.focus();
         }
@@ -112,11 +107,11 @@ export default function LoginPage() {
     };
     const resendapi = await resendOtp(data);
     if (resendapi && resendapi.error) {
-      // alert(resendapi?.data);
-      setApiErrorStatu(true);
-      setApiError(resendapi.error)
-    } 
-    else {
+      console.log("Sumit", resendapi);
+      setApiError(resendapi.data);
+    } else {
+      console.log("iam in sucesss");
+      setApiError("");
     }
   };
 
@@ -152,7 +147,11 @@ export default function LoginPage() {
                 <div>
                   <div className="login-Warning">
                     <div className="OTPWarning">
-                      {apiErrorStatus ? <p className="otpverifyerror">{apiError} </p>: <p>OTP is valid for 5 minutes only</p>}
+                      {apiError ? (
+                        <p className="otpverifyerror">{apiError} </p>
+                      ) : (
+                        <p>OTP is valid for 5 minutes only</p>
+                      )}
                       <div onClick={otpResend}>
                         <span>Resend OTP</span>
                       </div>

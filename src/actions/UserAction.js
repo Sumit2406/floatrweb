@@ -7,7 +7,7 @@ export const loginPersonal = async (params) => {
     console.log(params, "params login");
     const { data } = await axiosInstance.post("user/personal/login", params);
     // console.log('data',data)
-    console.log("expire_at", data.expire_at);
+    // console.log("expire_at", data.expire_at);
     return { error: false, data };
   } catch (error) {
     console.log("error in login personal", error);
@@ -28,12 +28,11 @@ export function otpSuccess(payload) {
 export const resendOtp = async (params) => {
   try {
     const { data } = await axiosInstance.put("user/personal/otp", params);
-    console.log("resendOtp", data);
     return { error: false, data };
   } catch (error) {
-    // console.log("error in resendOtp", error);
+    //  console.log("error in resendOtp", error?.response);
     //   customToast(error?.response?.data?.message, "error");
-    return { error: true, data: error?.response?.data?.message };
+    return { error: true, data: error?.response?.data };
   }
 };
 //
