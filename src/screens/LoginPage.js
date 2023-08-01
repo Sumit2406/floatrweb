@@ -6,12 +6,15 @@ import OtpComp from "../components/OtpComp";
 import InputBoxLowerBarder from "../components/InputBoxLowerBarder";
 // import {useNavigate} from "react-router-dom"
 
-import { loginPersonal, otpSuccess, resendOtp,verifyOtp } from "../actions/UserAction";
+import {
+  loginPersonal,
+  otpSuccess,
+  resendOtp,
+  verifyOtp,
+} from "../actions/UserAction";
 import { useDispatch, useSelector } from "react-redux";
 
-
 export default function LoginPage() {
-  
   const dispatch = useDispatch();
   const loginReducer = useSelector((state) => state.userReducer);
   const [mobileNumber, setMobileNumber] = useState("");
@@ -19,29 +22,27 @@ export default function LoginPage() {
   const [otp, setOtp] = useState(new Array(4).fill(""));
   const [otpStatus, setOtpStatus] = useState(false);
   const [loginbtnstatus, setloginbtnstatus] = useState(true);
+  
 
   const onLogin = async (userinfo) => {
     const { data, error } = await loginPersonal(userinfo);
-    console.log(data,'api sucesss',error);
+    console.log(data, "api sucesss", error);
     if (!error) {
       dispatch(otpSuccess(data));
       setOtpStatus(true);
       setloginbtnstatus(false);
-      
     } else {
       // showToastMessage(data?.message, "fail");
+
     }
   };
-
 
   //button
   const numBtnHandleClick = () => {
     if (mobileNumber.length !== 10) {
       setError("Mobile number should be 10 digits long");
-      
     } else if (!/^[6789]\d{9}$/.test(mobileNumber)) {
       setError("Mobile number should start with 6, 7, 8, or 9");
-      
     } else {
       onLogin({ contact: mobileNumber });
     }
@@ -53,7 +54,6 @@ export default function LoginPage() {
     if (isNaN(inputValue)) return false;
     setMobileNumber(inputValue);
     setError("");
-
   };
 
   let isOtpButtonDisabled = true;
@@ -68,15 +68,14 @@ export default function LoginPage() {
     const data = {
       contact: mobileNumber,
       otp: otp.join(""),
-      otp_expire_at: loginReducer?.otpData?.expire_at
+      otp_expire_at: loginReducer?.otpData?.expire_at,
     };
- 
-    const verifyapi = await verifyOtp(data,loginReducer?.otpData?.token)
-    if(verifyapi && verifyapi.error){
-      alert(verifyapi?.data)
-    }
-    else{     
-      alert('otp is verified successfully')
+
+    const verifyapi = await verifyOtp(data, loginReducer?.otpData?.token);
+    if (verifyapi && verifyapi.error) {
+      alert(verifyapi?.data);
+    } else {
+      alert("otp is verified successfully");
     }
   };
 
@@ -88,9 +87,8 @@ export default function LoginPage() {
     }
   };
 
-
   const handleKeyDown = (e, index) => {
-    if (e.key === "Backspace" && !otp[index]) {   
+    if (e.key === "Backspace" && !otp[index]) {
       if (index > 0) {
         const previousInput = e.target.previousSibling;
         // console.log('previousInput',previousInput)
@@ -101,18 +99,17 @@ export default function LoginPage() {
     }
   };
 
-  const otpResend = async ()=>{
+  const otpResend = async () => {
     console.log("called resend");
-    const data ={
-      "contact": mobileNumber
-   }
-    const resendapi = await resendOtp(data)
-    if(resendapi && resendapi.error){
-      alert(resendapi?.data)
-    }else{
-     
+    const data = {
+      contact: mobileNumber,
+    };
+    const resendapi = await resendOtp(data);
+    if (resendapi && resendapi.error) {
+      alert(resendapi?.data);
+    } else {
     }
-  }
+  };
 
   return (
     <div className="loginBlock container">
@@ -145,16 +142,18 @@ export default function LoginPage() {
                 </div>
                 <div>
                   <div className="login-Warning">
-                    
                     <div className="OTPWarning">
-                    <p>OTP is valid for 5 minutes only</p>  
-                    <div onClick={otpResend}>
-                                        <span>Resend OTP</span></div>
+                      <p>OTP is valid for 5 minutes only</p>
+                      <div onClick={otpResend}>
+                        <span>Resend OTP</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </>
-            ) : <div className="blankArea"></div>}
+            ) : (
+              <div className="blankArea"></div>
+            )}
             <div>
               <p className="login-instruction">
                 By proceeding, you are agreeing to Floatr’s <br />
@@ -167,7 +166,9 @@ export default function LoginPage() {
                 btnLabel="Get OTP"
                 rectangualar="false"
                 btnClick={numBtnHandleClick}
-                disable={mobileNumber && mobileNumber.length >= 1 ? true :false}
+                disable={
+                  mobileNumber && mobileNumber.length >= 1 ? true : false
+                }
               />
             ) : (
               <Button

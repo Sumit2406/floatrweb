@@ -7,7 +7,7 @@ export const loginPersonal = async (params) => {
     console.log(params, "params login");
     const { data } = await axiosInstance.post("user/personal/login", params);
     // console.log('data',data)
-    console.log("data.expire_at", data.expire_at);
+    console.log("expire_at", data.expire_at);
     return { error: false, data };
   } catch (error) {
     console.log("error in login personal", error);
@@ -39,7 +39,6 @@ export const resendOtp = async (params) => {
 export const verifyOtp = async (params, token) => {
   try {
     const customheader = { Authorization: token };
-
     const { data } = await axiosInstance.put(
       "user/personal/register/otp",
       params,
