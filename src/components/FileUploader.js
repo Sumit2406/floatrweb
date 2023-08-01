@@ -33,9 +33,10 @@ const FileUploader = ({uploadHandler}) => {
         onChange={handleFileChange}
         accept=".png, .jpg, .jpeg"
       />
-      {!uploadedImage && <><img src={uploadicon} alt="uploadicon" />
-      <br/>
-      <div>
+      {!uploadedImage && 
+      <> 
+      <div className='uploadicon'><img src={uploadicon} alt="uploadicon" /></div>
+      <div className='uploadinfo'>
       <p><b> Upload  </b></p>
       <p><b> Signature </b></p>
       <p>(.jpeg, .png)</p>
