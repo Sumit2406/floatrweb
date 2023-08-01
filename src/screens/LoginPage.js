@@ -24,14 +24,10 @@ export default function LoginPage() {
     const { data, error } = await loginPersonal(userinfo);
     console.log(data,'api sucesss',error);
     if (!error) {
-      // sendAnalytics("act_enter_phone_number");
-      // navigationx`.navigate("VerifyOTP", {
-      //   contact: data?.contact,
-      // });
       dispatch(otpSuccess(data));
       setOtpStatus(true);
       setloginbtnstatus(false);
-      console.log("loginReducer.... iiiii", loginReducer);
+      
     } else {
       // showToastMessage(data?.message, "fail");
     }
@@ -60,8 +56,6 @@ export default function LoginPage() {
 
   };
 
-  // let isButtonDisabled = mobileNumber === "";
-
   let isOtpButtonDisabled = true;
 
   if (otp.every((digit) => digit !== "")) {
@@ -71,18 +65,18 @@ export default function LoginPage() {
   }
 
   const otpBtnHandleClick = async () => {
-    console.log("Button Clicked by OTP");
     const data = {
-      contact: 98898989898,
-      otp: 9898,
-      otp_expire_at: ''
+      contact: mobileNumber,
+      otp: otp.join(""),
+      otp_expire_at: loginReducer?.otpData?.expire_at
     };
-    const verifyapi = await verifyOtp(data)
+ 
+    const verifyapi = await verifyOtp(data,loginReducer?.otpData?.token)
     if(verifyapi && verifyapi.error){
       alert(verifyapi?.data)
     }
     else{     
-    
+      alert('otp is verified successfully')
     }
   };
 
@@ -93,11 +87,13 @@ export default function LoginPage() {
       element.nextSibling.focus();
     }
   };
+
+
   const handleKeyDown = (e, index) => {
     if (e.key === "Backspace" && !otp[index]) {   
       if (index > 0) {
         const previousInput = e.target.previousSibling;
-        console.log('previousInput',previousInput)
+        // console.log('previousInput',previousInput)
         if (e.target.previousSibling) {
           previousInput.focus();
         }
