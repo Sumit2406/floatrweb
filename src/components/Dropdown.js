@@ -9,10 +9,11 @@ export default function Dropdown({
   dropstatus,
   dropDownObj,
   demoValueChange,
+  title
 }) 
+
 {
-  const [dropdownlabel, setdropdownlabel] = useState("Select Option");
-  console.log(selectedOption);
+  const [dropdownlabel, setdropdownlabel] = useState(title);
   return (
     <div className="dropContainer">
       <div
@@ -20,7 +21,7 @@ export default function Dropdown({
         onClick={handleDropdown}
         value={selectedOption}
       >
-      <div className="dropdowncontent"> <p>{dropdownlabel} </p> {dropstatus ? (
+      <div className="dropdowncontent"> <p className="dropdowntextheight">{dropdownlabel} </p> {dropstatus ? (
           <img src={upIcon} alt="upIcon"/>
         ) : (
           <img src={downIcon} alt="downIcon"/>

@@ -19,9 +19,43 @@ export default function Register() {
 
   //DropDown
   const dropDownObj = [
-    { value: "option1-Value", label: "Option 1" },
-    { value: "option2-Value", label: "Option 2" },
-    { value: "option3-Value", label: "Option 3" },
+    { value: "Andhra-Pradesh", label: "Andhra Pradesh" },
+    { value: "Arunachal Pradesh", label: "Arunachal Pradesh" },
+    { value: "Assam", label: "Assam" },
+    { value: "Bihar", label: "Bihar" },
+    { value: "Chhatisgarh", label: "Chhatisgarh" },
+    { value: "Goa", label: "Goa" },
+    { value: "Gujarat", label: "Gujarat" },
+    { value: "Haryana", label: "Haryana" },
+    { value: "Himachal-Pradesh", label: "Himachal Pradesh" },
+    { value: "Jharkhand", label: "Jharkhand" },
+    { value: "Karnataka", label: "Karnataka" },
+    { value: "Kerala", label: "Kerala" },
+    { value: "Madhra-Pradesh", label: "Madhra Pradesh" },
+    { value: "Maharashtra", label: "Maharashtra" },
+    { value: "Manipur", label: "Manipur" },
+    { value: "Meghalaya", label: "Meghalaya" },
+    { value: "Mizoram", label: "Mizoram" },
+    { value: "Nagaland", label: "Nagaland" },
+    { value: "Odisha", label: "Odisha" },
+    { value: "Punjab", label: "Punjab" },
+    { value: "Rajsthan", label: "Rajsthan" },
+    { value: "Sikkim", label: "Sikkim" },
+    { value: "Tamilnadu", label: "Tamilnadu" },
+    { value: "Telangana", label: "Telangana" },
+    { value: "Tripura", label: "Tripura" },
+    { value: "Uttar-Pradesh", label: "Uttar Pradesh" },
+    { value: "Uttrakhand", label: "Uttrakhand" },
+    { value: "West-Bengal", label: "West Bengal" },
+    { value: "Andaman-Nicobar", label: "Andaman and Nicobar Islands" },
+    { value: "Chandigarh", label: "Chandigarh" },
+    { value: "Dadra-Nagar-Haveli", label: "Dadra and Nagar Haveli" },
+    { value: "Delhi", label: "Delhi" },
+    { value: "Jammu-Kashmir", label: "Jammu and Kashmir" },
+    { value: "Ladakh", label: "Ladakh" },
+    { value: "Lakshadweep", label: "Lakshadweep" },
+    { value: "Punducherry", label: "Punducherry" },
+    { value: "Daman-Diu", label: "Daman and Diu" },
   ];
 
   const [dropstatus, setdropstatus] = useState(false);
@@ -72,6 +106,7 @@ export default function Register() {
                 dropDownObj={dropDownObj}
                 selectedOption={selectedOption}
                 demoValueChange={demoValueChange}
+                title="Select State"
               />
             </div>
             <div>

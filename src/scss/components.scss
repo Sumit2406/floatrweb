@@ -274,20 +274,23 @@ textarea{
     height: 100%;
   }
   .dropdowncontent p{
-    font-size: 25px;
+    font-size: 18px;
     margin-top: 12px;
   }
   .ddlist{
     margin: -1px;
-    margin-left: 225px;
+    // margin-left: 225px;
     display: flex;
     flex-direction: column;
-    width: auto;
+    width: 100%;
+    height: 120px;
+    overflow-x: hidden;
+    border: 1px solid black;
   }
 
 .ddlist li{
 margin-top: 0em;
-    border: 1px solid black;
+    // border: 1px solid black;
     list-style-type: none;
     width: auto;
     height: 40px;
