@@ -65,6 +65,7 @@ export default function Register() {
               />
             </div>
             <div className="inputwithlbl">
+              <p className="stateTitle">Select State</p>
               <Dropdown
                 handleDropdown={handleDropdown}
                 dropstatus={dropstatus}

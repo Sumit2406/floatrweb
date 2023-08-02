@@ -14,18 +14,18 @@ export default function Dropdown({
   const [dropdownlabel, setdropdownlabel] = useState("Select Option");
   console.log(selectedOption);
   return (
-    <>
+    <div className="dropContainer">
       <div
         className="dropdown"
         onClick={handleDropdown}
         value={selectedOption}
       >
-        <p>{dropdownlabel} {dropstatus ? (
-          <img src={upIcon} alt="upIcon" />
+      <div className="dropdowncontent"> <p>{dropdownlabel} </p> {dropstatus ? (
+          <img src={upIcon} alt="upIcon"/>
         ) : (
           <img src={downIcon} alt="downIcon"/>
         )}
-</p>
+</div> 
 
         {dropstatus ? (
           <ul className="ddlist">
@@ -44,7 +44,7 @@ export default function Dropdown({
         ) : null}
         </div>
       
-    </>
+    </div>
   );
 }
 
