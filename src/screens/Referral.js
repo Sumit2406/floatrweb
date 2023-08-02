@@ -31,7 +31,7 @@ export default function Referral() {
         <div className="col-4 align-self-center ">
           <div className="rightSideLoginContent">
             <h1 className="pgtitle">Have you been Reffered?</h1>
-            <div className="inputwithlbl">
+            <div className="inputwithlbl inputwithlblReferal">
               <InputBoxLowerBarder
                 title="Enter Referral Code"
                 placeholder="Enter Referral Code"
@@ -41,19 +41,13 @@ export default function Referral() {
                 handleInputChange={handleInputChange}
               />
             </div>
-            <div>
+            <div >
               <ToggleButton
                 title="I don't have a Referral Code"
                 handleToggle={handleToggle}
                 togglestatus={togglestatus}
               />
-              <div className="blankArea blankAreaReferal"></div>
-              <div>
-                <p className="login-instruction">
-                  By proceeding, you are agreeing to Floatr’s <br />
-                  <span>Terms & Conditions </span> & <span>Privacy Policy</span>
-                </p>
-              </div>
+
               <Button
                 btnLabel="Submit"
                 rectangualar="false"
