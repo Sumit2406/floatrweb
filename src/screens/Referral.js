@@ -30,11 +30,11 @@ export default function Referral() {
       <div className="row justify-content-center">
         <div className="col-4 align-self-center ">
           <div className="rightSideLoginContent">
-            <h1 className="pgtitle">Have you reffered?</h1>
+            <h1 className="pgtitle">Have you been Reffered?</h1>
             <div className="inputwithlbl">
               <InputBoxLowerBarder
                 title="Enter Referral Code"
-                placeholder="Enter code if you are referred"
+                placeholder="Enter Referral Code"
                 type="text"
                 id="referralCode"
                 value={referralCode}
