@@ -1,15 +1,18 @@
 import "../scss/App.scss";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Button from "../components/Button";
 import InputBoxLowerBarder from "../components/InputBoxLowerBarder";
 import Dropdown from "../components/Dropdown";
 import FileUploader from "../components/FileUploader";
-
+import {updateState} from "../actions/UserAction";
+import { useSelector } from "react-redux";
 
 export default function Register() {
 //   const dispatch = useDispatch();
   
   const [userName, setuserName] = useState("");
+  const [dropDownObj, setDropDownObj] =useState([])
+  const [error, setApiError] =useState(null)
 
   //FileUpload
 
@@ -18,45 +21,13 @@ export default function Register() {
   };
 
   //DropDown
-  const dropDownObj = [
-    { value: "Andhra-Pradesh", label: "Andhra Pradesh" },
-    { value: "Arunachal Pradesh", label: "Arunachal Pradesh" },
-    { value: "Assam", label: "Assam" },
-    { value: "Bihar", label: "Bihar" },
-    { value: "Chhatisgarh", label: "Chhatisgarh" },
-    { value: "Goa", label: "Goa" },
-    { value: "Gujarat", label: "Gujarat" },
-    { value: "Haryana", label: "Haryana" },
-    { value: "Himachal-Pradesh", label: "Himachal Pradesh" },
-    { value: "Jharkhand", label: "Jharkhand" },
-    { value: "Karnataka", label: "Karnataka" },
-    { value: "Kerala", label: "Kerala" },
-    { value: "Madhra-Pradesh", label: "Madhra Pradesh" },
-    { value: "Maharashtra", label: "Maharashtra" },
-    { value: "Manipur", label: "Manipur" },
-    { value: "Meghalaya", label: "Meghalaya" },
-    { value: "Mizoram", label: "Mizoram" },
-    { value: "Nagaland", label: "Nagaland" },
-    { value: "Odisha", label: "Odisha" },
-    { value: "Punjab", label: "Punjab" },
-    { value: "Rajsthan", label: "Rajsthan" },
-    { value: "Sikkim", label: "Sikkim" },
-    { value: "Tamilnadu", label: "Tamilnadu" },
-    { value: "Telangana", label: "Telangana" },
-    { value: "Tripura", label: "Tripura" },
-    { value: "Uttar-Pradesh", label: "Uttar Pradesh" },
-    { value: "Uttrakhand", label: "Uttrakhand" },
-    { value: "West-Bengal", label: "West Bengal" },
-    { value: "Andaman-Nicobar", label: "Andaman and Nicobar Islands" },
-    { value: "Chandigarh", label: "Chandigarh" },
-    { value: "Dadra-Nagar-Haveli", label: "Dadra and Nagar Haveli" },
-    { value: "Delhi", label: "Delhi" },
-    { value: "Jammu-Kashmir", label: "Jammu and Kashmir" },
-    { value: "Ladakh", label: "Ladakh" },
-    { value: "Lakshadweep", label: "Lakshadweep" },
-    { value: "Punducherry", label: "Punducherry" },
-    { value: "Daman-Diu", label: "Daman and Diu" },
-  ];
+  // const dropDownObj = [
+  //   { value: "Andhra-Pradesh", label: "Andhra Pradesh" },
+  //   { value: "Arunachal Pradesh", label: "Arunachal Pradesh" },
+  //   { value: "Assam", label: "Assam" },
+  // ];
+
+
 
   const [dropstatus, setdropstatus] = useState(false);
   const [selectedOption, setselectedOption] = useState("");
@@ -68,9 +39,7 @@ export default function Register() {
     console.log(value);
   };
   //
-
   const numBtnHandleClick = () => {
-   
 };
 
   const handleInputChange = (event) => {
@@ -79,13 +48,48 @@ export default function Register() {
     setuserName(inputValue);
     // setError("");
   };
+///
+
+//const loginReducer = useSelector((state) => state.userReducer);
+ console.log(
+  'dropDownObj',dropDownObj
+ );
+
+// window.onload = async function  () 
+// {
+//     const data = {
+//       token: loginReducer?.otpData?.token
+//     };
+//     const statedata = await updateState(data);
+//     if (statedata && statedata.error) {
+//       setApiError(statedata.data);
+//       console.log(error);
+//     } else {
+//       console.log("data Fetched");
+//       setDropDownObj(statedata)
+//       setApiError("");
+//     }
+//   };
+
+
+  useEffect( async() => {
+    const statedata = await updateState({});
+    if (statedata && statedata.error) {
+      setApiError(statedata.data);
+      console.log(error);
+    } else {
+      console.log("data Fetched");
+      setDropDownObj(statedata?.data?.data)
+      setApiError("");
+    }
+  }, []);
 
   return (
     <div className="loginBlock container">
       <div className="row justify-content-center">
         <div className="col-4 align-self-center ">
           <div className="rightSideLoginContent">
-            <h1 className="pgtitle">Welcome !</h1>
+            <h1 className="pgtitle">Registration !</h1>
             <p className="pgsubtitle">Personalize Your App</p>
             <div className="inputwithlbl">
               <InputBoxLowerBarder
@@ -109,12 +113,12 @@ export default function Register() {
                 title="Select State"
               />
             </div>
-            <div>
+            {/* <div>
               <p className="login-instruction">
                 By proceeding, you are agreeing to Floatr’s <br />
                 <span>Terms & Conditions </span> & <span>Privacy Policy</span>
               </p>
-            </div>
+            </div> */}
             <Button
               btnLabel="Get OTP"
               rectangualar="false"

@@ -44,6 +44,10 @@ export const verifyOtp = async (params, token) => {
       params,
       { customheader }
     );
+
+     if(data && Object.keys(data).length > 0){
+      localStorage.setItem('usercrendentials', JSON.stringify(data));
+     }
     return { error: false, data };
   } catch (error) {
     // customToast(error?.response?.data?.message, "error");
@@ -53,6 +57,20 @@ export const verifyOtp = async (params, token) => {
     return { error: true, data: error?.response?.data?.message };
   }
 };
+
+
+export const updateState = async (params) => {
+  try {
+    const { data } = await axiosInstance.get("master/state", params);
+    return { error: false, data };
+  } catch (error) {
+      console.log("error in updateState", error?.response);
+    //   customToast(error?.response?.data?.message, "error");
+    return { error: true, data: error?.response?.data };
+  }
+};
+
+
 
 export function userLogoutSuccess(payload) {
   return {

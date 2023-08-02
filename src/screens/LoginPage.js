@@ -4,7 +4,7 @@ import Button from "../components/Button";
 import LoginPageBanner from "../assets/pngs/LoginPageBanner.png";
 import OtpComp from "../components/OtpComp";
 import InputBoxLowerBarder from "../components/InputBoxLowerBarder";
-// import {useNavigate} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 
 import {
   loginPersonal,
@@ -23,6 +23,8 @@ export default function LoginPage() {
   const [otpStatus, setOtpStatus] = useState(false);
   const [loginbtnstatus, setloginbtnstatus] = useState(true);
   const [apiError, setApiError] = useState("");
+
+const navigate =useNavigate();
 
   const onLogin = async (userinfo) => {
     const { data, error } = await loginPersonal(userinfo);
@@ -73,11 +75,14 @@ export default function LoginPage() {
     const verifyapi = await verifyOtp(data, loginReducer?.otpData?.token);
     if (verifyapi && verifyapi.error) {
       // setApiErrorStatu(true);
+     
+    
       setApiError(verifyapi?.data);
       // alert(verifyapi?.data);
     } else {
       setApiError("");
       alert("otp is verified successfully");
+      navigate('/Register');
     }
   };
 
@@ -107,7 +112,6 @@ export default function LoginPage() {
     };
     const resendapi = await resendOtp(data);
     if (resendapi && resendapi.error) {
-      console.log("Sumit", resendapi);
       setApiError(resendapi.data);
     } else {
       console.log("iam in sucesss");
@@ -162,12 +166,13 @@ export default function LoginPage() {
             ) : (
               <div className="blankArea"></div>
             )}
-            <div>
+           {!otpStatus? <div>
               <p className="login-instruction">
                 By proceeding, you are agreeing to Floatr’s <br />
                 <span>Terms & Conditions </span> & <span>Privacy Policy</span>
               </p>
-            </div>
+            </div> : <div className="login-instruction"></div>}
+            
 
             {loginbtnstatus ? (
               <Button

@@ -217,25 +217,9 @@ textarea{
   }
  
   //DropDown Component
-
-  // .dropdown{
-    // border: 1px solid black;
-    // color: black;
-    // background-color: white;
-    // height: 1.66em;
-    // width: 8.33em;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // position: relative;
-    // display: block;   
-    // background-color: #f1ecec;
-    // text-align: center;
-  // }
   .dropdown{
-    border: 1px solid black;
+    border-bottom: 1px solid #535d69;
     color: black;
-    background-color: white;
     height: 40px;
     width: 350px;
     // display: flex;
@@ -243,29 +227,14 @@ textarea{
     // align-items: center;
     // position: relative;
     display: block;
-    background-color: #f1ecec;
+    // background-color: #f1ecec;
     text-align: center;    
   }
-  // .dropdown p{
-  //   padding: 0.2777777777777778em 0.2777777777777778em; 
-  //   display: flex;
-  //   justify-content: space-between;
-  //   z-index: 1000;
-  //   width: auto;
-  //   height: 1.11em;
-  //   margin: 0em;
-  //   text-align: left;
-  //   align-items: center;
-  // }
-  // dropdown p{
-  // font-size: 25px;
-  // margin-top: 12px;
-  // }
 
   .dropdowncontent{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 350px;
     height: 40px;
   }
@@ -285,17 +254,18 @@ textarea{
     width: 100%;
     height: 120px;
     overflow-x: hidden;
-    border: 1px solid black;
+    border-bottom: 1px solid #535d69;
+    padding: 0;;
   }
 
 .ddlist li{
-margin-top: 0em;
-    // border: 1px solid black;
+// margin-top: 0em;
     list-style-type: none;
     width: auto;
     height: 40px;
     background-color: #f1ecec;
     padding: 9px;
+    text-align: left;
 }
 
 .stateTitle{
@@ -305,14 +275,8 @@ margin-top: 0em;
 }
 
 .dropContainer{
-  margin-bottom: 39px;
+  margin-bottom: 105px;
 }
-// .ddlist img{
-//   align-items: end;
-//   padding-left: 1.6666666666666667em;
-//   position: absolute;
-//   right: 0;
-// }
 
 
 

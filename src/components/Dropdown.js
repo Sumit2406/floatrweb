@@ -21,7 +21,7 @@ export default function Dropdown({
         onClick={handleDropdown}
         value={selectedOption}
       >
-      <div className="dropdowncontent"> <p className="dropdowntextheight">{dropdownlabel} </p> {dropstatus ? (
+      <div className="dropdowncontent"> <p>{dropdownlabel} </p> {dropstatus ? (
           <img src={upIcon} alt="upIcon"/>
         ) : (
           <img src={downIcon} alt="downIcon"/>

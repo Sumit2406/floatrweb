@@ -14,15 +14,15 @@ const headers = {
     'Content-Type': 'application/json'
 };
 
-// let start;
-// const getToken = async () => {
-//     const tokenObj = await localStorage.getItem('usercrendentials').then((value) => {
-//         const res = JSON.parse(value);
-//         return res;
-//     });
-//     const returntoken = tokenObj && tokenObj.token ? tokenObj.token : null;
-//     return returntoken;
-// };
+//let start;
+const getToken = async () => {
+    const tokenObj = JSON.parse(localStorage.getItem('usercrendentials'));
+
+    console.log('gettoken from localstora',tokenObj)
+    
+    const returntoken = tokenObj && tokenObj.token ? tokenObj.token : null;
+    return returntoken;
+};
 
 const axiosInstance = rateLimit(axios.create({
     baseURL: SERVERURL,
@@ -40,13 +40,13 @@ const axiosInstance = rateLimit(axios.create({
 
 axiosInstance.interceptors.request.use(
     async (config) => {
-        // const token = await getToken();
+         const token = await getToken();
         // const netStatus = await NetInfo.fetch();
         // if (netStatus.isConnected) {
-            // if (token) {
-            //     // console.log('get token=== ',token)
-            //     config.headers.Authorization = `${token}`;
-            // }
+            if (token) {
+                // console.log('get token=== ',token)
+                config.headers.Authorization = `${token}`;
+            }
             if (config.customheader) {
                 config.headers = Object.assign(config.headers, config.customheader);
             }
@@ -84,10 +84,10 @@ axiosInstance.interceptors.response.use(
             });
         }else if(error.response.status === 403){
             const {dispatch} = store;
-            setTimeout(async () => {
-                await localStorage.removeItem("usercrendentials");
-                dispatch(userLogoutSuccess())
-              }, 3000);
+            // setTimeout(async () => {
+            //      localStorage.removeItem("usercrendentials");
+            //     dispatch(userLogoutSuccess())
+            //   }, 3000);
               return new Promise((resolve, reject) => {
                 reject(error);
             });

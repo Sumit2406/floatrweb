@@ -9,7 +9,7 @@ const initialState = {
 };
 
 export default function userReducer(state, action) {
-    console.log('userReducer',action.payload)
+    // console.log('userReducer',action.payload)
     if (typeof state === 'undefined') {
       return initialState;
     }
