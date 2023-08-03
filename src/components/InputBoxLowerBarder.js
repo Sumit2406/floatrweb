@@ -1,7 +1,7 @@
 import React from 'react';
 
 const InputBoxLowerBarder = ({ title, placeholder, prefix, suffix, image1, image2, value, info, error, handleInputChange,
-  type, len }) => {
+  type, len,readOnly }) => {
   return (
     <div className='txtinputblock'>
       {title && <label >{title} </label>}
@@ -13,7 +13,7 @@ const InputBoxLowerBarder = ({ title, placeholder, prefix, suffix, image1, image
           </span>
         }
       <input className='textinput_box' type={type}  placeholder={placeholder}
-      value={value} onChange={handleInputChange} maxLength={len}
+      value={value} onChange={handleInputChange} maxLength={len} readOnly={readOnly}
       />
 
       {suffix && <span className="textinput_suffix ">{suffix}</span>}

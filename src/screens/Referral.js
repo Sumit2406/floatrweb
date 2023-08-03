@@ -9,11 +9,12 @@ export default function Referral() {
   //Login
   const [referralCode, setreferralCode] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-  const [togglestatus, setToggleStatus] = useState(true);
+  const [togglestatus, setToggleStatus] = useState(false);
+  const [readOnlyInput, setreadOnlyInput] =useState(false);
   const handleInputChange = (event) => {
     const inputReferralCode = event.target.value;
     setreferralCode(inputReferralCode);
-
+    console.log("button", inputReferralCode);
     inputReferralCode ? setIsButtonDisabled(false) : setIsButtonDisabled(true);
   };
 
@@ -21,9 +22,15 @@ export default function Referral() {
     console.log("clicked by Referral page");
   };
 
-  const handleToggle = (event) => {
+  const handleToggle = () => {
     setToggleStatus(!togglestatus);
+    console.log(togglestatus);
+    togglestatus ? setIsButtonDisabled(true) : setIsButtonDisabled(false)
+    setreferralCode("");
+    setreadOnlyInput(!readOnlyInput)
   };
+
+  
 
   return (
     <div className="loginBlock container">
@@ -39,6 +46,7 @@ export default function Referral() {
                 id="referralCode"
                 value={referralCode}
                 handleInputChange={handleInputChange}
+                readOnly={readOnlyInput}
               />
             </div>
             <div >
