@@ -11,6 +11,7 @@ import OtpScreen from '../screens/OtpScreen';
 import Referral from '../screens/Referral';
 import Register from '../screens/Register';
 import "../scss/App.scss"
+import Dashboard from '../screens/Dashboard';
 
 export default function Navigation() {
   return (
@@ -20,6 +21,7 @@ export default function Navigation() {
 <Route path='/OtpScreen' element={<OtpScreen/>}/>
 <Route path='/Referral' element={<Referral/>}/>
 <Route path='/Register' element={<Register/>}/>
+<Route path='/Dashboard' element={<Dashboard/>}/>
 
   <Route path="/products" element={<Products />} /> 
   <Route path="/about" element={<About />} /> 

@@ -73,17 +73,16 @@ const navigate =useNavigate();
     };
 
     const verifyapi = await verifyOtp(data, loginReducer?.otpData?.token);
+    console.log(verifyapi);
     if (verifyapi && verifyapi.error) {
       // setApiErrorStatu(true);
-     
-    
       setApiError(verifyapi?.data);
       // alert(verifyapi?.data);
     } else {
       setApiError("");
       // alert("otp is verified successfully");
-      navigate('/Register');
     }
+    verifyapi.data.steps==="Registered" ? navigate('Dashboard') : navigate('/Register')
   };
 
   const handleChange = (element, index) => {

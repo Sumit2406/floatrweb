@@ -50,6 +50,7 @@ const onRegister = async () => {
     // alert(verifyapi?.data);
   } else {
     // setApiError("");
+
     navigate('/Referral');
   }
 };
@@ -66,22 +67,33 @@ const onRegister = async () => {
   };
 
 
- console.log(
-  'dropDownObj123',dropDownObj
- );
+//  console.log(
+//   'dropDownObj123',dropDownObj
+//  );
 
-
-  useEffect( async() => {
-    const statedata = await updateState({});
-    if (statedata && statedata.error) {
-      // setApiError(statedata.data);
-      // console.log(error);
-    } else {
-      // console.log("data Fetched");
-      setDropDownObj(statedata?.data?.data)
-      // setApiError("");
-    }
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const statedata = await updateState({});
+        if (statedata && statedata.error) {
+          // Handle error, if needed
+          // setApiError(statedata.data);
+          // console.log(error);
+        } else {
+          setDropDownObj(statedata?.data?.data);
+        }
+      } catch (error) {
+        // Handle any unexpected errors during API call
+        // console.error('Error fetching data:', error);
+        // setApiError("An error occurred while fetching data.");
+      }
+    };
+  
+    fetchData(); // Call the function immediately inside useEffect
   }, []);
+  
+
+
 
   return (
     <div className="loginBlock container">
