@@ -33,12 +33,12 @@ export default function Dropdown({
             {dropDownObj.map((option, i) => (
               <li
                 onClick={() => {
-                  setdropdownlabel(option.label);
-                  demoValueChange(option.value);
+                  setdropdownlabel(option.name);
+                  demoValueChange(option.state_id);
                 }}
                 key={i}
               >
-                {option.label}
+                {option.name}
               </li>
             ))}
           </ul>

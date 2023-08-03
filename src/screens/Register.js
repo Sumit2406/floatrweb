@@ -54,7 +54,7 @@ export default function Register() {
 
 
  console.log(
-  'dropDownObj',dropDownObj
+  'dropDownObj123',dropDownObj
  );
 
 

@@ -1,5 +1,5 @@
 import React, { useRef,useState} from 'react';
-import uploadicon from "../assets/pngs/Vector.png";
+import ProfilePhoto from "../assets/pngs/ProfilePhoto.png";
 import "../scss/components.scss"
 
 //
@@ -35,11 +35,13 @@ const FileUploader = ({uploadHandler}) => {
       />
       {!uploadedImage && 
       <> 
-      <div className='uploadicon'><img src={uploadicon} alt="uploadicon" /></div>
+      <div className='uploadicon'>
+      {/* <img src={uploadicon} alt="uploadicon" /></div>
       <div className='uploadinfo'>
       <p><b> Upload  </b></p>
       <p><b> Signature </b></p>
-      <p>(.jpeg, .png)</p>
+      <p>(.jpeg, .png)</p> */}
+      <img src={ProfilePhoto} alt="ProfilePhoto" />
       </div>
       </>}
     </div>
