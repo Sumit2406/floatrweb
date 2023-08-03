@@ -4,6 +4,7 @@ import Button from "../components/Button";
 import InputBoxLowerBarder from "../components/InputBoxLowerBarder";
 import LoginPageBanner from "../assets/pngs/LoginPageBanner.png";
 import ToggleButton from "../components/ToggleButton";
+import { refferedcode } from "../actions/UserAction";
 
 export default function Referral() {
   //Login
@@ -11,16 +12,39 @@ export default function Referral() {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [togglestatus, setToggleStatus] = useState(false);
   const [readOnlyInput, setreadOnlyInput] =useState(false);
+  const [error, setApiError]=useState(null);
   const handleInputChange = (event) => {
     const inputReferralCode = event.target.value;
     setreferralCode(inputReferralCode);
-    console.log("button", inputReferralCode);
+
     inputReferralCode ? setIsButtonDisabled(false) : setIsButtonDisabled(true);
   };
+///////////////////////////////
 
-  const btnHandleClick = () => {
-    console.log("clicked by Referral page");
-  };
+
+const btnHandleClick = async () =>{
+  // console.log("called resend",referralCode);
+  try{
+    const data = {
+      refcode: referralCode,
+      isreferral: true
+    };
+    const refferedapi = await refferedcode(data);
+    if (refferedapi && refferedapi.error) {
+      setApiError(refferedapi.data);
+
+    } else {
+      console.log(refferedapi,"ERROR");
+      setApiError(refferedapi.data);
+    }
+  }
+  catch(error){
+console.log(error);
+  }
+
+}
+
+
 
   const handleToggle = () => {
     setToggleStatus(!togglestatus);
@@ -30,14 +54,12 @@ export default function Referral() {
     setreadOnlyInput(!readOnlyInput)
   };
 
-  
-
   return (
     <div className="loginBlock container">
       <div className="row justify-content-center">
         <div className="col-4 align-self-center ">
           <div className="rightSideLoginContent">
-            <h1 className="pgtitle">Have you been Reffered?</h1>
+            <h1 className="pgtitle">Have you been Referred?</h1>
             <div className="inputwithlbl inputwithlblReferal">
               <InputBoxLowerBarder
                 title="Enter Referral Code"
@@ -47,6 +69,7 @@ export default function Referral() {
                 value={referralCode}
                 handleInputChange={handleInputChange}
                 readOnly={readOnlyInput}
+                error={error}
               />
             </div>
             <div >

@@ -59,6 +59,7 @@ export const verifyOtp = async (params, token) => {
   }
 };
 
+//updateState API
 
 export const updateState = async (params) => {
   try {
@@ -71,7 +72,7 @@ export const updateState = async (params) => {
   }
 };
 
-// Register User
+// Register User API
 export const registerUser = async (params) => {
   console.log(params,'params')
   try {
@@ -81,8 +82,7 @@ export const registerUser = async (params) => {
       );
       console.log(data)
       return { error: false, data };
-    }
-    
+    }    
 catch (error) {
     // customToast(error?.response?.data?.message, "error");
     if (error.response && error.response.data) {
@@ -93,6 +93,26 @@ catch (error) {
 };
 //
 
+//Refferal code
+
+export const refferedcode = async (params) => {
+  try {
+    console.log(params,"////////");
+    const data  = await axiosInstance.put("user/personal/referral", params);
+    
+    console.log(data);
+
+    return { error: false, data };
+  } catch (error) {
+    console.log(error, "error");
+    //  console.log("error in resendOtp", error?.response);
+    //   customToast(error?.response?.data?.message, "error");
+    // return error
+    return { error: true, data: error?.message };
+  }
+};
+
+//
 
 export function userLogoutSuccess(payload) {
   return {
