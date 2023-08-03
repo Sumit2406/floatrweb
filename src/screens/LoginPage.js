@@ -81,7 +81,7 @@ const navigate =useNavigate();
       // alert(verifyapi?.data);
     } else {
       setApiError("");
-      alert("otp is verified successfully");
+      // alert("otp is verified successfully");
       navigate('/Register');
     }
   };

@@ -35,7 +35,8 @@ export const resendOtp = async (params) => {
     return { error: true, data: error?.response?.data };
   }
 };
-//
+
+//Verify OTP
 export const verifyOtp = async (params, token) => {
   try {
     const customheader = { Authorization: token };
@@ -70,6 +71,27 @@ export const updateState = async (params) => {
   }
 };
 
+// Register User
+export const registerUser = async (params) => {
+  console.log(params,'params')
+  try {
+    const { data } = await axiosInstance.post(
+      "user/personal/register",
+      params
+      );
+      console.log(data)
+      return { error: false, data };
+    }
+    
+catch (error) {
+    // customToast(error?.response?.data?.message, "error");
+    if (error.response && error.response.data) {
+      console.error("Register Error data", error.response.data);
+    }
+    return { error: true, data: error?.response?.data };
+  }
+};
+//
 
 
 export function userLogoutSuccess(payload) {

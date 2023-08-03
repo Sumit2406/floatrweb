@@ -39,6 +39,7 @@
     border-radius: 0.25em;
   padding: 0 15px;
   max-height: 42px;    
+  outline: none;
 }
 
 .txtinputblock .errormessage {
@@ -90,6 +91,7 @@
   overflow: hidden;
   text-align: left;
   font-family: "ProximaRegular";
+  
 }
 
 // TextArea Component
@@ -359,12 +361,10 @@ border: none;
   font-family: "ProximaRegular";
   padding: 11.5px 16.5px;
   margin-right: 23px;
-  // border: 1px solid #535d69;
   background: transparent;
-  // border-radius: 0.5555555556em;
   border: none;
   border-bottom: 1px solid #535d69;
-  
+  outline: none;
 }
 .OTPWarning{
   display: flex;

@@ -5,33 +5,23 @@ import InputBoxLowerBarder from "../components/InputBoxLowerBarder";
 import Dropdown from "../components/Dropdown";
 import FileUploader from "../components/FileUploader";
 import {updateState} from "../actions/UserAction";
-// import { useSelector } from "react-redux";
+import { registerUser } from "../actions/UserAction";
+import { useNavigate } from "react-router-dom";
 import LoginPageBanner from "../assets/pngs/LoginPageBanner.png";
 
 export default function Register() {
-//   const dispatch = useDispatch();
   
   const [userName, setuserName] = useState("");
   const [dropDownObj, setDropDownObj] =useState([])
-  const [error, setApiError] =useState(null)
-
+  const navigate =useNavigate()
   //FileUpload
-
   const uploadHandler = (data) => {
     // console.log(data);
   };
 
-  //DropDown
-  // const dropDownObj = [
-  //   { value: "Andhra-Pradesh", label: "Andhra Pradesh" },
-  //   { value: "Arunachal Pradesh", label: "Arunachal Pradesh" },
-  //   { value: "Assam", label: "Assam" },
-  // ];
-
-
-
   const [dropstatus, setdropstatus] = useState(false);
   const [selectedOption, setselectedOption] = useState("");
+  
   const handleDropdown = (e) => {
     setdropstatus(!dropstatus);
   };
@@ -41,7 +31,30 @@ export default function Register() {
   };
   //
   const numBtnHandleClick = () => {
+    onRegister();
 };
+//OTP Register
+const onRegister = async () => {
+  const data = {
+    firstname: userName, //mandatory
+    statedata : selectedOption, ///// mandatory
+    // optional
+     profile_photo: "",
+     accounttype: 'Personal',
+     os: "jsjsjsj",
+  }
+  const registerapi = await registerUser(data);
+  if (registerapi && registerapi.error) {
+    // setApiErrorStatu(true);
+    // setApiError(register?.data);
+    // alert(verifyapi?.data);
+  } else {
+    // setApiError("");
+    navigate('/Referral');
+  }
+};
+
+//
 
   const handleInputChange = (event) => {
     const inputValue = event.target.value;
@@ -61,7 +74,7 @@ export default function Register() {
   useEffect( async() => {
     const statedata = await updateState({});
     if (statedata && statedata.error) {
-      setApiError(statedata.data);
+      // setApiError(statedata.data);
       // console.log(error);
     } else {
       // console.log("data Fetched");
