@@ -5,19 +5,20 @@ import InputBoxLowerBarder from "../components/InputBoxLowerBarder";
 import LoginPageBanner from "../assets/pngs/LoginPageBanner.png";
 import ToggleButton from "../components/ToggleButton";
 import { refferedcode } from "../actions/UserAction";
-
+import { useNavigate } from "react-router-dom";
 export default function Referral() {
   //Login
   const [referralCode, setreferralCode] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [togglestatus, setToggleStatus] = useState(false);
   const [readOnlyInput, setreadOnlyInput] =useState(false);
-  const [error, setApiError]=useState(null);
+  const [error, setApiError]=useState("");
+  const navigate = useNavigate()
   const handleInputChange = (event) => {
     const inputReferralCode = event.target.value;
     setreferralCode(inputReferralCode);
-
     inputReferralCode ? setIsButtonDisabled(false) : setIsButtonDisabled(true);
+    setApiError("");
   };
 ///////////////////////////////
 
@@ -31,15 +32,19 @@ const btnHandleClick = async () =>{
     };
     const refferedapi = await refferedcode(data);
     if (refferedapi && refferedapi.error) {
+console.log(refferedapi.data);
       setApiError(refferedapi.data);
 
     } else {
-      console.log(refferedapi,"ERROR");
-      setApiError(refferedapi.data);
+      // console.log(refferedapi,"Success");
+      // setApiError(refferedapi.message);
+navigate('/dashboard');
+
     }
   }
   catch(error){
 console.log(error);
+console.log("//////sumit")
   }
 
 }
@@ -52,6 +57,7 @@ console.log(error);
     togglestatus ? setIsButtonDisabled(true) : setIsButtonDisabled(false)
     setreferralCode("");
     setreadOnlyInput(!readOnlyInput)
+    setApiError("");
   };
 
   return (

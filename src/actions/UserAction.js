@@ -19,7 +19,6 @@ export const loginPersonal = async (params) => {
 
 export function otpSuccess(payload) {
   console.log(payload, "Reducer Payload");
-  console.log(payload.otp);
   return {
     type: OTP_SUCCESS,
     payload,
@@ -109,7 +108,8 @@ export const refferedcode = async (params) => {
     //  console.log("error in resendOtp", error?.response);
     //   customToast(error?.response?.data?.message, "error");
     // return error
-    return { error: true, data: error?.message };
+    // console.log(error?.response?.data?.message)
+    return { error: true, data: error?.response?.data?.message };
   }
 };
 
