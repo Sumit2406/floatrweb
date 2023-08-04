@@ -23,21 +23,25 @@ export default function LoginPage() {
   const [otpStatus, setOtpStatus] = useState(false);
   const [loginbtnstatus, setloginbtnstatus] = useState(true);
   const [apiError, setApiError] = useState("");
+  const [aixosOtp, setaxiosOtp] = useState(null);
 
 const navigate =useNavigate();
 
   const onLogin = async (userinfo) => {
     const { data, error } = await loginPersonal(userinfo);
+    setaxiosOtp(data.otp);
     if (!error) {
-      dispatch(otpSuccess(data));
+    dispatch(otpSuccess(data));
       setOtpStatus(true);
       setloginbtnstatus(false);
       setError("");
     } else {
       setError(data);
     }
+    
   };
-
+  
+  
   //button
   const numBtnHandleClick = () => {
     if (mobileNumber.length !== 10) {
@@ -74,9 +78,11 @@ const navigate =useNavigate();
 
     const verifyapi = await verifyOtp(data, loginReducer?.otpData?.token);
     console.log(verifyapi);
+
     if (verifyapi && verifyapi.error) {
       // setApiErrorStatu(true);
       setApiError(verifyapi?.data);
+
       // alert(verifyapi?.data);
     } else {
       setApiError("");
@@ -124,7 +130,7 @@ const navigate =useNavigate();
         <div className="col-4 align-self-center ">
           <div className="rightSideLoginContent">
             <h1 className="pgtitle">Welcome !</h1>
-            <p className="pgsubtitle">Login to continue</p>
+            <p className="pgsubtitle">Login to continue  <b>OTP -{aixosOtp}</b></p>
             <div className="inputwithlbl">
               <InputBoxLowerBarder
                 title="Mobile Number"

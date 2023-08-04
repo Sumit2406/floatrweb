@@ -37,7 +37,7 @@
     width: 100%;
     border: none;
     border-radius: 0.25em;
-  padding: 0 15px;
+  // padding: 0 15px;
   max-height: 42px;    
   outline: none;
 }
@@ -355,16 +355,16 @@ border: none;
 }
 
 .otp-field {
-  width: 45px;
+  width: 22%;
   height: 45px;
   color: #333;
   font-family: "ProximaRegular";
-  padding: 11.5px 16.5px;
-  margin-right: 23px;
+  padding: 5px auto;
   background: transparent;
   border: none;
   border-bottom: 1px solid #535d69;
   outline: none;
+  text-align: center;
 }
 .OTPWarning{
   display: flex;
@@ -386,12 +386,6 @@ border: none;
   margin-top: -18px;
 }
 
-//ToggleButton
-
-// .togglecontainer{ 
-//   display: flex;
-// justify-content: space-between;
-// }
 .toggle{
   width: 48px;
   height: 24px;
@@ -428,3 +422,14 @@ border: none;
   border: 1px solid rgba(110, 121, 133, 0.60);;
 }
 
+//Error Page
+.errorpage{
+  font-style: proxima;
+h1{
+  font-size: 160px;
+  background: #061D33;
+}
+p{
+  line-height: 1.3;
+}
+}

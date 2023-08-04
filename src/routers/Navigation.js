@@ -12,6 +12,7 @@ import Referral from '../screens/Referral';
 import Register from '../screens/Register';
 import "../scss/App.scss"
 import Dashboard from '../screens/Dashboard';
+import Errorpage from '../screens/Errorpage';
 
 export default function Navigation() {
   return (
@@ -29,6 +30,7 @@ export default function Navigation() {
   <Route path="/career" element={<Carrer /> } /> 
   <Route path="/contact" element={<Contact />} /> 
   <Route path="/description" element={<Description/>}/>
+  <Route path='/*' element={<Errorpage/>}/>
 </Routes>
     </div>
   )
