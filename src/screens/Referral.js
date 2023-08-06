@@ -68,7 +68,7 @@ console.log("//////sumit")
             <h1 className="pgtitle">Have you been Referred?</h1>
             <div className="inputwithlbl inputwithlblReferal">
               <InputBoxLowerBarder
-                title="Enter Referral Code"
+                // title="Enter Referral Code"
                 placeholder="Enter Referral Code"
                 type="text"
                 id="referralCode"

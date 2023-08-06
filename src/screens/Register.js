@@ -105,7 +105,7 @@ const onRegister = async () => {
           <div className="uploadimg">
               <FileUploader uploadHandler={uploadHandler} />   
             </div>         
-            <div className="inputwithlbl">
+            <div className="inputwithlbl inputwithlblRegister">
               <InputBoxLowerBarder
                 title="Name"
                 placeholder="Enter Mobile Name"
