@@ -22,9 +22,9 @@ export default function Dropdown({
         value={selectedOption}
       >
       <div className="dropdowncontent"> <p>{dropdownlabel} </p> {dropstatus ? (
-          <img src={upIcon} alt="upIcon"/>
+          <img src={downIcon} alt="upIcon"/>
         ) : (
-          <img src={downIcon} alt="downIcon"/>
+          <img src={upIcon} alt="downIcon"/>
         )}
 </div> 
 

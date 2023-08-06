@@ -142,10 +142,14 @@ white-space: nowrap;
 
 .uploadimg{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   top: 13px;  
+  text-align: left;
+  font-family: "ProximaRegular";
+
 }
 
 .inputwithlblReferal{

@@ -97,13 +97,13 @@ const onRegister = async () => {
 
   return (
     <div className="loginBlock container">
-      {/* <h1 className="pgtitle uploadpgtitle">Personalize Your Account</h1> */}
       <div className="row justify-content-center">
         <div className="col-4 align-self-center ">
           <div className="rightSideLoginContent">
             <h1 className="pgtitle">Personalize Your Account</h1>
           <div className="uploadimg">
-              <FileUploader uploadHandler={uploadHandler} />   
+              <FileUploader uploadHandler={uploadHandler} />
+              <span>Add Photo</span>
             </div>         
             <div className="inputwithlbl inputwithlblRegister">
               <InputBoxLowerBarder
