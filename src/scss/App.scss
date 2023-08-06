@@ -119,15 +119,14 @@ white-space: nowrap;
     }
 }
 
-
 .Termscondition{
   display: flex;
 }
-.Termscondition Checkbox{
-  height: 1em ;
-  width: 1em;
-  margin-right: 10px;
-}
+// .Termscondition Checkbox{
+//   height: 1em ;
+//   width: 1em;
+//   margin-right: 10px;
+// }
 .blankArea{
   margin-top: 147px
 }
@@ -159,7 +158,11 @@ white-space: nowrap;
   margin-bottom: 220px;
 }
 
-//For Register Leable
-.inputwithlblRegister{
-  margin-top: 10px;
+.interneterror {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: red;
+  font-family: proximRegular;
 }

@@ -37,8 +37,7 @@ const navigate =useNavigate();
       setError("");
     } else {
       setError(data);
-    }
-    
+    }    
   };
   
   
