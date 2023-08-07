@@ -15,14 +15,17 @@ const headers = {
 };
 
 //let start;
-const getToken = async () => {
+ const getToken = async () => {
     const tokenObj = JSON.parse(localStorage.getItem('usercrendentials'));
 
     // console.log('gettoken from localstora',tokenObj)
     
-    const returntoken = tokenObj && tokenObj.token ? tokenObj.token : null;
-    return returntoken;
+    // const returntoken = tokenObj && tokenObj.token ? tokenObj.token : null;
+    // return returntoken;
+    return tokenObj;
 };
+export { getToken };
+
 
 const axiosInstance = rateLimit(axios.create({
     baseURL: SERVERURL,

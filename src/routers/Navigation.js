@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect,useState} from 'react'
 import {Route, Routes} from "react-router-dom";
 import Home from "../screens/Home";
 import About from "../screens/About";
@@ -14,7 +14,31 @@ import "../scss/App.scss"
 import Dashboard from '../screens/Dashboard';
 import Errorpage from '../screens/Errorpage';
 
+import  { getToken } from '../helpers/axiosInstance';
+import { useNavigate } from 'react-router-dom';
+
+
 export default function Navigation() {
+  const [isRegistered, setIsRegistered] = useState(false);
+const navigate =useNavigate();
+  useEffect(() => {
+    const fetchToken = async () => {
+      try {
+        const token = await getToken();
+        const data = token;
+        console.log(data.steps);
+        // Do something with the token
+        setIsRegistered(data.steps === 'Registered');
+        isRegistered? navigate('Dashboard') : navigate('/')
+      } catch (error) {
+        console.error('Error fetching token:', error);
+      }
+    };
+fetchToken();  
+  }, [isRegistered,navigate]);
+
+  
+
   return (
     <div className='mainbody'>
 <Routes>
@@ -22,7 +46,8 @@ export default function Navigation() {
 <Route path='/OtpScreen' element={<OtpScreen/>}/>
 <Route path='/Referral' element={<Referral/>}/>
 <Route path='/Register' element={<Register/>}/>
-<Route path='/Dashboard' element={<Dashboard/>}/>
+<Route path="/Dashboard" element={<Dashboard />} />
+
 
   <Route path="/products" element={<Products />} /> 
   <Route path="/about" element={<About />} /> 

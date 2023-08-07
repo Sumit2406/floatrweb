@@ -3,7 +3,6 @@ import Navbar from './Navbar';
 import "../scss/App.scss"
 import React, { useState, useEffect } from 'react';
 
-
 function App() {
   const [isOnline, setIsOnline] = useState(navigator.onLine);
 
@@ -25,6 +24,9 @@ function App() {
     };
   }, []);
   
+
+
+
 
   return (
     <div className="container-fluid">
