@@ -171,3 +171,45 @@ white-space: nowrap;
   font-family: proximRegular;
   font-size: 32px;
 }
+
+.errorpagecontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -50px;
+}
+
+.errorpage{
+  width: 600px;
+  height: 375px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorpagemsg{
+  font-size: 1em;
+    line-height: 1.3;
+    font-family: 'ProximaRegular';
+    margin-top: 0;
+    margin-bottom: 0.55rem;
+}
+
+.errorpagebutton {
+  width: 356px;
+  letter-spacing: 3px;
+  line-height: 1.5;
+  font-size: 1.125em;
+  font-family: ProximaSemiBold;
+  padding: 7px 10px;
+  max-height: 42px;
+  border: none;
+}
+.ErrorPageTitle{
+  font-family: "ProximaBold";
+  font-size: 46px;
+  line-height: 1.3;
+  position: relative;
+  top: 64px;
+}
