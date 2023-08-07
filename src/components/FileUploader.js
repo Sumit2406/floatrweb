@@ -10,16 +10,19 @@ const FileUploader = ({uploadHandler}) => {
   const handleDivClick = () => {
     fileInputRef.current.click();
   };
+
   const handleFileChange = (event) => {
-    const file = event.target.files[0];
-    const reader = new FileReader();
-    
-    reader.onload = (e) => {
-      setUploadedImage(e.target.result);
-      uploadHandler(e.target.result);
-    };
-    reader.readAsDataURL(file);
+    const selectedFile = event.target.files[0];  
+    if (selectedFile) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        setUploadedImage(e.target.result);
+        uploadHandler(e.target.result);
+      };
+      reader.readAsDataURL(selectedFile);
+    }
   };
+  
 
   return (
     <div

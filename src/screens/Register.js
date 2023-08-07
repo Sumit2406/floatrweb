@@ -92,9 +92,6 @@ const onRegister = async () => {
     fetchData(); // Call the function immediately inside useEffect
   }, []);
   
-
-
-
   return (
     <div className="loginBlock container">
       <div className="row justify-content-center">
@@ -108,7 +105,7 @@ const onRegister = async () => {
             <div className="inputwithlbl inputwithlblRegister">
               <InputBoxLowerBarder
                 title="Name"
-                placeholder="Enter Mobile Name"
+                placeholder="Enter Your Name"
                 type="text"
                 id="name"
                 value={userName}
