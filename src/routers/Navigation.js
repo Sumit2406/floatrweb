@@ -13,6 +13,7 @@ import Register from '../screens/Register';
 import "../scss/App.scss"
 import Dashboard from '../screens/Dashboard';
 import Errorpage from '../screens/Errorpage';
+import OnBoarding from '../screens/KYC/OnBoarding';
 
 import  { getToken } from '../helpers/axiosInstance';
 import { useNavigate } from 'react-router-dom';
@@ -47,6 +48,7 @@ fetchToken();
 <Route path='/Referral' element={<Referral/>}/>
 <Route path='/Register' element={<Register/>}/>
 <Route path="/Dashboard" element={<Dashboard />} />
+<Route path="/Onboarding" element={<OnBoarding/>} />
 
 
   <Route path="/products" element={<Products />} /> 
