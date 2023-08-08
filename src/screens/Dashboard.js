@@ -11,8 +11,6 @@ const navigate=useNavigate();
   };
 
   const kycOnboardingbtn = () => {
-    console.log(localStorage);
-    localStorage.clear();
     navigate('/Onboarding')
   };
 
@@ -21,6 +19,7 @@ const navigate=useNavigate();
       <h1>Welcome to Dashboard</h1>
       <h2>All API implemented successfully for login</h2>
       <Button btnLabel="LogOut" rectangualar="false" btnClick={dashbordbtn} disable="false"/>
+      <h3>Click below to move to KYC Page</h3>  
       <Button btnLabel="Kyconbording" rectangualar="false" btnClick={kycOnboardingbtn} disable="false"/>
     </div>
   )

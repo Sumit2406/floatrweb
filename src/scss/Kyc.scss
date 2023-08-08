@@ -1,6 +1,7 @@
+@import '~bootstrap/scss/bootstrap';
 .onboading-left-content{
     width: 501px;
-    height: 400px;
+    height: 460px;
     margin-top: 50px;
 }
 
@@ -14,3 +15,20 @@
         object-fit: cover;
         margin-left: 316px;
 }
+
+.contactDetailslabel {
+    color: #061D33;
+    font-family: 'ProximaExtraBold';
+    font-size: 2.25em;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.onboading-left-content p{
+    color: #333;
+    font-family: 'ProximaRegular';
+    font-size: 1.125em;
+    line-height: 1.3;
+    margin-bottom: 0.55em;
+  }

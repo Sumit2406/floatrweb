@@ -90,6 +90,7 @@ catch (error) {
     if (error.response && error.response.data) {
       console.error("Register Error data", error.response.data);
     }
+    
     return { error: true, data: error?.response?.data };
   }
 };
@@ -99,7 +100,6 @@ catch (error) {
 
 export const refferedcode = async (params) => {
   try {
-    console.log(params,"////////");
     const data  = await axiosInstance.put("user/personal/referral", params);
     
     console.log(data);

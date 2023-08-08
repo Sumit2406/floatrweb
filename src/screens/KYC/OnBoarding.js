@@ -2,20 +2,22 @@ import React from "react";
 import onboardingimg from "../../assets/pngs/onboardingimg.png";
 import "../../scss/Kyc.scss";
 import Button from "../../components/Button";
-
-
+import { useNavigate } from "react-router-dom";
 export default function OnBoarding() {
 
+  const navigate = useNavigate();
+
   const onBoardBtnHandleClick = () => {
-    console.log("Clicked by onBoardBtnHandleClick")
+navigate('/Contactdetails');
   };
 
 
+ 
   return (
     <div className="loginBlock container d-flex .flex-col">
   
         <div className = "onboading-left-content">
-          <h1>Investor Onboarding</h1>
+          <h1 className="contactDetailslabel">Investor Onboarding</h1>
           <p>
             After onboarding is approved, you can invest in Mutual Funds and
             setup your NPS Account
