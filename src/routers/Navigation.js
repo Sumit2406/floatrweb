@@ -24,8 +24,7 @@ const navigate =useNavigate();
   useEffect(() => {
     const fetchToken = async () => {
       try {
-        const token = await getToken();
-        const data = token;
+        const data = await getToken();
         console.log(data.steps);
         // Do something with the token
         setIsRegistered(data.steps === 'Registered');
