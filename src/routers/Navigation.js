@@ -27,14 +27,18 @@ const navigate =useNavigate();
         const data = await getToken();
         console.log(data.steps);
         // Do something with the token
-        setIsRegistered(data.steps === 'Registered');
-        isRegistered? navigate('Dashboard') : navigate('/')
+
+        if(data.steps === 'Registered'){
+          navigate('Dashboard')
+        }
+        // setIsRegistered(data.steps === 'Registered');
+        // isRegistered && navigate('Dashboard')
       } catch (error) {
         console.error('Error fetching token:', error);
       }
     };
 fetchToken();  
-  }, [isRegistered,navigate]);
+  }, [navigate]);
 
   
 

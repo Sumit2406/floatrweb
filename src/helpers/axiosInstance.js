@@ -18,7 +18,7 @@ const headers = {
  const getToken = async () => {
     const tokenObj = JSON.parse(localStorage.getItem('usercrendentials'));
 
-    // console.log('gettoken from localstora',tokenObj)
+    //  console.log('gettoken from localstora',tokenObj)
     
     // const returntoken = tokenObj && tokenObj.token ? tokenObj.token : null;
     // return returntoken;
@@ -48,7 +48,7 @@ axiosInstance.interceptors.request.use(
         // if (netStatus.isConnected) {
             if (token) {
                 // console.log('get token=== ',token)
-                config.headers.Authorization = `${token}`;
+                config.headers.Authorization = `${ token && token.token ? token.token : null}`;
             }
             if (config.customheader) {
                 config.headers = Object.assign(config.headers, config.customheader);

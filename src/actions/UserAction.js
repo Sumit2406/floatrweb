@@ -63,7 +63,9 @@ export const verifyOtp = async (params, token) => {
 
 export const updateState = async (params) => {
   try {
+    // console.log("state params", params);
     const { data } = await axiosInstance.get("master/state", params);
+    // console.log(data,"checking state data");
     return { error: false, data };
   } catch (error) {
       console.log("error in updateState", error?.response);
