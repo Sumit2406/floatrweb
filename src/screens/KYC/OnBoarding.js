@@ -32,12 +32,14 @@ navigate('/Contactdetails');
             Aadhaar number and mobile linked to Aadhaar is needed for OTP
             verification & eSign
           </p>
+          <div className="onboardingbtn">
           <Button
                 btnLabel="Start Onboarding"
                 rectangualar="false"
                 btnClick={onBoardBtnHandleClick}
                 disable = "false"
          />
+          </div>
         </div>
 
         <div className="onboading-right-content">
