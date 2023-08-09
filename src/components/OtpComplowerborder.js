@@ -2,7 +2,7 @@ import React from "react";
 // import "../scss/App.scss";
 import "../scss/components.scss";
 
-export default function OtpComp({otp, handleChange, handleKeyDown,title}) 
+export default function OtpComplowerborder({otp, handleChange, handleKeyDown,title}) 
 {
     
     return (

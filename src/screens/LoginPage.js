@@ -2,7 +2,8 @@ import "../scss/App.scss";
 import React, { useState } from "react";
 import Button from "../components/Button";
 import LoginPageBanner from "../assets/pngs/LoginPageBanner.png";
-import OtpComp from "../components/OtpComp";
+
+import OtpComplowerborder from "../components/OtpComplowerborder";
 import InputBoxLowerBarder from "../components/InputBoxLowerBarder";
 import {useNavigate} from "react-router-dom"
 
@@ -146,7 +147,7 @@ const navigate =useNavigate();
             {otpStatus ? (
               <>
                 <div className="inputwithlbl">
-                  <OtpComp
+                  <OtpComplowerborder
                     title="Enter OTP"
                     otp={otp}
                     handleChange={handleChange}

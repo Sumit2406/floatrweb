@@ -1,15 +1,10 @@
 import React, { useState } from "react";
-import ContactDetailsImage from "../../assets/pngs/ContactDetailsImage.png";
+import KycOtpImg from "../../assets/pngs/KycOtpImg.png";
 import "../../scss/Kyc.scss";
 import Button from "../../components/Button";
-import InputBox from "../../components/InputBox";
 
-export default function ContactDetails() {
-  const [mobileNumber, setMobileNumber] = useState("");
-  const [error, setError] = useState("");
-  const [emailError, setEmailError] = useState("");
-  const [emailId, setEmailID] = useState("");
 
+export default function KycOtp() {
   const numBtnHandleClick = () => {
     let hasError = false;
 
@@ -22,16 +17,6 @@ export default function ContactDetails() {
     } else {
       setError("");
     }
-
-    // if (!/^[A-Z0-9._%+-]+@[A-Z]+\.(?:[A-Z]{2,}|co\.in|in)$/i.test(emailId)) {
-    //   setEmailError("Enter a valid email address");
-    //   hasError = true;
-    // } else if (!/^[A-Z]/i.test(emailId)) {
-    //   setEmailError("Email should not start with a number");
-    //   hasError = true;
-    // } else {
-    //   setEmailError("");
-    // }
 
     if (!/^[A-Z0-9._%+-]+@[A-Z]+\.(?:[A-Z]{2,}|co\.in|in)$/i.test(emailId)) {
       setEmailError("Enter a valid email address");
@@ -60,47 +45,14 @@ export default function ContactDetails() {
     }
   };
 
-  const handleEmailInputChange = (event) => {
-    const emailValue = event.target.value;
-    setEmailID(emailValue);
-    setEmailError("");
-  };
-
-  const handleInputChange = (event) => {
-    const inputValue = event.target.value;
-    if (!isNaN(inputValue)) {
-      setMobileNumber(inputValue);
-      setError("");
-    }
-  };
-
   return (
     <div className="loginBlock container d-flex .flex-col">
       <div className="onboading-left-content">
-        <img src={ContactDetailsImage} alt="ContactDetailsImage-img" />
+        <img src={KycOtpImg} alt="KycOtpImg-img" />
       </div>
 
       <div className="contactDetails-right-content">
-      <h1 className="contactDetailslabel">Contact Detail</h1>
-        <InputBox
-          title="Mobile Number"
-          placeholder="Enter Mobile Number"
-          type="text"
-          id="mobile"
-          handleInputChange={handleInputChange}
-          value={mobileNumber}
-          len={10}
-          error={error}
-        />
-
-        <InputBox
-          title="Email ID"
-          holder="abcd123@gmail.com"
-          type="text"
-          handleInputChange={handleEmailInputChange}
-          value={emailId}
-          error={emailError}
-        />
+      <h1 className="contactDetailslabel">Verification</h1>
 <div className="Kyccontactbtn"></div>
         <Button
           btnLabel="Start Onboarding"

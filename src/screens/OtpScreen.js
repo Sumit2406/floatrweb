@@ -2,7 +2,7 @@ import "../scss/App.scss";
 import React, { useState } from "react";
 import Button from "../components/Button";
 import LoginPageBanner from '../assets/pngs/LoginPageBanner.png';
-import OtpComp from "../components/OtpComp";
+import OtpComplowerborder from "../components/OtpComplowerborder";
 import { useNavigate } from "react-router-dom";
 import InputBoxLowerBarder from "../components/InputBoxLowerBarder";
 
@@ -75,7 +75,7 @@ return (
           </div>
 
           <div className="inputwithlbl">
-         <OtpComp 
+         <OtpComplowerborder 
          title="Enter OTP"
          otp={otp}
          handleChange={handleChange}
