@@ -88,8 +88,8 @@ const navigate =useNavigate();
     } else {
       setApiError("");
       // alert("otp is verified successfully");
+      verifyapi.data.steps==="Registered" ? navigate('Dashboard') : navigate('/Register')
     }
-    verifyapi.data.steps==="Registered" ? navigate('Dashboard') : navigate('/Register')
   };
 
   const handleChange = (element, index) => {
@@ -112,7 +112,6 @@ const navigate =useNavigate();
   };
 
   const otpResend = async () => {
-    console.log("called resend");
     const data = {
       contact: mobileNumber,
     };
@@ -120,8 +119,8 @@ const navigate =useNavigate();
     if (resendapi && resendapi.error) {
       setApiError(resendapi.data);
     } else {
-      console.log("iam in sucesss");
       setApiError("");
+      setaxiosOtp(resendapi.data.otp);
     }
   };
 
@@ -145,30 +144,17 @@ const navigate =useNavigate();
               />
             </div>
             {otpStatus ? (
-              <>
                 <div className="inputwithlbl">
                   <OtpComplowerborder
                     title="Enter OTP"
                     otp={otp}
                     handleChange={handleChange}
                     handleKeyDown={handleKeyDown}
+                    error={apiError}
+                    otpResend={otpResend}
+                    otpxxnum={"******".concat(mobileNumber.slice(7,10))}
                   />
                 </div>
-                <div>
-                  <div className="login-Warning">
-                    <div className="OTPWarning">
-                      {apiError ? (
-                        <p className="otpverifyerror">{apiError} </p>
-                      ) : (
-                        <p>OTP is valid for 5 minutes only</p>
-                      )}
-                      <div onClick={otpResend}>
-                        <span>Resend OTP</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </>
             ) : (
               <div className="blankArea"></div>
             )}

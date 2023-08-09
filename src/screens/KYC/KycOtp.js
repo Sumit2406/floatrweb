@@ -2,47 +2,59 @@ import React, { useState } from "react";
 import KycOtpImg from "../../assets/pngs/KycOtpImg.png";
 import "../../scss/Kyc.scss";
 import Button from "../../components/Button";
-
-
+import OtpComp from "../../components/OtpComp";
 export default function KycOtp() {
+
+  const [otp, setOtp] = useState(new Array(4).fill(""));
+  const [apiError, setApiError] = useState("");
+
+  // const [error, setError] = useState("");
+
+
+  const handleChange = (element, index) => {
+    if (isNaN(element.value)) return false;
+    setOtp([...otp.map((d, idx) => (idx === index ? element.value : d))]);
+    if (element.nextSibling) {
+      element.nextSibling.focus();
+    }
+  };
+
+  const handleKeyDown = (e, index) => {
+    if (e.key === "Backspace" && !otp[index]) {
+      if (index > 0) {
+        const previousInput = e.target.previousSibling;
+        if (e.target.previousSibling) {
+          previousInput.focus();
+        }
+      }
+    }
+  };
+
+  const handleChangeformail = (element, index) => {
+    if (isNaN(element.value)) return false;
+    setOtp([...otp.map((d, idx) => (idx === index ? element.value : d))]);
+    if (element.nextSibling) {
+      element.nextSibling.focus();
+    }
+  };
+
+  const handleKeyDownformail = (e, index) => {
+    if (e.key === "Backspace" && !otp[index]) {
+      if (index > 0) {
+        const previousInput = e.target.previousSibling;
+        if (e.target.previousSibling) {
+          previousInput.focus();
+        }
+      }
+    }
+  };
+
+  const otpResend =  () => {
+   console.log("OTP resend button click from kycOTP")
+  };
+
   const numBtnHandleClick = () => {
-    let hasError = false;
-
-    if (mobileNumber.length !== 10) {
-      setError("Mobile number should be 10 digits long");
-      hasError = true;
-    } else if (!/^[6789]\d{9}$/.test(mobileNumber)) {
-      setError("Mobile number should start with 6, 7, 8, or 9");
-      hasError = true;
-    } else {
-      setError("");
-    }
-
-    if (!/^[A-Z0-9._%+-]+@[A-Z]+\.(?:[A-Z]{2,}|co\.in|in)$/i.test(emailId)) {
-      setEmailError("Enter a valid email address");
-      hasError = true;
-    } else if (!/^[A-Z]/i.test(emailId)) {
-      setEmailError("Email should not start with a number");
-      hasError = true;
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(emailId)) {
-      setEmailError("Invalid email format");
-      hasError = true;
-    } else if (/^[A-Z0-9._%+-]+@mail\.(?:c|com)$/i.test(emailId)) {
-      setEmailError("Invalid email domain");
-      hasError = true;
-    } else if (/^[A-Z0-9._%+-]+@mail#.com$/i.test(emailId)) {
-      setEmailError("Invalid email domain");
-      hasError = true;
-    } else if (/^[A-Z0-9._%+-]+@mail\.\.$/i.test(emailId)) {
-      setEmailError("Invalid email domain");
-      hasError = true;
-    } else {
-      setEmailError("");
-    }
-    if (!hasError) {
-      // Perform other actions here after validation
-      console.log("Mobile number and Email Id is correct");
-    }
+    console.log("clicked by kyc Otp");
   };
 
   return (
@@ -53,12 +65,31 @@ export default function KycOtp() {
 
       <div className="contactDetails-right-content">
       <h1 className="contactDetailslabel">Verification</h1>
-<div className="Kyccontactbtn"></div>
+<div className="Kyccontactbtn">
+                  <OtpComp
+                    title="Mobile Number Verification"
+                    otp={otp}
+                    handleChange={handleChange}
+                    handleKeyDown={handleKeyDown}
+                    error={apiError}
+                    otpResend={otpResend}
+                  />
+                  <OtpComp
+                    title="Email Verification"
+                    otp={otp}
+                    handleChange={handleChangeformail}
+                    handleKeyDown={handleKeyDownformail}
+                    error={apiError}
+                    otpResend={otpResend}
+    
+                  />
+</div>
+
         <Button
           btnLabel="Start Onboarding"
           rectangualar="true"
           btnClick={numBtnHandleClick}
-          disable={mobileNumber && emailId}
+          disable="false"
         />
       </div>
     </div>

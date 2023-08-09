@@ -104,20 +104,20 @@ white-space: nowrap;
   margin-top: -15px;
 }
 
-.login-Warning{
-  color: #333;
-    font-family: "ProximaSemiBold";
-    font-size: 1em;
-    line-height: 1.2;
-    margin-bottom: 73px;
-    margin-top: 20px;
-    mar
-    span{
-      color: #43A2FF;
-      text-decoration: underline;
-      cursor: pointer;
-    }
-}
+// .login-Warning{
+//   color: #333;
+//     font-family: "ProximaSemiBold";
+//     font-size: 1em;
+//     line-height: 1.2;
+//     margin-bottom: 73px;
+//     margin-top: 20px;
+//     mar
+//     span{
+//       color: #43A2FF;
+//       text-decoration: underline;
+//       cursor: pointer;
+//     }
+// }
 
 .Termscondition{
   display: flex;
@@ -136,9 +136,7 @@ white-space: nowrap;
     margin-top: 126px;
 }
 
-.otpverifyerror{
-  color: #F00;
-}
+
 
 .uploadimg{
   display: flex;

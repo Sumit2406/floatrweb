@@ -6,7 +6,7 @@ export const loginPersonal = async (params) => {
   try {
     console.log(params, "params login");
     const { data } = await axiosInstance.post("user/personal/login", params);
-    // console.log('data',data)
+    // console.log('data',data)   //Common output like lineno 21
     // console.log("expire_at", data.expire_at);
     return { error: false, data };
   } catch (error) {
@@ -18,7 +18,7 @@ export const loginPersonal = async (params) => {
 
 
 export function otpSuccess(payload) {
-  console.log(payload, "Reducer Payload");
+  console.log(payload, "Reducer Payload");//Common output like lineno 9
   return {
     type: OTP_SUCCESS,
     payload,

@@ -2,7 +2,7 @@ import React from "react";
 // import "../scss/App.scss";
 import "../scss/components.scss";
 
-export default function OtpComplowerborder({
+export default function OtpComp({
   otp,
   handleChange,
   handleKeyDown,
@@ -20,7 +20,7 @@ export default function OtpComplowerborder({
           {otp.map((data, index) => {
             return (
               <input
-                className="otp-field-lowerborder"
+                className="otp-field"
                 type="text"
                 name="otp"
                 maxLength="1"
