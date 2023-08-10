@@ -139,16 +139,28 @@ textarea{
     padding: 0;
   }
   
+  // .tab-item {
+  //   padding: 0.5555555555555556em;
+  //   cursor: pointer;
+  //   font-family: "ProximaBold";
+  //   border: 1px solid #ccc;
+  //   border-radius: 0.27em;
+  //   margin-right: 0em;
+  //   border: none;
+  // }
   .tab-item {
-    padding: 0.5555555555555556em;
-    cursor: pointer;
-    // font-weight: bold;
-    font-family: "ProximaBold";
-    border: 1px solid #ccc;
-    border-radius: 0.27em;
-    margin-right: 0em;
-    border: none;
+  padding: 0.5555555556em;
+  cursor: pointer;
+  font-family: "ProximaBold";
+  border: 1px solid #ccc;
+  border-radius: 0.27em;
+  width: 100px;
+  text-align: center;
+  margin-right: 10px;
   }
+  .tab-item:last-child {
+    margin-right: 0;
+  }x
   
   .tab-content {
     margin-top: 0.5555555555555556em;

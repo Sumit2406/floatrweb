@@ -5,10 +5,21 @@ import InputBox from "../../components/InputBox";
 import Button from "../../components/Button";
 
 export default function Aboutme() {
+  const [fatherName, setFatherName] = useState("");
+  const [motherName, setmotherName] = useState("");
+  const [spouceName, setspouceName] = useState("");
+  const [AadharNum, setAadharNum] = useState("");
+  const [PanNum, setPanNum] = useState("");
 
-  const [fatherName, setFatherName] =useState("");
-  const [motherName, setmotherName] =useState("");
-  const [spouceName, setspouceName] =useState("");
+  const handleAadharChange = (e) => {
+    setAadharNum(e.target.value);
+    // console.log(e.target.value);
+  };
+
+  const handlePanChange = (e) => {
+    setPanNum(e.target.value);
+    // console.log(e.target.value);
+  };
 
   const handleFatherInputChange = (e) => {
     setFatherName(e.target.value);
@@ -24,7 +35,7 @@ export default function Aboutme() {
   };
 
   const btnHandleClick = () => {
-    console.log('Button clicked!');
+    console.log("Button clicked!");
   };
 
   const Title = [
@@ -49,59 +60,79 @@ export default function Aboutme() {
   };
 
   return (
-    <div className="stepscontainer container">
-      <div>
+    <div className="loginBlock container ">
+      <div className="stepcontiner"><Steps /></div>
+      <div className="d-flex .flex-col">
+        <div className="onboading-left-content">
+          <InputBox
+            title="PAN"
+            placeholder="AERTS3403H"
+            type="text"
+            id="PanId"
+            handleInputChange={handlePanChange}
+            value={PanNum}
+          />
 
+          <InputBox
+            title="Aadhar "
+            holder="xxxx xxxx 2431"
+            type="text"
+            id="AadharId"
+            handleInputChange={handleAadharChange}
+            value={AadharNum}
+          />
+        </div>
+        <div className="contactDetails-right-content">
+          <div>
+            <Tabs
+              tabDataObj={Title}
+              defaultSelected="1"
+              handleTabSelect={handleTitleSelect}
+            />
+          </div>
+          <InputBox
+            title="Father's Name"
+            placeholder="Enter full name"
+            type="text"
+            id="fatherId"
+            handleInputChange={handleFatherInputChange}
+            value={fatherName}
+            len={10}
+          />
+          <div>
+            <InputBox
+              title="Mother’s Name"
+              holder="Enter full name"
+              type="text"
+              id="motherId"
+              handleInputChange={handleMotherInputChange}
+              value={motherName}
+            />
+          </div>
+          <div>
+            <h1>Marital Status</h1>
+            <Tabs
+              tabDataObj={MaritalStatus}
+              defaultSelected="1"
+              handleTabSelect={handleMaritalSelect}
+            />
+          </div>
+          <InputBox
+            title="Spouce Name"
+            holder="Enter full Name"
+            type="text"
+            handleInputChange={handleSpouceInputChange}
+            value={spouceName}
+          />
+          <div>
+            <Button
+              btnLabel="Cotinue"
+              rectangualar="true"
+              btnClick={btnHandleClick}
+            />
+          </div>
+        </div>
       </div>
-
-      <div>
-      <Steps />
-      <div>
-        <Tabs
-          tabDataObj={Title}
-          defaultSelected="1"
-          handleTabSelect={handleTitleSelect}
-        />
-      </div>
-      <InputBox
-        title="Father's Name"
-        placeholder="Enter full name"
-        type="text"
-        id="fatherId"
-        handleInputChange={handleFatherInputChange}
-        value={fatherName}
-        len={10}
-      />
-      <div>
-        <InputBox
-          title="Mother’s Name"
-          holder="Enter full name"
-          type="text"
-          id="motherId"
-          handleInputChange={handleMotherInputChange}
-          value={motherName}
-        />
-      </div>
-      <div>
-        <h1>Marital Status</h1>
-        <Tabs
-          tabDataObj={MaritalStatus}
-          defaultSelected="1"
-          handleTabSelect={handleMaritalSelect}
-        />
-      </div>
-      <InputBox
-        title="Spouce Name"
-        holder="Enter full Name"
-        type="text"
-        handleInputChange={handleSpouceInputChange}
-        value={spouceName}
-        
-      />
-      <div>
-              <Button btnLabel="Cotinue" rectangualar="true" btnClick={btnHandleClick}/>
-              </div>
-              </div>
     </div>
   );
 }
