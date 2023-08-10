@@ -20,7 +20,9 @@ export default function DigilockerPage() {
           Your Aadhaar card must be linked to a mobile number to receive and
           confirm the OTP
         </p>
+        <div className="Digilockerlogo">
         <img src={Digilockerlogo} alt="Digilockerlogo-img" />
+        </div>
         <h2>How Digilocker works</h2>
         <ul>
           <li>
