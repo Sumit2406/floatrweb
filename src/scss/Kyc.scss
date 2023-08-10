@@ -4,8 +4,6 @@
     height: 460px;
     margin-top: 50px;
 }
-
-
     .onboading-right-content {
         width: 611px;
         height: 500px;
@@ -55,4 +53,44 @@ height: 80px;
 .Digilockerlogo{
     height: 48px;
     width: 200px;
+}
+
+////////////////////////////
+.steptitlecontainer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.steptitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .steptitle{
+width: 100px;
+  }
+  
+  .steptitle img {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+  }
+  
+  .steptitle span {
+    margin-top: 5px; /* Adjust the margin as needed */
+  }
+  .steptitlecontainer li{
+    list-style-type: none;
+  }
+.stepscontainer{
+    width: 100%;
+    margin-top: 25px;
+}
+.liitem{
+    display: flex;
+}
+
+.lining{
+    width: 145px;
+height: 4px;
 }

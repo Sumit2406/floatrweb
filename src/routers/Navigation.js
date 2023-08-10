@@ -20,6 +20,7 @@ import  { getToken } from '../helpers/axiosInstance';
 import { useNavigate } from 'react-router-dom';
 import ContactDetails from '../screens/KYC/ContactDetails';
 import DigilockerPage from '../screens/KYC/DigilockerPage';
+import Aboutme from '../screens/KYC/Aboutme';
 
 export default function Navigation() {
 const navigate =useNavigate();
@@ -56,6 +57,7 @@ fetchToken();
 <Route path="/ContactDetails" element={<ContactDetails/>} />
 <Route path="/KycOtp" element={<KycOtp/>} />
 <Route path="/DigilockerPage" element={<DigilockerPage/>} />
+<Route path="/Aboutme" element={<Aboutme/>} />
 
 
   <Route path="/products" element={<Products />} /> 
