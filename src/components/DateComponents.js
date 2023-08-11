@@ -5,12 +5,12 @@ export default function DateComponents({selectedDate,title, handleDateChange}) {
     <div >
       <h2>{title}</h2>
       <input
+      className="dateclass"
         type="date"
         placeholder="Select"
         value={selectedDate}
         onChange={handleDateChange}
       />
-      <p>Selected Date: {selectedDate}</p>
     </div>
 
   )
