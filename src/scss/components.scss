@@ -124,20 +124,42 @@ textarea{
 
 // Tabs Componet
 
-.tabs-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+
+  .tabs-container {
+    list-style-type: none;
     width: 100%;
+    padding: 0;
+    display: flex;
+    flex-flow: wrap;
   }
 
   .tab-list {
     list-style-type: none;
     display: flex;
-    justify-content: flex-start;
-    margin: 0;
+    justify-content: space-between;
+    width: 100%;    
     padding: 0;
+    flex-flow: wrap;
   }
+
+
+
+//   .tab-list {
+//     padding: 0.5555555556em;
+//   cursor: pointer;
+//   font-family: "ProximaBold";
+//   border: 1px solid #ccc;
+//   border-radius: 0.27em;
+//   width: 117px;
+//   text-align: center;
+//   margin-right: 10px;
+//   margin-top: 10px;
+//   height: 54px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   list-style-type: none;
+// }
   
   // .tab-item {
   //   padding: 0.5555555555555556em;
@@ -149,14 +171,20 @@ textarea{
   //   border: none;
   // }
   .tab-item {
-  padding: 0.5555555556em;
+    padding: 0.5555555556em;
   cursor: pointer;
   font-family: "ProximaBold";
   border: 1px solid #ccc;
   border-radius: 0.27em;
-  width: 100px;
+  width: 117px;
   text-align: center;
   margin-right: 10px;
+  margin-top: 10px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
   }
   .tab-item:last-child {
     margin-right: 0;

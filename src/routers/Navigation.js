@@ -15,12 +15,12 @@ import Dashboard from '../screens/Dashboard';
 import Errorpage from '../screens/Errorpage';
 import OnBoarding from '../screens/KYC/OnBoarding';
 import KycOtp from '../screens/KYC/KycOtp';
-
 import  { getToken } from '../helpers/axiosInstance';
 import { useNavigate } from 'react-router-dom';
 import ContactDetails from '../screens/KYC/ContactDetails';
 import DigilockerPage from '../screens/KYC/DigilockerPage';
 import Aboutme from '../screens/KYC/Aboutme';
+import Occupation from '../screens/KYC/Occupation';
 
 export default function Navigation() {
 const navigate =useNavigate();
@@ -58,6 +58,7 @@ fetchToken();
 <Route path="/KycOtp" element={<KycOtp/>} />
 <Route path="/DigilockerPage" element={<DigilockerPage/>} />
 <Route path="/Aboutme" element={<Aboutme/>} />
+<Route path="/Occupation" element={<Occupation/>} />
 
 
   <Route path="/products" element={<Products />} /> 

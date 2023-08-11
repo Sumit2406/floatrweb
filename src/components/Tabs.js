@@ -24,10 +24,10 @@ const Tabs = ({ tabDataObj, defaultSelected, handleTabSelect }) => {
           </li>
         ))}
       </ul>
-      <div className="tab-content">
+      {/* <div className="tab-content">
         {selectedValue &&
           tabDataObj.find((tab) => tab.value === selectedValue)?.content}
-      </div>
+      </div> */}
     </div>
   );
 };

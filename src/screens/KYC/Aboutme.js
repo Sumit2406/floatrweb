@@ -3,6 +3,7 @@ import Steps from "../../components/Steps";
 import Tabs from "../../components/Tabs";
 import InputBox from "../../components/InputBox";
 import Button from "../../components/Button";
+import hrline from "../../assets/pngs/steps/hrline.png"
 
 export default function Aboutme() {
   const [fatherName, setFatherName] = useState("");
@@ -39,9 +40,9 @@ export default function Aboutme() {
   };
 
   const Title = [
-    { label: "Shri", value: "Shri", content: <p>Content for Tab 1</p> },
-    { label: "Smt", value: "Smt", content: <p>Content for Tab 2</p> },
-    { label: "Kumari", value: "Kumari", content: <p>Content for Tab 3</p> },
+    { label: "Shri", value: "Shri" },
+    { label: "Smt", value: "Smt"},
+    { label: "Kumari", value: "Kumari" },
   ];
 
   const handleTitleSelect = (selectedValue) => {
@@ -49,10 +50,10 @@ export default function Aboutme() {
   };
 
   const MaritalStatus = [
-    { label: "Single", value: "Shri", content: <p>Content for Tab 1</p> },
-    { label: "Married", value: "Smt", content: <p>Content for Tab 2</p> },
-    { label: "Window", value: "Kumari", content: <p>Content for Tab 3</p> },
-    { label: "Divorce", value: "Divorce", content: <p>Content for Tab 3</p> },
+    { label: "Single", value: "Single"},
+    { label: "Married", value: "Married"},
+    { label: "widow", value: "widow"},
+    { label: "Divorce", value: "Divorce"},
   ];
 
   const handleMaritalSelect = (selectedValue) => {
@@ -62,6 +63,9 @@ export default function Aboutme() {
   return (
     <div className="loginBlock container ">
       <div className="stepcontiner"><Steps /></div>
+      <div className="hrline">
+        <img src={hrline} alt="hrline" />
+        </div>
       <div className="d-flex .flex-col">
         <div className="onboading-left-content">
           <InputBox
@@ -84,6 +88,7 @@ export default function Aboutme() {
         </div>
         <div className="contactDetails-right-content">
           <div>
+          <h1 className="Tabtitle">Title</h1>
             <Tabs
               tabDataObj={Title}
               defaultSelected="1"
@@ -110,7 +115,7 @@ export default function Aboutme() {
             />
           </div>
           <div>
-            <h1>Marital Status</h1>
+            <h1 className="Tabtitle">Marital Status</h1>
             <Tabs
               tabDataObj={MaritalStatus}
               defaultSelected="1"
