@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import DigilockerBanner from "../../assets/pngs/DigilockerBanner.png";
 import Digilockerlogo from "../../assets/pngs/Digilockerlogo.png";
 import "../../scss/Kyc.scss";

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Steps from "../../components/Steps";
 import Tabs from "../../components/Tabs";
 import InputBox from "../../components/InputBox";
 import Button from "../../components/Button";
+import Steps from "../../components/Steps";
 import hrline from "../../assets/pngs/steps/hrline.png"
 
 export default function Aboutme() {

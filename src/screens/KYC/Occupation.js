@@ -12,7 +12,6 @@ export default function Occupation() {
   const taxpayerHandleClick = () => {
     console.log("Button clicked!");
   };
-
   const Politicalobj = [
     { label: "Yes", value: "Yes" },
     { label: "No", value: "No"},
@@ -69,6 +68,11 @@ export default function Occupation() {
     console.log("Selected value:", selectedValue);
   };
 
+  const ContiueBtnClick = () => {
+    console.log("Button clicked!");
+  };
+
+
   return (
     <div className="loginBlock container ">
       <div className="stepcontiner">
@@ -102,7 +106,7 @@ export default function Occupation() {
             <p>I am politically exposed person</p>{" "}
             <Tabs
               tabDataObj={Politicalobj}
-              defaultSelected="1"
+              defaultSelected={Politicalobj[1].value}
               handleTabSelect={handlePoliticalSelect}
             />        
           </div>
@@ -110,7 +114,7 @@ export default function Occupation() {
             <p>I am politically exposed person</p>{" "}
             <Tabs
               tabDataObj={Politicalrelatedobj}
-              defaultSelected="1"
+              defaultSelected={Politicalrelatedobj[1].value}
               handleTabSelect={handlePoliticalrelated}
             />                    
           </div>
@@ -119,7 +123,7 @@ export default function Occupation() {
           <div >
             <Tabs
               tabDataObj={Occupatiotypeobj}
-              defaultSelected="1"
+              defaultSelected={Occupatiotypeobj[4].value}
               handleTabSelect={Occupatiotypeobjhandle}
             />
             </div>
@@ -132,7 +136,7 @@ export default function Occupation() {
           <div >
             <Tabs
               tabDataObj={SourcOfIncomeObj}
-              defaultSelected="1"
+              defaultSelected={SourcOfIncomeObj[0].value}
               handleTabSelect={SourcOfIncomehandle}
             />
             </div>
@@ -143,12 +147,17 @@ export default function Occupation() {
           <div >
             <Tabs
               tabDataObj={AnnualIncometypeobj}
-              defaultSelected="1"
+              defaultSelected={AnnualIncometypeobj[1].value}
               handleTabSelect={AnnualIncomehandle}
             />
             </div>
           </div>
-
+          <Button
+              btnLabel="Continue"
+              rectangualar="true"
+              btnClick={ContiueBtnClick}
+              disable="false"
+            />
 
         </div>
 

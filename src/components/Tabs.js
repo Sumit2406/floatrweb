@@ -2,14 +2,15 @@ import React, { useState } from "react";
 
 const Tabs = ({ tabDataObj, defaultSelected, handleTabSelect }) => {
   
-  const [selectedValue, setSelectedValue] = useState(defaultSelected || "");
-  console.log(defaultSelected);
+  const [selectedValue, setSelectedValue] = useState(defaultSelected);
+  
   const handleTabClick = (value) => {
     setSelectedValue(value);
     if (handleTabSelect) {
       handleTabSelect(value);
     }
   };
+
 
   return (
     <div className="tabs-container">
