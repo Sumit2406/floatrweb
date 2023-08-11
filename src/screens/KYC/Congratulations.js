@@ -14,33 +14,36 @@ export default function Congratulations() {
         <img src={Kycdone} alt="Kycdone-img" />
       </div>
 
-      <div className="contactDetails-right-content d-flex .flex-col justify-content-center align-items-center">
+      <div className="contactDetails-right-content d-flex flex-col justify-content-center align-items-center">
         <div className="congratsicon">
           <img src={CongratsIcon} alt="CongratsIcon" />
         </div>
         <p>On Completing Your Onboarding</p>
         <p>You are now ready to invest in</p>
         
-        <div className="d-flex justify-content-center align-items-center">
-          <div >
+        <div className="d-flex">
+          <div className="investIconcontainer d-flex flex-column align-items-center">
             <div className="investIcon">
               <img src={MutualFunds} alt="MutualFunds-img" />
             </div>
-            <span>Mutual Funds</span>
+            <span>Mutual </span>
+            <span>Funds</span>
           </div>
-          <div>
+          <div className="investIconcontainer d-flex flex-column align-items-center">
             <div className="investIcon">
               <img src={DigitalGold} alt="DigitalGold-img" />
             </div>
-            <span>Digital Gold & Silver</span>
+            <span>Digital Gold</span>
+            <span>& Silver</span>
           </div>
-          <div>
+          <div className="investIconcontainer d-flex flex-column align-items-center">
             <div className="investIcon">
               <img src={FixedDeposit} alt="FixedDeposit-img" />
             </div>
-            <span>Fixed Deposits</span>
+            <span>Fixed </span>
+            <span>Deposits</span>
           </div>
-          <div>
+          <div className="investIconcontainer d-flex flex-column align-items-center">
             <div className="investIcon">
               <img src={Insurance} alt="Insurance-img" />
             </div>
@@ -48,7 +51,7 @@ export default function Congratulations() {
           </div>
         </div>
         <p>You are just one step away from </p>
-        <o>getting your NPS Account</o>
+        <p>getting your NPS Account</p>
       </div>
     </div>
   );
