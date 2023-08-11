@@ -22,6 +22,7 @@ import DigilockerPage from '../screens/KYC/DigilockerPage';
 import Aboutme from '../screens/KYC/Aboutme';
 import Occupation from '../screens/KYC/Occupation';
 import Bank from '../screens/KYC/Bank';
+import Nomination from '../screens/KYC/Nomination';
 
 export default function Navigation() {
 const navigate =useNavigate();
@@ -61,6 +62,7 @@ fetchToken();
 <Route path="/Aboutme" element={<Aboutme/>} />
 <Route path="/Occupation" element={<Occupation/>} />
 <Route path="/Bank" element={<Bank/>} />
+<Route path="/Nomination" element={<Nomination/>} />
 
   <Route path="/products" element={<Products />} /> 
   <Route path="/about" element={<About />} /> 
@@ -69,6 +71,7 @@ fetchToken();
   <Route path="/contact" element={<Contact />} /> 
   <Route path="/description" element={<Description/>}/>
   <Route path='/*' element={<Errorpage/>}/>
+  
 </Routes>
     </div>
   )
