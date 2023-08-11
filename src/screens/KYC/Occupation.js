@@ -45,6 +45,29 @@ export default function Occupation() {
     console.log("Selected value:", selectedValue);
   };
 
+  const SourcOfIncomeObj = [
+    { label: "Salary", value: "Salary" },
+    { label: "Business", value: "Business"},
+    { label: "Rental", value: "Rental"},
+    { label: "Royalty", value: "Royalty"},
+    { label: "Ancestral", value: "Ancestral"},
+    { label: "Others", value: "Others"},
+  ];
+  const SourcOfIncomehandle= (selectedValue) => {
+    console.log("Selected value:", selectedValue);
+  };
+
+  const AnnualIncometypeobj = [
+    { label: "Below 1 Lakh", value: "Below 1 Lakh" },
+    { label: "1-5 Lakhs", value: "1-5 Lakhs"},
+    { label: "5-10 Lakhs", value: "5-10 Lakhs"},
+    { label: "10-20 Lakhs", value: "10-20 Lakhs"},
+    { label: "25L to 1Cr", value: "25L to 1Cr"},
+    { label: "Above 1Cr", value: "Above 1Cr"},
+  ];
+  const AnnualIncomehandle= (selectedValue) => {
+    console.log("Selected value:", selectedValue);
+  };
 
   return (
     <div className="loginBlock container ">
@@ -60,16 +83,18 @@ export default function Occupation() {
             <p>I am a citizen of India</p>{" "}
             <Button
               btnLabel="Yes"
-              rectangualar="true"
+              rectangualar="false"
               btnClick={citizenHandleClick}
+              disable="false"
             />
           </div>
           <div className="d-flex">
             <p>I am tax payer only in India</p>{" "}
             <Button
               btnLabel="Yes"
-              rectangualar="true"
+              rectangualar="false"
               btnClick={taxpayerHandleClick}
+              disable="false"
             />
           </div>
 
@@ -102,6 +127,27 @@ export default function Occupation() {
         </div>
 
         <div className="contactDetails-right-content">
+        <div >
+          <h1 className="Tabtitle">Main Source of Income</h1>
+          <div >
+            <Tabs
+              tabDataObj={SourcOfIncomeObj}
+              defaultSelected="1"
+              handleTabSelect={SourcOfIncomehandle}
+            />
+            </div>
+          </div>
+
+          <div >
+          <h1 className="Tabtitle">Annual Income</h1>
+          <div >
+            <Tabs
+              tabDataObj={AnnualIncometypeobj}
+              defaultSelected="1"
+              handleTabSelect={AnnualIncomehandle}
+            />
+            </div>
+          </div>
 
 
         </div>
