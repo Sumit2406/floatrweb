@@ -1,13 +1,11 @@
 import React, { useRef,useState} from 'react';
 import uploadicon from "../assets/pngs/uploadicon.png"
-// import ProfilePhoto from "../assets/pngs/ProfilePhoto.png";
-
 import "../scss/components.scss"
 
 //
 export default function FileUploaderwithArrowIcon ({uploadHandler}) {
   const fileInputRef = useRef(null);
-  const [uploadedImage, setUploadedImage] = useState(null);
+  const [uploadedImage1, setUploadedImage] = useState(null);
   
   const handleDivClick = () => {
     fileInputRef.current.click();
@@ -28,8 +26,8 @@ export default function FileUploaderwithArrowIcon ({uploadHandler}) {
 
   return (
     <div
-      className="upload-div"
-      style={{ backgroundImage: `url(${uploadedImage})`}}
+      className="upload-div-icond"
+      style={{ backgroundImage: `url(${uploadedImage1})`}}
       onClick={handleDivClick}
     >
       <input
@@ -38,17 +36,18 @@ export default function FileUploaderwithArrowIcon ({uploadHandler}) {
         onChange={handleFileChange}
         accept=".png, .jpg, .jpeg"
       />
-      {!uploadedImage && 
+      <div className='uploadcontainer'>
+      {!uploadedImage1 && 
       <> 
-      <div className='uploadicon'>
-      <img src={uploadicon} alt="uploadicon" /></div>
+      <div className='uploadicond'>
+      <img src={uploadicon} alt="uploadicon" />
+      </div>
       <div className='uploadinfo'>
-      <p><b> Upload  </b></p>
-      <p><b> Signature </b></p>
+      <p> Upload Signature </p>
       <p>(.jpeg, .png)</p>
-      {/* <img src={ProfilePhoto} alt="ProfilePhoto" /> */}
       </div>
       </>}
+      </div>
     </div>
   );
 };

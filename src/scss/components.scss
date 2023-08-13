@@ -126,8 +126,6 @@ textarea{
 }
 
 // Tabs Componet
-
-
   .tabs-container {
     list-style-type: none;
     width: 100%;
@@ -225,20 +223,7 @@ textarea{
       width: 120px;
       margin: -5px;
       }
-    .uploadinfo{      
-      height: 101px;
-      width: 90px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: -15px;
-      p{
-        font-size: 0.8888888888888888em;
-        margin: 0px;
-      }
-    }
-    .uploadedImage {
+       .uploadedImage {
       width: 2.77em;
       height: 2.77em;
       margin-top: 0.5555555555555556em;
@@ -250,7 +235,67 @@ textarea{
   .upload-div input[type="file"] {
     display: none;
   }
+
+  // Fileupload with icon
+
+  .upload-div-icond {
+    
+    width: 570px;
+height: 208px;
+background-color: FFF;
+    background-size: cover;
+    cursor: pointer;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: none;
+
+    .uploadcontainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  .uploadicond{
+    height: 50px;
+    width: 50px;
+    }
+
+  .uploadinfo{      
+    color: #333;
+    font-family: ProximaRegular;
+    font-size: 20px;
+    line-height: 1.3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    p{
+      margin-top: 20px;
+      margin-bottom: -1rem;
+    }
+  }
+  .uploadedImage1 {
+    width: 2.77em;
+    height: 2.77em;
+    margin-top: 0.5555555555555556em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+  }
+
+}
+ 
+  }
+  .upload-div-icond input[type="file"] {
+    display: none;
+  }
+
   
+
+
   //CheckBox Component 
 
   .chkBox, .chkBox img {
