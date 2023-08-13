@@ -24,6 +24,7 @@ import Occupation from '../screens/KYC/Occupation';
 import Bank from '../screens/KYC/Bank';
 import Nomination from '../screens/KYC/Nomination';
 import Congratulations from '../screens/KYC/Congratulations';
+import Photo from '../screens/KYC/Photo';
 
 export default function Navigation() {
 const navigate =useNavigate();
@@ -65,6 +66,7 @@ fetchToken();
 <Route path="/Bank" element={<Bank/>} />
 <Route path="/Nomination" element={<Nomination/>} />
 <Route path="/Congratulations" element={<Congratulations/>} />
+<Route path="/Photo" element={<Photo/>} />
 
   <Route path="/products" element={<Products />} /> 
   <Route path="/about" element={<About />} /> 
