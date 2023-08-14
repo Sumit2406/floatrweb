@@ -101,13 +101,14 @@ export default function ContactDetails() {
           value={emailId}
           error={emailError}
         />
-<div className="Kyccontactbtn"></div>
+<div className="kycobtn">
         <Button
           btnLabel="Start Onboarding"
           rectangualar="true"
           btnClick={numBtnHandleClick}
           disable={mobileNumber && emailId}
         />
+        </div>
       </div>
     </div>
   );

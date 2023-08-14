@@ -81,13 +81,14 @@ export default function Bank() {
             handleDateChange={handleDateChange}
             selectedDate={selectedDate}
           />
-
+<div className="kycobtn">
           <Button
             btnLabel="Continue"
             rectangualar="true"
             btnClick={continueBtnClick}
             disable="true"
           />
+          </div>
         </div>
       </div>
     </div>

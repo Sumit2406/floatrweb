@@ -70,13 +70,14 @@ export default function Bank() {
           id={BankName}
         />
 
-          <Button
+<div className="kycobtn">
+<Button
                 btnLabel="Continue"
                 rectangualar="true"
                 btnClick={continueBtnClick}
                 disable = "true"
          />
-
+</div>          
 </div>
 </div>
 

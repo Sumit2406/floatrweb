@@ -1,6 +1,7 @@
 import React from "react";
 // import "../scss/App.scss";
 import "../scss/components.scss";
+import "../scss/Kyc.scss"
 
 export default function OtpComp({
   otp,
@@ -9,18 +10,21 @@ export default function OtpComp({
   title,
   error,
   otpResend,
-  otpxxnum
+  otpxxnum,
+  KycOTPDesign,
+Kycotp_field,
+Kyclogin_Warning
 }) {
   return (
     <div className="row">
       <p className="OtpTitle">{title}</p>
       {otpxxnum && <p className="otpmsg">OTP received on {otpxxnum}</p>}
       <div className="col-12">
-        <div className="OTPDesign">
+        <div  className= {KycOTPDesign ? "KycOTPDesign": "OTPDesign"}>
           {otp.map((data, index) => {
             return (
               <input
-                className="otp-field"
+                className={Kycotp_field ? "Kycotp_field" : "otp-field"}
                 type="text"
                 name="otp"
                 maxLength="1"
@@ -33,8 +37,8 @@ export default function OtpComp({
             );
           })}
         </div>
-        <div className="login-Warning">
-          <div className="OTPWarning">
+        <div className={Kyclogin_Warning? "Kyclogin_Warning":"login-Warning"}>
+          <div className=  "OTPWarning">
             {error ? (
               <p className="otpverifyerror">{error} </p>
             ) : (

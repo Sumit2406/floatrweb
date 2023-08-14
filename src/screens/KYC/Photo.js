@@ -39,7 +39,7 @@ export default function Photo() {
           
         </div>
       </div>
-      <div>
+      <div className="kycobtn">
       <Button
             btnLabel="Continue"
             rectangualar="true"

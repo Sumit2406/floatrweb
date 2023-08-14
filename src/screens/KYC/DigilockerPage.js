@@ -37,12 +37,14 @@ export default function DigilockerPage() {
             provide consent for sharing documents / information with CRA
           </li>
         </ul>
+        <div className="kycobtn">
         <Button
           btnLabel="Start Onboarding"
           rectangualar="true"
           btnClick={numBtnHandleClick}
           disable="false"
         />
+        </div>
       </div>
     </div>
   );

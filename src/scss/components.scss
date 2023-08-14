@@ -17,7 +17,6 @@
 }
 .txtinputblock .textinput {
     border: 1px solid #535d69;
-    // border-bottom: 1px solid #535d69;
     height: 2.77em;
     display: flex;
     background: transparent;
@@ -25,6 +24,7 @@
     overflow: hidden;
     text-align: left;
     font-family: "ProximaRegular";
+    padding: 0.5555555556em;
 }
 .textinputblock .textinput::placeholder {
   font-family: "ProximaRegular";
@@ -86,7 +86,6 @@
 
 .txtinputblock .textinputlowerborder {
   border-bottom: 1px solid #535d69;
-  // border-bottom: 1px solid #535d69;
   height: 2.77em;
   display: flex;
   background: transparent;
@@ -565,4 +564,69 @@ h1{
 p{
   line-height: 1.3;
 }
+}
+
+//Kyc OTP
+
+.KycOTPDesign {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Kycotp-field {
+  width: 70px;
+  height: 70px;
+  color: #333;
+  font-family: "ProximaRegular";
+  /* padding: 0px 3px; */
+  background: transparent;
+  border: none;
+  border: 1px solid #535d69;
+  outline: none;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 32px;
+}
+.Kyclogin-Warning {
+  color: #333;
+  font-family: "ProximaSemiBold";
+  font-size: 1em;
+  line-height: 1.2;
+  /* margin-bottom: 73px; */
+  margin-top: 8px;
+}
+
+
+.KycOTPDesign {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Kycotp_field {
+  width: 70px;
+  height: 70px;
+  color: #333;
+  font-family: "ProximaRegular";
+  /* padding: 0px 3px; */
+  background: transparent;
+  border: none;
+  border: 1px solid #535d69;
+  outline: none;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 32px;
+}
+.Kyclogin_Warning {
+  color: #333;
+  font-family: "ProximaSemiBold";
+  font-size: 1em;
+  line-height: 1.2;
+  /* margin-bottom: 73px; */
+  margin-top: 8px;
 }

@@ -152,13 +152,14 @@ export default function Occupation() {
             />
             </div>
           </div>
+          <div className="kycobtn">
           <Button
               btnLabel="Continue"
               rectangualar="true"
               btnClick={ContiueBtnClick}
               disable="false"
             />
-
+</div>
         </div>
 
       </div>

@@ -129,7 +129,7 @@ export default function Aboutme() {
             handleInputChange={handleSpouceInputChange}
             value={spouceName}
           />
-          <div>
+          <div className="kycobtn">
             <Button
               btnLabel="Cotinue"
               rectangualar="true"

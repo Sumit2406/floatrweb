@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import KycOtpImg from "../../assets/pngs/KycOtpImg.png";
+import OtpLine from "../../assets/pngs/OtpLine.png";
 import "../../scss/Kyc.scss";
 import Button from "../../components/Button";
 import OtpComp from "../../components/OtpComp";
-export default function KycOtp() {
 
+export default function KycOtp() {
   const [otp, setOtp] = useState(new Array(4).fill(""));
   const [apiError, setApiError] = useState("");
 
   // const [error, setError] = useState("");
-
 
   const handleChange = (element, index) => {
     if (isNaN(element.value)) return false;
@@ -49,8 +49,8 @@ export default function KycOtp() {
     }
   };
 
-  const otpResend =  () => {
-   console.log("OTP resend button click from kycOTP")
+  const otpResend = () => {
+    console.log("OTP resend button click from kycOTP");
   };
 
   const numBtnHandleClick = () => {
@@ -64,33 +64,41 @@ export default function KycOtp() {
       </div>
 
       <div className="contactDetails-right-content">
-      <h1 className="contactDetailslabel">Verification</h1>
-<div className="Kyccontactbtn">
-                  <OtpComp
-                    title="Mobile Number Verification"
-                    otp={otp}
-                    handleChange={handleChange}
-                    handleKeyDown={handleKeyDown}
-                    error={apiError}
-                    otpResend={otpResend}
-                  />
-                  <OtpComp
-                    title="Email Verification"
-                    otp={otp}
-                    handleChange={handleChangeformail}
-                    handleKeyDown={handleKeyDownformail}
-                    error={apiError}
-                    otpResend={otpResend}
-    
-                  />
-</div>
-
-        <Button
-          btnLabel="Start Onboarding"
-          rectangualar="true"
-          btnClick={numBtnHandleClick}
-          disable="false"
+        <h1 className="contactDetailslabel">Verification</h1>
+        <OtpComp
+          KycOTPDesign="KycOTPDesign"
+          Kycotp_field="Kycotp_field"
+          Kyclogin_Warning="Kyclogin_Warning"
+          title="Mobile Number Verification"
+          otp={otp}
+          handleChange={handleChange}
+          handleKeyDown={handleKeyDown}
+          error={apiError}
+          otpResend={otpResend}
         />
+        <div className="OtpLine">
+          <img src={OtpLine} alt="OtpLine" />
+        </div>
+
+        <OtpComp
+          KycOTPDesign="KycOTPDesign"
+          Kycotp_field="Kycotp_field"
+          Kyclogin_Warning="Kyclogin_Warning"
+          title="Mobile Number Verification"
+          otp={otp}
+          handleChange={handleChangeformail}
+          handleKeyDown={handleKeyDownformail}
+          error={apiError}
+          otpResend={otpResend}
+        />
+        <div className="kycobtn">
+          <Button
+            btnLabel="Start Onboarding"
+            rectangualar="true"
+            btnClick={numBtnHandleClick}
+            disable="false"
+          />
+        </div>
       </div>
     </div>
   );
