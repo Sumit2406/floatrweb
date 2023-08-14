@@ -61,7 +61,7 @@ export default function Aboutme() {
   };
 
   return (
-    <div className="loginBlock container position-relative">
+    <div className="loginBlock container ">
       <div className="stepcontiner">
         <Steps />
       </div>
@@ -88,7 +88,7 @@ export default function Aboutme() {
             value={AadharNum}
           />
         </div>
-        <div className="contactDetails-right-content ">
+        <div className="contactDetails-right-content position-relative">
           <div>
             <h1 className="Tabtitle">Title</h1>
             <Tabs
@@ -131,16 +131,15 @@ export default function Aboutme() {
             handleInputChange={handleSpouceInputChange}
             value={spouceName}
           />
-
-        </div>
-      </div>
-      <div className="kycobtn">
+        <div className="kycobtn">
             <Button
               btnLabel="Cotinue"
               rectangualar="true"
               btnClick={btnHandleClick}
             />
           </div>
+        </div>
+      </div>
 
     </div>
   );
