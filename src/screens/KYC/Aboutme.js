@@ -3,7 +3,7 @@ import Tabs from "../../components/Tabs";
 import InputBox from "../../components/InputBox";
 import Button from "../../components/Button";
 import Steps from "../../components/Steps";
-import hrline from "../../assets/pngs/steps/hrline.png"
+import hrline from "../../assets/pngs/steps/hrline.png";
 
 export default function Aboutme() {
   const [fatherName, setFatherName] = useState("");
@@ -41,7 +41,7 @@ export default function Aboutme() {
 
   const Title = [
     { label: "Shri", value: "Shri" },
-    { label: "Smt", value: "Smt"},
+    { label: "Smt", value: "Smt" },
     { label: "Kumari", value: "Kumari" },
   ];
 
@@ -50,10 +50,10 @@ export default function Aboutme() {
   };
 
   const MaritalStatus = [
-    { label: "Single", value: "Single"},
-    { label: "Married", value: "Married"},
-    { label: "widow", value: "widow"},
-    { label: "Divorce", value: "Divorce"},
+    { label: "Single", value: "Single" },
+    { label: "Married", value: "Married" },
+    { label: "widow", value: "widow" },
+    { label: "Divorce", value: "Divorce" },
   ];
 
   const handleMaritalSelect = (selectedValue) => {
@@ -61,11 +61,13 @@ export default function Aboutme() {
   };
 
   return (
-    <div className="loginBlock container ">
-      <div className="stepcontiner"><Steps /></div>
+    <div className="loginBlock container position-relative">
+      <div className="stepcontiner">
+        <Steps />
+      </div>
       <div className="hrline">
         <img src={hrline} alt="hrline" />
-        </div>
+      </div>
       <div className="d-flex .flex-col">
         <div className="onboading-left-content">
           <InputBox
@@ -86,9 +88,9 @@ export default function Aboutme() {
             value={AadharNum}
           />
         </div>
-        <div className="contactDetails-right-content">
+        <div className="contactDetails-right-content ">
           <div>
-          <h1 className="Tabtitle">Title</h1>
+            <h1 className="Tabtitle">Title</h1>
             <Tabs
               tabDataObj={Title}
               defaultSelected="1"
@@ -129,15 +131,17 @@ export default function Aboutme() {
             handleInputChange={handleSpouceInputChange}
             value={spouceName}
           />
-          <div className="kycobtn">
+
+        </div>
+      </div>
+      <div className="kycobtn">
             <Button
               btnLabel="Cotinue"
               rectangualar="true"
               btnClick={btnHandleClick}
             />
           </div>
-        </div>
-      </div>
+
     </div>
   );
 }

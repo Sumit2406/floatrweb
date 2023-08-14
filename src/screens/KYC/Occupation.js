@@ -5,7 +5,6 @@ import Button from "../../components/Button";
 import Tabs from "../../components/Tabs";
 
 export default function Occupation() {
-
   const citizenHandleClick = () => {
     console.log("Button clicked!");
   };
@@ -14,7 +13,7 @@ export default function Occupation() {
   };
   const Politicalobj = [
     { label: "Yes", value: "Yes" },
-    { label: "No", value: "No"},
+    { label: "No", value: "No" },
   ];
   const handlePoliticalSelect = (selectedValue) => {
     console.log("Selected value:", selectedValue);
@@ -22,23 +21,22 @@ export default function Occupation() {
 
   const Politicalrelatedobj = [
     { label: "Yes", value: "Yes" },
-    { label: "No", value: "No"},
+    { label: "No", value: "No" },
   ];
-  const handlePoliticalrelated= (selectedValue) => {
+  const handlePoliticalrelated = (selectedValue) => {
     console.log("Selected value:", selectedValue);
   };
 
-
   const Occupatiotypeobj = [
     { label: "Private Sector", value: "Private Sector" },
-    { label: "Public Sector", value: "Public Sector"},
-    { label: "Govt Employee", value: "Govt Employee"},
-    { label: "Business", value: "Business"},
-    { label: "Professional", value: "Professional"},
-    { label: "Retired", value: "Retired"},
-    { label: "Housewife", value: "Housewife"},
-    { label: "Student", value: "Student"},
-    { label: "Not Working", value: "Not Working"},
+    { label: "Public Sector", value: "Public Sector" },
+    { label: "Govt Employee", value: "Govt Employee" },
+    { label: "Business", value: "Business" },
+    { label: "Professional", value: "Professional" },
+    { label: "Retired", value: "Retired" },
+    { label: "Housewife", value: "Housewife" },
+    { label: "Student", value: "Student" },
+    { label: "Not Working", value: "Not Working" },
   ];
   const Occupatiotypeobjhandle = (selectedValue) => {
     console.log("Selected value:", selectedValue);
@@ -46,32 +44,31 @@ export default function Occupation() {
 
   const SourcOfIncomeObj = [
     { label: "Salary", value: "Salary" },
-    { label: "Business", value: "Business"},
-    { label: "Rental", value: "Rental"},
-    { label: "Royalty", value: "Royalty"},
-    { label: "Ancestral", value: "Ancestral"},
-    { label: "Others", value: "Others"},
+    { label: "Business", value: "Business" },
+    { label: "Rental", value: "Rental" },
+    { label: "Royalty", value: "Royalty" },
+    { label: "Ancestral", value: "Ancestral" },
+    { label: "Others", value: "Others" },
   ];
-  const SourcOfIncomehandle= (selectedValue) => {
+  const SourcOfIncomehandle = (selectedValue) => {
     console.log("Selected value:", selectedValue);
   };
 
   const AnnualIncometypeobj = [
     { label: "Below 1 Lakh", value: "Below 1 Lakh" },
-    { label: "1-5 Lakhs", value: "1-5 Lakhs"},
-    { label: "5-10 Lakhs", value: "5-10 Lakhs"},
-    { label: "10-20 Lakhs", value: "10-20 Lakhs"},
-    { label: "25L to 1Cr", value: "25L to 1Cr"},
-    { label: "Above 1Cr", value: "Above 1Cr"},
+    { label: "1-5 Lakhs", value: "1-5 Lakhs" },
+    { label: "5-10 Lakhs", value: "5-10 Lakhs" },
+    { label: "10-20 Lakhs", value: "10-20 Lakhs" },
+    { label: "25L to 1Cr", value: "25L to 1Cr" },
+    { label: "Above 1Cr", value: "Above 1Cr" },
   ];
-  const AnnualIncomehandle= (selectedValue) => {
+  const AnnualIncomehandle = (selectedValue) => {
     console.log("Selected value:", selectedValue);
   };
 
   const ContiueBtnClick = () => {
     console.log("Button clicked!");
   };
-
 
   return (
     <div className="loginBlock container ">
@@ -108,7 +105,7 @@ export default function Occupation() {
               tabDataObj={Politicalobj}
               defaultSelected={Politicalobj[1].value}
               handleTabSelect={handlePoliticalSelect}
-            />        
+            />
           </div>
           <div className="d-flex">
             <p>I am politically exposed person</p>{" "}
@@ -116,52 +113,51 @@ export default function Occupation() {
               tabDataObj={Politicalrelatedobj}
               defaultSelected={Politicalrelatedobj[1].value}
               handleTabSelect={handlePoliticalrelated}
-            />                    
-          </div>
-          <div >
-          <h1 className="Tabtitle">Occupation Type</h1>
-          <div >
-            <Tabs
-              tabDataObj={Occupatiotypeobj}
-              defaultSelected={Occupatiotypeobj[4].value}
-              handleTabSelect={Occupatiotypeobjhandle}
             />
+          </div>
+          <div>
+            <h1 className="Tabtitle">Occupation Type</h1>
+            <div>
+              <Tabs
+                tabDataObj={Occupatiotypeobj}
+                defaultSelected={Occupatiotypeobj[4].value}
+                handleTabSelect={Occupatiotypeobjhandle}
+              />
             </div>
           </div>
         </div>
 
-        <div className="contactDetails-right-content">
-        <div >
-          <h1 className="Tabtitle">Main Source of Income</h1>
-          <div >
-            <Tabs
-              tabDataObj={SourcOfIncomeObj}
-              defaultSelected={SourcOfIncomeObj[0].value}
-              handleTabSelect={SourcOfIncomehandle}
-            />
+        <div className="contactDetails-right-content position-relative">
+          <div>
+            <h1 className="Tabtitle">Main Source of Income</h1>
+            <div>
+              <Tabs
+                tabDataObj={SourcOfIncomeObj}
+                defaultSelected={SourcOfIncomeObj[0].value}
+                handleTabSelect={SourcOfIncomehandle}
+              />
             </div>
           </div>
 
-          <div >
-          <h1 className="Tabtitle">Annual Income</h1>
-          <div >
-            <Tabs
-              tabDataObj={AnnualIncometypeobj}
-              defaultSelected={AnnualIncometypeobj[1].value}
-              handleTabSelect={AnnualIncomehandle}
-            />
+          <div>
+            <h1 className="Tabtitle">Annual Income</h1>
+            <div>
+              <Tabs
+                tabDataObj={AnnualIncometypeobj}
+                defaultSelected={AnnualIncometypeobj[1].value}
+                handleTabSelect={AnnualIncomehandle}
+              />
             </div>
           </div>
           <div className="kycobtn">
-          <Button
+            <Button
               btnLabel="Continue"
               rectangualar="true"
               btnClick={ContiueBtnClick}
               disable="false"
             />
-</div>
+          </div>
         </div>
-
       </div>
     </div>
   );

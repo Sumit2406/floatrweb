@@ -56,7 +56,7 @@ export default function Bank() {
           <img src={KycBank} alt="KycBank" />
         </div>
 
-        <div className="contactDetails-right-content">
+        <div className="contactDetails-right-content position-relative">
           <p className="stateTitle">Nominee is My</p>
           <Dropdownwithborder
             handleDropdown={handleDropdown}
@@ -81,13 +81,13 @@ export default function Bank() {
             handleDateChange={handleDateChange}
             selectedDate={selectedDate}
           />
-<div className="kycobtn">
-          <Button
-            btnLabel="Continue"
-            rectangualar="true"
-            btnClick={continueBtnClick}
-            disable="true"
-          />
+          <div className="kycobtn">
+            <Button
+              btnLabel="Continue"
+              rectangualar="true"
+              btnClick={continueBtnClick}
+              disable="true"
+            />
           </div>
         </div>
       </div>

@@ -63,7 +63,7 @@ export default function KycOtp() {
         <img src={KycOtpImg} alt="KycOtpImg-img" />
       </div>
 
-      <div className="contactDetails-right-content">
+      <div className="contactDetails-right-content position-relative">
         <h1 className="contactDetailslabel">Verification</h1>
         <OtpComp
           KycOTPDesign="KycOTPDesign"

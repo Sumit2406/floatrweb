@@ -80,7 +80,7 @@ export default function ContactDetails() {
         <img src={ContactDetailsImage} alt="ContactDetailsImage-img" />
       </div>
 
-      <div className="contactDetails-right-content">
+      <div className="contactDetails-right-content position-relative">
       <h1 className="contactDetailslabel">Contact Detail</h1>
         <InputBox
           title="Mobile Number"
