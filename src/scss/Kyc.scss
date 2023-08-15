@@ -1,8 +1,21 @@
 @import '~bootstrap/scss/bootstrap';
 .onboading-left-content{
-    width: 501px;
-    height: 460px;
+    // width: 501px;
+    // height: 460px;
+    // margin-top: 50px;
+    width: 550px;
+    height: 450px;
     margin-top: 50px;
+    overflow: hidden;
+    position: relative;
+    img{
+      width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    position: relative;
+    top: 0px;
+    left: 0;
+    }
 }
     .onboading-right-content {
         width: 611px;
@@ -37,13 +50,21 @@ height: 80px;
 }
 
 .contactDetails-right-content {
-    width: 611px;
-    // height: 500px;
-    height: auto;
+    // width: 611px;
+    // // height: 500px;
+    // height: auto;
+    // display: flex;
+    // flex-direction: column;
+    // object-fit: cover;
+    // margin-left: 240px;
+    // margin-top: 50px;
+
+    width: 425px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     object-fit: cover;
-    margin-left: 240px;
+    margin-left: 150px;
     margin-top: 50px;
 }
 

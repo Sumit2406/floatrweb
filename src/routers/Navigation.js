@@ -32,12 +32,12 @@ const navigate =useNavigate();
     const fetchToken = async () => {
       try {
         const data = await getToken();
-        console.log(data.steps);
+        console.log(data, "checking data");
 
         //Commented due to Page not getting moved need to implement Nested Route
-        // if(data.steps === 'Registered'){
-        //   navigate('Dashboard')
-        // }
+        if(data.steps === 'Registered'){
+          navigate('Dashboard')
+        }
 
       } catch (error) {
         console.error('Error fetching token:', error);

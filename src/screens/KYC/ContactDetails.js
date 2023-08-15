@@ -9,6 +9,7 @@ export default function ContactDetails() {
   const [error, setError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [emailId, setEmailID] = useState("");
+  
 
   const numBtnHandleClick = () => {
     let hasError = false;
@@ -65,7 +66,7 @@ export default function ContactDetails() {
     setEmailID(emailValue);
     setEmailError("");
   };
-
+  
   const handleInputChange = (event) => {
     const inputValue = event.target.value;
     if (!isNaN(inputValue)) {
