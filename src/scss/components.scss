@@ -607,20 +607,19 @@ p{
 }
 
 
-.Kycotp_field {
-  width: 70px;
-  height: 70px;
-  color: #333;
-  font-family: "ProximaRegular";
-  /* padding: 0px 3px; */
-  background: transparent;
-  border: none;
-  border: 1px solid #535d69;
-  outline: none;
-  text-align: center;
-  border-radius: 8px;
-  font-size: 32px;
+
+  .Kycotp_field {
+    width: 45px;
+    height: 45px;
+    color: #333;
+    font-family: "ProximaRegular";
+    background: transparent;
+    border: 1px solid #535d69;
+    outline: none;
+    text-align: center;
+    border-radius: 8px;
 }
+
 .Kyclogin_Warning {
   color: #333;
   font-family: "ProximaSemiBold";
