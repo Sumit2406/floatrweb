@@ -74,46 +74,6 @@ export default function ContactDetails() {
     }
   };
 
-//   return (
-//     <div className="loginBlock container d-flex .flex-col">
-//       <div className="onboading-left-content">
-//         <img src={ContactDetailsImage} alt="ContactDetailsImage-img" />
-//       </div>
-
-//       <div className="contactDetails-right-content position-relative">
-//       <h1 className="contactDetailslabel">Contact Detail</h1>
-//         <InputBox
-//           title="Mobile Number"
-//           placeholder="Enter Mobile Number"
-//           type="text"
-//           id="mobile"
-//           handleInputChange={handleInputChange}
-//           value={mobileNumber}
-//           len={10}
-//           error={error}
-//         />
-
-//         <InputBox
-//           title="Email ID"
-//           holder="abcd123@gmail.com"
-//           type="text"
-//           handleInputChange={handleEmailInputChange}
-//           value={emailId}
-//           error={emailError}
-//         />
-// <div className="kycobtn">
-//         <Button
-//           btnLabel="Start Onboarding"
-//           rectangualar="true"
-//           btnClick={numBtnHandleClick}
-//           disable={mobileNumber && emailId}
-//         />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
 return (
   <div className="container" >
       <div className="row" >

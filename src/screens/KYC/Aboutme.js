@@ -60,17 +60,103 @@ export default function Aboutme() {
     console.log("Selected value:", selectedValue);
   };
 
-  return (
-    <div className="loginBlock container ">
-      <div className="stepcontiner">
+//   return (
+//     <div className="loginBlock container ">
+      // <div className="stepcontiner">
+      //   <Steps />
+      // </div>
+      // <div className="hrline">
+      //   <img src={hrline} alt="hrline" />
+      // </div>
+//       <div className="d-flex .flex-col">
+//         <div className="onboading-left-content">
+          // <InputBox
+          //   title="PAN"
+          //   placeholder="AERTS3403H"
+          //   type="text"
+          //   id="PanId"
+          //   handleInputChange={handlePanChange}
+          //   value={PanNum}
+          // />
+
+          // <InputBox
+          //   title="Aadhar "
+          //   holder="xxxx xxxx 2431"
+          //   type="text"
+          //   id="AadharId"
+          //   handleInputChange={handleAadharChange}
+          //   value={AadharNum}
+          // />
+//         </div>
+//         <div className="contactDetails-right-content position-relative">
+        //   <div>
+        //     <h1 className="Tabtitle">Title</h1>
+        //     <Tabs
+        //       tabDataObj={Title}
+        //       defaultSelected="1"
+        //       handleTabSelect={handleTitleSelect}
+        //     />
+        //   </div>
+        //   <InputBox
+        //     title="Father's Name"
+        //     placeholder="Enter full name"
+        //     type="text"
+        //     id="fatherId"
+        //     handleInputChange={handleFatherInputChange}
+        //     value={fatherName}
+        //     len={10}
+        //   />
+        //   <div>
+        //     <InputBox
+        //       title="Mother’s Name"
+        //       holder="Enter full name"
+        //       type="text"
+        //       id="motherId"
+        //       handleInputChange={handleMotherInputChange}
+        //       value={motherName}
+        //     />
+        //   </div>
+        //   <div>
+        //     <h1 className="Tabtitle">Marital Status</h1>
+        //     <Tabs
+        //       tabDataObj={MaritalStatus}
+        //       defaultSelected="1"
+        //       handleTabSelect={handleMaritalSelect}
+        //     />
+        //   </div>
+        //   <InputBox
+        //     title="Spouce Name"
+        //     holder="Enter full Name"
+        //     type="text"
+        //     handleInputChange={handleSpouceInputChange}
+        //     value={spouceName}
+        //   />
+        // <div className="kycobtn">
+        //     <Button
+        //       btnLabel="Cotinue"
+        //       rectangualar="true"
+        //       btnClick={btnHandleClick}
+        //     />
+        //   </div>
+//         </div>
+//       </div>
+
+//     </div>
+//   );
+// }
+return (
+  <div className="container" >
+          <div className="stepcontiner">
         <Steps />
       </div>
       <div className="hrline">
         <img src={hrline} alt="hrline" />
       </div>
-      <div className="d-flex .flex-col">
-        <div className="onboading-left-content">
-          <InputBox
+
+      <div className="row" >
+        <div className="col-md-5 col-sm-12  " >
+            
+        <InputBox
             title="PAN"
             placeholder="AERTS3403H"
             type="text"
@@ -87,13 +173,15 @@ export default function Aboutme() {
             handleInputChange={handleAadharChange}
             value={AadharNum}
           />
+
         </div>
-        <div className="contactDetails-right-content position-relative">
-          <div>
+        <div className="col-md-2 col-sm-hidden">&nbsp;</div>
+        <div className="col-md-5 col-sm-12 justify-content-center align-self-center">
+        <div>
             <h1 className="Tabtitle">Title</h1>
             <Tabs
               tabDataObj={Title}
-              defaultSelected="1"
+              defaultSelected={Title[0].value}
               handleTabSelect={handleTitleSelect}
             />
           </div>
@@ -120,7 +208,7 @@ export default function Aboutme() {
             <h1 className="Tabtitle">Marital Status</h1>
             <Tabs
               tabDataObj={MaritalStatus}
-              defaultSelected="1"
+              defaultSelected={MaritalStatus[0].value}
               handleTabSelect={handleMaritalSelect}
             />
           </div>
@@ -138,9 +226,8 @@ export default function Aboutme() {
               btnClick={btnHandleClick}
             />
           </div>
-        </div>
       </div>
-
+      </div>
     </div>
   );
 }
