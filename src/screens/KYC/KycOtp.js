@@ -67,54 +67,62 @@ console.log("OTP",otp);
 console.log("Email OTP", Emailotp);
 
   return (
-    <div className="loginBlock container d-flex .flex-col"  >
-      <div className="onboading-left-content">
-        <img src={KycOtpImg} alt="KycOtpImg-img" />
-      </div>
-
-      <div className="contactDetails-right-content position-relative">
-        <h1 className="contactDetailslabel">Verification</h1>
-        <OtpComp
-          title="Mobile Number Verification"
-          otp={otp}
-          handleChange={handleChange}
-          handleKeyDown={handleKeyDown}
-          error={apiError}
-          otpResend={otpResend}
-          otpxxnum={"******".concat(mobileNumber?.slice(7,10))}
-          KycOTPDesign="KycOTPDesign"
-          Kycotp_field="Kycotp_field"
-          Kyclogin_Warning="Kyclogin_Warning"
-        />
-        <div className="OtpLine">
-          <img src={OtpLine} alt="OtpLine" />
+  <div className="container" >
+      <div className="row justify-content-center container" >
+        <div className="col-6 align-self-center " >
+          <div className="onboading-left-content">
+            <div >
+            <img src={KycOtpImg} alt="KycOtpImg-img" style={{width:'100%', height:'auto'}}/>
+            </div>
+          </div>
         </div>
-
-        <OtpComp
-          title="Mobile Number Verification"
-          otp={Emailotp}
-          handleChange={handleChangeforEmail}
-          handleKeyDown={handleKeyDownformail}
-          error={apiError}
-          otpResend={otpResend}
-          otpxxnum={"******".concat(emailId?.slice(7))}
-          KycOTPDesign="KycOTPDesign"
-          Kycotp_field="Kycotp_field"
-          Kyclogin_Warning="Kyclogin_Warning"
-        />
-        
-        <div className="kycobtn">
-          <Button
-            btnLabel="Start Onboarding"
-            rectangualar="true"
-            btnClick={numBtnHandleClick}
-            disable={Emailotp.length===4 && otp.length===4}
-          />
+        <div className="col-6 d-flex justify-content-center align-self-center">
+          <div className="contactDetails-right-content position-relative" >
+            <h1 className="contactDetailslabel">Verification</h1>
+            <OtpComp
+              title="Mobile Number Verification"
+              otp={otp}
+              handleChange={handleChange}
+              handleKeyDown={handleKeyDown}
+              error={apiError}
+              otpResend={otpResend}
+              otpxxnum={"******".concat(mobileNumber?.slice(7,10))}
+              KycOTPDesign="KycOTPDesign"
+              Kycotp_field="Kycotp_field"
+              Kyclogin_Warning="Kyclogin_Warning"
+            />
+            <div className="OtpLine">
+              <img src={OtpLine} alt="OtpLine" />
+            </div>
+    
+            <OtpComp
+              title="Mobile Number Verification"
+              otp={Emailotp}
+              handleChange={handleChangeforEmail}
+              handleKeyDown={handleKeyDownformail}
+              error={apiError}
+              otpResend={otpResend}
+              otpxxnum={"******".concat(emailId?.slice(7))}
+              KycOTPDesign="KycOTPDesign"
+              Kycotp_field="Kycotp_field"
+              Kyclogin_Warning="Kyclogin_Warning"
+            />
+            <div style={{width:'100%',display:'flex', justifyContent:'flex-end'}}>
+            <div className="kycobtn ">
+              <Button
+                btnLabel="Start Onboarding"
+                rectangualar="true"
+                btnClick={numBtnHandleClick}
+                disable={Emailotp.length===4 && otp.length===4}
+              />
+            </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-//     <div style={{height: '100%',width:'100%', marginLeft: 60, marginRight: 60}}>
+//     <div className="container" style={{height: '100%',width:'100%', marginLeft: 60, marginRight: 60}}>
 
 //       <div style={{display: 'flex', flexDirection:'row'}}>
 

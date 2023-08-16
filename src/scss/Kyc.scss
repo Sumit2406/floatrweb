@@ -1,11 +1,8 @@
 @import '~bootstrap/scss/bootstrap';
 .onboading-left-content{
-    // width: 501px;
-    // height: 460px;
-    // margin-top: 50px;
-    width: 550px;
-    height: 460px;
-    margin-top: 50px;
+    width: 34.375em;
+    height: 28.75em;
+    margin-top: 3.125em;
     overflow: hidden;
     position: relative;
     img{
@@ -18,13 +15,13 @@
     }
 }
     .onboading-right-content {
-        width: 611px;
-        height: 500px;
+        width: 38.1875em;
+        height: 31.25em;
         display: flex;
         flex-direction: column;
         justify-content: center;
         object-fit: cover;
-        margin-left: 316px;
+        margin-left: 19.75empx;
 }
 
 .contactDetailslabel {
@@ -32,7 +29,7 @@
     font-family: 'ProximaExtraBold';
     font-size: 2.25em;
     line-height: 1.3;
-    margin-bottom: 10px;
+    margin-bottom: 0.625em;
     white-space: nowrap;
 }
 
@@ -45,39 +42,29 @@
   }
 
 .onboardingbtn{
-width: 295px;
-height: 80px;
+width: 18.4375em;
+height: 5em;
 position: absolute;
 bottom: 0px;
 }
 
 .contactDetails-right-content {
-    // width: 611px;
-    // // height: 500px;
-    // height: auto;
-    // display: flex;
-    // flex-direction: column;
-    // object-fit: cover;
-    // margin-left: 240px;
-    // margin-top: 50px;
-
-    width: 425px;
-    height: 460px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     object-fit: cover;
-    margin-left: 150px;
-    margin-top: 50px;
+    padding: 0px 0px 0px 130px;
 }
 
 .Kyccontactbtn{
-    margin-top: 145px;
+    margin-top: 9.0625em;
 }
 
 .Digilockerlogo{
-  height: 32px;
+  height: 2em;
   width: auto;
-  margin-bottom: 8px;
+  margin-bottom: 0.5em;
 }
 
 ////////////////////////////
@@ -97,33 +84,33 @@ width: 100px;
   }
   
   .steptitle img {
-    width: 50px; /* Adjust the width as needed */
-    height: 50px; /* Adjust the height as needed */
+    width: 3.125em; /* Adjust the width as needed */
+    height: 3.125em; /* Adjust the height as needed */
   }
   
   .steptitle span {
-    margin-top: 5px; /* Adjust the margin as needed */
+    margin-top: 0.3125em; /* Adjust the margin as needed */
   }
   .steptitlecontainer li{
     list-style-type: none;
   }
 .stepscontainer{
     // width: 100%;
-    margin-top: 25px;
+    margin-top: 1.5625em;
 }
 .liitem{
     display: flex;
 }
 
 .lining{
-    width: 145px;
-height: 4px;
+    width: 9.0625em;
+height: 0.25em;
 }
 
 .stepcontiner{
-  margin-top: 220px;
-  margin-left: -50px;
-  margin-right: -15px;
+  margin-top: 13.75em;
+  margin-left: -3.125em;
+  margin-right: -0.9375em;
 }
 .Tabtitle{
   color: #333;
@@ -141,32 +128,32 @@ height: 4px;
 
 
 .congratsicon{
-  width: 100px;
-height: 100px
+  width: 6.25em;
+height: 6.25em
 }
 
 .investIcon{
-  width: 60px;
-height: 60px;
+  width: 3.75em;
+height: 3.75em;
 }
 
 .investIconcontainer{
-  width: 125px;
-height: 160px;
+  width: 7.8125em;
+height: 10em;
 }
 
 .OtpLine {
-  width: 541px;
-  height: 2px;
-  margin: 16px 0px 32px 0px;
+  width: 33.8125em;
+  height: 0.125em;
+  margin: 1em 0px 2em 0px;
 }
 .kycobtn{
-  width: 250px;
-height: 50px;
-position: absolute;
+  width: 15.625em;
+height: 3.125em;
+// position: absolute;
     bottom: 0px;
     right: 0px;
 }
 .Occupationinfo{
-  width: 500px;
+  width: 31.25em;
 }

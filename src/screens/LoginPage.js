@@ -187,7 +187,9 @@ const navigate =useNavigate();
         </div>
         <div className="col-8 d-flex justify-content-center align-self-center">
           <div className="left-LoginPageBanner">
-            <img src={LoginPageBanner} alt="LoginPageBanner" />
+ 
+<img src={LoginPageBanner} alt="LoginPageBanner" />
+
           </div>
         </div>
       </div>
