@@ -70,17 +70,112 @@ export default function Occupation() {
     console.log("Button clicked!");
   };
 
-  return (
-    <div className="loginBlock container ">
-      <div className="stepcontiner">
+//   return (
+//     <div className="loginBlock container ">
+//       <div className="stepcontiner">
+//         <Steps />
+//       </div>
+//       <div className="hrline">
+//         <img src={hrline} alt="hrline" />
+//       </div>
+//       <div className="d-flex .flex-col">
+//         <div className="onboading-left-content ">
+//           <div className="d-flex align-items-center mb-2">
+//             <p className="Occupationinfo ">I am a citizen of India</p>{" "}
+//             <Button
+//               btnLabel="Yes"
+//               rectangualar="false"
+//               btnClick={citizenHandleClick}
+//               disable="false"
+//             />
+//           </div>
+//           <div className="d-flex align-items-center">
+//             <p className="Occupationinfo">I am tax payer only in India</p>{" "}
+//             <Button
+//               btnLabel="Yes"
+//               rectangualar="false"
+//               btnClick={taxpayerHandleClick}
+//               disable="false"
+//             />
+//           </div>
+
+//           <div className="d-flex align-items-center">
+//             <p className="Occupationinfo">I am politically exposed person</p>{" "}
+//             <Tabs
+//               tabDataObj={Politicalobj}
+//               defaultSelected={Politicalobj[1].value}
+//               handleTabSelect={handlePoliticalSelect}
+//             />
+//           </div>
+//           <div className="d-flex justify-content-center align-items-center">
+//             <p className="Occupationinfo ">I am related to a politically
+// exposed person</p>{" "}
+//             <Tabs
+//               tabDataObj={Politicalrelatedobj}
+//               defaultSelected={Politicalrelatedobj[1].value}
+//               handleTabSelect={handlePoliticalrelated}
+//             />
+//           </div>
+//           <div>
+//             <h1 className="Tabtitle">Occupation Type</h1>
+//             <div >
+//               <Tabs
+//                 tabDataObj={Occupatiotypeobj}
+//                 defaultSelected={Occupatiotypeobj[4].value}
+//                 handleTabSelect={Occupatiotypeobjhandle}
+//               />
+//             </div>
+//           </div>
+//         </div>
+
+//         <div className="contactDetails-right-content position-relative">
+          // <div>
+          //   <h1 className="Tabtitle">Main Source of Income</h1>
+          //   <div>
+          //     <Tabs
+          //       tabDataObj={SourcOfIncomeObj}
+          //       defaultSelected={SourcOfIncomeObj[0].value}
+          //       handleTabSelect={SourcOfIncomehandle}
+          //     />
+          //   </div>
+          // </div>
+
+          // <div>
+          //   <h1 className="Tabtitle">Annual Income</h1>
+          //   <div>
+          //     <Tabs
+          //       tabDataObj={AnnualIncometypeobj}
+          //       defaultSelected={AnnualIncometypeobj[1].value}
+          //       handleTabSelect={AnnualIncomehandle}
+          //     />
+          //   </div>
+          // </div>
+          // <div className="kycobtn">
+          //   <Button
+          //     btnLabel="Continue"
+          //     rectangualar="true"
+          //     btnClick={ContiueBtnClick}
+          //     disable="false"
+          //   />
+          // </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+return (
+  <div className="container" >
+          <div className="stepcontiner">
         <Steps />
       </div>
       <div className="hrline">
         <img src={hrline} alt="hrline" />
       </div>
-      <div className="d-flex .flex-col">
-        <div className="onboading-left-content ">
-          <div className="d-flex align-items-center mb-2">
+
+      <div className="row" >
+        <div className="col-md-6 col-sm-12  " >
+        <div className="d-flex align-items-center mb-2">
             <p className="Occupationinfo ">I am a citizen of India</p>{" "}
             <Button
               btnLabel="Yes"
@@ -126,10 +221,13 @@ exposed person</p>{" "}
               />
             </div>
           </div>
-        </div>
+            
 
-        <div className="contactDetails-right-content position-relative">
-          <div>
+        </div>
+        {/* <div className="col-md-2 col-sm-hidden">&nbsp;</div> */}
+        <div className="col-md-6 col-sm-12 justify-content-center align-self-center">
+
+        <div>
             <h1 className="Tabtitle">Main Source of Income</h1>
             <div>
               <Tabs
@@ -158,7 +256,7 @@ exposed person</p>{" "}
               disable="false"
             />
           </div>
-        </div>
+      </div>
       </div>
     </div>
   );
