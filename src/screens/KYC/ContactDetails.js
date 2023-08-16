@@ -56,7 +56,6 @@ export default function ContactDetails() {
       setEmailError("");
     }
     if (!hasError) {
-      // Perform other actions here after validation
       Navigate('/Kycotp', { state: { mobileNumber, emailId } });
     }
   };
@@ -75,14 +74,55 @@ export default function ContactDetails() {
     }
   };
 
-  return (
-    <div className="loginBlock container d-flex .flex-col">
-      <div className="onboading-left-content">
-        <img src={ContactDetailsImage} alt="ContactDetailsImage-img" />
-      </div>
+//   return (
+//     <div className="loginBlock container d-flex .flex-col">
+//       <div className="onboading-left-content">
+//         <img src={ContactDetailsImage} alt="ContactDetailsImage-img" />
+//       </div>
 
-      <div className="contactDetails-right-content position-relative">
-      <h1 className="contactDetailslabel">Contact Detail</h1>
+//       <div className="contactDetails-right-content position-relative">
+//       <h1 className="contactDetailslabel">Contact Detail</h1>
+//         <InputBox
+//           title="Mobile Number"
+//           placeholder="Enter Mobile Number"
+//           type="text"
+//           id="mobile"
+//           handleInputChange={handleInputChange}
+//           value={mobileNumber}
+//           len={10}
+//           error={error}
+//         />
+
+//         <InputBox
+//           title="Email ID"
+//           holder="abcd123@gmail.com"
+//           type="text"
+//           handleInputChange={handleEmailInputChange}
+//           value={emailId}
+//           error={emailError}
+//         />
+// <div className="kycobtn">
+//         <Button
+//           btnLabel="Start Onboarding"
+//           rectangualar="true"
+//           btnClick={numBtnHandleClick}
+//           disable={mobileNumber && emailId}
+//         />
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+return (
+  <div className="container" >
+      <div className="row" >
+        <div className="col-md-5 col-sm-12 align-self-center " >
+            <img src={ContactDetailsImage} alt="ContactDetailsImage-img"  style={{width:'100%', height:'auto'}}/>
+        </div>
+        <div className="col-md-2 col-sm-hidden">&nbsp;</div>
+        <div className="col-md-5 col-sm-12 justify-content-center align-self-center">
+        <h1 className="contactDetailslabel">Contact Detail</h1>
         <InputBox
           title="Mobile Number"
           placeholder="Enter Mobile Number"
@@ -109,7 +149,8 @@ export default function ContactDetails() {
           btnClick={numBtnHandleClick}
           disable={mobileNumber && emailId}
         />
-        </div>
+        </div>          
+      </div>
       </div>
     </div>
   );
