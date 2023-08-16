@@ -68,16 +68,13 @@ console.log("Email OTP", Emailotp);
 
   return (
   <div className="container" >
-      <div className="row justify-content-center container" >
-        <div className="col-6 align-self-center " >
-          <div className="onboading-left-content">
-            <div >
+      <div className="row" >
+        <div className="col-md-5 col-sm-12 align-self-center " >
             <img src={KycOtpImg} alt="KycOtpImg-img" style={{width:'100%', height:'auto'}}/>
-            </div>
-          </div>
         </div>
-        <div className="col-6 d-flex justify-content-center align-self-center">
-          <div className="contactDetails-right-content position-relative" >
+        <div className="col-md-2 col-sm-hidden">&nbsp;</div>
+        <div className="col-md-5 col-sm-12 justify-content-center align-self-center">
+          <div className="" >
             <h1 className="contactDetailslabel">Verification</h1>
             <OtpComp
               title="Mobile Number Verification"

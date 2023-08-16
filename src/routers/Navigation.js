@@ -28,12 +28,13 @@ import Photo from '../screens/KYC/Photo';
 
 export default function Navigation() {
 const navigate =useNavigate();
+let loginstatus;
   useEffect(() => {
     const fetchToken = async () => {
       try {
         const data = await getToken();
         console.log(data, "checking data");
-
+        loginstatus=data.steps;
         //Commented due to Page not getting moved need to implement Nested Route
         if(data.steps === 'Registered'){
           navigate('Dashboard')
@@ -49,7 +50,8 @@ fetchToken();
   
 
   return (
-    <div className='mainbody'>
+    <div className={loginstatus !== 'Registered'? 'mainbody' : ""}>
+    {/* <div className='mainbody'> */}
 <Routes>
   <Route path="/" element={<Home />} /> 
 <Route path='/OtpScreen' element={<OtpScreen/>}/>
