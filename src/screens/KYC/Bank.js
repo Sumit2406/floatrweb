@@ -29,21 +29,77 @@ export default function Bank() {
     console.log("ContinueBtnClick");
   };
 
-  return (
-    <div className="loginBlock container position-relative">
-      <div className="stepcontiner">
+//   return (
+//     <div className="loginBlock container position-relative">
+//       <div className="stepcontiner">
+//         <Steps />
+//       </div>
+//       <div className="hrline">
+//         <img src={hrline} alt="hrline" />
+//       </div>
+//       <div className="d-flex .flex-col">
+//         <div className="onboading-left-content">
+          // <img src={KycBank} alt="KycBank" />
+//         </div>
+
+//         <div className="contactDetails-right-content">
+          // <InputBox
+          //   title="Account Number (Must be Saving Account)"
+          //   placeholder="Enter account number"
+          //   type="text"
+          //   id="AccountNum"
+          //   handleInputChange={handleAccountNumChange}
+          //   value={AccountNum}
+          // />
+
+          // <InputBox
+          //   title="IFSC Code"
+          //   placeholder="Enter IFSC Code"
+          //   type="text"
+          //   handleInputChange={handleIfscCodeChange}
+          //   value={IfscCode}
+          //   id={IfscCode}
+          // />
+
+          // <InputBox
+          //   title="Bank Name"
+          //   placeholder="Enter bank name"
+          //   type="text"
+          //   handleInputChange={handleBankTxtboxChange}
+          //   value={BankName}
+          //   id={BankName}
+          // />
+
+          // <div className="kycobtn">
+          //   <Button
+          //     btnLabel="Continue"
+          //     rectangualar="true"
+          //     btnClick={continueBtnClick}
+          //     disable="true"
+          //   />
+          // </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+return (
+  <div className="container" >
+          <div className="stepcontiner">
         <Steps />
       </div>
       <div className="hrline">
         <img src={hrline} alt="hrline" />
       </div>
-      <div className="d-flex .flex-col">
-        <div className="onboading-left-content">
-          <img src={KycBank} alt="KycBank" />
-        </div>
 
-        <div className="contactDetails-right-content">
-          <InputBox
+      <div className="row" >
+        <div className="col-md-5 col-sm-12 align-self-center" >
+        <img src={KycBank} alt="KycBank" style={{width:'100%', height:'auto'}}/>            
+        </div>
+        <div className="col-md-2 col-sm-hidden">&nbsp;</div>
+        <div className="col-md-5 col-sm-12 justify-content-center align-self-center">
+        <InputBox
             title="Account Number (Must be Saving Account)"
             placeholder="Enter account number"
             type="text"
@@ -78,7 +134,8 @@ export default function Bank() {
               disable="true"
             />
           </div>
-        </div>
+
+      </div>
       </div>
     </div>
   );

@@ -173,9 +173,9 @@ return (
         <img src={hrline} alt="hrline" />
       </div>
 
-      <div className="row" >
+      <div className="row mt-4" >
         <div className="col-md-6 col-sm-12  " >
-        <div className="d-flex align-items-center mb-2">
+        <div className="d-flex justify-content-center align-items-center mb-2 ">
             <p className="Occupationinfo ">I am a citizen of India</p>{" "}
             <Button
               btnLabel="Yes"
@@ -184,7 +184,7 @@ return (
               disable="false"
             />
           </div>
-          <div className="d-flex align-items-center">
+          <div className="d-flex align-items-center ">
             <p className="Occupationinfo">I am tax payer only in India</p>{" "}
             <Button
               btnLabel="Yes"
@@ -225,7 +225,7 @@ exposed person</p>{" "}
 
         </div>
         {/* <div className="col-md-2 col-sm-hidden">&nbsp;</div> */}
-        <div className="col-md-6 col-sm-12 justify-content-center align-self-center">
+        <div className="col-md-6 col-sm-12 ">
 
         <div>
             <h1 className="Tabtitle">Main Source of Income</h1>
