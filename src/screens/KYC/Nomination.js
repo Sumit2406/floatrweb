@@ -44,57 +44,6 @@ export default function Bank() {
     setSelectedDate(event.target.value);
   };
 
-//   return (
-//     <div className="loginBlock container ">
-//       <div className="stepcontiner">
-//         <Steps />
-//       </div>
-//       <div className="hrline">
-//         <img src={hrline} alt="hrline" />
-//       </div>
-//       <div className="d-flex .flex-col">
-//         <div className="onboading-left-content">
-//           <img src={KycBank} alt="KycBank" />
-//         </div>
-
-//         <div className="contactDetails-right-content position-relative">
-          // <p className="stateTitle">Nominee is My</p>
-          // <Dropdownwithborder
-          //   handleDropdown={handleDropdown}
-          //   dropstatus={dropstatus}
-          //   dropDownObj={dropDownObj}
-          //   selectedOption={selectedOption}
-          //   demoValueChange={demoValueChange}
-          //   title="Select Nominee"
-          // />
-
-          // <InputBox
-          //   title="Nominee Name"
-          //   placeholder="Aditi Sharma"
-          //   type="text"
-          //   id="Nominee"
-          //   handleInputChange={handleNomineeChange}
-          //   value={Nominee}
-          // />
-
-          // <DateComponents
-          //   title="Select Date"
-          //   handleDateChange={handleDateChange}
-          //   selectedDate={selectedDate}
-          // />
-          // <div className="kycobtn">
-          //   <Button
-          //     btnLabel="Continue"
-          //     rectangualar="true"
-          //     btnClick={continueBtnClick}
-          //     disable="true"
-          //   />
-          // </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 
 return (
   <div className="container" >
