@@ -51,7 +51,6 @@ fetchToken();
 
   return (
     <div className={loginstatus !== 'Registered'? 'mainbody' : ""}>
-    {/* <div className='mainbody'> */}
 <Routes>
   <Route path="/" element={<Home />} /> 
 <Route path='/OtpScreen' element={<OtpScreen/>}/>
