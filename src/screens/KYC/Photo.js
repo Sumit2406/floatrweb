@@ -24,19 +24,17 @@ export default function Photo() {
       <p className="Tabtitle">File size should be 2KB to 2MB only</p>
       <div className="d-flex .flex-col">
         <div className="onboading-left-content">
-          <div className="uploadimg">
+          <div >
             <FileUploaderwithArrowIcon unloadHandler={uploadHandler} />
           </div>
         </div>
 
-        <div className="contactDetails-right-content">
-          <div className="uploadimg">
+        <div className="contactDetails-right-content position-relative">
+          <div >
             <FileUploaderwithArrowIcon unloadHandler={uploadHandler} />
-            <span>A Sample Image of signature</span>
           </div>
-        </div>
-      </div>
-      <div className="kycobtn">
+          <p>A Sample Image of signature</p>
+          <div className="kycobtn">
         <Button
           btnLabel="Continue"
           rectangualar="true"
@@ -44,6 +42,10 @@ export default function Photo() {
           disable="true"
         />
       </div>
+
+        </div>
+      </div>
+ 
     </div>
   );
 }

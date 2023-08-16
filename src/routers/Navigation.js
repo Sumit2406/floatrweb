@@ -58,7 +58,6 @@ fetchToken();
 <Route path="/Dashboard" element={<Dashboard />} />
 <Route path="/Onboarding" element={<OnBoarding/>} />
 <Route path="/ContactDetails" element={<ContactDetails/>} />
-<Route path="/ContactDetails" element={<ContactDetails/>} />
 <Route path="/KycOtp" element={<KycOtp/>} />
 <Route path="/DigilockerPage" element={<DigilockerPage/>} />
 <Route path="/Aboutme" element={<Aboutme/>} />

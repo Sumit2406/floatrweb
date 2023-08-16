@@ -79,9 +79,9 @@ export default function Occupation() {
         <img src={hrline} alt="hrline" />
       </div>
       <div className="d-flex .flex-col">
-        <div className="onboading-left-content">
-          <div className="d-flex">
-            <p>I am a citizen of India</p>{" "}
+        <div className="onboading-left-content ">
+          <div className="d-flex align-items-center mb-2">
+            <p className="Occupationinfo ">I am a citizen of India</p>{" "}
             <Button
               btnLabel="Yes"
               rectangualar="false"
@@ -89,8 +89,8 @@ export default function Occupation() {
               disable="false"
             />
           </div>
-          <div className="d-flex">
-            <p>I am tax payer only in India</p>{" "}
+          <div className="d-flex align-items-center">
+            <p className="Occupationinfo">I am tax payer only in India</p>{" "}
             <Button
               btnLabel="Yes"
               rectangualar="false"
@@ -99,16 +99,17 @@ export default function Occupation() {
             />
           </div>
 
-          <div className="d-flex">
-            <p>I am politically exposed person</p>{" "}
+          <div className="d-flex align-items-center">
+            <p className="Occupationinfo">I am politically exposed person</p>{" "}
             <Tabs
               tabDataObj={Politicalobj}
               defaultSelected={Politicalobj[1].value}
               handleTabSelect={handlePoliticalSelect}
             />
           </div>
-          <div className="d-flex">
-            <p>I am politically exposed person</p>{" "}
+          <div className="d-flex justify-content-center align-items-center">
+            <p className="Occupationinfo ">I am related to a politically
+exposed person</p>{" "}
             <Tabs
               tabDataObj={Politicalrelatedobj}
               defaultSelected={Politicalrelatedobj[1].value}

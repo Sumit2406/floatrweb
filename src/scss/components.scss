@@ -176,7 +176,7 @@ textarea{
   font-family: "ProximaBold";
   border: 1px solid #ccc;
   border-radius: 0.27em;
-  width: 117px;
+  width: 130px;
   text-align: center;
   margin-right: 10px;
   margin-top: 10px;
@@ -185,6 +185,7 @@ textarea{
   justify-content: center;
   align-items: center;
   list-style-type: none;
+  
   }
   .tab-item:last-child {
     margin-right: 0;
@@ -239,12 +240,12 @@ textarea{
 
   .upload-div-icond {
     
-    width: 570px;
-height: 208px;
-background-color: FFF;
+    width: 420px;
+    height: 208px;
+    background-color: FFF;
     background-size: cover;
     cursor: pointer;
-    border: 1px solid gray;
+    border: 1px dashed gray;
     display: flex;
     justify-content: center;
     align-items: center;
