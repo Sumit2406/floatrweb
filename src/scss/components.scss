@@ -136,10 +136,11 @@ textarea{
   .tab-list {
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
+     justify-content: space-between;
     width: 100%;    
     padding: 0;
-    flex-flow: wrap;
+     flex-flow: wrap;
+    background-color: 'black';
   }
 
 
@@ -171,25 +172,26 @@ textarea{
   //   border: none;
   // }
   .tab-item {
-    padding: 0.5555555556em;
+    // padding: 0.5555555556em;
   cursor: pointer;
   font-family: "ProximaBold";
   border: 1px solid #ccc;
   border-radius: 0.5em;
-  width: 130px;
+   width: 130px;
   text-align: center;
-  margin-right: 10px;
+   margin-right: 10px;
   margin-top: 10px;
   height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
   list-style-type: none;
+
   
   }
-  .tab-item:last-child {
-    margin-right: 0;
-  }x
+  // .tab-item:last-child {
+  //   margin-right: 0;
+  // }
   
   .tab-content {
     margin-top: 0.5555555555555556em;
@@ -312,13 +314,8 @@ textarea{
     color: black;
     height: 40px;
     width: 100%;
-        padding: 0.15em;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // position: relative;
+    padding: 0.15em;
     display: block;
-    // background-color: #f1ecec;
     text-align: center;    
   }
   .dropdownallborder{
@@ -495,7 +492,6 @@ border: none;
     font-family: "ProximaSemiBold";
     font-size: 1em;
     line-height: 1.2;
-    // margin-bottom: 73px;
     margin-top: 8px;
     margin-bottom: 15px;
 
