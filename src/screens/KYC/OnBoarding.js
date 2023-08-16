@@ -13,7 +13,6 @@ export default function OnBoarding() {
   return (
     <div className="container" >
     <div className="row" >
-      {/* <div className="col-md-5 col-sm-12 align-self-center " > */}
       <div className="col-md-5 col-sm-12 justify-content-center align-self-center">
       <h1 className="contactDetailslabel">Investor Onboarding</h1>
         <p>
