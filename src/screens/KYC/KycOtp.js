@@ -7,6 +7,7 @@ import OtpComp from "../../components/OtpComp";
 
 export default function KycOtp() {
   const [otp, setOtp] = useState(new Array(4).fill(""));
+  const [Emailotp, setEmailotp] = useState(new Array(4).fill(""));
   const [apiError, setApiError] = useState("");
 
   // const [error, setError] = useState("");
@@ -30,9 +31,9 @@ export default function KycOtp() {
     }
   };
 
-  const handleChangeformail = (element, index) => {
+  const handleChangeforEmail = (element, index) => {
     if (isNaN(element.value)) return false;
-    setOtp([...otp.map((d, idx) => (idx === index ? element.value : d))]);
+    setEmailotp([...Emailotp.map((d, idx) => (idx === index ? element.value : d))]);
     if (element.nextSibling) {
       element.nextSibling.focus();
     }
@@ -85,8 +86,8 @@ export default function KycOtp() {
           Kycotp_field="Kycotp_field"
           Kyclogin_Warning="Kyclogin_Warning"
           title="Mobile Number Verification"
-          otp={otp}
-          handleChange={handleChangeformail}
+          otp={Emailotp}
+          handleChange={handleChangeforEmail}
           handleKeyDown={handleKeyDownformail}
           error={apiError}
           otpResend={otpResend}

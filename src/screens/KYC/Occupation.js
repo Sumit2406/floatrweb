@@ -118,7 +118,7 @@ exposed person</p>{" "}
           </div>
           <div>
             <h1 className="Tabtitle">Occupation Type</h1>
-            <div>
+            <div >
               <Tabs
                 tabDataObj={Occupatiotypeobj}
                 defaultSelected={Occupatiotypeobj[4].value}
