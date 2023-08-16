@@ -3,13 +3,13 @@ import ContactDetailsImage from "../../assets/pngs/ContactDetailsImage.png";
 import "../../scss/Kyc.scss";
 import Button from "../../components/Button";
 import InputBox from "../../components/InputBox";
-
+import { useNavigate } from "react-router-dom";
 export default function ContactDetails() {
   const [mobileNumber, setMobileNumber] = useState("");
   const [error, setError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [emailId, setEmailID] = useState("");
-  
+  const Navigate=useNavigate();
 
   const numBtnHandleClick = () => {
     let hasError = false;
@@ -57,7 +57,7 @@ export default function ContactDetails() {
     }
     if (!hasError) {
       // Perform other actions here after validation
-      console.log("Mobile number and Email Id is correct");
+      Navigate('/Kycotp', { state: { mobileNumber, emailId } });
     }
   };
 
