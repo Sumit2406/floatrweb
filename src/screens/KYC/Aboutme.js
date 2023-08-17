@@ -133,12 +133,14 @@ export default function Aboutme() {
             handleInputChange={handleSpouceInputChange}
             value={spouceName}
           />
+          <div className="d-flex justify-content-end">
           <div className="kycobtn">
             <Button
               btnLabel="Cotinue"
               rectangualar="true"
               btnClick={btnHandleClick}
             />
+          </div>
           </div>
         </div>
       </div>

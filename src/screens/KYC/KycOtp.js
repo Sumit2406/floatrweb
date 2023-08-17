@@ -105,7 +105,12 @@ console.log("Email OTP", Emailotp);
               Kyclogin_Warning="Kyclogin_Warning"
             />
             <div style={{width:'100%',display:'flex', justifyContent:'flex-end'}}>
-            <div className="kycobtn ">
+            
+            </div>
+          </div>
+        </div>
+        <div className="d-flex justify-content-end">
+        <div className="kycobtn ">
               <Button
                 btnLabel="Start Onboarding"
                 rectangualar="true"
@@ -113,9 +118,7 @@ console.log("Email OTP", Emailotp);
                 disable={Emailotp.length===4 && otp.length===4}
               />
             </div>
-            </div>
-          </div>
-        </div>
+</div>
       </div>
     </div>
   );

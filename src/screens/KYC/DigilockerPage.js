@@ -38,7 +38,9 @@ export default function DigilockerPage() {
             provide consent for sharing documents / information with CRA
           </li>
         </ul>
-        <div className="kycobtn">
+      </div>
+      <div className="d-flex justify-content-end">
+      <div className="kycobtn">
           <Button
             btnLabel="Start Onboarding"
             rectangualar="true"
@@ -46,7 +48,7 @@ export default function DigilockerPage() {
             disable="false"
           />
         </div>
-      </div>
+</div>
 
     </div>
   </div>

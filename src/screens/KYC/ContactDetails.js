@@ -101,16 +101,18 @@ return (
           handleInputChange={handleEmailInputChange}
           value={emailId}
           error={emailError}
-        />
-<div className="kycobtn">
+        />          
+      </div>
+      <div className="d-flex justify-content-end">
+      <div className="kycobtn">
         <Button
           btnLabel="Start Onboarding"
           rectangualar="true"
           btnClick={numBtnHandleClick}
           disable={mobileNumber && emailId}
         />
-        </div>          
-      </div>
+        </div>
+</div>
       </div>
     </div>
   );

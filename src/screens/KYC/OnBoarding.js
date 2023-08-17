@@ -13,7 +13,7 @@ export default function OnBoarding() {
   return (
     <div className="container" >
     <div className="row" >
-      <div className="col-md-5 col-sm-12 justify-content-center align-self-center">
+      <div className="col-md-4 col-sm-12 justify-content-center align-self-center">
       <h1 className="contactDetailslabel">Investor Onboarding</h1>
         <p>
           After onboarding is approved, you can invest in Mutual Funds and setup
@@ -29,7 +29,8 @@ export default function OnBoarding() {
           Aadhaar number and mobile linked to Aadhaar is needed for OTP
           verification & eSign
         </p>
-        <div className="onboardingbtn">
+        <div className="d-flex justify-content-start">
+        <div className="kycobtn">
           <Button
             btnLabel="Start Onboarding"
             rectangualar="false"
@@ -37,9 +38,12 @@ export default function OnBoarding() {
             disable="false"
           />
         </div>
+</div>
+      
       </div>
+
       <div className="col-md-2 col-sm-hidden">&nbsp;</div>
-      <div className="col-md-5 col-sm-12 align-self-center " >
+      <div className="col-md-6 col-sm-12 align-self-center justify-content-center " >
       <img src={onboardingimg} alt="onboardingimg-img" style={{width:'100%', height:'auto'}}/>
       </div>
     </div>

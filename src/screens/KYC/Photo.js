@@ -21,18 +21,23 @@ return (
       <div className="hrline">
         <img src={hrline} alt="hrline" />
       </div>
+      <div>
       <h1 className="contactDetailslabel">Upload Your Photo & Signature</h1>
  <p className="Tabtitle">File size should be 2KB to 2MB only</p>
-      <div className="row" >
-        <div className="col-md-5 col-sm-12 align-self-center" >
- 
- <FileUploaderwithArrowIcon unloadHandler={uploadHandler} />
+      <div className="row ">        
+        <div className="col-md-5 col-sm-12 " s>
+          <p>Selfe Photo</p>
+ <FileUploaderwithArrowIcon uploadHandler={uploadHandler} />
         </div>
-        <div className="col-md-2 col-sm-hidden">&nbsp;</div>
-        <div className="col-md-5 col-sm-12 justify-content-center align-self-center">
-        <FileUploaderwithArrowIcon unloadHandler={uploadHandler} />
+        <div className="col-md-2 col-sm-hidden" >&nbsp;</div>
+        <div className="col-md-5 col-sm-12  ">
+        <p>Signature</p>
+        <FileUploaderwithArrowIcon uploadHandler={uploadHandler} />
         <p>A Sample Image of signature</p>
-          <div className="kycobtn">
+      </div>
+      </div>
+      <div className="d-flex justify-content-end">
+      <div className="kycobtn">
         <Button
           btnLabel="Continue"
           rectangualar="true"
@@ -40,8 +45,7 @@ return (
           disable="true"
         />
       </div>
-
-      </div>
+</div>
       </div>
     </div>
   );

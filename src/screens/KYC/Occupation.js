@@ -151,7 +151,9 @@ export default function Occupation() {
               />
             </div>
           </div>
-          <div className="kycobtn">
+        </div>
+        <div className="d-flex justify-content-end">
+        <div className="kycobtn">
             <Button
               btnLabel="Continue"
               rectangualar="true"
@@ -159,7 +161,7 @@ export default function Occupation() {
               disable="false"
             />
           </div>
-        </div>
+</div>
       </div>
     </div>
   );

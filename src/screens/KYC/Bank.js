@@ -70,8 +70,10 @@ return (
             value={BankName}
             id={BankName}
           />
-
-          <div className="kycobtn">
+      </div>
+      <div className="d-flex justify-content-end">
+        
+      <div className="kycobtn">
             <Button
               btnLabel="Continue"
               rectangualar="true"
@@ -79,8 +81,7 @@ return (
               disable="true"
             />
           </div>
-
-      </div>
+</div>
       </div>
     </div>
   );
