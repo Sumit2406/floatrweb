@@ -44,10 +44,11 @@
 .contactDetailslabel {
     color: #061D33;
     font-family: 'ProximaExtraBold';
+    white-space: nowrap;
     font-size: 2.25em;
     line-height: 1.3;
-    margin-bottom: 0.625em;
     white-space: nowrap;
+    // margin-bottom: 0.625em;
 }
 
 .onboardingbtn{
@@ -62,9 +63,9 @@ bottom: 0px;
 }
 
 .Digilockerlogo{
-  height: 2em;
-  width: auto;
-  margin-bottom: 0.5em;
+  height: 3em;
+  width: 12.5em;
+    margin-bottom: 0.5em;
 }
 
 ////////////////////////////
@@ -155,4 +156,15 @@ height: 3.125em;
 }
 .Occupationinfo{
   width: 31.25em;
+  color: #333;
+  font-family: "ProximaRegular";
+  font-size: 1em;
+  line-height: 1.2;
+}
+
+.diglockerPara, .congratsfont{
+  color: #333;
+  font-family: "ProximaRegular";
+  font-size: 1em;
+  line-height: 1.3;
 }

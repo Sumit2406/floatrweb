@@ -12,15 +12,15 @@ export default function Congratulations() {
 return (
   <div className="container" >
       <div className="row" >
-        <div className="col-md-6 col-sm-12 align-self-center " >
+        <div className="col-md-6 col-sm-12 align-self-center" >
             <img src={Kycdone} alt="Kycdone-img" style={{width:'100%', height:'auto'}}/>
         </div>
-        <div className="col-md-6 col-sm-12 ">
-        <div className="contactDetails-right-content d-flex flex-col justify-content-center align-items-center">
-        <div className="congratsicon">
+        <div className="col-md-6 col-sm-12 congratsfont">
+        <div className="contactDetails-right-content d-flex flex-column justify-content-center align-items-center">
+        <div className="congratsicon mb-2">
           <img src={CongratsIcon} alt="CongratsIcon" />
         </div>
-        <p style={{ color: '#33B469' }}>Congratulations!</p>
+        <p style={{ color: '#33B469',}}><strong>Congratulations!</strong></p>
 
         <p>On Completing Your Onboarding</p>
         <p>You are now ready to invest in</p>

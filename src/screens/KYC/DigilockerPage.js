@@ -17,23 +17,23 @@ export default function DigilockerPage() {
       <div className="col-md-2 col-sm-hidden">&nbsp;</div>
       <div className="col-md-5 col-sm-12 justify-content-center align-self-center">
       <h1 className="contactDetailslabel">Verify Through DigiLocker</h1>
-        <p>
+        <p className="diglockerPara">
           Your Aadhaar card must be linked to a mobile number to receive and
           confirm the OTP
         </p>
         <div className="Digilockerlogo">
           <img src={Digilockerlogo} alt="Digilockerlogo-img" />
         </div>
-        <h2>How Digilocker works</h2>
+        <h2 className="contactDetailslabel">How Digilocker works</h2>
         <ul>
-          <li>
+          <li className="diglockerPara">
             Your KYC related documents are auto-verified using the digilocker
           </li>
-          <li>
+          <li className="diglockerPara">
             To access digilocker you enter your Aadhaar number and confirm the
             OTP received on the mobile linked to the Aadhaar card
           </li>
-          <li>
+          <li className="diglockerPara">
             You will be redirected to the digilocker page where in you need to
             provide consent for sharing documents / information with CRA
           </li>

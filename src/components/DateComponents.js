@@ -3,7 +3,7 @@ import React from "react";
 export default function DateComponents({selectedDate,title, handleDateChange}) {
   return (
     <div >
-      <h2>{title}</h2>
+      <p className="DateTitle">{title}</p>
       <input
       className="dateclass"
         type="date"
