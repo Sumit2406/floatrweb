@@ -60,19 +60,18 @@ export default function Aboutme() {
     console.log("Selected value:", selectedValue);
   };
 
-return (
-  <div className="container" >
-          <div className="stepcontiner">
+  return (
+    <div className="container">
+      <div className="stepcontiner ">
         <Steps />
       </div>
       <div className="hrline">
         <img src={hrline} alt="hrline" />
       </div>
 
-      <div className="row" >
-        <div className="col-md-5 col-sm-12  " >
-            
-        <InputBox
+      <div className="row">
+        <div className="col-md-5 col-sm-12  ">
+          <InputBox
             title="PAN"
             placeholder="AERTS3403H"
             type="text"
@@ -83,17 +82,16 @@ return (
 
           <InputBox
             title="Aadhar "
-            holder="xxxx xxxx 2431"
+            placeholder="xxxx xxxx 2431"
             type="text"
             id="AadharId"
             handleInputChange={handleAadharChange}
             value={AadharNum}
           />
-
         </div>
         <div className="col-md-2 col-sm-hidden">&nbsp;</div>
         <div className="col-md-5 col-sm-12 justify-content-center align-self-center">
-        <div>
+          <div>
             <h1 className="Tabtitle">Title</h1>
             <Tabs
               tabDataObj={Title}
@@ -103,7 +101,7 @@ return (
           </div>
           <InputBox
             title="Father's Name"
-            placeholder="Enter full name"
+            placeholder="Enter father's name"
             type="text"
             id="fatherId"
             handleInputChange={handleFatherInputChange}
@@ -113,7 +111,7 @@ return (
           <div>
             <InputBox
               title="Mother’s Name"
-              holder="Enter full name"
+              placeholder="Enter mother's name"
               type="text"
               id="motherId"
               handleInputChange={handleMotherInputChange}
@@ -130,19 +128,19 @@ return (
           </div>
           <InputBox
             title="Spouce Name"
-            holder="Enter full Name"
+            placeholder="Enter Spouce Name"
             type="text"
             handleInputChange={handleSpouceInputChange}
             value={spouceName}
           />
-        <div className="kycobtn">
+          <div className="kycobtn">
             <Button
               btnLabel="Cotinue"
               rectangualar="true"
               btnClick={btnHandleClick}
             />
           </div>
-      </div>
+        </div>
       </div>
     </div>
   );

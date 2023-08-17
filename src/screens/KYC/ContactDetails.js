@@ -96,7 +96,7 @@ return (
 
         <InputBox
           title="Email ID"
-          holder="abcd123@gmail.com"
+          placeholder="abcd123@gmail.com"
           type="text"
           handleInputChange={handleEmailInputChange}
           value={emailId}

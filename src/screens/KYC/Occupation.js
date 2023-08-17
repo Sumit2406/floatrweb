@@ -70,19 +70,17 @@ export default function Occupation() {
     console.log("Button clicked!");
   };
 
-
-return (
-  <div className="container" >
-          <div className="stepcontiner">
+  return (
+    <div className="container">
+      <div className="stepcontiner">
         <Steps />
       </div>
       <div className="hrline">
         <img src={hrline} alt="hrline" />
       </div>
-
-      <div className="row mt-4" >
-        <div className="col-md-6 col-sm-12  " >
-        <div className="d-flex justify-content-center align-items-center mb-2 ">
+      <div className="row ">
+        <div className="col-md-6 col-sm-12  ">
+          <div className="d-flex justify-content-center align-items-center mb-2 ">
             <p className="Occupationinfo ">I am a citizen of India</p>{" "}
             <Button
               btnLabel="Yes"
@@ -110,8 +108,9 @@ return (
             />
           </div>
           <div className="d-flex justify-content-center align-items-center">
-            <p className="Occupationinfo ">I am related to a politically
-exposed person</p>{" "}
+            <p className="Occupationinfo ">
+              I am related to a politically exposed person
+            </p>{" "}
             <Tabs
               tabDataObj={Politicalrelatedobj}
               defaultSelected={Politicalrelatedobj[1].value}
@@ -120,7 +119,7 @@ exposed person</p>{" "}
           </div>
           <div>
             <h1 className="Tabtitle">Occupation Type</h1>
-            <div >
+            <div>
               <Tabs
                 tabDataObj={Occupatiotypeobj}
                 defaultSelected={Occupatiotypeobj[4].value}
@@ -128,13 +127,10 @@ exposed person</p>{" "}
               />
             </div>
           </div>
-            
-
         </div>
         {/* <div className="col-md-2 col-sm-hidden">&nbsp;</div> */}
         <div className="col-md-6 col-sm-12 ">
-
-        <div>
+          <div>
             <h1 className="Tabtitle">Main Source of Income</h1>
             <div>
               <Tabs
@@ -163,7 +159,7 @@ exposed person</p>{" "}
               disable="false"
             />
           </div>
-      </div>
+        </div>
       </div>
     </div>
   );

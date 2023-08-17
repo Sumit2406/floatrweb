@@ -1,28 +1,45 @@
 @import '~bootstrap/scss/bootstrap';
-.onboading-left-content{
-    width: 34.375em;
-    height: 28.75em;
-    margin-top: 3.125em;
-    overflow: hidden;
-    position: relative;
-    img{
-      width: 100%;
-    height: 100%;
-    object-fit: scale-down;
-    position: relative;
-    top: 0px;
-    left: 0;
-    }
-}
-    .onboading-right-content {
-        width: 38.1875em;
-        height: 31.25em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        object-fit: cover;
-        margin-left: 19.75empx;
-}
+// .onboading-left-content{
+//     width: 34.375em;
+//     height: 28.75em;
+//     margin-top: 3.125em;
+//     overflow: hidden;
+//     position: relative;
+//     img{
+//       width: 100%;
+//     height: 100%;
+//     object-fit: scale-down;
+//     position: relative;
+//     top: 0px;
+//     left: 0;
+//     }
+// }
+//     .onboading-right-content {
+//         width: 38.1875em;
+//         height: 31.25em;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         object-fit: cover;
+//         margin-left: 19.75empx;
+// }
+
+// .onboading-left-content p{
+//   color: #333;
+//   font-family: 'ProximaRegular';
+//   font-size: 1.125em;
+//   line-height: 1.3;
+//   margin-bottom: 0.55em;
+// }
+
+// .contactDetails-right-content {
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   object-fit: cover;
+//   padding: 0px 0px 0px 130px;
+// }
 
 .contactDetailslabel {
     color: #061D33;
@@ -33,28 +50,11 @@
     white-space: nowrap;
 }
 
-.onboading-left-content p{
-    color: #333;
-    font-family: 'ProximaRegular';
-    font-size: 1.125em;
-    line-height: 1.3;
-    margin-bottom: 0.55em;
-  }
-
 .onboardingbtn{
 width: 18.4375em;
 height: 5em;
 position: absolute;
 bottom: 0px;
-}
-
-.contactDetails-right-content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    object-fit: cover;
-    padding: 0px 0px 0px 130px;
 }
 
 .Kyccontactbtn{
@@ -150,7 +150,6 @@ height: 8em;
 .kycobtn{
   width: 15.625em;
 height: 3.125em;
-// position: absolute;
     bottom: 0px;
     right: 0px;
 }
